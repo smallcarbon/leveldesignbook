@@ -1,117 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>类型学 | The Level Design Book 中文版</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>类型学 | The Level Design Book 中文版</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-  <aside class="sidebar">
-    <a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-    <nav><a class="" style="--depth:0" href="index.html">The Level Design Book 中文版</a>
-<a class="" style="--depth:1" href="introduction.html">✨ 什么是关卡设计</a>
-<a class="" style="--depth:2" href="process__overview.html">🗺️ 如何制作一个关卡</a>
-<a class="" style="--depth:2" href="process__preproduction.html">🧠 前期设计</a>
-<a class="" style="--depth:3" href="process__preproduction__pacing.html">节奏</a>
-<a class="" style="--depth:3" href="process__preproduction__research.html">调研</a>
-<a class="" style="--depth:3" href="process__preproduction__worldbuilding.html">世界构建</a>
-<a class="" style="--depth:3" href="process__preproduction__scope.html">范围控制</a>
-<a class="" style="--depth:2" href="process__combat.html">🔫 战斗</a>
-<a class="" style="--depth:3" href="process__combat__enemy.html">敌人设计</a>
-<a class="" style="--depth:3" href="process__combat__encounter.html">遭遇战</a>
-<a class="" style="--depth:3" href="process__combat__cover.html">掩体</a>
-<a class="" style="--depth:3" href="process__combat__balance.html">地图平衡</a>
-<a class="" style="--depth:2" href="process__layout.html">🛠️ 布局</a>
-<a class="" style="--depth:3" href="process__layout__flow.html">流动感</a>
-<a class="" style="--depth:4" href="process__layout__flow__circulation.html">循环动线</a>
-<a class="" style="--depth:4" href="process__layout__flow__verticality.html">垂直性</a>
-<a class="" style="--depth:3" href="process__layout__criticalpath.html">关键路径</a>
-<a class="" style="--depth:3" href="process__layout__parti.html">Parti：概念布局</a>
-<a class="active" style="--depth:3" href="process__layout__typology.html">类型学</a>
-<a class="" style="--depth:4" href="process__layout__typology__gates.html">门与关口</a>
-<a class="" style="--depth:2" href="process__blockout.html">🏠 白盒</a>
-<a class="" style="--depth:3" href="process__blockout__massing.html">体量</a>
-<a class="" style="--depth:4" href="process__blockout__massing__landscape.html">景观地形</a>
-<a class="" style="--depth:4" href="process__blockout__massing__composition.html">构图</a>
-<a class="" style="--depth:4" href="process__blockout__massing__prospect-refuge.html">眺望-庇护</a>
-<a class="" style="--depth:3" href="process__blockout__metrics.html">尺度指标</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__modular.html">模块化套件设计</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__doom.html">DOOM 尺度</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__quake.html">Quake 尺度</a>
-<a class="" style="--depth:3" href="process__blockout__wayfinding.html">寻路与引导</a>
-<a class="" style="--depth:3" href="process__blockout__playtesting.html">试玩测试</a>
-<a class="" style="--depth:4" href="process__blockout__playtesting__persona.html">玩家画像</a>
-<a class="" style="--depth:2" href="process__scripting.html">📜 脚本</a>
-<a class="" style="--depth:3" href="process__scripting__nav.html">(存根) 导航</a>
-<a class="" style="--depth:3" href="process__scripting__doors.html">门</a>
-<a class="" style="--depth:2" href="process__lighting.html">☀️ 灯光</a>
-<a class="" style="--depth:3" href="process__lighting__three-point.html">三点布光</a>
-<a class="" style="--depth:3" href="process__lighting__d6-lighting.html">D6 灯光法</a>
-<a class="" style="--depth:3" href="process__lighting__darkness.html">黑暗场景灯光</a>
-<a class="" style="--depth:2" href="process__env-art.html">🏡 环境美术</a>
-<a class="" style="--depth:3" href="process__env-art__psychology.html">形状与色彩心理学</a>
-<a class="" style="--depth:3" href="process__env-art__texturing.html">材质</a>
-<a class="" style="--depth:3" href="process__env-art__storytelling.html">叙事</a>
-<a class="" style="--depth:3" href="process__env-art__optimization.html">优化</a>
-<a class="" style="--depth:2" href="process__release.html">🌈 发布</a>
-<a class="" style="--depth:2" href="culture__overview.html">🦜 作为文化的关卡设计</a>
-<a class="" style="--depth:2" href="culture__history-level-designer.html">关卡设计师简史</a>
-<a class="" style="--depth:2" href="culture__zero-player.html">零玩家关卡设计</a>
-<a class="" style="--depth:2" href="culture__unfinished-pages.html">未完成页面</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-architecture.html">建筑史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__structural-engineering-primer.html">结构工程入门</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-environment-art.html">环境美术史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-furniture.html">家具史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-encounter-design.html">遭遇战设计史</a>
-<a class="" style="--depth:2" href="studies__overview.html">🔍 如何研究一个关卡</a>
-<a class="" style="--depth:2" href="studies__sp.html">单人关卡研究</a>
-<a class="" style="--depth:3" href="studies__sp__undead-burg.html">不死镇 (Dark Souls 1)</a>
-<a class="" style="--depth:3" href="studies__sp__assassins.html">Assassins (Thief 1)</a>
-<a class="" style="--depth:3" href="studies__sp__cradle.html">(存根) The Cradle (Thief 3)</a>
-<a class="" style="--depth:3" href="studies__sp__sapienza.html">(存根) Sapienza (Hitman)</a>
-<a class="" style="--depth:3" href="studies__sp__silent-cartographer.html">(存根) Silent Cartographer (Halo 1)</a>
-<a class="" style="--depth:2" href="studies__mp.html">多人关卡研究</a>
-<a class="" style="--depth:3" href="studies__mp__chill-out.html">Chill Out (Halo 1)</a>
-<a class="" style="--depth:3" href="studies__mp__de_dust2.html">(存根) de_dust2 (Counter-Strike)</a>
-<a class="" style="--depth:2" href="studies__irl.html">现实空间研究</a>
-<a class="" style="--depth:3" href="studies__irl__disneyland.html">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" style="--depth:3" href="studies__irl__stub-las-vegas-nevada-usa.html">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" style="--depth:2" href="learning__notes.html">🎒 给教学者的笔记</a>
-<a class="" style="--depth:2" href="learning__projects.html">项目计划</a>
-<a class="" style="--depth:3" href="learning__projects__classic-combat.html">经典战斗</a>
-<a class="" style="--depth:3" href="learning__projects__unfinished-wip-pages.html">未完成 WIP 页面</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-combat.html">现代战斗</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-stealth.html">现代潜行</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html">练习：直射光</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html">练习：2D 白板图</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html">关卡设计作品集</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__adaptation.html">设计测试：改编</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html">练习：布局</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__verticality.html">练习：垂直性</a>
-<a class="" style="--depth:2" href="appendix__tools.html">工具</a>
-<a class="" style="--depth:3" href="appendix__tools__trenchbroom.html">TrenchBroom</a>
-<a class="" style="--depth:2" href="appendix__resources.html">资产与资源</a>
-<a class="" style="--depth:3" href="appendix__resources__talks.html">推荐演讲</a>
-<a class="" style="--depth:3" href="appendix__resources__books.html">推荐书目</a>
-<a class="" style="--depth:3" href="appendix__resources__quake.html">Quake 资源</a>
-<a class="" style="--depth:4" href="appendix__resources__quake__how-to-package.html">如何打包 Quake 地图/Mod</a>
-<a class="" style="--depth:3" href="appendix__resources__formats.html">文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__fgd.html">FGD 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__map.html">MAP 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__mdl.html">MDL 文件格式</a>
-<a class="" style="--depth:2" href="appendix__communities.html">社区</a>
-<a class="" style="--depth:2" href="appendix__about.html">关于本书与作者</a>
-<a class="" style="--depth:2" href="appendix__license.html">许可与版权</a></nav>
-  </aside>
-  <main class="page">
-    <div class="topbar">
-      <a href="https://book.leveldesignbook.com/process/layout/typology">查看原文</a>
-      <a href="https://book.leveldesignbook.com">原站首页</a>
-    </div>
-    <div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-    <article><header><nav><ol><li></li><li></li></ol></nav><h1>类型学</h1><p>关卡设计的抽象布局模式，并附有具体示例</p></header><div><div><h2><div><a href="#whats-a-typology"></a></div><div>什么是类型学？</div></h2><p>一个 <strong>类型学</strong> 是一种布局设计模式，一种帮助我们思考布局的类系统。它 <i>摘要</i> 布局——它简化并概括了结构。</p><div><div></div><div><p><strong>为什么说“类型学”而不是“类型”？ </strong>这不仅仅是学者自命不凡。添加“-ology”部分提醒我们，它是一个很大的研究领域，是一个与其他思想相关的思想体系。 “类型”太笼统了。</p></div></div><div><div><div><picture><div><img height="1063" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FxfRLuQ0NNUImorA77zDE%252FLDB_Typology_DensityArchitecture_MajaBaldea.jpg%3Falt%3Dmedia%26token%3D8ead8433-3018-4e24-8ca9-7da4fa4cf55e&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=1abd2fe1&amp;sv=2" width="2598"/></div><figcaption>建筑图“密集住宅建筑的形式类型”， <span><a href="https://densityarchitecture.wordpress.com/2013/01/21/formal-typologies-of-dense-residential-architectures/">作者：Maja Baldea（来自密度建筑博客）</a></span></figcaption></picture></div></div></div><p>在上面的现实世界建筑图中，Maja Baldea 思考了组织公寓楼的不同方式。她 <i>摘要</i> （简化、概括）这些建筑物是无窗的街区，因为她对小细节不感兴趣，她考虑的是整体形状， <span><a href="process__blockout__massing.html">聚集</a></span>， 和 <span><a href="process__blockout__massing__composition.html">组成</a></span>, 至 <strong>分类不同类型</strong> 的住宅楼。</p><p>类型学可用于：</p><ul><li><div><div></div></div><div><p>对不同类型的关卡设计进行分类</p></div></li><li><div><div></div></div><div><p>关于地图的推理 <span><a href="process__combat__balance.html">平衡</a></span> 和 <span><a href="process__combat__encounter.html">遭遇战</a></span> 设计</p></div></li><li><div><div></div></div><div><p>开放世界/大逃杀类型的项目，因为不同的类型通常会导致不同的游戏内容</p></div></li><li><div><div></div></div><div><p>共享设计语言，有助于协作和团队合作</p></div></li></ul><h2><div><a href="#elements"></a></div><div>元素</div></h2><p>除了墙壁、地板和天花板之外，还有一些常见的 <i>游戏元素</i> 常见于大多数关卡：</p><ul><li><div><div></div></div><div><p><strong></strong><span><a href="process__combat__cover.html"><strong>掩体</strong></a></span>。半掩体与全掩体，硬掩体与软掩体。</p></div></li><li><div><div></div></div><div><p><strong></strong><span><a href="process__layout__typology__gates.html"><strong>门与关口</strong></a></span>。硬门与软门、锁和钥匙、前向门控与后向门控。</p></div></li></ul><h2><div><a href="#room-typologies"></a></div><div>房间类型</div></h2><p><strong>房间类型</strong> 是关卡单个区域/“块”的通用模式。 </p><div><div></div><div><p>我们使用“房间”作为“空间”的通用术语。房间可以是花园、洞穴等。这可以追溯到 90 年代的游戏引擎，当时室外空间是带有天空天花板的房间。</p></div></div><h3><div><a href="#corridor"></a></div><div>走廊</div></h3><div><div><div><div><img height="360" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Lv6YGpBQxsQzANptpRi%252F-Lv6vQsjMSxXDUp7QepP%252Fleveldesignbook_corridor.png%3Falt%3Dmedia%26token%3D678486bc-d308-4500-8c74-74f2506d5ed5&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=47e5eda8&amp;sv=2" width="1280"/></div></div></div></div><p>直线穿过空间，就像走廊、河流或峡谷。任何通过可预测的空间序列具有单向轨迹的物体都可以被视为走廊。</p><ul><li><div><div></div></div><div><p>高度的作者身份、控制力和确定性。您知道玩家必须去哪里以及可能需要多长时间。</p></div></li><li><div><div></div></div><div><p>为了加快速度，请添加向下的斜坡、单向下降和明亮的照明</p></div></li><li><div><div></div></div><div><p>要减慢速度，请添加侧面区域、壁龛和斑点照明</p></div></li></ul><h4><div><a href="#corridor-example-house-in-p.t"></a></div><div>走廊示例：P.T 的房屋</div></h4><p>第一人称恐怖游戏 P.T. （2014）让玩家一遍又一遍地走在同一个走廊上，循环机制会在玩家打开最后的门时将其传送回起点。这是对走廊的有力利用，如果采用更开放的布局，则会受到影响。</p><div><div><div><picture><div><img height="925" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Lv6YGpBQxsQzANptpRi%252F-Lv6tE3LQLOrPYmjcvan%252Fleveldesignbook_pt.png%3Falt%3Dmedia%26token%3De21be228-d0c9-4173-bfb3-1c214543a816&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=98c10cb5&amp;sv=2" width="1500"/></div><figcaption>P.T. 的平面图和关键路径(2014) 小岛制作所；要完成游戏，玩家必须解决隐藏的谜题并循环穿过同一组走廊至少 12 次</figcaption></picture></div></div></div><p>请注意对视线的强烈控制，迫使玩家凝视角落的窗户，或者绕道进入浴室注意镜子和水槽。恐怖比喻和不祥的壁龛会白盒玩家移动得太快，而线性和熟悉感最终会带来一种不祥、恐​​惧和厄运的感觉。我们能做的就是越陷越深，无处可逃。 </p><h3><div><a href="#switchback-hairpin"></a></div><div>之字形/发夹形</div></h3><p>一条死胡同走廊，当你原路返回时，有一个可见的出口。</p><ul><li><div><div></div></div><div><p>与走廊类似，提供大量控制和作者身份</p></div></li><li><div><div></div></div><div><p>遮挡出口会鼓励玩家首先探索死胡同</p></div></li><li><div><div></div></div><div><p>短暂的困惑，轻微的探索感和导航感</p></div></li></ul><p>之字形示例：《亲爱的以斯帖》中的洞穴</p><h3><div><a href="#ring-around-the-rosie-combat-bowl"></a></div><div>围绕罗西/战斗碗</div></h3><p>小型开放区域 <span><a href="process__combat__cover.html">掩体</a></span> 在中间，通常像柱子或圆柱一样完全覆盖，导致旋转/旋转流。在快节奏的战斗游戏中尤其常见，玩家可以围绕中央掩体“跳舞”/绕圈扫射，同时阻挡敌人的攻击。</p><ul><li><div><div></div></div><div><p>添加单向下降以强制特定的流动，和/或引入一些垂直性</p></div></li></ul><h3><div><a href="#arena-point-of-interest-poi"></a></div><div>竞技场/兴趣点 (POI)</div></h3><div><div><div><div><img height="680" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-LvCPUfM6ZFrYpR7MOEF%252F-LvCPYN0y1Fy8Bw47a79%252Fleveldesignbook_arena_simpler2.png%3Falt%3Dmedia%26token%3Dac70f80e-5481-403e-8f8a-685407cf7fac&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=874acfef&amp;sv=2" width="1200"/></div></div></div></div><p>安 <strong>竞技场</strong> 是一个有几条车道的开放区域 <span><a href="process__layout__flow__circulation.html">循环</a></span> 还有一些 <span><a href="process__combat__cover.html">掩体</a></span> 在中间。</p><ul><li><div><div></div></div><div><p>开放世界和大逃杀设计师使用 <strong>兴趣点 (POI)</strong>，由具有多个入口和出口的大型地标锚定的大型竞技场</p></div></li><li><div><div></div></div><div><p>在单人游戏中，竞技场通常需要 <span><a href="process__layout__typology__gates.html">门控</a></span>;白盒玩家提前离开竞技场，同时也关闭入口以防止玩家将所有敌人拉入阻塞点</p></div></li></ul><h4><div><a href="#example-dead-simple-in-doom-2"></a></div><div>示例：《毁灭战士 2》中的极其简单</div></h4><p>（TODO：绘制简单的平面图和关键路径）</p><h2><div><a href="#level-typologies"></a></div><div>关卡类型</div></h2><p><strong>关卡类型</strong> 是多个房间/整个楼层的通用布局模式。</p><h3><div><a href="#hub-and-spoke"></a></div><div>轮辐式</div></h3><p>较大的多区域图案，具有中心区域（中心）和从其延伸的几个较小区域/通道（辐条）。要探索不同的辐条，玩家必须返回中心。</p><ul><li><div><div></div></div><div><p>为不同的辐条提供统一的标识，向结构传达逻辑</p></div></li><li><div><div></div></div><div><p>每次访问都需要大量工作来更新中心，否则感觉就像是在原路返回</p></div></li><li><div><div></div></div><div><p>可以是一个有用的节奏工具，返回中心感觉像是一种放松的奖励</p></div></li></ul><p></p><ul><li><div><div></div></div><div><p>门控集线器一开始就挡住了大多数辐条，玩家逐渐解锁快捷方式</p></div></li><li><div><div></div></div><div><p></p></div></li></ul><h4><div><a href="#example-medical-pavilion-in-bioshock-1"></a></div><div>示例：《生化奇兵 1》中的医疗馆</div></h4><p>《生化奇兵 1》具有多个轴辐式结构。最初的医馆第一章</p><h3><div><a href="#loopback"></a></div><div>环回</div></h3><p>（待办事项：图表）</p><p>一种自我循环的线性进程，在开放世界地下城中最常见。</p><ul><li><div><div></div></div><div><p>类似于走廊：大量的控制和确定性，减少玩家的犹豫不决</p></div></li><li><div><div></div></div><div><p>帮助一个区域在结构上感觉非线性且合理，即使进展最初是线性的</p></div></li><li><div><div></div></div><div><p>微妙的环回感觉就像关闭自然不可避免的循环</p></div></li><li><div><div></div></div><div><p>过于方便的环回会让人感觉像是为了恳求玩家的感激而做作的捷径，因此感觉不自然或难以置信<!-- --></p></div></li></ul><h4><div><a href="#example-some-dungeon-in-skyrim"></a></div><div>示例：《天际》中的（某些地下城）</div></h4><p>（示例：天际布局和屏幕截图）</p><p>开放世界奇幻角色扮演游戏《天际》拥有许多地下城，玩家在完成地下城后必须返回主世界。然而，在一个区域被清除后，回溯通常会让人感到单调或死记硬背……（TODO：完成）</p><h3><div><a href="#branching-chokepoints-string-of-pearls"></a></div><div>分支阻塞点/珍珠串</div></h3><h3><div><a href="#pass-through"></a></div><div>直通</div></h3><h3><div><a href="#time-cave"></a></div><div>时间洞穴</div></h3><h2><div><a href="#multiplayer-typologies"></a></div><div>多人游戏类型</div></h2><p>多人游戏布局往往更加非线性、迂回和双向，强调可重用区域的高重玩价值。许多基于团队的游戏都设有基地/重生室，玩家可以安全地加入游戏，以及团队进攻和防守的占领点。</p><h3><div><a href="#base-spawn-room"></a></div><div>基地/产卵室</div></h3><h3><div><a href="#no-mans-land"></a></div><div>无人之地</div></h3><h3><div><a href="#sniper-nest-sniper-alley"></a></div><div>狙击手巢穴/狙击手巷</div></h3><h3><div><a href="#figure-8"></a></div><div>图8</div></h3><p>最常见于经典CTF地图、血峡谷等</p><h3><div><a href="#connector-pivot"></a></div><div>连接器/枢轴</div></h3><p>在具有基地和通往占领点的路线的多人团队游戏中</p><p>示例：反恐精英：全球攻势</p><h3><div><a href="#three-lane"></a></div><div>三车道</div></h3><p>例如：英雄联盟、DOTA、使命召唤：现代战争...在 CS:GO 中也很常见（每个炸弹点 1 条车道，中间连接器车道）</p><p></p><h2><div><a href="#against-typology"></a></div><div>反对类型学？</div></h2><p>一旦你对某些东西进行了分类，你就有可能陷入这些分类的限制之中。有时，忽略类型和拒绝分类可能会更有帮助。</p><h2><div><a href="#to-review"></a></div><div>要审查...</div></h2><p>一个 <strong>类型学</strong> 是一种对不同类别的关卡布局进行分类的方法。这些单词和标签帮助我们讨论和思考布局。</p><p><strong>房间类型</strong> 是用于设计单个区域的模式，例如走廊、之字形、玫瑰花环/战斗碗和竞技场/兴趣点。</p><p><strong>关卡类型</strong> 是按顺序排列多个房间的模式，如环回、直通、分支和瓶颈、轴辐式和时间洞穴。</p><h2><div><a href="#further-reading-sources"></a></div><div>进一步阅读/来源</div></h2><ul><li><div><div></div></div><div><p> <span><a href="https://en.wikipedia.org/wiki/A_Pattern_Language">《一种模式语言》</a></span> (1977) 由建筑师克里斯托弗·亚历山大等人设计。是当今现代建筑和城市规划的经典类型学手册，开创了新城市主义运动。</p></div></li><li><div><div></div></div><div><p><span><a href="https://medium.com/@tlukejones/on-the-three-typologies-ed0b5747fd9c">《论‘三种类型’》</a></span> (2017) 建筑师卢克·琼斯 (Luke Jones) 是一篇精彩的文章，讲述了建筑师仍然不太确定如何对建筑进行分类。</p></div></li></ul><p></p></div></div></article>
-    <div class="page-links"><a class="page-link" href="process__layout__parti.html"><span>上一页</span>Parti：概念布局</a><a class="page-link" href="process__layout__typology__gates.html"><span>下一页</span>门与关口</a></div>
-  </main>
+<aside class="sidebar">
+<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
+<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
+<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
+<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
+<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
+<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
+<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
+<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
+<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
+<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
+<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
+<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
+<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
+<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
+<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
+<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
+<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
+<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
+<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
+<a class="active" href="process__layout__typology.html" style="--depth:3">类型学</a>
+<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
+<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
+<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
+<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
+<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
+<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
+<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
+<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
+<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
+<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
+<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
+<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
+<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
+<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
+<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
+<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
+<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
+<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
+<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
+<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
+<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
+<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
+<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
+<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
+<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
+<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
+<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
+<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
+<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
+<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
+<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
+<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
+<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
+<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
+<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
+<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
+<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
+<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
+<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
+<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
+<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
+<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
+<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
+<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
+<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
+<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
+<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
+<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
+<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
+<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
+<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
+<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
+<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
+<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
+<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
+<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
+<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
+<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
+<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
+<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
+<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
+<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
+<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
+<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
+<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
+</aside>
+<main class="page">
+<div class="topbar">
+<a href="https://book.leveldesignbook.com/process/layout/typology">查看原文</a>
+<a href="https://book.leveldesignbook.com">原站首页</a>
+</div>
+<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+<article><header><nav><ol><li></li><li></li></ol></nav><h1>类型学</h1><p>关卡设计的抽象布局模式，并附有具体示例</p></header><div><div><h2><div><a href="#whats-a-typology"></a></div><div>什么是类型学？</div></h2><p>一个 <strong>类型学</strong> 是一种布局设计模式，一种帮助我们思考布局的类系统。它 <i>摘要</i> 布局——它简化并概括了结构。</p><div><div></div><div><p><strong>为什么说“类型学”而不是“类型”？ </strong>这不仅仅是学者自命不凡。添加“-ology”部分提醒我们，它是一个很大的研究领域，是一个与其他思想相关的思想体系。 “类型”太笼统了。</p></div></div><div><div><div><picture><div><img height="1063" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FxfRLuQ0NNUImorA77zDE%252FLDB_Typology_DensityArchitecture_MajaBaldea.jpg%3Falt%3Dmedia%26token%3D8ead8433-3018-4e24-8ca9-7da4fa4cf55e&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=1abd2fe1&amp;sv=2" width="2598"/></div><figcaption>建筑图“密集住宅建筑的形式类型”， <span><a href="https://densityarchitecture.wordpress.com/2013/01/21/formal-typologies-of-dense-residential-architectures/">作者：Maja Baldea（来自密度建筑博客）</a></span></figcaption></picture></div></div></div><p>在上面的现实世界建筑图中，Maja Baldea 思考了组织公寓楼的不同方式。她 <i>摘要</i> （简化、概括）这些建筑物是无窗的街区，因为她对小细节不感兴趣，她考虑的是整体形状， <span><a href="process__blockout__massing.html">体块</a></span>， 和 <span><a href="process__blockout__massing__composition.html">组成</a></span>, 至 <strong>分类不同类型</strong> 的住宅楼。</p><p>类型学可用于：</p><ul><li><div><div></div></div><div><p>对不同类型的关卡设计进行分类</p></div></li><li><div><div></div></div><div><p>关于地图的推理 <span><a href="process__combat__balance.html">平衡</a></span> 和 <span><a href="process__combat__encounter.html">遭遇战</a></span> 设计</p></div></li><li><div><div></div></div><div><p>开放世界/大逃杀类型的项目，因为不同的类型通常会导致不同的游戏内容</p></div></li><li><div><div></div></div><div><p>共享设计语言，有助于协作和团队合作</p></div></li></ul><h2><div><a href="#elements"></a></div><div>元素</div></h2><p>除了墙壁、地板和天花板之外，还有一些常见的 <i>游戏元素</i> 常见于大多数关卡：</p><ul><li><div><div></div></div><div><p><strong></strong><span><a href="process__combat__cover.html"><strong>掩体</strong></a></span>。半掩体与全掩体，硬掩体与软掩体。</p></div></li><li><div><div></div></div><div><p><strong></strong><span><a href="process__layout__typology__gates.html"><strong>门与关口</strong></a></span>。硬门与软门、锁和钥匙、前向门控与后向门控。</p></div></li></ul><h2><div><a href="#room-typologies"></a></div><div>房间类型</div></h2><p><strong>房间类型</strong> 是关卡单个区域/“块”的通用模式。 </p><div><div></div><div><p>我们使用“房间”作为“空间”的通用术语。房间可以是花园、洞穴等。这可以追溯到 90 年代的游戏引擎，当时室外空间是带有天空天花板的房间。</p></div></div><h3><div><a href="#corridor"></a></div><div>走廊</div></h3><div><div><div><div><img height="360" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Lv6YGpBQxsQzANptpRi%252F-Lv6vQsjMSxXDUp7QepP%252Fleveldesignbook_corridor.png%3Falt%3Dmedia%26token%3D678486bc-d308-4500-8c74-74f2506d5ed5&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=47e5eda8&amp;sv=2" width="1280"/></div></div></div></div><p>直线穿过空间，就像走廊、河流或峡谷。任何通过可预测的空间序列具有单向轨迹的物体都可以被视为走廊。</p><ul><li><div><div></div></div><div><p>高度的作者身份、控制力和确定性。您知道玩家必须去哪里以及可能需要多长时间。</p></div></li><li><div><div></div></div><div><p>为了加快速度，请添加向下的斜坡、单向下降和明亮的照明</p></div></li><li><div><div></div></div><div><p>要减慢速度，请添加侧面区域、壁龛和斑点照明</p></div></li></ul><h4><div><a href="#corridor-example-house-in-p.t"></a></div><div>走廊示例：P.T 的房屋</div></h4><p>第一人称恐怖游戏 P.T. （2014）让玩家一遍又一遍地走在同一个走廊上，循环机制会在玩家打开最后的门时将其传送回起点。这是对走廊的有力利用，如果采用更开放的布局，则会受到影响。</p><div><div><div><picture><div><img height="925" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Lv6YGpBQxsQzANptpRi%252F-Lv6tE3LQLOrPYmjcvan%252Fleveldesignbook_pt.png%3Falt%3Dmedia%26token%3De21be228-d0c9-4173-bfb3-1c214543a816&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=98c10cb5&amp;sv=2" width="1500"/></div><figcaption>P.T. 的平面图和主动线(2014) 小岛制作所；要完成游戏，玩家必须解决隐藏的谜题并循环穿过同一组走廊至少 12 次</figcaption></picture></div></div></div><p>请注意对视线的强烈控制，迫使玩家凝视角落的窗户，或者绕道进入浴室注意镜子和水槽。恐怖比喻和不祥的壁龛会白盒玩家移动得太快，而线性和熟悉感最终会带来一种不祥、恐​​惧和厄运的感觉。我们能做的就是越陷越深，无处可逃。 </p><h3><div><a href="#switchback-hairpin"></a></div><div>之字形/发夹形</div></h3><p>一条死胡同走廊，当你原路返回时，有一个可见的出口。</p><ul><li><div><div></div></div><div><p>与走廊类似，提供大量控制和作者身份</p></div></li><li><div><div></div></div><div><p>遮挡出口会鼓励玩家首先探索死胡同</p></div></li><li><div><div></div></div><div><p>短暂的困惑，轻微的探索感和导航感</p></div></li></ul><p>之字形示例：《亲爱的以斯帖》中的洞穴</p><h3><div><a href="#ring-around-the-rosie-combat-bowl"></a></div><div>围绕罗西/战斗碗</div></h3><p>小型开放区域 <span><a href="process__combat__cover.html">掩体</a></span> 在中间，通常像柱子或圆柱一样完全覆盖，导致旋转/旋转流。在快节奏的战斗游戏中尤其常见，玩家可以围绕中央掩体“跳舞”/绕圈扫射，同时阻挡敌人的攻击。</p><ul><li><div><div></div></div><div><p>添加单向下降以强制特定的流动，和/或引入一些纵向/垂直空间</p></div></li></ul><h3><div><a href="#arena-point-of-interest-poi"></a></div><div>竞技场/兴趣点 (POI)</div></h3><div><div><div><div><img height="680" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-LvCPUfM6ZFrYpR7MOEF%252F-LvCPYN0y1Fy8Bw47a79%252Fleveldesignbook_arena_simpler2.png%3Falt%3Dmedia%26token%3Dac70f80e-5481-403e-8f8a-685407cf7fac&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=874acfef&amp;sv=2" width="1200"/></div></div></div></div><p>安 <strong>竞技场</strong> 是一个有几条通路的开放区域 <span><a href="process__layout__flow__circulation.html">循环</a></span> 还有一些 <span><a href="process__combat__cover.html">掩体</a></span> 在中间。</p><ul><li><div><div></div></div><div><p>开放世界和大逃杀设计师使用 <strong>兴趣点 (POI)</strong>，由具有多个入口和出口的大型地标锚定的大型竞技场</p></div></li><li><div><div></div></div><div><p>在单人游戏中，竞技场通常需要 <span><a href="process__layout__typology__gates.html">门控</a></span>;白盒玩家提前离开竞技场，同时也关闭入口以防止玩家将所有敌人拉入阻塞点</p></div></li></ul><h4><div><a href="#example-dead-simple-in-doom-2"></a></div><div>示例：《毁灭战士 2》中的极其简单</div></h4><p>（TODO：绘制简单的平面图和主动线）</p><h2><div><a href="#level-typologies"></a></div><div>关卡类型</div></h2><p><strong>关卡类型</strong> 是多个房间/整个楼层的通用布局模式。</p><h3><div><a href="#hub-and-spoke"></a></div><div>轮辐式</div></h3><p>较大的多区域图案，具有中心区域（中心）和从其延伸的几个较小区域/通道（辐条）。要探索不同的辐条，玩家必须返回中心。</p><ul><li><div><div></div></div><div><p>为不同的辐条提供统一的标识，向结构传达逻辑</p></div></li><li><div><div></div></div><div><p>每次访问都需要大量工作来更新中心，否则感觉就像是在原路返回</p></div></li><li><div><div></div></div><div><p>可以是一个有用的节奏工具，返回中心感觉像是一种放松的奖励</p></div></li></ul><p></p><ul><li><div><div></div></div><div><p>门控集线器一开始就挡住了大多数辐条，玩家逐渐解锁快捷方式</p></div></li><li><div><div></div></div><div><p></p></div></li></ul><h4><div><a href="#example-medical-pavilion-in-bioshock-1"></a></div><div>示例：《生化奇兵 1》中的医疗馆</div></h4><p>《生化奇兵 1》具有多个轴辐式结构。最初的医馆第一章</p><h3><div><a href="#loopback"></a></div><div>环回</div></h3><p>（待办事项：图表）</p><p>一种自我循环的线性进程，在开放世界地下城中最常见。</p><ul><li><div><div></div></div><div><p>类似于走廊：大量的控制和确定性，减少玩家的犹豫不决</p></div></li><li><div><div></div></div><div><p>帮助一个区域在结构上感觉非线性且合理，即使进展最初是线性的</p></div></li><li><div><div></div></div><div><p>微妙的环回感觉就像关闭自然不可避免的循环</p></div></li><li><div><div></div></div><div><p>过于方便的环回会让人感觉像是为了恳求玩家的感激而做作的捷径，因此感觉不自然或难以置信<!-- --></p></div></li></ul><h4><div><a href="#example-some-dungeon-in-skyrim"></a></div><div>示例：《上古卷轴5：天际》中的（某些地下城）</div></h4><p>（示例：天际布局和屏幕截图）</p><p>开放世界奇幻角色扮演游戏《上古卷轴5：天际》拥有许多地下城，玩家在完成地下城后必须返回主世界。然而，在一个区域被清除后，回溯通常会让人感到单调或死记硬背……（TODO：完成）</p><h3><div><a href="#branching-chokepoints-string-of-pearls"></a></div><div>分支阻塞点/珍珠串</div></h3><h3><div><a href="#pass-through"></a></div><div>直通</div></h3><h3><div><a href="#time-cave"></a></div><div>时间洞穴</div></h3><h2><div><a href="#multiplayer-typologies"></a></div><div>多人游戏类型</div></h2><p>多人游戏布局往往更加非线性、迂回和双向，强调可重用区域的高重玩价值。许多基于团队的游戏都设有基地/重生室，玩家可以安全地加入游戏，以及团队进攻和防守的占领点。</p><h3><div><a href="#base-spawn-room"></a></div><div>基地/产卵室</div></h3><h3><div><a href="#no-mans-land"></a></div><div>无人之地</div></h3><h3><div><a href="#sniper-nest-sniper-alley"></a></div><div>狙击手巢穴/狙击手巷</div></h3><h3><div><a href="#figure-8"></a></div><div>图8</div></h3><p>最常见于经典CTF地图、血峡谷等</p><h3><div><a href="#connector-pivot"></a></div><div>连接器/枢轴</div></h3><p>在具有基地和通往占领点的路线的多人团队游戏中</p><p>示例：反恐精英：全球攻势</p><h3><div><a href="#three-lane"></a></div><div>三通路</div></h3><p>例如：英雄联盟、DOTA、使命召唤：现代战争...在 CS:GO 中也很常见（每个炸弹点 1 条通路，中间连接器通路）</p><p></p><h2><div><a href="#against-typology"></a></div><div>反对类型学？</div></h2><p>一旦你对某些东西进行了分类，你就有可能陷入这些分类的限制之中。有时，忽略类型和拒绝分类可能会更有帮助。</p><h2><div><a href="#to-review"></a></div><div>要审查...</div></h2><p>一个 <strong>类型学</strong> 是一种对不同类别的关卡布局进行分类的方法。这些单词和标签帮助我们讨论和思考布局。</p><p><strong>房间类型</strong> 是用于设计单个区域的模式，例如走廊、之字形、玫瑰花环/战斗碗和竞技场/兴趣点。</p><p><strong>关卡类型</strong> 是按顺序排列多个房间的模式，如环回、直通、分支和瓶颈、轴辐式和时间洞穴。</p><h2><div><a href="#further-reading-sources"></a></div><div>进一步阅读/来源</div></h2><ul><li><div><div></div></div><div><p> <span><a href="https://en.wikipedia.org/wiki/A_Pattern_Language">《一种模式语言》</a></span> (1977) 由建筑师克里斯托弗·亚历山大等人设计。是当今现代建筑和城市规划的经典类型学手册，开创了新城市主义运动。</p></div></li><li><div><div></div></div><div><p><span><a href="https://medium.com/@tlukejones/on-the-three-typologies-ed0b5747fd9c">《论‘三种类型’》</a></span> (2017) 建筑师卢克·琼斯 (Luke Jones) 是一篇精彩的文章，讲述了建筑师仍然不太确定如何对建筑进行分类。</p></div></li></ul><p></p></div></div></article>
+<div class="page-links"><a class="page-link" href="process__layout__parti.html"><span>上一页</span>设计概念草图</a><a class="page-link" href="process__layout__typology__gates.html"><span>下一页</span>门与关口</a></div>
+</main>
 </body>
 </html>

@@ -1,119 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MDL 文件格式 | The Level Design Book 中文版</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>MDL 文件格式 | The Level Design Book 中文版</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-  <aside class="sidebar">
-    <a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-    <nav><a class="" style="--depth:0" href="index.html">The Level Design Book 中文版</a>
-<a class="" style="--depth:1" href="introduction.html">✨ 什么是关卡设计</a>
-<a class="" style="--depth:2" href="process__overview.html">🗺️ 如何制作一个关卡</a>
-<a class="" style="--depth:2" href="process__preproduction.html">🧠 前期设计</a>
-<a class="" style="--depth:3" href="process__preproduction__pacing.html">节奏</a>
-<a class="" style="--depth:3" href="process__preproduction__research.html">调研</a>
-<a class="" style="--depth:3" href="process__preproduction__worldbuilding.html">世界构建</a>
-<a class="" style="--depth:3" href="process__preproduction__scope.html">范围控制</a>
-<a class="" style="--depth:2" href="process__combat.html">🔫 战斗</a>
-<a class="" style="--depth:3" href="process__combat__enemy.html">敌人设计</a>
-<a class="" style="--depth:3" href="process__combat__encounter.html">遭遇战</a>
-<a class="" style="--depth:3" href="process__combat__cover.html">掩体</a>
-<a class="" style="--depth:3" href="process__combat__balance.html">地图平衡</a>
-<a class="" style="--depth:2" href="process__layout.html">🛠️ 布局</a>
-<a class="" style="--depth:3" href="process__layout__flow.html">流动感</a>
-<a class="" style="--depth:4" href="process__layout__flow__circulation.html">循环动线</a>
-<a class="" style="--depth:4" href="process__layout__flow__verticality.html">垂直性</a>
-<a class="" style="--depth:3" href="process__layout__criticalpath.html">关键路径</a>
-<a class="" style="--depth:3" href="process__layout__parti.html">Parti：概念布局</a>
-<a class="" style="--depth:3" href="process__layout__typology.html">类型学</a>
-<a class="" style="--depth:4" href="process__layout__typology__gates.html">门与关口</a>
-<a class="" style="--depth:2" href="process__blockout.html">🏠 白盒</a>
-<a class="" style="--depth:3" href="process__blockout__massing.html">体量</a>
-<a class="" style="--depth:4" href="process__blockout__massing__landscape.html">景观地形</a>
-<a class="" style="--depth:4" href="process__blockout__massing__composition.html">构图</a>
-<a class="" style="--depth:4" href="process__blockout__massing__prospect-refuge.html">眺望-庇护</a>
-<a class="" style="--depth:3" href="process__blockout__metrics.html">尺度指标</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__modular.html">模块化套件设计</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__doom.html">DOOM 尺度</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__quake.html">Quake 尺度</a>
-<a class="" style="--depth:3" href="process__blockout__wayfinding.html">寻路与引导</a>
-<a class="" style="--depth:3" href="process__blockout__playtesting.html">试玩测试</a>
-<a class="" style="--depth:4" href="process__blockout__playtesting__persona.html">玩家画像</a>
-<a class="" style="--depth:2" href="process__scripting.html">📜 脚本</a>
-<a class="" style="--depth:3" href="process__scripting__nav.html">(存根) 导航</a>
-<a class="" style="--depth:3" href="process__scripting__doors.html">门</a>
-<a class="" style="--depth:2" href="process__lighting.html">☀️ 灯光</a>
-<a class="" style="--depth:3" href="process__lighting__three-point.html">三点布光</a>
-<a class="" style="--depth:3" href="process__lighting__d6-lighting.html">D6 灯光法</a>
-<a class="" style="--depth:3" href="process__lighting__darkness.html">黑暗场景灯光</a>
-<a class="" style="--depth:2" href="process__env-art.html">🏡 环境美术</a>
-<a class="" style="--depth:3" href="process__env-art__psychology.html">形状与色彩心理学</a>
-<a class="" style="--depth:3" href="process__env-art__texturing.html">材质</a>
-<a class="" style="--depth:3" href="process__env-art__storytelling.html">叙事</a>
-<a class="" style="--depth:3" href="process__env-art__optimization.html">优化</a>
-<a class="" style="--depth:2" href="process__release.html">🌈 发布</a>
-<a class="" style="--depth:2" href="culture__overview.html">🦜 作为文化的关卡设计</a>
-<a class="" style="--depth:2" href="culture__history-level-designer.html">关卡设计师简史</a>
-<a class="" style="--depth:2" href="culture__zero-player.html">零玩家关卡设计</a>
-<a class="" style="--depth:2" href="culture__unfinished-pages.html">未完成页面</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-architecture.html">建筑史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__structural-engineering-primer.html">结构工程入门</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-environment-art.html">环境美术史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-furniture.html">家具史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-encounter-design.html">遭遇战设计史</a>
-<a class="" style="--depth:2" href="studies__overview.html">🔍 如何研究一个关卡</a>
-<a class="" style="--depth:2" href="studies__sp.html">单人关卡研究</a>
-<a class="" style="--depth:3" href="studies__sp__undead-burg.html">不死镇 (Dark Souls 1)</a>
-<a class="" style="--depth:3" href="studies__sp__assassins.html">Assassins (Thief 1)</a>
-<a class="" style="--depth:3" href="studies__sp__cradle.html">(存根) The Cradle (Thief 3)</a>
-<a class="" style="--depth:3" href="studies__sp__sapienza.html">(存根) Sapienza (Hitman)</a>
-<a class="" style="--depth:3" href="studies__sp__silent-cartographer.html">(存根) Silent Cartographer (Halo 1)</a>
-<a class="" style="--depth:2" href="studies__mp.html">多人关卡研究</a>
-<a class="" style="--depth:3" href="studies__mp__chill-out.html">Chill Out (Halo 1)</a>
-<a class="" style="--depth:3" href="studies__mp__de_dust2.html">(存根) de_dust2 (Counter-Strike)</a>
-<a class="" style="--depth:2" href="studies__irl.html">现实空间研究</a>
-<a class="" style="--depth:3" href="studies__irl__disneyland.html">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" style="--depth:3" href="studies__irl__stub-las-vegas-nevada-usa.html">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" style="--depth:2" href="learning__notes.html">🎒 给教学者的笔记</a>
-<a class="" style="--depth:2" href="learning__projects.html">项目计划</a>
-<a class="" style="--depth:3" href="learning__projects__classic-combat.html">经典战斗</a>
-<a class="" style="--depth:3" href="learning__projects__unfinished-wip-pages.html">未完成 WIP 页面</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-combat.html">现代战斗</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-stealth.html">现代潜行</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html">练习：直射光</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html">练习：2D 白板图</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html">关卡设计作品集</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__adaptation.html">设计测试：改编</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html">练习：布局</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__verticality.html">练习：垂直性</a>
-<a class="" style="--depth:2" href="appendix__tools.html">工具</a>
-<a class="" style="--depth:3" href="appendix__tools__trenchbroom.html">TrenchBroom</a>
-<a class="" style="--depth:2" href="appendix__resources.html">资产与资源</a>
-<a class="" style="--depth:3" href="appendix__resources__talks.html">推荐演讲</a>
-<a class="" style="--depth:3" href="appendix__resources__books.html">推荐书目</a>
-<a class="" style="--depth:3" href="appendix__resources__quake.html">Quake 资源</a>
-<a class="" style="--depth:4" href="appendix__resources__quake__how-to-package.html">如何打包 Quake 地图/Mod</a>
-<a class="" style="--depth:3" href="appendix__resources__formats.html">文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__fgd.html">FGD 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__map.html">MAP 文件格式</a>
-<a class="active" style="--depth:4" href="appendix__resources__formats__mdl.html">MDL 文件格式</a>
-<a class="" style="--depth:2" href="appendix__communities.html">社区</a>
-<a class="" style="--depth:2" href="appendix__about.html">关于本书与作者</a>
-<a class="" style="--depth:2" href="appendix__license.html">许可与版权</a></nav>
-  </aside>
-  <main class="page">
-    <div class="topbar">
-      <a href="https://book.leveldesignbook.com/appendix/resources/formats/mdl">查看原文</a>
-      <a href="https://book.leveldesignbook.com">原站首页</a>
-    </div>
-    <div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-    <article><header><nav><ol><li></li><li></li><li></li></ol></nav><h1>MDL 文件格式</h1><p>如何解析 Quake 1 模型 (.MDL) 和示例 C 源代码以进行 3D 渲染</p></header><div><div><div><div></div><div><p><i>这是该页面的档案镜像 </i><span><a href="http://tfc.duke.free.fr/coding/mdl-specs-en.html"><i>“MDL 文件格式（Quake 的模型）”作者：David Henry</i></a></span><i>，发表于 2004 年 12 月 20 日（最后访问日期：2021 年 1 月 13 日）。已获得许可 </i><span><a href="https://www.gnu.org/licenses/fdl-1.3.html"><i>GNU 自由文档许可证</i></a></span><i>.</i></p></div></div><div><div></div><div><p><strong>这是一篇面向程序员的技术文件格式规范文章。</strong> </p><p>有关 3D 艺术家教程和文件，请参阅 <span><a href="appendix__resources__quake.html#modeling">Quake 资源 # 建模</a></span> 相反。</p></div></div><h2><div><a href="#introduction"></a></div><div>简介</div></h2><p>MDL 文件格式是 Quake（1996 年 6 月）中使用的模型格式。 MDL 模型文件的特征如下：</p><ul><li><div><div></div></div><div><p>模型的几何数据（三角形）；</p></div></li><li><div><div></div></div><div><p>8位纹理数据；</p></div></li><li><div><div></div></div><div><p>逐帧动画；</p></div></li></ul><p>一个 MDL 文件可以保存多个纹理。</p><p>MDL模型文件的扩展名是 <code>.mdl</code>。 MDL 文件是一个二进制文件，分为两部分：标头和数据。标头包含使用和操作数据所需的所有信息。</p><h2><div><a href="#variable-sizes"></a></div><div>尺寸可变</div></h2><p>本文档中使用的变量类型具有以下大小：</p><ul><li><div><div></div></div><div><p><strong>字符</strong>: 1 字节</p></div></li><li><div><div></div></div><div><p><strong>短</strong>: 2 字节</p></div></li><li><div><div></div></div><div><p><strong>整数</strong>: 4 字节</p></div></li><li><div><div></div></div><div><p><strong>浮动</strong>: 4 字节<!-- --></p></div></li><li><div><div></div></div><div><p><strong>优字节</strong>: 1 个无符号字节</p></div></li></ul><p>它们对应于 x86 架构上的 C 类型大小。如果您正在针对其他体系结构进行编译，请确保类型大小与这些大小相对应。</p><h3><div><a href="#endianess-issues"></a></div><div>字节顺序问题</div></h3><p>由于 MDL 文件格式是二进制格式，因此您必须处理字节顺序。 MDL 文件以小尾数法 (x86) 存储。如果您的目标是大端架构（PowerPC、SPARC...），或者只是希望您的程序可移植，则必须对从文件中读取的每个字或双字执行正确的转换。</p><h2><div><a href="#header"></a></div><div>标头</div></h2><p>标头是位于文件开头的结构：</p>$?<template></template>/$<p><code>ident</code> 是文件的幻数。它用于识别文件类型。 <code>ident</code> 必须等于 1330660425 或字符串“IDPO”。我们可以通过表达式获得这个数字 <code>(('2'&lt;&lt;24) + ('P'&lt;&lt;16) + ('D'&lt;&lt;8) + 'I')</code>.</p><p><code>version</code> 是文件格式的版本号，必须等于 6。</p><p><code>scale</code> 和 <code>translate</code> 需要获取模型的真实顶点坐标。 <code>scale</code> 是一个比例因子并且 <code>translate</code> 平移向量（或模型的原点）。您必须首先将各自的值相乘 <code>scale</code> 与顶点坐标，然后添加各自的值 <code>translate</code> 结果：</p>$?<template></template>/$<p>哪里 <code>i</code> 范围从 0 ou 2（x、y 和 z 坐标）。</p><p><code>boundingradius</code> 是整个模型可以容纳的球体的半径（例如用于碰撞检测）。</p><p><code>eyeposition</code> 是...眼睛的位置（如果模型是怪物或其他 NPC）。把它变成你想要的样子。</p><p><code>num_skins</code> 是文件中存在的纹理数量。 <code>skinwidth</code> 和 <code>skinheight</code> 分别是纹理的宽度和高度。所有纹理必须具有相同的大小。</p><p><code>num_verts</code> 是一帧的顶点数。
+<aside class="sidebar">
+<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
+<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
+<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
+<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
+<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
+<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
+<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
+<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
+<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
+<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
+<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
+<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
+<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
+<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
+<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
+<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
+<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
+<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
+<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
+<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
+<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
+<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
+<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
+<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
+<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
+<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
+<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
+<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
+<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
+<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
+<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
+<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
+<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
+<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
+<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
+<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
+<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
+<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
+<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
+<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
+<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
+<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
+<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
+<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
+<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
+<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
+<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
+<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
+<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
+<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
+<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
+<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
+<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
+<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
+<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
+<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
+<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
+<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
+<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
+<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
+<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
+<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
+<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
+<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
+<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
+<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
+<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
+<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
+<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
+<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
+<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
+<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
+<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
+<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
+<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
+<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
+<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
+<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
+<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
+<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
+<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
+<a class="active" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
+<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
+<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
+<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
+</aside>
+<main class="page">
+<div class="topbar">
+<a href="https://book.leveldesignbook.com/appendix/resources/formats/mdl">查看原文</a>
+<a href="https://book.leveldesignbook.com">原站首页</a>
+</div>
+<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+<article><header><nav><ol><li></li><li></li><li></li></ol></nav><h1>MDL 文件格式</h1><p>如何解析 《雷神之锤》1 模型 (.MDL) 和示例 C 源代码以进行 3D 渲染</p></header><div><div><div><div></div><div><p><i>这是该页面的档案镜像 </i><span><a href="http://tfc.duke.free.fr/coding/mdl-specs-en.html"><i>“MDL 文件格式（《雷神之锤》 的模型）”作者：David Henry</i></a></span><i>，发表于 2004 年 12 月 20 日（最后访问日期：2021 年 1 月 13 日）。已获得许可 </i><span><a href="https://www.gnu.org/licenses/fdl-1.3.html"><i>GNU 自由文档许可证</i></a></span><i>.</i></p></div></div><div><div></div><div><p><strong>这是一篇面向程序员的技术文件格式规范文章。</strong> </p><p>有关 3D 艺术家教程和文件，请参阅 <span><a href="appendix__resources__quake.html#modeling">《雷神之锤》资源 # 建模</a></span> 相反。</p></div></div><h2><div><a href="#introduction"></a></div><div>简介</div></h2><p>MDL 文件格式是 《雷神之锤》（1996 年 6 月）中使用的模型格式。 MDL 模型文件的特征如下：</p><ul><li><div><div></div></div><div><p>模型的几何数据（三角形）；</p></div></li><li><div><div></div></div><div><p>8位纹理数据；</p></div></li><li><div><div></div></div><div><p>逐帧动画；</p></div></li></ul><p>一个 MDL 文件可以保存多个纹理。</p><p>MDL模型文件的扩展名是 <code>.mdl</code>。 MDL 文件是一个二进制文件，分为两部分：标头和数据。标头包含使用和操作数据所需的所有信息。</p><h2><div><a href="#variable-sizes"></a></div><div>尺寸可变</div></h2><p>本文档中使用的变量类型具有以下大小：</p><ul><li><div><div></div></div><div><p><strong>字符</strong>: 1 字节</p></div></li><li><div><div></div></div><div><p><strong>短</strong>: 2 字节</p></div></li><li><div><div></div></div><div><p><strong>整数</strong>: 4 字节</p></div></li><li><div><div></div></div><div><p><strong>浮动</strong>: 4 字节<!-- --></p></div></li><li><div><div></div></div><div><p><strong>优字节</strong>: 1 个无符号字节</p></div></li></ul><p>它们对应于 x86 架构上的 C 类型大小。如果您正在针对其他体系结构进行编译，请确保类型大小与这些大小相对应。</p><h3><div><a href="#endianess-issues"></a></div><div>字节顺序问题</div></h3><p>由于 MDL 文件格式是二进制格式，因此您必须处理字节顺序。 MDL 文件以小尾数法 (x86) 存储。如果您的目标是大端架构（PowerPC、SPARC...），或者只是希望您的程序可移植，则必须对从文件中读取的每个字或双字执行正确的转换。</p><h2><div><a href="#header"></a></div><div>标头</div></h2><p>标头是位于文件开头的结构：</p>$?<template></template>/$<p><code>ident</code> 是文件的幻数。它用于识别文件类型。 <code>ident</code> 必须等于 1330660425 或字符串“IDPO”。我们可以通过表达式获得这个数字 <code>(('2'&lt;&lt;24) + ('P'&lt;&lt;16) + ('D'&lt;&lt;8) + 'I')</code>.</p><p><code>version</code> 是文件格式的版本号，必须等于 6。</p><p><code>scale</code> 和 <code>translate</code> 需要获取模型的真实顶点坐标。 <code>scale</code> 是一个比例因子并且 <code>translate</code> 平移向量（或模型的原点）。您必须首先将各自的值相乘 <code>scale</code> 与顶点坐标，然后添加各自的值 <code>translate</code> 结果：</p>$?<template></template>/$<p>哪里 <code>i</code> 范围从 0 ou 2（x、y 和 z 坐标）。</p><p><code>boundingradius</code> 是整个模型可以容纳的球体的半径（例如用于碰撞检测）。</p><p><code>eyeposition</code> 是...眼睛的位置（如果模型是怪物或其他 NPC）。把它变成你想要的样子。</p><p><code>num_skins</code> 是文件中存在的纹理数量。 <code>skinwidth</code> 和 <code>skinheight</code> 分别是纹理的宽度和高度。所有纹理必须具有相同的大小。</p><p><code>num_verts</code> 是一帧的顶点数。
 <code>num_tris</code> 是模型的三角形数量。
-<code>num_frames</code> 是模型的帧数。</p><h2><div><a href="#data-types"></a></div><div>数据类型</div></h2><h4><div><a href="#vector"></a></div><div>矢量</div></h4><p>该向量由三个浮动坐标 (x, y, z) 组成：</p>$?<template></template>/$<h4><div><a href="#texture-information"></a></div><div>纹理信息</div></h4><p>纹理数据紧接在文件中的标头之后。它可以是由单张图片或一组图片组成的纹理（动画纹理）。</p>$?<template></template>/$<p>或：</p>$?<template></template>/$<p><code>time</code> 是一个数组 <code>nb</code> 元素和 <code>data</code> 一个数组 <code>nb</code> 的数组 <code>skinwidth</code> * <code>skinheight</code> 元素（图片大小）。</p><p>数据图片包含在 <code>data</code> 数组并处于 8 位颜色索引模式。颜色图通常位于单独的 LMP 文件 (*.lmp) 中。 LMP 文件是二进制文件，仅包含 768 字节（24 位 256 种颜色）。它们易于使用：只需读取缓冲区中的整个文件即可完成。 （见 <span><a href="appendix__resources__formats__mdl.html#undefined">色彩图</a></span>)</p><p>有 <code>num_skins</code> 的对象 <code>mdl_skin_t</code> 键入或 <code>mdl_groupskin_t</code> 类型。</p><h4><div><a href="#texture-coordinates"></a></div><div>纹理坐标</div></h4><p>纹理坐标存储在结构中： <i>短</i> 整数。</p>$?<template></template>/$<p>纹理通常分为两块：一块用于模型的正面，另一块用于模型的背面。背面部分必须翻译为 <code>skinwidth/2</code> 从正面部分。</p><p><code>onseam</code> 指示顶点是否位于两块的边界上。</p><p>要获得实数 (s, t) 坐标（范围从 0.0 到 1.0），必须将坐标加上 0.5，然后将结果除以 <code>skinwidth</code> 为了 <code>s</code> 和 <code>skinheight</code> 为了 <code>t</code>.</p><p>有 <code>num_verts</code> (s, t) MDL 模型中的纹理坐标。纹理坐标数据位于纹理数据之后。</p><h4><div><a href="#triangles"></a></div><div>三角形</div></h4><p>每个三角形都有一个顶点索引数组和一个标志来指示它是正面三角形还是背面三角形。</p>$?<template></template>/$<p>如果属于背面三角形的顶点位于两块的边界上（<code>onseam</code> 是真的），你必须添加 <code>skinwidth/2</code> 到 <code>s</code> 为了纠正纹理坐标。</p><p>有 <code>num_tris</code> MDL 模型中的三角形。三角形数据遵循纹理坐标。文件中的数据。</p><h4><div><a href="#vertices"></a></div><div>顶点</div></h4><p>顶点由“压缩”3D 坐标和法线向量索引组成，每个坐标存储在一个字节中。法线向量数组存储在 <code>anorms.h</code> Quake 文件并以浮点形式保存 162 个向量（3 <i>浮动</i>）。 （见 <span><a href="appendix__resources__formats__mdl.html#anorms.h"><code>anorms.h</code></a></span>)</p>$?<template></template>/$<h4><div><a href="#frames"></a></div><div>镜框</div></h4><p>每个帧都有其顶点列表和一些其他特定信息。</p>$?<template></template>/$<p><code>bboxmin</code> 和 <code>bboxmax</code> 定义一个可以容纳模型的盒子。 <code>name</code> 是框架的名称。 <code>verts</code> 是框架的顶点列表。</p><p>框架可以是简单框架或框架组。我们可以知道它是一个简单的框架还是一个带有标志的组：</p>$?<template></template>/$<p>或：</p>$?<template></template>/$<p><code>time</code> 和 <code>frames</code> 是数组 <code>nb</code> 维度。 <code>min</code> 和 <code>max</code> 对应于帧组的所有简单帧中的最小和最大位置。 <code>time</code> 是每个简单帧的持续时间。</p><p>特别注意 <code>nb</code>，历史 MDL 文件规范文档中经常缺少该内容。根据 Sean May 的说法，省略它 <i>“将白盒正确解析具有没有 AI 控制的循环动画的 .mdl 文件（火把/火焰/一些带刺的射弹）。”</i></p><h2><div><a href="#reading-a-mdl-file"></a></div><div>读取 MDL 文件</div></h2><p>假设 <code>mdl_model_t</code> 是一个保存所有模型数据的结构， <code>*mdl</code> 一个指向 a 的指针 <code>mdl_model_t</code> 对象，此代码显示如何加载 MDL 模型文件：</p>$?<template></template>/$<p>注意：此代码无法处理带有组框架的 MDL 文件。</p><h2><div><a href="#rendering-the-model"></a></div><div>渲染模型</div></h2><p>这是如何绘制框架的示例 <code>n</code> 一个模型的 <code>mdl</code>:</p>$?<template></template>/$<h2><div><a href="#animation"></a></div><div>动画</div></h2><p>MDL 模型是逐帧动画的。帧是动画的屏幕截图。为了避免抖动和丑陋的动画，我们在两个连续帧（我们正在绘制的当前帧和下一帧）的顶点坐标之间使用线性插值。我们对法向量做同样的事情：</p>$?<template></template>/$<p><code>v</code> 是要绘制的最终顶点。 <code>interp</code> 是两帧之间的插值百分比。这是一个 <i>浮动</i> 范围从 0.0 到 1.0。当它等于1.0时， <code>current</code> 增加 1 并且 <code>interp</code> 重新初始化为 0.0。插值纹理坐标是没有用的，因为它们对于所有模型帧都是相同的。优选的是 <code>interp</code> 与程序每秒渲染帧数（fps）有关。</p>$?<template></template>/$<h2><div><a href="#constants"></a></div><div>常数</div></h2><p>以下是定义最大尺寸的一些常量值：</p><ul><li><div><div></div></div><div><p>三角形最大数量：2048</p></div></li><li><div><div></div></div><div><p>最大顶点数：1024</p></div></li><li><div><div></div></div><div><p>纹理坐标最大数量：1024</p></div></li><li><div><div></div></div><div><p>最大帧数：256<!-- --></p></div></li><li><div><div></div></div><div><p>预先计算的法向量数量：162</p></div></li></ul><h2><div><a href="#sample-c-code"></a></div><div>示例 C 代码</div></h2><h3><div><a href="#mdl.c"></a></div><div>mdl.c</div></h3><p>用于加载 MDL 文件的完整示例 C 代码。</p>$?<template></template>/$<h3><div><a href="#anorms.h"></a></div><div>异常.h</div></h3><p>定义所有可能的顶点法线的 C 头文件。 （见 <span><a href="appendix__resources__formats__mdl.html#vertices">顶点</a></span>)</p>$?<template></template>/$<h3><div><a href="#colormap"></a></div><div>色彩图</div></h3><p>这 <span><a href="https://quakewiki.org/wiki/Quake_palette">Quake 中的默认调色板</a></span>，在公共领域。 256 个 RGB 颜色值，每种颜色 3 个字节 = 总共 768 个字节。</p><ul><li><div><div></div></div><div><p>颜色 128-223 传统上仅用于球员模型衬衫/裤子定制</p></div></li><li><div><div></div></div><div><p>颜色255 <code>{159,  91,  83}</code> 保留用于 alpha 透明度。</p></div></li></ul>$?<template></template>/$</div></div></article>
-    <div class="page-links"><a class="page-link" href="appendix__resources__formats__map.html"><span>上一页</span>MAP 文件格式</a><a class="page-link" href="appendix__communities.html"><span>下一页</span>社区</a></div>
-  </main>
+<code>num_frames</code> 是模型的帧数。</p><h2><div><a href="#data-types"></a></div><div>数据类型</div></h2><h4><div><a href="#vector"></a></div><div>矢量</div></h4><p>该向量由三个浮动坐标 (x, y, z) 组成：</p>$?<template></template>/$<h4><div><a href="#texture-information"></a></div><div>纹理信息</div></h4><p>纹理数据紧接在文件中的标头之后。它可以是由单张图片或一组图片组成的纹理（动画纹理）。</p>$?<template></template>/$<p>或：</p>$?<template></template>/$<p><code>time</code> 是一个数组 <code>nb</code> 元素和 <code>data</code> 一个数组 <code>nb</code> 的数组 <code>skinwidth</code> * <code>skinheight</code> 元素（图片大小）。</p><p>数据图片包含在 <code>data</code> 数组并处于 8 位颜色索引模式。颜色图通常位于单独的 LMP 文件 (*.lmp) 中。 LMP 文件是二进制文件，仅包含 768 字节（24 位 256 种颜色）。它们易于使用：只需读取缓冲区中的整个文件即可完成。 （见 <span><a href="appendix__resources__formats__mdl.html#undefined">色彩图</a></span>)</p><p>有 <code>num_skins</code> 的对象 <code>mdl_skin_t</code> 键入或 <code>mdl_groupskin_t</code> 类型。</p><h4><div><a href="#texture-coordinates"></a></div><div>纹理坐标</div></h4><p>纹理坐标存储在结构中： <i>短</i> 整数。</p>$?<template></template>/$<p>纹理通常分为两块：一块用于模型的正面，另一块用于模型的背面。背面部分必须翻译为 <code>skinwidth/2</code> 从正面部分。</p><p><code>onseam</code> 指示顶点是否位于两块的边界上。</p><p>要获得实数 (s, t) 坐标（范围从 0.0 到 1.0），必须将坐标加上 0.5，然后将结果除以 <code>skinwidth</code> 为了 <code>s</code> 和 <code>skinheight</code> 为了 <code>t</code>.</p><p>有 <code>num_verts</code> (s, t) MDL 模型中的纹理坐标。纹理坐标数据位于纹理数据之后。</p><h4><div><a href="#triangles"></a></div><div>三角形</div></h4><p>每个三角形都有一个顶点索引数组和一个标志来指示它是正面三角形还是背面三角形。</p>$?<template></template>/$<p>如果属于背面三角形的顶点位于两块的边界上（<code>onseam</code> 是真的），你必须添加 <code>skinwidth/2</code> 到 <code>s</code> 为了纠正纹理坐标。</p><p>有 <code>num_tris</code> MDL 模型中的三角形。三角形数据遵循纹理坐标。文件中的数据。</p><h4><div><a href="#vertices"></a></div><div>顶点</div></h4><p>顶点由“压缩”3D 坐标和法线向量索引组成，每个坐标存储在一个字节中。法线向量数组存储在 <code>anorms.h</code> 《雷神之锤》 文件并以浮点形式保存 162 个向量（3 <i>浮动</i>）。 （见 <span><a href="appendix__resources__formats__mdl.html#anorms.h"><code>anorms.h</code></a></span>)</p>$?<template></template>/$<h4><div><a href="#frames"></a></div><div>镜框</div></h4><p>每个帧都有其顶点列表和一些其他特定信息。</p>$?<template></template>/$<p><code>bboxmin</code> 和 <code>bboxmax</code> 定义一个可以容纳模型的盒子。 <code>name</code> 是框架的名称。 <code>verts</code> 是框架的顶点列表。</p><p>框架可以是简单框架或框架组。我们可以知道它是一个简单的框架还是一个带有标志的组：</p>$?<template></template>/$<p>或：</p>$?<template></template>/$<p><code>time</code> 和 <code>frames</code> 是数组 <code>nb</code> 维度。 <code>min</code> 和 <code>max</code> 对应于帧组的所有简单帧中的最小和最大位置。 <code>time</code> 是每个简单帧的持续时间。</p><p>特别注意 <code>nb</code>，历史 MDL 文件规范文档中经常缺少该内容。根据 Sean May 的说法，省略它 <i>“将白盒正确解析具有没有 AI 控制的循环动画的 .mdl 文件（火把/火焰/一些带刺的射弹）。”</i></p><h2><div><a href="#reading-a-mdl-file"></a></div><div>读取 MDL 文件</div></h2><p>假设 <code>mdl_model_t</code> 是一个保存所有模型数据的结构， <code>*mdl</code> 一个指向 a 的指针 <code>mdl_model_t</code> 对象，此代码显示如何加载 MDL 模型文件：</p>$?<template></template>/$<p>注意：此代码无法处理带有组框架的 MDL 文件。</p><h2><div><a href="#rendering-the-model"></a></div><div>渲染模型</div></h2><p>这是如何绘制框架的示例 <code>n</code> 一个模型的 <code>mdl</code>:</p>$?<template></template>/$<h2><div><a href="#animation"></a></div><div>动画</div></h2><p>MDL 模型是逐帧动画的。帧是动画的屏幕截图。为了避免抖动和丑陋的动画，我们在两个连续帧（我们正在绘制的当前帧和下一帧）的顶点坐标之间使用线性插值。我们对法向量做同样的事情：</p>$?<template></template>/$<p><code>v</code> 是要绘制的最终顶点。 <code>interp</code> 是两帧之间的插值百分比。这是一个 <i>浮动</i> 范围从 0.0 到 1.0。当它等于1.0时， <code>current</code> 增加 1 并且 <code>interp</code> 重新初始化为 0.0。插值纹理坐标是没有用的，因为它们对于所有模型帧都是相同的。优选的是 <code>interp</code> 与程序每秒渲染帧数（fps）有关。</p>$?<template></template>/$<h2><div><a href="#constants"></a></div><div>常数</div></h2><p>以下是定义最大尺寸的一些常量值：</p><ul><li><div><div></div></div><div><p>三角形最大数量：2048</p></div></li><li><div><div></div></div><div><p>最大顶点数：1024</p></div></li><li><div><div></div></div><div><p>纹理坐标最大数量：1024</p></div></li><li><div><div></div></div><div><p>最大帧数：256<!-- --></p></div></li><li><div><div></div></div><div><p>预先计算的法向量数量：162</p></div></li></ul><h2><div><a href="#sample-c-code"></a></div><div>示例 C 代码</div></h2><h3><div><a href="#mdl.c"></a></div><div>mdl.c</div></h3><p>用于加载 MDL 文件的完整示例 C 代码。</p>$?<template></template>/$<h3><div><a href="#anorms.h"></a></div><div>异常.h</div></h3><p>定义所有可能的顶点法线的 C 头文件。 （见 <span><a href="appendix__resources__formats__mdl.html#vertices">顶点</a></span>)</p>$?<template></template>/$<h3><div><a href="#colormap"></a></div><div>色彩图</div></h3><p>这 <span><a href="https://quakewiki.org/wiki/Quake_palette">《雷神之锤》 中的默认调色板</a></span>，在公共领域。 256 个 RGB 颜色值，每种颜色 3 个字节 = 总共 768 个字节。</p><ul><li><div><div></div></div><div><p>颜色 128-223 传统上仅用于玩家模型衬衫/裤子定制</p></div></li><li><div><div></div></div><div><p>颜色255 <code>{159,  91,  83}</code> 保留用于 alpha 透明度。</p></div></li></ul>$?<template></template>/$</div></div></article>
+<div class="page-links"><a class="page-link" href="appendix__resources__formats__map.html"><span>上一页</span>MAP 文件格式</a><a class="page-link" href="appendix__communities.html"><span>下一页</span>社区</a></div>
+</main>
 </body>
 </html>

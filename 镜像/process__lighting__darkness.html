@@ -1,117 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>黑暗场景灯光 | The Level Design Book 中文版</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>黑暗场景灯光 | The Level Design Book 中文版</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-  <aside class="sidebar">
-    <a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-    <nav><a class="" style="--depth:0" href="index.html">The Level Design Book 中文版</a>
-<a class="" style="--depth:1" href="introduction.html">✨ 什么是关卡设计</a>
-<a class="" style="--depth:2" href="process__overview.html">🗺️ 如何制作一个关卡</a>
-<a class="" style="--depth:2" href="process__preproduction.html">🧠 前期设计</a>
-<a class="" style="--depth:3" href="process__preproduction__pacing.html">节奏</a>
-<a class="" style="--depth:3" href="process__preproduction__research.html">调研</a>
-<a class="" style="--depth:3" href="process__preproduction__worldbuilding.html">世界构建</a>
-<a class="" style="--depth:3" href="process__preproduction__scope.html">范围控制</a>
-<a class="" style="--depth:2" href="process__combat.html">🔫 战斗</a>
-<a class="" style="--depth:3" href="process__combat__enemy.html">敌人设计</a>
-<a class="" style="--depth:3" href="process__combat__encounter.html">遭遇战</a>
-<a class="" style="--depth:3" href="process__combat__cover.html">掩体</a>
-<a class="" style="--depth:3" href="process__combat__balance.html">地图平衡</a>
-<a class="" style="--depth:2" href="process__layout.html">🛠️ 布局</a>
-<a class="" style="--depth:3" href="process__layout__flow.html">流动感</a>
-<a class="" style="--depth:4" href="process__layout__flow__circulation.html">循环动线</a>
-<a class="" style="--depth:4" href="process__layout__flow__verticality.html">垂直性</a>
-<a class="" style="--depth:3" href="process__layout__criticalpath.html">关键路径</a>
-<a class="" style="--depth:3" href="process__layout__parti.html">Parti：概念布局</a>
-<a class="" style="--depth:3" href="process__layout__typology.html">类型学</a>
-<a class="" style="--depth:4" href="process__layout__typology__gates.html">门与关口</a>
-<a class="" style="--depth:2" href="process__blockout.html">🏠 白盒</a>
-<a class="" style="--depth:3" href="process__blockout__massing.html">体量</a>
-<a class="" style="--depth:4" href="process__blockout__massing__landscape.html">景观地形</a>
-<a class="" style="--depth:4" href="process__blockout__massing__composition.html">构图</a>
-<a class="" style="--depth:4" href="process__blockout__massing__prospect-refuge.html">眺望-庇护</a>
-<a class="" style="--depth:3" href="process__blockout__metrics.html">尺度指标</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__modular.html">模块化套件设计</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__doom.html">DOOM 尺度</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__quake.html">Quake 尺度</a>
-<a class="" style="--depth:3" href="process__blockout__wayfinding.html">寻路与引导</a>
-<a class="" style="--depth:3" href="process__blockout__playtesting.html">试玩测试</a>
-<a class="" style="--depth:4" href="process__blockout__playtesting__persona.html">玩家画像</a>
-<a class="" style="--depth:2" href="process__scripting.html">📜 脚本</a>
-<a class="" style="--depth:3" href="process__scripting__nav.html">(存根) 导航</a>
-<a class="" style="--depth:3" href="process__scripting__doors.html">门</a>
-<a class="" style="--depth:2" href="process__lighting.html">☀️ 灯光</a>
-<a class="" style="--depth:3" href="process__lighting__three-point.html">三点布光</a>
-<a class="" style="--depth:3" href="process__lighting__d6-lighting.html">D6 灯光法</a>
-<a class="active" style="--depth:3" href="process__lighting__darkness.html">黑暗场景灯光</a>
-<a class="" style="--depth:2" href="process__env-art.html">🏡 环境美术</a>
-<a class="" style="--depth:3" href="process__env-art__psychology.html">形状与色彩心理学</a>
-<a class="" style="--depth:3" href="process__env-art__texturing.html">材质</a>
-<a class="" style="--depth:3" href="process__env-art__storytelling.html">叙事</a>
-<a class="" style="--depth:3" href="process__env-art__optimization.html">优化</a>
-<a class="" style="--depth:2" href="process__release.html">🌈 发布</a>
-<a class="" style="--depth:2" href="culture__overview.html">🦜 作为文化的关卡设计</a>
-<a class="" style="--depth:2" href="culture__history-level-designer.html">关卡设计师简史</a>
-<a class="" style="--depth:2" href="culture__zero-player.html">零玩家关卡设计</a>
-<a class="" style="--depth:2" href="culture__unfinished-pages.html">未完成页面</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-architecture.html">建筑史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__structural-engineering-primer.html">结构工程入门</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-environment-art.html">环境美术史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-furniture.html">家具史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-encounter-design.html">遭遇战设计史</a>
-<a class="" style="--depth:2" href="studies__overview.html">🔍 如何研究一个关卡</a>
-<a class="" style="--depth:2" href="studies__sp.html">单人关卡研究</a>
-<a class="" style="--depth:3" href="studies__sp__undead-burg.html">不死镇 (Dark Souls 1)</a>
-<a class="" style="--depth:3" href="studies__sp__assassins.html">Assassins (Thief 1)</a>
-<a class="" style="--depth:3" href="studies__sp__cradle.html">(存根) The Cradle (Thief 3)</a>
-<a class="" style="--depth:3" href="studies__sp__sapienza.html">(存根) Sapienza (Hitman)</a>
-<a class="" style="--depth:3" href="studies__sp__silent-cartographer.html">(存根) Silent Cartographer (Halo 1)</a>
-<a class="" style="--depth:2" href="studies__mp.html">多人关卡研究</a>
-<a class="" style="--depth:3" href="studies__mp__chill-out.html">Chill Out (Halo 1)</a>
-<a class="" style="--depth:3" href="studies__mp__de_dust2.html">(存根) de_dust2 (Counter-Strike)</a>
-<a class="" style="--depth:2" href="studies__irl.html">现实空间研究</a>
-<a class="" style="--depth:3" href="studies__irl__disneyland.html">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" style="--depth:3" href="studies__irl__stub-las-vegas-nevada-usa.html">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" style="--depth:2" href="learning__notes.html">🎒 给教学者的笔记</a>
-<a class="" style="--depth:2" href="learning__projects.html">项目计划</a>
-<a class="" style="--depth:3" href="learning__projects__classic-combat.html">经典战斗</a>
-<a class="" style="--depth:3" href="learning__projects__unfinished-wip-pages.html">未完成 WIP 页面</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-combat.html">现代战斗</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-stealth.html">现代潜行</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html">练习：直射光</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html">练习：2D 白板图</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html">关卡设计作品集</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__adaptation.html">设计测试：改编</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html">练习：布局</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__verticality.html">练习：垂直性</a>
-<a class="" style="--depth:2" href="appendix__tools.html">工具</a>
-<a class="" style="--depth:3" href="appendix__tools__trenchbroom.html">TrenchBroom</a>
-<a class="" style="--depth:2" href="appendix__resources.html">资产与资源</a>
-<a class="" style="--depth:3" href="appendix__resources__talks.html">推荐演讲</a>
-<a class="" style="--depth:3" href="appendix__resources__books.html">推荐书目</a>
-<a class="" style="--depth:3" href="appendix__resources__quake.html">Quake 资源</a>
-<a class="" style="--depth:4" href="appendix__resources__quake__how-to-package.html">如何打包 Quake 地图/Mod</a>
-<a class="" style="--depth:3" href="appendix__resources__formats.html">文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__fgd.html">FGD 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__map.html">MAP 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__mdl.html">MDL 文件格式</a>
-<a class="" style="--depth:2" href="appendix__communities.html">社区</a>
-<a class="" style="--depth:2" href="appendix__about.html">关于本书与作者</a>
-<a class="" style="--depth:2" href="appendix__license.html">许可与版权</a></nav>
-  </aside>
-  <main class="page">
-    <div class="topbar">
-      <a href="https://book.leveldesignbook.com/process/lighting/darkness">查看原文</a>
-      <a href="https://book.leveldesignbook.com">原站首页</a>
-    </div>
-    <div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-    <article><header><nav><ol><li></li><li></li></ol></nav><h1>黑暗场景灯光</h1><p>如何在保持可读性的同时照亮夜间/傍晚场景以营造黑暗气氛</p></header><div><div><p>当为夜间或阴暗的低光条件照明场景时，游戏开发人员通常遵循电影行业惯例（<span><a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/HollywoodDarkness">《好莱坞黑暗》</a></span>): <strong>成功 </strong><i><strong>感觉</strong></i><strong> 黑暗，但实际上并不让它变暗。 </strong></p><p>早期的电影制片人采用“日夜交替”的技术拍摄夜景：在清晨拍摄，并用蓝色滤镜人为地使图像变暗。如今，人工照明和更好的相机意味着当代电影制作人也可以拍摄“夜对夜”的场景。一些电影摄影师（例如 <span><a href="https://twitter.com/steveyedlin/status/1201278088794923008">史蒂夫·耶德林 <i>利刃出鞘 (2019)</i></a></span>）甚至将这两种技术结合起来，将日间和夜间的照片合成在一起，创造出印象派的外观。</p><p>如果我们用漆黑的黑暗“准确地”照亮我们的关卡，那么玩家将看不到要去哪里并感到沮丧。</p><p> <i>   本页面建立在主要术语和概念的基础上 </i><span><a href="process__lighting.html"><i>灯光</i></a></span><i> 页。</i></p><h2><div><a href="#general-night-setup"></a></div><div>一般夜间设置</div></h2><p>在现实生活中，月光是白色的（来自太阳的反射光）......在电影和游戏中，月光是蓝色的。满月将投射出鲜明的投影阴影，阴天的夜晚将投射出很少的阴影</p><p>填充灯 = 昏暗、微妙的蓝色点光源，没有阴影和柔和的衰减</p><p>不要对所有阴影应用平坦环境；您希望某些阴影终止为 0% 黑色，否则您将无法使用完整的动态范围。使用定向环境</p><p>请记住：不要依赖深色反照率纹理来使场景变暗！让灯光营造出黑暗的感觉。如果将阴影刻录到纹理中，纹理的可重用性会降低，并且难以重新照明，并且会强制照明进入过亮范围以进行补偿。</p><p>边缘照明可强调轮廓，同时使大部分拍摄对象处于阴影中</p><p>由于对蓝色的依赖如此之多，蓝橙色很常见，但请尝试通过引入第三种颜色或调整色调范围来避免普通的蓝橙</p><div><div><div><picture><div><img height="979" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FYuZ03kyIfuuhQHxILase%252FLDB_Overwatch2_Numbani_LightingScenarios.jpg%3Falt%3Dmedia%26token%3D0ac49298-8aff-45b5-9aca-2827299acde2&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=9297845a&amp;sv=2" width="1772"/></div><figcaption>《守望先锋 2》中“Numbani”不同灯光场景的情绪板，由 Fabien Christin 拍摄 <span><a href="https://playoverwatch.com/en-gb/news/23674944/environment-states-in-overwatch-2-behind-the-scenes-with-the-engineering-team/">（来自 PlayOverwatch.com）</a></span></figcaption></picture></div></div></div><p>在《守望先锋 2》的上图中，请注意夜间照明场景中的亮度、对比度和调色板（右下）。是什么让夜景看起来像夜景？</p><ul><li><div><div></div></div><div><p>它实际上很亮；增加对比度和镜面反射使其感觉较暗</p></div></li><li><div><div></div></div><div><p>人物轮廓较暗，地平线较亮</p></div></li><li><div><div></div></div><div><p>这不仅仅是无聊的blorange；有很多紫色和黄色混合在一起</p></div></li></ul><h2><div><a href="#shadow-design"></a></div><div>阴影设计</div></h2><div><div><div><picture><div><img height="806" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MDGMBCgIsDexaRfEThI%252F-MDGMgoSaS_REtGHsivE%252FJamesGurney_LightShadowDiagram.jpg%3Falt%3Dmedia%26token%3D2a9bc34f-a5ed-4fa8-9bb8-d335829e3687&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=4c501357&amp;sv=2" width="1080"/></div><figcaption>James Gurney 的阴影图，来自 https://gurneyjourney.blogspot.com/2010/02/light-and-form-part-1_15.html</figcaption></picture></div></div></div><h2><div><a href="#against-hollywood-darkness-in-games"></a></div><div>对抗游戏中的“好莱坞黑暗”</div></h2><p>以“好莱坞黑暗”风格照亮您的游戏会带来更精致的商业感觉，与流行的主流视觉文化相匹配。</p><p>就像在电影中一样，一些艺术家有意避免这种风格及其含义。如果这种情绪不适合您项目的体验目标（即您想要制作一些令人不安、混乱、刺耳、视觉实验性的东西），那么您可能希望忽略本页上的大部分建议。</p><h3><div><a href="#lighting-as-mechanic"></a></div><div>照明作为机械师</div></h3><p>大量使用动态照明和手电筒的游戏，尤其是恐怖游戏，可能需要有选择地让高度紧张的场景进入漆黑的黑暗。</p><h2><div><a href="#sources-further-reading"></a></div><div>来源/进一步阅读</div></h2><ul><li><div><div></div></div><div><p><strong></strong><span><a href="https://www.youtube.com/watch?v=rNggiaosjuw"><strong>《如何为黑暗打光 | 5 种摄影技巧》</strong></a></span> 是由电影摄影师 Valentina Vee 撰写的 15 分钟精彩的夜景灯光和制作设计介绍。尽管她专注于电影行业技术，但她的大部分视觉思维也适用于游戏。</p></div></li><li><div><div></div></div><div><p><strong>"</strong><span><a href="https://www.youtube.com/watch?v=xks0kAeSW9Q&amp;list=PLdY77XvZ-l20ZeYtAtYx7n-wOHxkyQGog"><strong>在 Source 2 的 Hammer 中照亮夜间场景</strong></a></span><strong>"</strong> 是一个由 4 部分组成的 3.5 小时视频系列，其中环境美术家 <span><a href="https://www.helderpinto.com/">赫尔德·平托</a></span> （《孤岛危机》、《守望先锋》）通过大量解说照亮了葡萄牙夜晚的街景。他的大部分工作流程特定于 Source 2 的 Hammer 工具，但一般思想适用于任何工具或引擎。</p></div></li></ul></div></div></article>
-    <div class="page-links"><a class="page-link" href="process__lighting__d6-lighting.html"><span>上一页</span>D6 灯光法</a><a class="page-link" href="process__env-art.html"><span>下一页</span>🏡 环境美术</a></div>
-  </main>
+<aside class="sidebar">
+<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
+<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
+<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
+<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
+<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
+<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
+<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
+<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
+<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
+<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
+<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
+<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
+<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
+<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
+<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
+<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
+<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
+<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
+<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
+<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
+<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
+<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
+<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
+<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
+<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
+<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
+<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
+<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
+<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
+<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
+<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
+<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
+<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
+<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
+<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
+<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
+<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
+<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
+<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
+<a class="active" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
+<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
+<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
+<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
+<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
+<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
+<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
+<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
+<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
+<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
+<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
+<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
+<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
+<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
+<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
+<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
+<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
+<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
+<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
+<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
+<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
+<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
+<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
+<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
+<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
+<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
+<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
+<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
+<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
+<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
+<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
+<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
+<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
+<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
+<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
+<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
+<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
+<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
+<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
+<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
+<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
+<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
+<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
+<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
+<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
+<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
+</aside>
+<main class="page">
+<div class="topbar">
+<a href="https://book.leveldesignbook.com/process/lighting/darkness">查看原文</a>
+<a href="https://book.leveldesignbook.com">原站首页</a>
+</div>
+<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+<article><header><nav><ol><li></li><li></li></ol></nav><h1>黑暗场景灯光</h1><p>如何在保持可读性的同时照亮夜间/傍晚场景以营造黑暗气氛</p></header><div><div><p>当为夜间或阴暗的低光条件照明场景时，游戏开发人员通常遵循电影行业惯例（<span><a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/HollywoodDarkness">《好莱坞黑暗》</a></span>): <strong>成功 </strong><i><strong>感觉</strong></i><strong> 黑暗，但实际上并不让它变暗。 </strong></p><p>早期的电影制片人采用“日夜交替”的技术拍摄夜景：在清晨拍摄，并用蓝色滤镜人为地使图像变暗。如今，人工照明和更好的相机意味着当代电影制作人也可以拍摄“夜对夜”的场景。一些电影摄影师（例如 <span><a href="https://twitter.com/steveyedlin/status/1201278088794923008">史蒂夫·耶德林 <i>利刃出鞘 (2019)</i></a></span>）甚至将这两种技术结合起来，将日间和夜间的照片合成在一起，创造出印象派的外观。</p><p>如果我们用漆黑的黑暗“准确地”照亮我们的关卡，那么玩家将看不到要去哪里并感到沮丧。</p><p> <i>   本页面建立在主要术语和概念的基础上 </i><span><a href="process__lighting.html"><i>灯光</i></a></span><i> 页。</i></p><h2><div><a href="#general-night-setup"></a></div><div>一般夜间设置</div></h2><p>在现实生活中，月光是白色的（来自太阳的反射光）......在电影和游戏中，月光是蓝色的。满月将投射出鲜明的投影阴影，阴天的夜晚将投射出很少的阴影</p><p>填充灯 = 昏暗、微妙的蓝色点光源，没有阴影和柔和的衰减</p><p>不要对所有阴影应用平坦环境；您希望某些阴影终止为 0% 黑色，否则您将无法使用完整的动态范围。使用定向环境</p><p>请记住：不要依赖深色反照率纹理来使场景变暗！让灯光营造出黑暗的感觉。如果将阴影刻录到纹理中，纹理的可重用性会降低，并且难以重新照明，并且会强制照明进入过亮范围以进行补偿。</p><p>边缘照明可强调轮廓，同时使大部分拍摄对象处于阴影中</p><p>由于对蓝色的依赖如此之多，蓝橙色很常见，但请尝试通过引入第三种颜色或调整色调范围来避免普通的蓝橙</p><div><div><div><picture><div><img height="979" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FYuZ03kyIfuuhQHxILase%252FLDB_Overwatch2_Numbani_LightingScenarios.jpg%3Falt%3Dmedia%26token%3D0ac49298-8aff-45b5-9aca-2827299acde2&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=9297845a&amp;sv=2" width="1772"/></div><figcaption>《守望先锋 2》中“Numbani”不同灯光场景的情绪板，由 Fabien Christin 拍摄 <span><a href="https://playoverwatch.com/en-gb/news/23674944/environment-states-in-overwatch-2-behind-the-scenes-with-the-engineering-team/">（来自 Play《守望先锋》.com）</a></span></figcaption></picture></div></div></div><p>在《守望先锋 2》的上图中，请注意夜间照明场景中的亮度、对比度和调色板（右下）。是什么让夜景看起来像夜景？</p><ul><li><div><div></div></div><div><p>它实际上很亮；增加对比度和镜面反射使其感觉较暗</p></div></li><li><div><div></div></div><div><p>人物轮廓较暗，地平线较亮</p></div></li><li><div><div></div></div><div><p>这不仅仅是无聊的blorange；有很多紫色和黄色混合在一起</p></div></li></ul><h2><div><a href="#shadow-design"></a></div><div>阴影设计</div></h2><div><div><div><picture><div><img height="806" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MDGMBCgIsDexaRfEThI%252F-MDGMgoSaS_REtGHsivE%252FJamesGurney_LightShadowDiagram.jpg%3Falt%3Dmedia%26token%3D2a9bc34f-a5ed-4fa8-9bb8-d335829e3687&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=4c501357&amp;sv=2" width="1080"/></div><figcaption>James Gurney 的阴影图，来自 https://gurneyjourney.blogspot.com/2010/02/light-and-form-part-1_15.html</figcaption></picture></div></div></div><h2><div><a href="#against-hollywood-darkness-in-games"></a></div><div>对抗游戏中的“好莱坞黑暗”</div></h2><p>以“好莱坞黑暗”风格照亮您的游戏会带来更精致的商业感觉，与流行的主流视觉文化相匹配。</p><p>就像在电影中一样，一些艺术家有意避免这种风格及其含义。如果这种情绪不适合您项目的体验目标（即您想要制作一些令人不安、混乱、刺耳、视觉实验性的东西），那么您可能希望忽略本页上的大部分建议。</p><h3><div><a href="#lighting-as-mechanic"></a></div><div>照明作为机械师</div></h3><p>大量使用动态照明和手电筒的游戏，尤其是恐怖游戏，可能需要有选择地让高度紧张的场景进入漆黑的黑暗。</p><h2><div><a href="#sources-further-reading"></a></div><div>来源/进一步阅读</div></h2><ul><li><div><div></div></div><div><p><strong></strong><span><a href="https://www.youtube.com/watch?v=rNggiaosjuw"><strong>《如何为黑暗打光 | 5 种摄影技巧》</strong></a></span> 是由电影摄影师 Valentina Vee 撰写的 15 分钟精彩的夜景灯光和制作设计介绍。尽管她专注于电影行业技术，但她的大部分视觉思维也适用于游戏。</p></div></li><li><div><div></div></div><div><p><strong>"</strong><span><a href="https://www.youtube.com/watch?v=xks0kAeSW9Q&amp;list=PLdY77XvZ-l20ZeYtAtYx7n-wOHxkyQGog"><strong>在 Source 2 的 Hammer 中照亮夜间场景</strong></a></span><strong>"</strong> 是一个由 4 部分组成的 3.5 小时视频系列，其中环境美术家 <span><a href="https://www.helderpinto.com/">赫尔德·平托</a></span> （《孤岛危机》、《守望先锋》）通过大量解说照亮了葡萄牙夜晚的街景。他的大部分工作流程特定于 Source 2 的 Hammer 工具，但一般思想适用于任何工具或引擎。</p></div></li></ul></div></div></article>
+<div class="page-links"><a class="page-link" href="process__lighting__d6-lighting.html"><span>上一页</span>D6 灯光法</a><a class="page-link" href="process__env-art.html"><span>下一页</span>🏡 环境美术</a></div>
+</main>
 </body>
 </html>

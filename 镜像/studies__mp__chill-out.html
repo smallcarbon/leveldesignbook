@@ -1,117 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chill Out (Halo 1) | The Level Design Book 中文版</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chill Out (《光环》 1) | The Level Design Book 中文版</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-  <aside class="sidebar">
-    <a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-    <nav><a class="" style="--depth:0" href="index.html">The Level Design Book 中文版</a>
-<a class="" style="--depth:1" href="introduction.html">✨ 什么是关卡设计</a>
-<a class="" style="--depth:2" href="process__overview.html">🗺️ 如何制作一个关卡</a>
-<a class="" style="--depth:2" href="process__preproduction.html">🧠 前期设计</a>
-<a class="" style="--depth:3" href="process__preproduction__pacing.html">节奏</a>
-<a class="" style="--depth:3" href="process__preproduction__research.html">调研</a>
-<a class="" style="--depth:3" href="process__preproduction__worldbuilding.html">世界构建</a>
-<a class="" style="--depth:3" href="process__preproduction__scope.html">范围控制</a>
-<a class="" style="--depth:2" href="process__combat.html">🔫 战斗</a>
-<a class="" style="--depth:3" href="process__combat__enemy.html">敌人设计</a>
-<a class="" style="--depth:3" href="process__combat__encounter.html">遭遇战</a>
-<a class="" style="--depth:3" href="process__combat__cover.html">掩体</a>
-<a class="" style="--depth:3" href="process__combat__balance.html">地图平衡</a>
-<a class="" style="--depth:2" href="process__layout.html">🛠️ 布局</a>
-<a class="" style="--depth:3" href="process__layout__flow.html">流动感</a>
-<a class="" style="--depth:4" href="process__layout__flow__circulation.html">循环动线</a>
-<a class="" style="--depth:4" href="process__layout__flow__verticality.html">垂直性</a>
-<a class="" style="--depth:3" href="process__layout__criticalpath.html">关键路径</a>
-<a class="" style="--depth:3" href="process__layout__parti.html">Parti：概念布局</a>
-<a class="" style="--depth:3" href="process__layout__typology.html">类型学</a>
-<a class="" style="--depth:4" href="process__layout__typology__gates.html">门与关口</a>
-<a class="" style="--depth:2" href="process__blockout.html">🏠 白盒</a>
-<a class="" style="--depth:3" href="process__blockout__massing.html">体量</a>
-<a class="" style="--depth:4" href="process__blockout__massing__landscape.html">景观地形</a>
-<a class="" style="--depth:4" href="process__blockout__massing__composition.html">构图</a>
-<a class="" style="--depth:4" href="process__blockout__massing__prospect-refuge.html">眺望-庇护</a>
-<a class="" style="--depth:3" href="process__blockout__metrics.html">尺度指标</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__modular.html">模块化套件设计</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__doom.html">DOOM 尺度</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__quake.html">Quake 尺度</a>
-<a class="" style="--depth:3" href="process__blockout__wayfinding.html">寻路与引导</a>
-<a class="" style="--depth:3" href="process__blockout__playtesting.html">试玩测试</a>
-<a class="" style="--depth:4" href="process__blockout__playtesting__persona.html">玩家画像</a>
-<a class="" style="--depth:2" href="process__scripting.html">📜 脚本</a>
-<a class="" style="--depth:3" href="process__scripting__nav.html">(存根) 导航</a>
-<a class="" style="--depth:3" href="process__scripting__doors.html">门</a>
-<a class="" style="--depth:2" href="process__lighting.html">☀️ 灯光</a>
-<a class="" style="--depth:3" href="process__lighting__three-point.html">三点布光</a>
-<a class="" style="--depth:3" href="process__lighting__d6-lighting.html">D6 灯光法</a>
-<a class="" style="--depth:3" href="process__lighting__darkness.html">黑暗场景灯光</a>
-<a class="" style="--depth:2" href="process__env-art.html">🏡 环境美术</a>
-<a class="" style="--depth:3" href="process__env-art__psychology.html">形状与色彩心理学</a>
-<a class="" style="--depth:3" href="process__env-art__texturing.html">材质</a>
-<a class="" style="--depth:3" href="process__env-art__storytelling.html">叙事</a>
-<a class="" style="--depth:3" href="process__env-art__optimization.html">优化</a>
-<a class="" style="--depth:2" href="process__release.html">🌈 发布</a>
-<a class="" style="--depth:2" href="culture__overview.html">🦜 作为文化的关卡设计</a>
-<a class="" style="--depth:2" href="culture__history-level-designer.html">关卡设计师简史</a>
-<a class="" style="--depth:2" href="culture__zero-player.html">零玩家关卡设计</a>
-<a class="" style="--depth:2" href="culture__unfinished-pages.html">未完成页面</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-architecture.html">建筑史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__structural-engineering-primer.html">结构工程入门</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-environment-art.html">环境美术史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-furniture.html">家具史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-encounter-design.html">遭遇战设计史</a>
-<a class="" style="--depth:2" href="studies__overview.html">🔍 如何研究一个关卡</a>
-<a class="" style="--depth:2" href="studies__sp.html">单人关卡研究</a>
-<a class="" style="--depth:3" href="studies__sp__undead-burg.html">不死镇 (Dark Souls 1)</a>
-<a class="" style="--depth:3" href="studies__sp__assassins.html">Assassins (Thief 1)</a>
-<a class="" style="--depth:3" href="studies__sp__cradle.html">(存根) The Cradle (Thief 3)</a>
-<a class="" style="--depth:3" href="studies__sp__sapienza.html">(存根) Sapienza (Hitman)</a>
-<a class="" style="--depth:3" href="studies__sp__silent-cartographer.html">(存根) Silent Cartographer (Halo 1)</a>
-<a class="" style="--depth:2" href="studies__mp.html">多人关卡研究</a>
-<a class="active" style="--depth:3" href="studies__mp__chill-out.html">Chill Out (Halo 1)</a>
-<a class="" style="--depth:3" href="studies__mp__de_dust2.html">(存根) de_dust2 (Counter-Strike)</a>
-<a class="" style="--depth:2" href="studies__irl.html">现实空间研究</a>
-<a class="" style="--depth:3" href="studies__irl__disneyland.html">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" style="--depth:3" href="studies__irl__stub-las-vegas-nevada-usa.html">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" style="--depth:2" href="learning__notes.html">🎒 给教学者的笔记</a>
-<a class="" style="--depth:2" href="learning__projects.html">项目计划</a>
-<a class="" style="--depth:3" href="learning__projects__classic-combat.html">经典战斗</a>
-<a class="" style="--depth:3" href="learning__projects__unfinished-wip-pages.html">未完成 WIP 页面</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-combat.html">现代战斗</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-stealth.html">现代潜行</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html">练习：直射光</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html">练习：2D 白板图</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html">关卡设计作品集</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__adaptation.html">设计测试：改编</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html">练习：布局</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__verticality.html">练习：垂直性</a>
-<a class="" style="--depth:2" href="appendix__tools.html">工具</a>
-<a class="" style="--depth:3" href="appendix__tools__trenchbroom.html">TrenchBroom</a>
-<a class="" style="--depth:2" href="appendix__resources.html">资产与资源</a>
-<a class="" style="--depth:3" href="appendix__resources__talks.html">推荐演讲</a>
-<a class="" style="--depth:3" href="appendix__resources__books.html">推荐书目</a>
-<a class="" style="--depth:3" href="appendix__resources__quake.html">Quake 资源</a>
-<a class="" style="--depth:4" href="appendix__resources__quake__how-to-package.html">如何打包 Quake 地图/Mod</a>
-<a class="" style="--depth:3" href="appendix__resources__formats.html">文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__fgd.html">FGD 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__map.html">MAP 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__mdl.html">MDL 文件格式</a>
-<a class="" style="--depth:2" href="appendix__communities.html">社区</a>
-<a class="" style="--depth:2" href="appendix__about.html">关于本书与作者</a>
-<a class="" style="--depth:2" href="appendix__license.html">许可与版权</a></nav>
-  </aside>
-  <main class="page">
-    <div class="topbar">
-      <a href="https://book.leveldesignbook.com/studies/mp/chill-out">查看原文</a>
-      <a href="https://book.leveldesignbook.com">原站首页</a>
-    </div>
-    <div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-    <article><header><nav><ol><li></li><li></li></ol></nav><h1>Chill Out (Halo 1)</h1><p>小型多人竞技竞技场</p></header><div><div><h2><div><a href="#why-halo-1-multiplayer"></a></div><div><strong>为什么选择光环 1 多人游戏？</strong></div></h2><p>Bungie 的“光环：战斗进化”（2001 年）是第一款 Microsoft Xbox 游戏机的关键发布游戏，并且可以说是 Xbox 获得市场吸引力和受众的主要原因。 </p><p>它也是第一款在游戏手柄上“运行”的 FPS，其单人游戏格式（大型户外关卡、车辆、“智能”AI）和多人游戏设计（完全合作模式、4 人分屏）都非常受欢迎且具有影响力。 《黄金眼 007》(1997) 的精神继承者。</p><div><div></div><div><p>这是 Andrew Yoder 博客文章的编辑版本 <span><a href="https://andrewyoderdesign.blog/2017/12/09/halos-multiplayer-maps-and-public-parks/">“光环的多人游戏地图和公园”</a></span>。所有 Chill Out 视频和屏幕截图均由 Andrew Yoder 制作，经许可使用。</p></div></div><div><div><div><div><img height="1080" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLzzAlDgBE4bXDn_44W%252F-MLzzqNmTcRZd7LjGlqz%252Fhalo1_cover.jpg%3Falt%3Dmedia%26token%3D31c20e9a-c3e0-407d-99da-9ab54f68e1a9&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=1482458a&amp;sv=2" width="1920"/></div></div></div></div><h3><div><a href="#systems-primer"></a></div><div>系统入门</div></h3><p>如果您不熟悉 Halo 的标准混战（“杀手”）游戏玩法，请了解以下基础知识： </p><ul><li><div><div></div></div><div><p>使用地图上搜罗的各种枪支、物品和能量道具四处奔跑并攻击其他玩家。要获胜，击杀 25 人（有时是 50 人）。<!-- --></p></div></li><li><div><div></div></div><div><p>当你死亡时，你会在几秒钟后在随机选择的位置重生。然而，高水平的光环玩家都明白 <span><a href="https://halospawns.com/">如何玩光环的重生选择算法</a></span>.</p></div></li><li><div><div></div></div><div><p>与其他FPS游戏相比，《光环》的主要特点来自于它的 <strong>漂浮运动</strong> 和它的 <strong>再生护盾</strong> 机械师。 </p><ul><li><div><div></div></div><div><p><i>浮动运动：</i> 玩家全速时速度缓慢，加速时速度缓慢。跳跃本身几乎与玩家角色一样高，并且跳跃的持续时间比在地球引力下的持续时间更长。这种缓慢的动作变得可预测，这意味着很容易射击，这意味着在战斗中做出错误的动作会产生后果。</p></div></li><li><div><div></div></div><div><p><i>再生护盾：</i> 玩家在受到生命条伤害之前先受到护盾伤害。<!-- --></p><ul><li><div><div></div></div><div><p>受损的护盾将在一秒后开始再生，最多需要一秒才能完成。 </p></div></li><li><div><div></div></div><div><p>如果玩家在再生时间内受到伤害，护盾计时器就会重置。 </p></div></li><li><div><div></div></div><div><p>如果护盾被完全摧毁，玩家很容易被爆头，并且必须等待几秒钟护盾才能开始再生。 </p></div></li><li><div><div></div></div><div><p>有些武器对护盾造成的伤害比对生命值的伤害更大。其他武器造成的伤害足以有效绕过护盾。在《光环 1》中，默认手枪的威力是出了名的强：两次爆头打破了对手的护盾，第三次爆头则立即杀死。</p></div></li></ul></div></li></ul></div></li></ul><picture><div><div><div><div><iframe></iframe></div></div></div></div><figcaption>典型的 4 人分屏本地多人混战（“Slayer”）地图“Hang 'Em High”，原始 Xbox 版本 </figcaption></picture><p>请记住：光环是最早为游戏手柄设计的主机 FPS 游戏之一，因此缓慢的移动速度、缺乏空中控制、宽容的护盾和粘性瞄准磁力对于让玩家轻松进入体验至关重要。它比当时的竞争对手《Quake 3 Arena》和《Unreal Tournament》要慢得多。这种机制的组合使标准光环多人游戏具有持续的精确性和从容的移动。更严格的环境放大了这些机制，并引入了定义竞争性 Halo 的地图控制和定位方面。</p><h2><div><a href="#chill-out"></a></div><div><strong>放松一下</strong></div></h2><p>Chill Out 是一张中等大小的室内地图，每个房间都感觉像一个洞穴，没有外部景观或可见的天空。环境纹理属于紫色星盟外星人主题，但建筑具有先行者建筑的更粗糙的角度。很难确定这张地图在光环宇宙中的位置。 </p><p>最低的房间里还有地面雾，可以帮助玩家在整个地图上垂直定位。结合柔和的灰色、蓝色和紫色的冷色调，这种雾气给人一种冷酷的印象，与地图名称中的双关语相呼应。</p><p>Chill Out 是最初 Halo 1 零售版中附带的十几种不同的多人游戏地图之一。它既不是地图周期中最令人讨厌的关卡，也不是最受欢迎的关卡，但它仍然提供了一种有用的方法来了解玩家如何使用视线和维护领土来在多人游戏竞技场中建立地图控制。</p><div><div><div><picture><div><img height="579" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252Fy4W5PanwQKIMY2TyFusI%252FLDB_chilloutmap.webp%3Falt%3Dmedia%26token%3D7bb0033a-e02a-4a27-8c62-6f14d0ba7912&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=f4884b0f&amp;sv=2" width="788"/></div><figcaption>带有房间标注的“放松”地图布局。绿线表示传送路径。</figcaption></picture></div></div></div><h3><div><a href="#structure"></a></div><div>结构</div></h3><p>从结构上讲，“Chill Out”分为三个部分和六个房间：Rocket、Mid、Pink、Gold、Shotgun 和 Spiral。</p><h4><div><a href="#rocket"></a></div><div>火箭</div></h4><p>偏离中心的是一个四边形的房间，有两层，两个高架平台位于火箭发射器产卵的柱子上，还有一个从底层通向顶部的长坡道。从这个火箭室，顶门通向一个长长的、尖角的大厅，通向粉红色的房间。这个大厅还有一个单向传送到猎枪室的通道。一扇较低的门通向黄金房间，一扇小弧形门通向猎枪室。还有两个大拱门，其上方有一个空间，通过一座断桥将火箭室与下层房间连接起来。</p><div><div><div><picture><div><img height="1080" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FaUXyGVPMwTPaL1PRSFbd%252FLDB_Halo_AndrewYoder_ChillOut1.webp%3Falt%3Dmedia%26token%3D34d672f4-d329-43be-a9f0-5a31adbd6745&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c7488a3e&amp;sv=2" width="1920"/></div><figcaption>火箭室。前面的门通向猎枪室。金色的房间在右边，粉红色的大厅在上面，拱门在左边。</figcaption></picture></div></div></div><h4><div><a href="#mid-bridge"></a></div><div>中/桥</div></h4><p>桥牌室的下层有两个宽阔的大厅，连接着猎枪室和黄金室。桥门一侧连接粉红色的房间，另一侧螺旋向下通向猎枪室。房间对面有两根大柱子，柱子有一个头高的间隙可以射穿，还有一条单向传送到粉红色的房间。火箭室和舰桥室一起构成了地图的中间部分。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Fbridge.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=95870a99&amp;sv=2" width="787"/></div><figcaption>中。右边的桥通向螺旋，左边的桥通向粉红色的房间。下层大厅右侧通向猎枪房，左侧通向金房。</figcaption></picture></div></div></div><h4><div><a href="#pink"></a></div><div>粉色</div></h4><p>粉红色的房间是主动迷彩加电和狙击步枪生成的地方。粉红色房间的一个出口是横跨中间的断桥的一部分。另一个出口是走上坡道，进入粉红色的大厅，到达火箭室的顶部，有一扇窗户可以俯瞰金色的房间。粉色大厅的窗户太小，很难跳过去，而且射击角度不大，但投掷手榴弹很有效。粉红色的房间也足够小，容易受到手榴弹的影响。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Fpinkroom.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=d8e9b46f&amp;sv=2" width="787"/></div><figcaption>从粉色大厅看粉色房间。</figcaption></picture></div></div></div><h4><div><a href="#gold"></a></div><div>黄金</div></h4><p>黄金房间主要作用是作为火箭房间中部到底部的一个长厅之间的连接，但它也有一个单向传送到螺旋断桥的地方。这种传送是有风险的，因为玩家退出时面朝粉红色的房间，而他们的背部暴露在霰弹枪房间螺旋处的任何人面前。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2F12-2-2017_6-43-50_pm.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=49f507ce&amp;sv=2" width="787"/></div><figcaption>从长廊看“金”房。门通向火箭室。</figcaption></picture></div></div></div><h4><div><a href="#shotgun"></a></div><div>霰弹枪</div></h4><p>最后一部分是猎枪室和螺旋坡道。霰弹枪是超护盾加电产生的地方。无论谁抓住它，都会获得两层额外的护盾保护，并在激活时获得第二层刀枪不入的保护。除了上盾之外，霰弹室也是一个薄弱位置。霰弹枪本身只在近距离战斗中有用，而手枪起始武器在地图的所有空间中都更加一致。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Fshotgunroom.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=8854bb5d&amp;sv=2" width="787"/></div><figcaption>从火箭室看霰弹枪室。</figcaption></picture></div></div></div><h4><div><a href="#spiral"></a></div><div>螺旋</div></h4><p>从螺旋中，玩家可能会看到断桥对面的粉红色，但粉红色的对手可能拥有狙击步枪。螺旋也容易受到手榴弹的攻击。从霰弹枪到火箭室底部还有一个小弯曲，但它的三个侧面都有盲点，包括火箭发射器产生的上方。猎枪室唯一的另一个出口是进入中间的另一个长厅，从拱门顶部很容易受到攻击。从粉色大厅到霰弹房中间还有一个传送出口，可以导致意想不到的近战。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Fspiral.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=82afcd35&amp;sv=2" width="787"/></div><figcaption>跳跃时从螺旋上看到的景色。</figcaption></picture></div></div></div><h3><div><a href="#competitive-meta"></a></div><div><strong>竞争元</strong></div></h3><p>在竞技2v2 Team Slayer中，这种设计的效果是两队都试图控制火箭房和粉红房。当玩家在这些房间中时，游戏会白盒敌人在附近重生，这增加了他们在中下或霰弹枪房间重生的可能性。从这个设置中，控制时间内的团队会随着超护盾能量的重生而进入霰弹枪室。对于被困在霰弹枪室的队伍来说，上方护盾是推动敌方队伍并重新获得地图定位的最佳方式。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2F12-2-2017_6-48-43_pm.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=115bdfa7&amp;sv=2" width="787"/></div><figcaption>粉红色房间的景色。</figcaption></picture></div></div></div><p>如果两个团队的技术相同，则很难维持此设置或任何其他设置。特别是在 2v2 中，当一名玩家死亡时，另一名玩家需要移动，否则就会面临 2v1 的风险。由于这些权力转移，两支球队都必须在地图上的强势位置之间不断轮换。其中一些位置更多的是关于信息，而不是玩家可以从中造成的伤害。例如，在粉红色房间到桥的门口，玩家可以看到猎枪室的两个出口，并可以清楚地看到火箭室，但如果不走出桥，就无法同时看到所有内容。其中两个视野太窄，无法多次击中正在奔跑的敌人，但对于发现敌人来说，这是一个很有价值的位置。这样，信息控制就与地图控制联动起来。</p><p>在竞技游戏中，我们还可以将玩家采取的每个行动视为资源交换。当玩家受到攻击时，他们可以交换护盾和生命值来获得更好的位置，或者玩家可以交换一个好的位置来获得能量提升或武器。强势头寸是指拥有多种选择且汇率良好的头寸。弱势仓位和“陷阱”是指每一个选择都会带来风险的仓位。</p><h3><div><a href="#doors-halls-teleports"></a></div><div><strong>门、大厅、传送</strong></div></h3><p>所有的门和走廊都又长又窄。 </p><p>有些门的长度和宽度一样，模糊了大厅和门之间的界限。在这些最狭窄的空间中，玩家无法欺骗敌人的目标或躲避手榴弹。 </p><p>有些天花板太低，玩家跳下去会撞到头。因此，玩家可以通过向这些走廊和门扔手榴弹来延迟敌人的推进或强制撤退。这些结构也比战术射击游戏中的门口更难做出承诺。 </p><p>盾牌机制及其对战斗中持续精确度的要求意味着玩家必须致力于进入竞技场，而不是从门的另一侧无效地戳戳。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Fbigdoor.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=de5ea592&amp;sv=2" width="787"/></div><figcaption>从黄金到火箭的大门造成了很大的盲点。</figcaption></picture></div></div></div><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Flowhall.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=90b279a9&amp;sv=2" width="787"/></div><figcaption>长长的大厅从护盾重生点穿过中间，到达黄金房间</figcaption></picture></div></div></div><p>地图的单向传送也起到了一种门口的作用，但它们比实际的门更难做出承诺。在休闲游戏中，由于过于混乱而无法预测地图另一侧的游戏状态，传送就像掷骰子：敌人可能在出口处扎营，或者玩家可能让敌人措手不及。作为一个新玩家或不常玩的玩家，甚至很难记住哪个传送去哪里，这可能是游戏玩法中惊喜甚至幽默的来源。</p><p>传送也是逃避战斗的一种方式，因为不可能通过它们射击或投掷手榴弹。谁先进入瞬移，就可以退后一步，等待对手追击，然后进行近战攻击。或者，玩家可以在穿过传送入口时将手榴弹从传送入口弹开，白盒敌人继续追逐。</p><h3><div><a href="#friction"></a></div><div><strong>摩擦力</strong></div></h3><p>当前游戏设计的原则之一是限制玩家遇到的“摩擦”或“粗糙边缘”。摩擦的一种形式是测试无聊的技能。例如，从粉红色房间过桥到螺旋形房间需要小心跳跃，如果时机错误，则意味着几乎不会错过并在底部中间掉入空地。有一个类似的跳跃到火箭平台，还有另一个到拱门的顶部。这些都是令人沮丧的技能检查，因为没有部分故障状态或恢复空间。这些失败的跳跃所带来的缓慢、可预测的坠落的惩罚使它们变得更糟。</p><p>中下方的地面上也有断桥的碎片。尽管这些为抽象地图增添了视觉趣味，但它们却给游戏空间增加了字面上的摩擦。经验不足或心烦意乱的玩家试图穿过底部中路时，如果不向下看或盲目跳跃，就不会意识到自己被困在什么地方，这两者都会花费时间并可能导致玩家死亡。</p><p>我们还可以将狭窄的走廊和低矮的天花板视为摩擦源。这些空间让人感觉不舒服。但修复这些区域，就像《光环 3》在《Chill Out》的“Cold Storage”重制版中所做的那样，从地图的中心移除了一些东西。</p><h2><div><a href="#social-context"></a></div><div>社会背景</div></h2><p>对于沙发多人游戏来说，《Chill Out》并不是一个连贯的游戏场，而更像是一个冲突和惊喜的漏斗。</p><p>想象一下，那是 2001 年，我和三个朋友坐在沙发上玩《光环》。但几场比赛之后，技能差距就很明显了，我们开始临时制定新的目标和规则：近战只在地图向导上进行，反击得分 2 分，摔倒得分 3 分？或者也许是响尾蛇地图上的主动迷彩和狙击步枪？</p><p>如果一个变体变得乏味，我们会在比赛中对其进行调整并开始射击而不是使用近战，或者我们开始驾驶车辆穿过隐形狙击手的领域。目前，该团队对所有这些变体的目标不是谁赢了，或者谁是最好的。 </p><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mav1n1BvTZMwaSFP56s%252F-Mav4IIVXJZG962sSZH2%252FLDB_Halo2_MultiplayerMenu.jpg%3Falt%3Dmedia%26token%3Dba647ae0-3dad-409a-969e-37f40412df30&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=67125d4&amp;sv=2" width="1280"/></div><figcaption>Halo 2 中多人游戏前大厅菜单的屏幕截图，其中包含可配置的游戏模式选项</figcaption></picture></div></div></div><p>这些变体是为了调整规则，增加混乱和不可预测性，这样即使是较弱的玩家也能获得成功。如果变体反而加剧了技能差距，那么玩家可能会放弃比赛或违反规则；本地多人游戏中的这种“恶搞”行为是玩家表达自己不开心的一种方式。</p><p>整个游戏模式类似于游乐场上的孩子们如何将标签改编成“冻结标签”，或“熔岩怪物”（只有“它”的玩家可以接触地面），或“金属怪物”（“它”的玩家只能在接触金属的结构周围移动）。这种自由形式的游戏并不关乎输赢，如果游戏锁定在一个已解决的状态，其中一个玩家被困在“它”中，那么该变体就失败了，需要修改。</p><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mav1n1BvTZMwaSFP56s%252F-Mav3EDuYv6OxO2Dw0U_%252FHMCC_HCE_Wizard_Map.png%3Falt%3Dmedia%26token%3D427c9ce8-391f-41ed-bbe3-38f0614c3109&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=acd9ac84&amp;sv=2" width="1280"/></div><figcaption>《士官长合集》光环 1 重制版中“巫师”地图布局的加载屏幕 </figcaption></picture></div></div></div><p>现在，如果你在 2001 年让我推荐《光环》中最好的地图，我可能会说“巫师”。它有四个轴对称部分、两组链接的传送、独立的第一层和第二层，以及两种类型的四个加电道具。传送和对称性造成了一种迷失方向，这给休闲游戏带来了混乱，并限制了战术游戏。巫师也足够小，迷失方向并不重要；如果玩家选择随机方向并开始行走，他们就会找到对手进行战斗。该地图也适合我们的许多游戏模式变体。 Wizard 是纯霰弹枪游戏、纯近战游戏或荒谬的无限手榴弹游戏的首选地图。它也是一张伟大的山丘之王地图，因为玩家只能通过跳跃才能到达中央柱子结构。</p><p>Chill Out 是我们本地多人游戏轮换中的另一张关键地图，但它的设计有更多细微差别，并且在我的记忆中停留得更久。我们如何谈论多人关卡设计，“Chill Out”是好是坏？对于想要安静散步的人来说，这是一个狗公园，还是对于没有孩子的人来说，这是一个游乐场？</p><p>我们可以列出玩家玩地图的所有方式。我们可以将地图分为几个组成部分，描述它们的相互关系，并考虑每个部分如何影响不同的玩家。或者我们可以采取叙事方式，在这些空间中讲述我们这个时代的故事。这些方法似乎都没有完全揭示地图的核心。但是，从本质上讲，这难道不是因为一张好的地图，就像一个好的公园， <i>应该</i> 对很多人来说意味着很多事情？</p><h2><div><a href="#videos"></a></div><div>视频</div></h2><p>您可以观看 <strong>本文的解说导览/视频版本</strong> 在 YouTube 上。 <span><a href="https://www.youtube.com/watch?v=YUdUh0uE2V4">https://www.youtube.com/watch?v=YUdUh0uE2V4</a></span></p><div><div><div><div><iframe></iframe></div></div></div></div><p>为了更好地了解 Chill Out 的实际玩法，您还可以观看这段 3v3 团队死亡竞赛（“Team Slayer”）视频： <span><a href="https://www.youtube.com/watch?v=AwPwL3snINQ">https://www.youtube.com/watch?v=AwPwL3snINQ</a></span></p><div><div><div><div><iframe></iframe></div></div></div></div><h2><div><a href="#further-reading"></a></div><div>进一步阅读</div></h2><ul><li><div><div></div></div><div><p><span><a href="https://www.youtube.com/watch?v=8YJ53skc-k4">“详细设计：将光环 3 中狙击步枪的射击间隔时间从 0.5 秒更改为 0.7 秒”</a></span> 由 Jaime Griesemer 创作的 GDC 2010 是一款备受推荐的经典游戏设计，深入探讨了武器平衡和 Halo 的多人游戏设计。</p></div></li><li><div><div></div></div><div><p><span><a href="https://andrewyoderdesign.blog/2017/12/28/inflexible-pvp/">“光环和不灵活的 PvP”</a></span> 作者：Andrew Yoder 批评了 Halo 僵化的多人游戏模式，这使得休闲网络酒吧游戏变得痛苦。</p></div></li></ul></div></div></article>
-    <div class="page-links"><a class="page-link" href="studies__mp.html"><span>上一页</span>多人关卡研究</a><a class="page-link" href="studies__mp__de_dust2.html"><span>下一页</span>(存根) de_dust2 (Counter-Strike)</a></div>
-  </main>
+<aside class="sidebar">
+<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
+<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
+<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
+<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
+<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
+<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
+<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
+<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
+<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
+<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
+<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
+<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
+<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
+<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
+<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
+<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
+<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
+<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
+<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
+<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
+<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
+<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
+<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
+<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
+<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
+<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
+<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
+<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
+<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
+<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
+<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
+<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
+<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
+<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
+<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
+<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
+<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
+<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
+<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
+<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
+<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
+<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
+<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
+<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
+<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
+<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
+<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
+<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
+<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
+<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
+<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
+<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
+<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
+<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
+<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
+<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
+<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
+<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
+<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
+<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
+<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
+<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
+<a class="active" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
+<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
+<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
+<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
+<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
+<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
+<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
+<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
+<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
+<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
+<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
+<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
+<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
+<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
+<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
+<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
+<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
+<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
+<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
+<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
+<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
+<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
+<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
+</aside>
+<main class="page">
+<div class="topbar">
+<a href="https://book.leveldesignbook.com/studies/mp/chill-out">查看原文</a>
+<a href="https://book.leveldesignbook.com">原站首页</a>
+</div>
+<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+<article><header><nav><ol><li></li><li></li></ol></nav><h1>Chill Out (《光环》 1)</h1><p>小型多人竞技竞技场</p></header><div><div><h2><div><a href="#why-halo-1-multiplayer"></a></div><div><strong>为什么选择光环 1 多人游戏？</strong></div></h2><p>Bungie 的“光环：战斗进化”（2001 年）是第一款 Microsoft Xbox 游戏机的关键发布游戏，并且可以说是 Xbox 获得市场吸引力和受众的主要原因。 </p><p>它也是第一款在游戏手柄上“运行”的 FPS，其单人游戏格式（大型户外关卡、车辆、“智能”AI）和多人游戏设计（完全合作模式、4 人分屏）都非常受欢迎且具有影响力。 《黄金眼 007》(1997) 的精神继承者。</p><div><div></div><div><p>这是 Andrew Yoder 博客文章的编辑版本 <span><a href="https://andrewyoderdesign.blog/2017/12/09/halos-multiplayer-maps-and-public-parks/">“光环的多人游戏地图和公园”</a></span>。所有 Chill Out 视频和屏幕截图均由 Andrew Yoder 制作，经许可使用。</p></div></div><div><div><div><div><img height="1080" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLzzAlDgBE4bXDn_44W%252F-MLzzqNmTcRZd7LjGlqz%252Fhalo1_cover.jpg%3Falt%3Dmedia%26token%3D31c20e9a-c3e0-407d-99da-9ab54f68e1a9&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=1482458a&amp;sv=2" width="1920"/></div></div></div></div><h3><div><a href="#systems-primer"></a></div><div>系统入门</div></h3><p>如果您不熟悉 《光环》 的标准混战（“杀手”）玩法，请了解以下基础知识： </p><ul><li><div><div></div></div><div><p>使用地图上搜罗的各种枪支、物品和能量道具四处奔跑并攻击其他玩家。要获胜，击杀 25 人（有时是 50 人）。<!-- --></p></div></li><li><div><div></div></div><div><p>当你死亡时，你会在几秒钟后在随机选择的位置重生。然而，高水平的光环玩家都明白 <span><a href="https://halospawns.com/">如何玩光环的重生选择算法</a></span>.</p></div></li><li><div><div></div></div><div><p>与其他FPS游戏相比，《光环》的主要特点来自于它的 <strong>漂浮运动</strong> 和它的 <strong>再生护盾</strong> 机械师。 </p><ul><li><div><div></div></div><div><p><i>浮动运动：</i> 玩家全速时速度缓慢，加速时速度缓慢。跳跃本身几乎与玩家角色一样高，并且跳跃的持续时间比在地球引力下的持续时间更长。这种缓慢的动作变得可预测，这意味着很容易射击，这意味着在战斗中做出错误的动作会产生后果。</p></div></li><li><div><div></div></div><div><p><i>再生护盾：</i> 玩家在受到生命条伤害之前先受到护盾伤害。<!-- --></p><ul><li><div><div></div></div><div><p>受损的护盾将在一秒后开始再生，最多需要一秒才能完成。 </p></div></li><li><div><div></div></div><div><p>如果玩家在再生时间内受到伤害，护盾计时器就会重置。 </p></div></li><li><div><div></div></div><div><p>如果护盾被完全摧毁，玩家很容易被爆头，并且必须等待几秒钟护盾才能开始再生。 </p></div></li><li><div><div></div></div><div><p>有些武器对护盾造成的伤害比对生命值的伤害更大。其他武器造成的伤害足以有效绕过护盾。在《光环 1》中，默认手枪的威力是出了名的强：两次爆头打破了对手的护盾，第三次爆头则立即杀死。</p></div></li></ul></div></li></ul></div></li></ul><picture><div><div><div><div><iframe></iframe></div></div></div></div><figcaption>典型的 4 人分屏本地多人混战（“Slayer”）地图“Hang 'Em High”，原始 Xbox 版本 </figcaption></picture><p>请记住：光环是最早为游戏手柄设计的主机 FPS 游戏之一，因此缓慢的移动速度、缺乏空中控制、宽容的护盾和粘性瞄准磁力对于让玩家轻松进入体验至关重要。它比当时的竞争对手《雷神之锤》 3 Arena》和《Unreal Tournament》要慢得多。这种机制的组合使标准光环多人游戏具有持续的精确性和从容的移动。更严格的环境放大了这些机制，并引入了定义竞争性 《光环》 的地图控制和定位方面。</p><h2><div><a href="#chill-out"></a></div><div><strong>放松一下</strong></div></h2><p>Chill Out 是一张中等大小的室内地图，每个房间都感觉像一个洞穴，没有外部景观或可见的天空。环境纹理属于紫色星盟外星人主题，但建筑具有先行者建筑的更粗糙的角度。很难确定这张地图在光环宇宙中的位置。 </p><p>最低的房间里还有地面雾，可以帮助玩家在整个地图上垂直定位。结合柔和的灰色、蓝色和紫色的冷色调，这种雾气给人一种冷酷的印象，与地图名称中的双关语相呼应。</p><p>Chill Out 是最初 《光环》 1 零售版中附带的十几种不同的多人游戏地图之一。它既不是地图周期中最令人讨厌的关卡，也不是最受欢迎的关卡，但它仍然提供了一种有用的方法来了解玩家如何使用视线和维护领土来在多人游戏竞技场中建立地图控制。</p><div><div><div><picture><div><img height="579" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252Fy4W5PanwQKIMY2TyFusI%252FLDB_chilloutmap.webp%3Falt%3Dmedia%26token%3D7bb0033a-e02a-4a27-8c62-6f14d0ba7912&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=f4884b0f&amp;sv=2" width="788"/></div><figcaption>带有房间标注的“放松”地图布局。绿线表示传送路径。</figcaption></picture></div></div></div><h3><div><a href="#structure"></a></div><div>结构</div></h3><p>从结构上讲，“Chill Out”分为三个部分和六个房间：Rocket、Mid、Pink、Gold、Shotgun 和 Spiral。</p><h4><div><a href="#rocket"></a></div><div>火箭</div></h4><p>偏离中心的是一个四边形的房间，有两层，两个高架平台位于火箭发射器产卵的柱子上，还有一个从底层通向顶部的长坡道。从这个火箭室，顶门通向一个长长的、尖角的大厅，通向粉红色的房间。这个大厅还有一个单向传送到猎枪室的通道。一扇较低的门通向黄金房间，一扇小弧形门通向猎枪室。还有两个大拱门，其上方有一个空间，通过一座断桥将火箭室与下层房间连接起来。</p><div><div><div><picture><div><img height="1080" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FaUXyGVPMwTPaL1PRSFbd%252FLDB_Halo_AndrewYoder_ChillOut1.webp%3Falt%3Dmedia%26token%3D34d672f4-d329-43be-a9f0-5a31adbd6745&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c7488a3e&amp;sv=2" width="1920"/></div><figcaption>火箭室。前面的门通向猎枪室。金色的房间在右边，粉红色的大厅在上面，拱门在左边。</figcaption></picture></div></div></div><h4><div><a href="#mid-bridge"></a></div><div>中/桥</div></h4><p>桥牌室的下层有两个宽阔的大厅，连接着猎枪室和黄金室。桥门一侧连接粉红色的房间，另一侧螺旋向下通向猎枪室。房间对面有两根大柱子，柱子有一个头高的间隙可以射穿，还有一条单向传送到粉红色的房间。火箭室和舰桥室一起构成了地图的中间部分。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Fbridge.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=95870a99&amp;sv=2" width="787"/></div><figcaption>中。右边的桥通向螺旋，左边的桥通向粉红色的房间。下层大厅右侧通向猎枪房，左侧通向金房。</figcaption></picture></div></div></div><h4><div><a href="#pink"></a></div><div>粉色</div></h4><p>粉红色的房间是主动迷彩加电和狙击步枪生成的地方。粉红色房间的一个出口是横跨中间的断桥的一部分。另一个出口是走上坡道，进入粉红色的大厅，到达火箭室的顶部，有一扇窗户可以俯瞰金色的房间。粉色大厅的窗户太小，很难跳过去，而且射击角度不大，但投掷手榴弹很有效。粉红色的房间也足够小，容易受到手榴弹的影响。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Fpinkroom.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=d8e9b46f&amp;sv=2" width="787"/></div><figcaption>从粉色大厅看粉色房间。</figcaption></picture></div></div></div><h4><div><a href="#gold"></a></div><div>黄金</div></h4><p>黄金房间主要作用是作为火箭房间中部到底部的一个长厅之间的连接，但它也有一个单向传送到螺旋断桥的地方。这种传送是有风险的，因为玩家退出时面朝粉红色的房间，而他们的背部暴露在霰弹枪房间螺旋处的任何人面前。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2F12-2-2017_6-43-50_pm.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=49f507ce&amp;sv=2" width="787"/></div><figcaption>从长廊看“金”房。门通向火箭室。</figcaption></picture></div></div></div><h4><div><a href="#shotgun"></a></div><div>霰弹枪</div></h4><p>最后一部分是猎枪室和螺旋坡道。霰弹枪是超护盾加电产生的地方。无论谁抓住它，都会获得两层额外的护盾保护，并在激活时获得第二层刀枪不入的保护。除了上盾之外，霰弹室也是一个薄弱位置。霰弹枪本身只在近距离战斗中有用，而手枪起始武器在地图的所有空间中都更加一致。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Fshotgunroom.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=8854bb5d&amp;sv=2" width="787"/></div><figcaption>从火箭室看霰弹枪室。</figcaption></picture></div></div></div><h4><div><a href="#spiral"></a></div><div>螺旋</div></h4><p>从螺旋中，玩家可能会看到断桥对面的粉红色，但粉红色的对手可能拥有狙击步枪。螺旋也容易受到手榴弹的攻击。从霰弹枪到火箭室底部还有一个小弯曲，但它的三个侧面都有盲点，包括火箭发射器产生的上方。猎枪室唯一的另一个出口是进入中间的另一个长厅，从拱门顶部很容易受到攻击。从粉色大厅到霰弹房中间还有一个传送出口，可以导致意想不到的近战。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Fspiral.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=82afcd35&amp;sv=2" width="787"/></div><figcaption>跳跃时从螺旋上看到的景色。</figcaption></picture></div></div></div><h3><div><a href="#competitive-meta"></a></div><div><strong>竞争元</strong></div></h3><p>在竞技2v2 Team Slayer中，这种设计的效果是两队都试图控制火箭房和粉红房。当玩家在这些房间中时，游戏会白盒敌人在附近重生，这增加了他们在中下或霰弹枪房间重生的可能性。从这个设置中，控制时间内的团队会随着超护盾能量的重生而进入霰弹枪室。对于被困在霰弹枪室的队伍来说，上方护盾是推动敌方队伍并重新获得地图定位的最佳方式。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2F12-2-2017_6-48-43_pm.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=115bdfa7&amp;sv=2" width="787"/></div><figcaption>粉红色房间的景色。</figcaption></picture></div></div></div><p>如果两个团队的技术相同，则很难维持此设置或任何其他设置。特别是在 2v2 中，当一名玩家死亡时，另一名玩家需要移动，否则就会面临 2v1 的风险。由于这些权力转移，两支球队都必须在地图上的强势位置之间不断轮换。其中一些位置更多的是关于信息，而不是玩家可以从中造成的伤害。例如，在粉红色房间到桥的门口，玩家可以看到猎枪室的两个出口，并可以清楚地看到火箭室，但如果不走出桥，就无法同时看到所有内容。其中两个视野太窄，无法多次击中正在奔跑的敌人，但对于发现敌人来说，这是一个很有价值的位置。这样，信息控制就与地图控制联动起来。</p><p>在竞技游戏中，我们还可以将玩家采取的每个行动视为资源交换。当玩家受到攻击时，他们可以交换护盾和生命值来获得更好的位置，或者玩家可以交换一个好的位置来获得能量提升或武器。强势头寸是指拥有多种选择且汇率良好的头寸。弱势仓位和“陷阱”是指每一个选择都会带来风险的仓位。</p><h3><div><a href="#doors-halls-teleports"></a></div><div><strong>门、大厅、传送</strong></div></h3><p>所有的门和走廊都又长又窄。 </p><p>有些门的长度和宽度一样，模糊了大厅和门之间的界限。在这些最狭窄的空间中，玩家无法欺骗敌人的目标或躲避手榴弹。 </p><p>有些天花板太低，玩家跳下去会撞到头。因此，玩家可以通过向这些走廊和门扔手榴弹来延迟敌人的推进或强制撤退。这些结构也比战术射击游戏中的门口更难做出承诺。 </p><p>盾牌机制及其对战斗中持续精确度的要求意味着玩家必须致力于进入竞技场，而不是从门的另一侧无效地戳戳。</p><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Fbigdoor.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=de5ea592&amp;sv=2" width="787"/></div><figcaption>从黄金到火箭的大门造成了很大的盲点。</figcaption></picture></div></div></div><div><div><div><picture><div><img height="443" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Fmclogeblog.files.wordpress.com%2F2017%2F12%2Flowhall.png%3Fw%3D788&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=90b279a9&amp;sv=2" width="787"/></div><figcaption>长长的大厅从护盾重生点穿过中间，到达黄金房间</figcaption></picture></div></div></div><p>地图的单向传送也起到了一种门口的作用，但它们比实际的门更难做出承诺。在休闲游戏中，由于过于混乱而无法预测地图另一侧的游戏状态，传送就像掷骰子：敌人可能在出口处扎营，或者玩家可能让敌人措手不及。作为一个新玩家或不常玩的玩家，甚至很难记住哪个传送去哪里，这可能是玩法中惊喜甚至幽默的来源。</p><p>传送也是逃避战斗的一种方式，因为不可能通过它们射击或投掷手榴弹。谁先进入瞬移，就可以退后一步，等待对手追击，然后进行近战攻击。或者，玩家可以在穿过传送入口时将手榴弹从传送入口弹开，白盒敌人继续追逐。</p><h3><div><a href="#friction"></a></div><div><strong>摩擦力</strong></div></h3><p>当前游戏设计的原则之一是限制玩家遇到的“摩擦”或“粗糙边缘”。摩擦的一种形式是测试无聊的技能。例如，从粉红色房间过桥到螺旋形房间需要小心跳跃，如果时机错误，则意味着几乎不会错过并在底部中间掉入空地。有一个类似的跳跃到火箭平台，还有另一个到拱门的顶部。这些都是令人沮丧的技能检查，因为没有部分故障状态或恢复空间。这些失败的跳跃所带来的缓慢、可预测的坠落的惩罚使它们变得更糟。</p><p>中下方的地面上也有断桥的碎片。尽管这些为抽象地图增添了视觉趣味，但它们却给游戏空间增加了字面上的摩擦。经验不足或心烦意乱的玩家试图穿过底部中路时，如果不向下看或盲目跳跃，就不会意识到自己被困在什么地方，这两者都会花费时间并可能导致玩家死亡。</p><p>我们还可以将狭窄的走廊和低矮的天花板视为摩擦源。这些空间让人感觉不舒服。但修复这些区域，就像《光环 3》在《Chill Out》的“Cold Storage”重制版中所做的那样，从地图的中心移除了一些东西。</p><h2><div><a href="#social-context"></a></div><div>社会背景</div></h2><p>对于沙发多人游戏来说，《Chill Out》并不是一个连贯的游戏场，而更像是一个冲突和惊喜的漏斗。</p><p>想象一下，那是 2001 年，我和三个朋友坐在沙发上玩《光环》。但几场比赛之后，技能差距就很明显了，我们开始临时制定新的目标和规则：近战只在地图向导上进行，反击得分 2 分，摔倒得分 3 分？或者也许是响尾蛇地图上的主动迷彩和狙击步枪？</p><p>如果一个变体变得乏味，我们会在比赛中对其进行调整并开始射击而不是使用近战，或者我们开始驾驶车辆穿过隐形狙击手的领域。目前，该团队对所有这些变体的目标不是谁赢了，或者谁是最好的。 </p><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mav1n1BvTZMwaSFP56s%252F-Mav4IIVXJZG962sSZH2%252FLDB_Halo2_MultiplayerMenu.jpg%3Falt%3Dmedia%26token%3Dba647ae0-3dad-409a-969e-37f40412df30&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=67125d4&amp;sv=2" width="1280"/></div><figcaption>《光环》 2 中多人游戏前大厅菜单的屏幕截图，其中包含可配置的游戏模式选项</figcaption></picture></div></div></div><p>这些变体是为了调整规则，增加混乱和不可预测性，这样即使是较弱的玩家也能获得成功。如果变体反而加剧了技能差距，那么玩家可能会放弃比赛或违反规则；本地多人游戏中的这种“恶搞”行为是玩家表达自己不开心的一种方式。</p><p>整个游戏模式类似于游乐场上的孩子们如何将标签改编成“冻结标签”，或“熔岩怪物”（只有“它”的玩家可以接触地面），或“金属怪物”（“它”的玩家只能在接触金属的结构周围移动）。这种自由形式的游戏并不关乎输赢，如果游戏锁定在一个已解决的状态，其中一个玩家被困在“它”中，那么该变体就失败了，需要修改。</p><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mav1n1BvTZMwaSFP56s%252F-Mav3EDuYv6OxO2Dw0U_%252FHMCC_HCE_Wizard_Map.png%3Falt%3Dmedia%26token%3D427c9ce8-391f-41ed-bbe3-38f0614c3109&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=acd9ac84&amp;sv=2" width="1280"/></div><figcaption>《士官长合集》光环 1 重制版中“巫师”地图布局的加载屏幕 </figcaption></picture></div></div></div><p>现在，如果你在 2001 年让我推荐《光环》中最好的地图，我可能会说“巫师”。它有四个轴对称部分、两组链接的传送、独立的第一层和第二层，以及两种类型的四个加电道具。传送和对称性造成了一种迷失方向，这给休闲游戏带来了混乱，并限制了战术游戏。巫师也足够小，迷失方向并不重要；如果玩家选择随机方向并开始行走，他们就会找到对手进行战斗。该地图也适合我们的许多游戏模式变体。 Wizard 是纯霰弹枪游戏、纯近战游戏或荒谬的无限手榴弹游戏的首选地图。它也是一张伟大的山丘之王地图，因为玩家只能通过跳跃才能到达中央柱子结构。</p><p>Chill Out 是我们本地多人游戏轮换中的另一张关键地图，但它的设计有更多细微差别，并且在我的记忆中停留得更久。我们如何谈论多人关卡设计，“Chill Out”是好是坏？对于想要安静散步的人来说，这是一个狗公园，还是对于没有孩子的人来说，这是一个游乐场？</p><p>我们可以列出玩家玩地图的所有方式。我们可以将地图分为几个组成部分，描述它们的相互关系，并考虑每个部分如何影响不同的玩家。或者我们可以采取叙事方式，在这些空间中讲述我们这个时代的故事。这些方法似乎都没有完全揭示地图的核心。但是，从本质上讲，这难道不是因为一张好的地图，就像一个好的公园， <i>应该</i> 对很多人来说意味着很多事情？</p><h2><div><a href="#videos"></a></div><div>视频</div></h2><p>您可以观看 <strong>本文的解说导览/视频版本</strong> 在 YouTube 上。 <span><a href="https://www.youtube.com/watch?v=YUdUh0uE2V4">https://www.youtube.com/watch?v=YUdUh0uE2V4</a></span></p><div><div><div><div><iframe></iframe></div></div></div></div><p>为了更好地了解 Chill Out 的实际玩法，您还可以观看这段 3v3 团队死亡竞赛（“Team Slayer”）视频： <span><a href="https://www.youtube.com/watch?v=AwPwL3snINQ">https://www.youtube.com/watch?v=AwPwL3snINQ</a></span></p><div><div><div><div><iframe></iframe></div></div></div></div><h2><div><a href="#further-reading"></a></div><div>进一步阅读</div></h2><ul><li><div><div></div></div><div><p><span><a href="https://www.youtube.com/watch?v=8YJ53skc-k4">“详细设计：将光环 3 中狙击步枪的射击间隔时间从 0.5 秒更改为 0.7 秒”</a></span> 由 Jaime Griesemer 创作的 GDC 2010 是一款备受推荐的经典游戏设计，深入探讨了武器平衡和 《光环》 的多人游戏设计。</p></div></li><li><div><div></div></div><div><p><span><a href="https://andrewyoderdesign.blog/2017/12/28/inflexible-pvp/">“光环和不灵活的 PvP”</a></span> 作者：Andrew Yoder 批评了 《光环》 僵化的多人游戏模式，这使得休闲网络酒吧游戏变得痛苦。</p></div></li></ul></div></div></article>
+<div class="page-links"><a class="page-link" href="studies__mp.html"><span>上一页</span>多人关卡研究</a><a class="page-link" href="studies__mp__de_dust2.html"><span>下一页</span>(存根) de_dust2 (《反恐精英》)</a></div>
+</main>
 </body>
 </html>

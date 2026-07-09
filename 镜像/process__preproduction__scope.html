@@ -1,117 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>范围控制 | The Level Design Book 中文版</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>范围控制 | The Level Design Book 中文版</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-  <aside class="sidebar">
-    <a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-    <nav><a class="" style="--depth:0" href="index.html">The Level Design Book 中文版</a>
-<a class="" style="--depth:1" href="introduction.html">✨ 什么是关卡设计</a>
-<a class="" style="--depth:2" href="process__overview.html">🗺️ 如何制作一个关卡</a>
-<a class="" style="--depth:2" href="process__preproduction.html">🧠 前期设计</a>
-<a class="" style="--depth:3" href="process__preproduction__pacing.html">节奏</a>
-<a class="" style="--depth:3" href="process__preproduction__research.html">调研</a>
-<a class="" style="--depth:3" href="process__preproduction__worldbuilding.html">世界构建</a>
-<a class="active" style="--depth:3" href="process__preproduction__scope.html">范围控制</a>
-<a class="" style="--depth:2" href="process__combat.html">🔫 战斗</a>
-<a class="" style="--depth:3" href="process__combat__enemy.html">敌人设计</a>
-<a class="" style="--depth:3" href="process__combat__encounter.html">遭遇战</a>
-<a class="" style="--depth:3" href="process__combat__cover.html">掩体</a>
-<a class="" style="--depth:3" href="process__combat__balance.html">地图平衡</a>
-<a class="" style="--depth:2" href="process__layout.html">🛠️ 布局</a>
-<a class="" style="--depth:3" href="process__layout__flow.html">流动感</a>
-<a class="" style="--depth:4" href="process__layout__flow__circulation.html">循环动线</a>
-<a class="" style="--depth:4" href="process__layout__flow__verticality.html">垂直性</a>
-<a class="" style="--depth:3" href="process__layout__criticalpath.html">关键路径</a>
-<a class="" style="--depth:3" href="process__layout__parti.html">Parti：概念布局</a>
-<a class="" style="--depth:3" href="process__layout__typology.html">类型学</a>
-<a class="" style="--depth:4" href="process__layout__typology__gates.html">门与关口</a>
-<a class="" style="--depth:2" href="process__blockout.html">🏠 白盒</a>
-<a class="" style="--depth:3" href="process__blockout__massing.html">体量</a>
-<a class="" style="--depth:4" href="process__blockout__massing__landscape.html">景观地形</a>
-<a class="" style="--depth:4" href="process__blockout__massing__composition.html">构图</a>
-<a class="" style="--depth:4" href="process__blockout__massing__prospect-refuge.html">眺望-庇护</a>
-<a class="" style="--depth:3" href="process__blockout__metrics.html">尺度指标</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__modular.html">模块化套件设计</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__doom.html">DOOM 尺度</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__quake.html">Quake 尺度</a>
-<a class="" style="--depth:3" href="process__blockout__wayfinding.html">寻路与引导</a>
-<a class="" style="--depth:3" href="process__blockout__playtesting.html">试玩测试</a>
-<a class="" style="--depth:4" href="process__blockout__playtesting__persona.html">玩家画像</a>
-<a class="" style="--depth:2" href="process__scripting.html">📜 脚本</a>
-<a class="" style="--depth:3" href="process__scripting__nav.html">(存根) 导航</a>
-<a class="" style="--depth:3" href="process__scripting__doors.html">门</a>
-<a class="" style="--depth:2" href="process__lighting.html">☀️ 灯光</a>
-<a class="" style="--depth:3" href="process__lighting__three-point.html">三点布光</a>
-<a class="" style="--depth:3" href="process__lighting__d6-lighting.html">D6 灯光法</a>
-<a class="" style="--depth:3" href="process__lighting__darkness.html">黑暗场景灯光</a>
-<a class="" style="--depth:2" href="process__env-art.html">🏡 环境美术</a>
-<a class="" style="--depth:3" href="process__env-art__psychology.html">形状与色彩心理学</a>
-<a class="" style="--depth:3" href="process__env-art__texturing.html">材质</a>
-<a class="" style="--depth:3" href="process__env-art__storytelling.html">叙事</a>
-<a class="" style="--depth:3" href="process__env-art__optimization.html">优化</a>
-<a class="" style="--depth:2" href="process__release.html">🌈 发布</a>
-<a class="" style="--depth:2" href="culture__overview.html">🦜 作为文化的关卡设计</a>
-<a class="" style="--depth:2" href="culture__history-level-designer.html">关卡设计师简史</a>
-<a class="" style="--depth:2" href="culture__zero-player.html">零玩家关卡设计</a>
-<a class="" style="--depth:2" href="culture__unfinished-pages.html">未完成页面</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-architecture.html">建筑史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__structural-engineering-primer.html">结构工程入门</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-environment-art.html">环境美术史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-furniture.html">家具史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-encounter-design.html">遭遇战设计史</a>
-<a class="" style="--depth:2" href="studies__overview.html">🔍 如何研究一个关卡</a>
-<a class="" style="--depth:2" href="studies__sp.html">单人关卡研究</a>
-<a class="" style="--depth:3" href="studies__sp__undead-burg.html">不死镇 (Dark Souls 1)</a>
-<a class="" style="--depth:3" href="studies__sp__assassins.html">Assassins (Thief 1)</a>
-<a class="" style="--depth:3" href="studies__sp__cradle.html">(存根) The Cradle (Thief 3)</a>
-<a class="" style="--depth:3" href="studies__sp__sapienza.html">(存根) Sapienza (Hitman)</a>
-<a class="" style="--depth:3" href="studies__sp__silent-cartographer.html">(存根) Silent Cartographer (Halo 1)</a>
-<a class="" style="--depth:2" href="studies__mp.html">多人关卡研究</a>
-<a class="" style="--depth:3" href="studies__mp__chill-out.html">Chill Out (Halo 1)</a>
-<a class="" style="--depth:3" href="studies__mp__de_dust2.html">(存根) de_dust2 (Counter-Strike)</a>
-<a class="" style="--depth:2" href="studies__irl.html">现实空间研究</a>
-<a class="" style="--depth:3" href="studies__irl__disneyland.html">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" style="--depth:3" href="studies__irl__stub-las-vegas-nevada-usa.html">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" style="--depth:2" href="learning__notes.html">🎒 给教学者的笔记</a>
-<a class="" style="--depth:2" href="learning__projects.html">项目计划</a>
-<a class="" style="--depth:3" href="learning__projects__classic-combat.html">经典战斗</a>
-<a class="" style="--depth:3" href="learning__projects__unfinished-wip-pages.html">未完成 WIP 页面</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-combat.html">现代战斗</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-stealth.html">现代潜行</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html">练习：直射光</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html">练习：2D 白板图</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html">关卡设计作品集</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__adaptation.html">设计测试：改编</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html">练习：布局</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__verticality.html">练习：垂直性</a>
-<a class="" style="--depth:2" href="appendix__tools.html">工具</a>
-<a class="" style="--depth:3" href="appendix__tools__trenchbroom.html">TrenchBroom</a>
-<a class="" style="--depth:2" href="appendix__resources.html">资产与资源</a>
-<a class="" style="--depth:3" href="appendix__resources__talks.html">推荐演讲</a>
-<a class="" style="--depth:3" href="appendix__resources__books.html">推荐书目</a>
-<a class="" style="--depth:3" href="appendix__resources__quake.html">Quake 资源</a>
-<a class="" style="--depth:4" href="appendix__resources__quake__how-to-package.html">如何打包 Quake 地图/Mod</a>
-<a class="" style="--depth:3" href="appendix__resources__formats.html">文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__fgd.html">FGD 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__map.html">MAP 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__mdl.html">MDL 文件格式</a>
-<a class="" style="--depth:2" href="appendix__communities.html">社区</a>
-<a class="" style="--depth:2" href="appendix__about.html">关于本书与作者</a>
-<a class="" style="--depth:2" href="appendix__license.html">许可与版权</a></nav>
-  </aside>
-  <main class="page">
-    <div class="topbar">
-      <a href="https://book.leveldesignbook.com/process/preproduction/scope">查看原文</a>
-      <a href="https://book.leveldesignbook.com">原站首页</a>
-    </div>
-    <div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-    <article><header><nav><ol><li></li><li></li></ol></nav><h1>范围控制</h1><p>项目的一般规模和复杂性；通过原型验证</p></header><div><div><p><strong>范围控制</strong> 是项目的一般规模和复杂性。 </p><p>在 <span><a href="process__preproduction.html">前期设计</a></span>，您设置初始范围和期望。</p><p>游戏开发中的传统智慧是假设每个项目一开始就范围过大。即使是小型合理的项目也隐藏着秘密问题。关卡设计也不例外；即使是一个小关卡也可能需要多次迭代和试玩测试来证明（如果有的话）。如有疑问，请缩小范围并削减不必要的非支柱游戏方面。</p><p>随着更多的工作经验（或者在一个团队中，更多的信任），你最终会成为 <i>稍微好一点</i> 在估计项目范围时。如果您是游戏开发新手，我们建议采用 50% 规则：想象您能想到的最小项目……然后无情地削减 -50% 的范围，以获得 +50% 的实际完成机会。</p><h2><div><a href="#feasibility"></a></div><div>可行性</div></h2><p>在从事大型或商业项目时，前期设计是一个重要的步骤 <!-- --><strong>可行性</strong> 研究：这个项目可以用提议的时间和资源完成吗？这是一个合理的想法还是一个异想天开的梦想？这有多可行？<!-- --></p><p>游戏引擎和工具的选择极大地影响了哪些机制和系统的可行性。例如，《毁灭战士 3》引擎中的开放世界驾驶游戏将非常难以制作，因为该引擎没有对大型景观或车辆的内置支持。</p><h3><div><a href="#engine-and-tools"></a></div><div>发动机和工具</div></h3><p>可行性比仅仅使用您最喜欢的游戏引擎更复杂。每个项目都有不同的需求和目标。</p><ul><li><div><div></div></div><div><p>所有权：依赖另一家公司是否明智？许多大型工作室维护自己的引擎，而不是依赖 Unity 或 Unreal，尽管制作自己的游戏引擎显然需要更多工作。</p></div></li><li><div><div></div></div><div><p>劳工：你能招聘和留住工人吗？例如，如果小型工作室无法抵制大型工作室以高得多的工资挖走员工，那么他们可能会避免使用虚幻引擎。</p></div></li><li><div><div></div></div><div><p>技术优先：你能改变设计以适应技术吗？想象一下一项需要使用 Doom 引擎的工作；制作射击游戏比平台游戏更可行（《毁灭战士》没有跳跃按钮）。</p></div></li></ul><h2><div><a href="#pipeline"></a></div><div>管道</div></h2><p>在游戏开发中， <strong>管道</strong> 是将文件转换为更可用格式的一系列步骤。前期设计是指您弄清楚大部分流程的时候。</p><p>一个 <i>建立管道</i> 制作一个可播放的可执行文件分发给玩家，同时 <i>艺术管道</i> 可能专注于将 2D 图像或 3D 模型转换为游戏引擎可用的格式。基本上，如果您看到这些词——转换、导入、导出、编译、烘焙——那么它就是管道的一部分。</p><p><i>关卡设计管线</i> 可能会有很大差异。有时您可能需要单独 <span><a href="appendix__tools.html">工具</a></span> 或插件来生成景观或建造建筑物。在 2010 年之前，游戏引擎在加载游戏中的关卡文件之前需要“地图编译”优化/错误检查步骤是很常见的。</p><h2><div><a href="#prototyping"></a></div><div>原型制作</div></h2><p>也许评估可行性的最佳方法是制定一个 <strong>原型,</strong> 一个回答问题的小型重点项目。</p><p>1997 年，苹果研究人员 Stephanie Houde 和 Charles Hill 发表了一篇著名论文，名为 <span><a href="https://hci.stanford.edu/courses/cs247/2012/readings/WhatDoPrototypesPrototype.pdf">“原型制作什么原型？”</a></span>。 Houde 和 Hill 定义了原型的三大类：</p><ul><li><div><div></div></div><div><p><strong>角色：</strong> 它如何满足用户需求，在他们的生活中扮演什么角色？</p></div></li><li><div><div></div></div><div><p><strong>实施：</strong> 这在技术上可行吗？我们将如何构建它？</p></div></li><li><div><div></div></div><div><p><strong>外观和感觉：</strong> 它会是什么样子，感觉如何？</p></div></li></ul><p>当对这些方面中的任何一个进行原型设计时，您都会制作所谓的 <strong>概念证明</strong>。它可能是纸质原型、引擎技术演示或带有玩家控制器的测试关卡。 </p><p><span><a href="process__layout.html">布局</a></span> 和 <span><a href="process__blockout.html">白盒</a></span> 也是寻求回答设计问题的原型。</p><h3><div><a href="#vertical-slice"></a></div><div>垂直切片</div></h3><p>当你试图将多个方面组合成一个更大的方面时 <i>综合的 </i>原型，你正在制作一个 <strong>垂直切片</strong> -- 已完成游戏的示例“切片”，包括体验设计（角色）、一些音频/视觉打磨（外观和感觉）以及功能技术基础（实现）。</p><p>进行垂直切片迫使团队证明他们的管道。如果他们能够使用当前的工具和工作流程制作出漂亮的切片，那么也许这些工具就足够好了。或者，如果垂直切片感觉不可能，那么就需要对团队的工作方式进行重大改变。</p><p>垂直切片还可以帮助我们衡量项目范围。如果需要 5 个月的时间来制作该项目的 10%，那么可能需要 45 个月的时间来制作游戏的其余 90%。 （嗯，显然它比这更复杂，但你明白了。）</p></div></div></article>
-    <div class="page-links"><a class="page-link" href="process__preproduction__worldbuilding.html"><span>上一页</span>世界构建</a><a class="page-link" href="process__combat.html"><span>下一页</span>🔫 战斗</a></div>
-  </main>
+<aside class="sidebar">
+<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
+<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
+<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
+<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
+<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
+<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
+<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
+<a class="active" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
+<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
+<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
+<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
+<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
+<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
+<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
+<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
+<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
+<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
+<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
+<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
+<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
+<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
+<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
+<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
+<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
+<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
+<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
+<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
+<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
+<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
+<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
+<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
+<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
+<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
+<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
+<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
+<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
+<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
+<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
+<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
+<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
+<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
+<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
+<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
+<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
+<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
+<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
+<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
+<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
+<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
+<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
+<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
+<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
+<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
+<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
+<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
+<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
+<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
+<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
+<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
+<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
+<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
+<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
+<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
+<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
+<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
+<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
+<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
+<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
+<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
+<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
+<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
+<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
+<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
+<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
+<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
+<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
+<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
+<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
+<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
+<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
+<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
+<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
+<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
+<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
+<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
+</aside>
+<main class="page">
+<div class="topbar">
+<a href="https://book.leveldesignbook.com/process/preproduction/scope">查看原文</a>
+<a href="https://book.leveldesignbook.com">原站首页</a>
+</div>
+<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+<article><header><nav><ol><li></li><li></li></ol></nav><h1>范围控制</h1><p>项目的一般规模和复杂性；通过原型验证</p></header><div><div><p><strong>范围控制</strong> 是项目的一般规模和复杂性。 </p><p>在 <span><a href="process__preproduction.html">前期设计</a></span>，您设置初始范围和期望。</p><p>游戏开发中的传统智慧是假设每个项目一开始就范围过大。即使是小型合理的项目也隐藏着秘密问题。关卡设计也不例外；即使是一个小关卡也可能需要多次迭代和试玩测试来证明（如果有的话）。如有疑问，请缩小范围并削减不必要的非支柱游戏方面。</p><p>随着更多的工作经验（或者在一个团队中，更多的信任），你最终会成为 <i>稍微好一点</i> 在估计项目范围时。如果您是游戏开发新手，我们建议采用 50% 规则：想象您能想到的最小项目……然后无情地削减 -50% 的范围，以获得 +50% 的实际完成机会。</p><h2><div><a href="#feasibility"></a></div><div>可行性</div></h2><p>在从事大型或商业项目时，前期设计是一个重要的步骤 <!-- --><strong>可行性</strong> 研究：这个项目可以用提议的时间和资源完成吗？这是一个合理的想法还是一个异想天开的梦想？这有多可行？<!-- --></p><p>游戏引擎和工具的选择极大地影响了哪些机制和系统的可行性。例如，《毁灭战士 3》引擎中的开放世界驾驶游戏将非常难以制作，因为该引擎没有对大型景观或车辆的内置支持。</p><h3><div><a href="#engine-and-tools"></a></div><div>引擎和工具</div></h3><p>可行性比仅仅使用您最喜欢的游戏引擎更复杂。每个项目都有不同的需求和目标。</p><ul><li><div><div></div></div><div><p>所有权：依赖另一家公司是否明智？许多大型工作室维护自己的引擎，而不是依赖 Unity 或 Unreal，尽管制作自己的游戏引擎显然需要更多工作。</p></div></li><li><div><div></div></div><div><p>劳工：你能招聘和留住工人吗？例如，如果小型工作室无法抵制大型工作室以高得多的工资挖走员工，那么他们可能会避免使用虚幻引擎。</p></div></li><li><div><div></div></div><div><p>技术优先：你能改变设计以适应技术吗？想象一下一项需要使用 《毁灭战士》 引擎的工作；制作射击游戏比平台游戏更可行（《毁灭战士》没有跳跃按钮）。</p></div></li></ul><h2><div><a href="#pipeline"></a></div><div>管道</div></h2><p>在游戏开发中， <strong>管道</strong> 是将文件转换为更可用格式的一系列步骤。前期设计是指您弄清楚大部分流程的时候。</p><p>一个 <i>建立管道</i> 制作一个可播放的可执行文件分发给玩家，同时 <i>艺术管道</i> 可能专注于将 2D 图像或 3D 模型转换为游戏引擎可用的格式。基本上，如果您看到这些词——转换、导入、导出、编译、烘焙——那么它就是管道的一部分。</p><p><i>关卡设计管线</i> 可能会有很大差异。有时您可能需要单独 <span><a href="appendix__tools.html">工具</a></span> 或插件来生成景观或建造建筑物。在 2010 年之前，游戏引擎在加载游戏中的关卡文件之前需要“地图编译”优化/错误检查步骤是很常见的。</p><h2><div><a href="#prototyping"></a></div><div>原型制作</div></h2><p>也许评估可行性的最佳方法是制定一个 <strong>原型,</strong> 一个回答问题的小型重点项目。</p><p>1997 年，苹果研究人员 Stephanie Houde 和 Charles Hill 发表了一篇著名论文，名为 <span><a href="https://hci.stanford.edu/courses/cs247/2012/readings/WhatDoPrototypesPrototype.pdf">“原型制作什么原型？”</a></span>。 Houde 和 Hill 定义了原型的三大类：</p><ul><li><div><div></div></div><div><p><strong>角色：</strong> 它如何满足用户需求，在他们的生活中扮演什么角色？</p></div></li><li><div><div></div></div><div><p><strong>实施：</strong> 这在技术上可行吗？我们将如何构建它？</p></div></li><li><div><div></div></div><div><p><strong>外观和感觉：</strong> 它会是什么样子，感觉如何？</p></div></li></ul><p>当对这些方面中的任何一个进行原型设计时，您都会制作所谓的 <strong>概念证明</strong>。它可能是纸质原型、引擎技术演示或带有玩家控制器的测试关卡。 </p><p><span><a href="process__layout.html">布局</a></span> 和 <span><a href="process__blockout.html">白盒</a></span> 也是寻求回答设计问题的原型。</p><h3><div><a href="#vertical-slice"></a></div><div>垂直切片</div></h3><p>当你试图将多个方面组合成一个更大的方面时 <i>综合的 </i>原型，你正在制作一个 <strong>垂直切片</strong> -- 已完成游戏的示例“切片”，包括体验设计（角色）、一些音频/视觉打磨（外观和感觉）以及功能技术基础（实现）。</p><p>进行垂直切片迫使团队证明他们的管道。如果他们能够使用当前的工具和工作流程制作出漂亮的切片，那么也许这些工具就足够好了。或者，如果垂直切片感觉不可能，那么就需要对团队的工作方式进行重大改变。</p><p>垂直切片还可以帮助我们衡量项目范围。如果需要 5 个月的时间来制作该项目的 10%，那么可能需要 45 个月的时间来制作游戏的其余 90%。 （嗯，显然它比这更复杂，但你明白了。）</p></div></div></article>
+<div class="page-links"><a class="page-link" href="process__preproduction__worldbuilding.html"><span>上一页</span>世界构建</a><a class="page-link" href="process__combat.html"><span>下一页</span>🔫 战斗</a></div>
+</main>
 </body>
 </html>

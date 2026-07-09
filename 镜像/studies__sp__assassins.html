@@ -1,127 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Assassins (Thief 1) | The Level Design Book 中文版</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Assassins (《神偷》 1) | The Level Design Book 中文版</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-  <aside class="sidebar">
-    <a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-    <nav><a class="" style="--depth:0" href="index.html">The Level Design Book 中文版</a>
-<a class="" style="--depth:1" href="introduction.html">✨ 什么是关卡设计</a>
-<a class="" style="--depth:2" href="process__overview.html">🗺️ 如何制作一个关卡</a>
-<a class="" style="--depth:2" href="process__preproduction.html">🧠 前期设计</a>
-<a class="" style="--depth:3" href="process__preproduction__pacing.html">节奏</a>
-<a class="" style="--depth:3" href="process__preproduction__research.html">调研</a>
-<a class="" style="--depth:3" href="process__preproduction__worldbuilding.html">世界构建</a>
-<a class="" style="--depth:3" href="process__preproduction__scope.html">范围控制</a>
-<a class="" style="--depth:2" href="process__combat.html">🔫 战斗</a>
-<a class="" style="--depth:3" href="process__combat__enemy.html">敌人设计</a>
-<a class="" style="--depth:3" href="process__combat__encounter.html">遭遇战</a>
-<a class="" style="--depth:3" href="process__combat__cover.html">掩体</a>
-<a class="" style="--depth:3" href="process__combat__balance.html">地图平衡</a>
-<a class="" style="--depth:2" href="process__layout.html">🛠️ 布局</a>
-<a class="" style="--depth:3" href="process__layout__flow.html">流动感</a>
-<a class="" style="--depth:4" href="process__layout__flow__circulation.html">循环动线</a>
-<a class="" style="--depth:4" href="process__layout__flow__verticality.html">垂直性</a>
-<a class="" style="--depth:3" href="process__layout__criticalpath.html">关键路径</a>
-<a class="" style="--depth:3" href="process__layout__parti.html">Parti：概念布局</a>
-<a class="" style="--depth:3" href="process__layout__typology.html">类型学</a>
-<a class="" style="--depth:4" href="process__layout__typology__gates.html">门与关口</a>
-<a class="" style="--depth:2" href="process__blockout.html">🏠 白盒</a>
-<a class="" style="--depth:3" href="process__blockout__massing.html">体量</a>
-<a class="" style="--depth:4" href="process__blockout__massing__landscape.html">景观地形</a>
-<a class="" style="--depth:4" href="process__blockout__massing__composition.html">构图</a>
-<a class="" style="--depth:4" href="process__blockout__massing__prospect-refuge.html">眺望-庇护</a>
-<a class="" style="--depth:3" href="process__blockout__metrics.html">尺度指标</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__modular.html">模块化套件设计</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__doom.html">DOOM 尺度</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__quake.html">Quake 尺度</a>
-<a class="" style="--depth:3" href="process__blockout__wayfinding.html">寻路与引导</a>
-<a class="" style="--depth:3" href="process__blockout__playtesting.html">试玩测试</a>
-<a class="" style="--depth:4" href="process__blockout__playtesting__persona.html">玩家画像</a>
-<a class="" style="--depth:2" href="process__scripting.html">📜 脚本</a>
-<a class="" style="--depth:3" href="process__scripting__nav.html">(存根) 导航</a>
-<a class="" style="--depth:3" href="process__scripting__doors.html">门</a>
-<a class="" style="--depth:2" href="process__lighting.html">☀️ 灯光</a>
-<a class="" style="--depth:3" href="process__lighting__three-point.html">三点布光</a>
-<a class="" style="--depth:3" href="process__lighting__d6-lighting.html">D6 灯光法</a>
-<a class="" style="--depth:3" href="process__lighting__darkness.html">黑暗场景灯光</a>
-<a class="" style="--depth:2" href="process__env-art.html">🏡 环境美术</a>
-<a class="" style="--depth:3" href="process__env-art__psychology.html">形状与色彩心理学</a>
-<a class="" style="--depth:3" href="process__env-art__texturing.html">材质</a>
-<a class="" style="--depth:3" href="process__env-art__storytelling.html">叙事</a>
-<a class="" style="--depth:3" href="process__env-art__optimization.html">优化</a>
-<a class="" style="--depth:2" href="process__release.html">🌈 发布</a>
-<a class="" style="--depth:2" href="culture__overview.html">🦜 作为文化的关卡设计</a>
-<a class="" style="--depth:2" href="culture__history-level-designer.html">关卡设计师简史</a>
-<a class="" style="--depth:2" href="culture__zero-player.html">零玩家关卡设计</a>
-<a class="" style="--depth:2" href="culture__unfinished-pages.html">未完成页面</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-architecture.html">建筑史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__structural-engineering-primer.html">结构工程入门</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-environment-art.html">环境美术史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-furniture.html">家具史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-encounter-design.html">遭遇战设计史</a>
-<a class="" style="--depth:2" href="studies__overview.html">🔍 如何研究一个关卡</a>
-<a class="" style="--depth:2" href="studies__sp.html">单人关卡研究</a>
-<a class="" style="--depth:3" href="studies__sp__undead-burg.html">不死镇 (Dark Souls 1)</a>
-<a class="active" style="--depth:3" href="studies__sp__assassins.html">Assassins (Thief 1)</a>
-<a class="" style="--depth:3" href="studies__sp__cradle.html">(存根) The Cradle (Thief 3)</a>
-<a class="" style="--depth:3" href="studies__sp__sapienza.html">(存根) Sapienza (Hitman)</a>
-<a class="" style="--depth:3" href="studies__sp__silent-cartographer.html">(存根) Silent Cartographer (Halo 1)</a>
-<a class="" style="--depth:2" href="studies__mp.html">多人关卡研究</a>
-<a class="" style="--depth:3" href="studies__mp__chill-out.html">Chill Out (Halo 1)</a>
-<a class="" style="--depth:3" href="studies__mp__de_dust2.html">(存根) de_dust2 (Counter-Strike)</a>
-<a class="" style="--depth:2" href="studies__irl.html">现实空间研究</a>
-<a class="" style="--depth:3" href="studies__irl__disneyland.html">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" style="--depth:3" href="studies__irl__stub-las-vegas-nevada-usa.html">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" style="--depth:2" href="learning__notes.html">🎒 给教学者的笔记</a>
-<a class="" style="--depth:2" href="learning__projects.html">项目计划</a>
-<a class="" style="--depth:3" href="learning__projects__classic-combat.html">经典战斗</a>
-<a class="" style="--depth:3" href="learning__projects__unfinished-wip-pages.html">未完成 WIP 页面</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-combat.html">现代战斗</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-stealth.html">现代潜行</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html">练习：直射光</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html">练习：2D 白板图</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html">关卡设计作品集</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__adaptation.html">设计测试：改编</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html">练习：布局</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__verticality.html">练习：垂直性</a>
-<a class="" style="--depth:2" href="appendix__tools.html">工具</a>
-<a class="" style="--depth:3" href="appendix__tools__trenchbroom.html">TrenchBroom</a>
-<a class="" style="--depth:2" href="appendix__resources.html">资产与资源</a>
-<a class="" style="--depth:3" href="appendix__resources__talks.html">推荐演讲</a>
-<a class="" style="--depth:3" href="appendix__resources__books.html">推荐书目</a>
-<a class="" style="--depth:3" href="appendix__resources__quake.html">Quake 资源</a>
-<a class="" style="--depth:4" href="appendix__resources__quake__how-to-package.html">如何打包 Quake 地图/Mod</a>
-<a class="" style="--depth:3" href="appendix__resources__formats.html">文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__fgd.html">FGD 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__map.html">MAP 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__mdl.html">MDL 文件格式</a>
-<a class="" style="--depth:2" href="appendix__communities.html">社区</a>
-<a class="" style="--depth:2" href="appendix__about.html">关于本书与作者</a>
-<a class="" style="--depth:2" href="appendix__license.html">许可与版权</a></nav>
-  </aside>
-  <main class="page">
-    <div class="topbar">
-      <a href="https://book.leveldesignbook.com/studies/sp/assassins">查看原文</a>
-      <a href="https://book.leveldesignbook.com">原站首页</a>
-    </div>
-    <div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-    <article><header><nav><ol><li></li><li></li></ol></nav><h1>Assassins (Thief 1)</h1><p>开放世界 潜行 单人 中世纪城市 讲故事</p></header><div><div><h2><div><a href="#why-thief"></a></div><div>为什么是小偷？</div></h2><p>Looking Glass Studios 出品的《神偷：黑暗计划》（又名《神偷黄金》、《神偷 1》、《TDP》或简称为《神偷》）是一款第一人称潜行游戏，讲述在一座坚韧的奇幻蒸汽朋克城市中悄悄穿过阴影躲避守卫并窃取宝藏的游戏。</p><p>这款 1998 年的里程碑式游戏营造了一种缓慢而有条理的 RPG 感觉，与《毁灭战士》(1993) 和《雷神之锤》(1996) 的快速街机暴力形成鲜明对比。与《毁灭战士》或《雷神之锤》不同，如果你跑过前门并尝试与《神偷》中的敌人战斗，那么你很快就会死。相反，你必须扮演一名街头聪明的反英雄小偷，用分心的方式欺骗​​守卫，或者更好的是，耐心观察守卫的动作并巧妙地从巡逻路线之间的缝隙中溜过去。最重要的是，《Thief》是一款第一人称游戏，玩家需要观察但不能瞄准，躲藏但不能逃跑，当你的所有计划都严重出错时，只能草率地即兴发挥。</p><p>多年后，《神偷》推出了三部续集，并启发了后代的“沉浸式模拟游戏”——强调对象交互、庞大的关卡设计、环境故事讲述和非暴力游戏风格的游戏。我们研究《神偷》是因为它创造了一种令人惊叹的世界感和能动性，这在今天仍然很少有人能比拟。</p><div><div><div><picture><div><img height="674" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mav5X5fQHslQaOpCXwW%252F-Mav66rGpeGASVQFJKnv%252FLDB_Thief_Cover.jpg%3Falt%3Dmedia%26token%3D17f44cb0-e909-4fbe-b02c-39b6a6f00577&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=dc66d9a&amp;sv=2" width="1200"/></div><figcaption>《神偷：黑暗计划》的关键艺术作品展示了拿着火箭的阴暗玩家角色加勒特</figcaption></picture></div></div></div><h2><div><a href="#assassins"></a></div><div>刺客</div></h2><p>从《神偷》的第一个任务开始（<span><a href="http://thief.wikia.com/wiki/OM_T1_Lord_Bafford's_Manor">《巴福德勋爵的庄园》</a></span>），每个关卡都从安全的公共区域开始，然后是您必须渗透和掠夺的受限制的私人区域。公共空间通常是一个开放的公共空间，您可以在城市街道上漫步，几乎没有危险或受到惩罚。相比之下，私人住宅通常戒备森严，前门戒备森严。 <!-- --></p><p>大多数小偷任务的第一步是绘制私人区域的边界并探测任何漏洞或漏洞。 “装上接头”是小偷幻想的基础，因此对小偷的体验目标至关重要。除非外面有安全的公共场所，而里面有危险的私人场所，否则不会有偷偷摸摸的感觉。
+<aside class="sidebar">
+<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
+<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
+<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
+<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
+<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
+<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
+<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
+<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
+<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
+<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
+<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
+<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
+<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
+<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
+<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
+<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
+<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
+<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
+<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
+<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
+<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
+<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
+<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
+<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
+<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
+<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
+<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
+<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
+<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
+<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
+<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
+<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
+<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
+<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
+<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
+<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
+<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
+<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
+<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
+<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
+<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
+<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
+<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
+<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
+<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
+<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
+<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
+<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
+<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
+<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
+<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
+<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
+<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
+<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
+<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
+<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
+<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
+<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
+<a class="active" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
+<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
+<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
+<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
+<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
+<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
+<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
+<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
+<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
+<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
+<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
+<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
+<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
+<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
+<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
+<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
+<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
+<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
+<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
+<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
+<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
+<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
+<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
+<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
+<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
+<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
+<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
+</aside>
+<main class="page">
+<div class="topbar">
+<a href="https://book.leveldesignbook.com/studies/sp/assassins">查看原文</a>
+<a href="https://book.leveldesignbook.com">原站首页</a>
+</div>
+<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+<article><header><nav><ol><li></li><li></li></ol></nav><h1>Assassins (《神偷》 1)</h1><p>开放世界 潜行 单人 中世纪城市 讲故事</p></header><div><div><h2><div><a href="#why-thief"></a></div><div>为什么是小偷？</div></h2><p>Looking Glass Studios 出品的《神偷：黑暗计划》（又名《神偷黄金》、《神偷 1》、《TDP》或简称为《神偷》）是一款第一人称潜行游戏，讲述在一座坚韧的奇幻蒸汽朋克城市中悄悄穿过阴影躲避守卫并窃取宝藏的游戏。</p><p>这款 1998 年的里程碑式游戏营造了一种缓慢而有条理的 RPG 感觉，与《毁灭战士》(1993) 和《雷神之锤》(1996) 的快速街机暴力形成鲜明对比。与《毁灭战士》或《雷神之锤》不同，如果你跑过前门并尝试与《神偷》中的敌人战斗，那么你很快就会死。相反，你必须扮演一名街头聪明的反英雄小偷，用分心的方式欺骗​​守卫，或者更好的是，耐心观察守卫的动作并巧妙地从巡逻路线之间的缝隙中溜过去。最重要的是，《神偷》是一款第一人称游戏，玩家需要观察但不能瞄准，躲藏但不能逃跑，当你的所有计划都严重出错时，只能草率地即兴发挥。</p><p>多年后，《神偷》推出了三部续集，并启发了后代的“沉浸式模拟游戏”——强调对象交互、庞大的关卡设计、环境故事讲述和非暴力游戏风格的游戏。我们研究《神偷》是因为它创造了一种令人惊叹的世界感和能动性，这在今天仍然很少有人能比拟。</p><div><div><div><picture><div><img height="674" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mav5X5fQHslQaOpCXwW%252F-Mav66rGpeGASVQFJKnv%252FLDB_Thief_Cover.jpg%3Falt%3Dmedia%26token%3D17f44cb0-e909-4fbe-b02c-39b6a6f00577&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=dc66d9a&amp;sv=2" width="1200"/></div><figcaption>《神偷：黑暗计划》的关键艺术作品展示了拿着火箭的阴暗玩家角色加勒特</figcaption></picture></div></div></div><h2><div><a href="#assassins"></a></div><div>刺客</div></h2><p>从《神偷》的第一个任务开始（<span><a href="http://thief.wikia.com/wiki/OM_T1_Lord_Bafford's_Manor">《巴福德勋爵的庄园》</a></span>），每个关卡都从安全的公共区域开始，然后是您必须渗透和掠夺的受限制的私人区域。公共空间通常是一个开放的公共空间，您可以在城市街道上漫步，几乎没有危险或受到惩罚。相比之下，私人住宅通常戒备森严，前门戒备森严。 <!-- --></p><p>大多数小偷任务的第一步是绘制私人区域的边界并探测任何漏洞或漏洞。 “装上接头”是小偷幻想的基础，因此对小偷的体验目标至关重要。除非外面有安全的公共场所，而里面有危险的私人场所，否则不会有偷偷摸摸的感觉。
 
-当他们开始第四个任务“刺客”（由迈克·瑞恩（Mike Ryan）在格雷格·洛皮科洛（Greg LoPiccolo）的协助下）时，玩家已经习惯了这种公共外部与私人内部的节奏模式。这就是设计师翻转剧本并满足玩家期望的时候。刺客既体现又颠覆了游戏对公共与私人空间的使用，质疑谁真正拥有一座城市。</p><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mav5X5fQHslQaOpCXwW%252F-Mav771mT68ehjUIS03W%252FThief_assassins2a.jpg%3Falt%3Dmedia%26token%3Ddc9acd04-73e5-4361-9c11-3669101a810f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=3b1a4aa4&amp;sv=2" width="1280"/></div><figcaption>《刺客：黑暗计划》（1998 年）中，中世纪城市街道上参差不齐，窗户发光，背光窗户闪烁。</figcaption></picture></div></div></div><p>该特派团由四名将军组成 <span><a href="process__preproduction__pacing.html">踱步</a></span> 节拍：</p><ol><li><div><div></div></div><div><p>简介：站在商店里，差点被刺客 NPC 杀死</p></div></li><li><div><div></div></div><div><p>跟随：秘密跟随刺客 NPC 穿过城市，回到他们的雇主身边</p></div></li><li><div><div></div></div><div><p>豪宅：潜入雇主的豪宅并偷走他的东西</p></div></li><li><div><div></div></div><div><p>（可选）逃生：如果警报响起，你必须原路穿过城市<!-- --></p></div></li></ol><p>布局分为城市街道和府邸两部分。左上角的豪宅几乎占了地图的一半，最初它甚至更大，但在开发后期它必须缩小范围以方便记忆 <span><a href="process__env-art__optimization.html">优化</a></span> 运行游戏的目标系统要求。</p><div><div><div><picture><div><img height="736" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MavIPJYjeTzRXCT-5P6%252F-MavR6FectKlMqVAHVPA%252FLDB_Thief_Assassins.png%3Falt%3Dmedia%26token%3D88a42051-53ef-4ac9-958d-d249f17b7a92&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=3e2d4c48&amp;sv=2" width="1360"/></div><figcaption>刺客的最终布局；拉米雷斯大厦（左上）的内部布局未显示</figcaption></picture></div></div></div><h2><div><a href="#mission-structure"></a></div><div>任务结构</div></h2><h3><div><a href="#id-1.-intro-the-shop"></a></div><div>1. 店铺简介：</div></h3><p>你从一家商店开始，这在《神偷》中是不寻常的。之前的所有任务都是从外面开始的，通常就在主入口外面。这个房间也很不寻常，因为《神偷》在每次任务之前都会有一个商店机械师，这被严格视为菜单屏幕中的单独模式，而且它永远不是您可以访问的实际商店位置。 </p><p>当你向前迈出一步时，你会激活一个扳机，从窗户射出一支箭来谋杀店主。然后你无意中听到外面有两个刺客，他们以为他们谋杀了你而走开。 </p><p>你的任务目标现在完全改变了。你现在必须跟随刺客回到他们的秘密基地而不被发现，而不是闯入当地的寺庙。这种类型的诱饵和切换非常不寻常，并且在整个游戏中再也没有重复过。</p><div><div><div><picture><div><img height="592" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MavIPJYjeTzRXCT-5P6%252F-Mavm-lqh04TrEB7-g4Y%252FThief_Assassins_Shop.jpg%3Falt%3Dmedia%26token%3D706fce90-833c-42cd-92fc-069d8557f3d2&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=8c7bb171&amp;sv=2" width="1095"/></div><figcaption>店主法库斯在一支箭突然射入看不见的窗户并杀死他之前 </figcaption></picture></div></div></div><p>因此，刺客在第一分钟就颠覆了《神偷》中的许多设计规范。商店是假商店，任务简报是假简报，目标是假目标。这些惊喜预示着任务即将结束时更大的惊喜。 </p><p>但此时，玩家几乎没有时间思考（也没有时间抢劫商店），他们就必须立即离开去追随刺客。</p><h3><div><a href="#id-2.-follow-tailing-the-assassins"></a></div><div>2. 追踪：追踪刺客</div></h3><p>游戏从未解释如何追踪刺客回到他们的藏身处。缺乏这方面的教程 <i>未公布的惊喜游戏模式</i> 对于当今的当代玩家来说，这或许是令人沮丧的。玩家必须通过反复试验来猜测规则和策略，但你很快就会知道有 <strong>失败的三种方式</strong>:</p><ul><li><div><div></div></div><div><p>有时刺客会停下来并转身看看是否有人跟踪他们。 <strong>如果他们看到你 </strong>然后他们就会开始追你，你的任务就会失败。</p></div></li><li><div><div></div></div><div><p>如果你在金属板上行走或跑步距离它们太近，就会发出很大的声音。 <strong>如果他们听到你的声音</strong> 如果你太过怀疑，他们就会开始寻找你，而你基本上会失败。</p></div></li><li><div><div></div></div><div><p><strong>如果你落后太多</strong>，那么你就会失去他们的踪迹并很快迷失在迷宫般的街道中。如果你落后太远，那么你最终将引发艰难的任务失败。 </p><ul><li><div><div></div></div><div><p>最重要的是， <strong>当你有因距离而失败的危险时，你不会得到任何反馈。</strong> 因此，玩家学会了错误地靠近而不是退后——确切的限制永远不会显示。</p></div></li></ul></div></li></ul><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Lu045u3CaCHx8tynVj0%252F-Lu04_c2FWVkns-t-waJ%252Fimage.png%3Falt%3Dmedia%26token%3D0745f56a-4648-4ec5-a4be-34965f2fabd0&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=6e343050&amp;sv=2" width="1280"/></div><figcaption>在《神偷：黑暗计划》的“刺客”开头跟踪一名刺客 NPC</figcaption></picture></div></div></div><p>这个任务是你对这座城市的第一个广阔的感觉，它是一个由狭窄的中世纪街道和小巷组成的巨大迷宫，没有网格图案或标志。在这里，公共领域是未知的、巨大的、势不可挡的，很容易迷失方向。这是《神偷》中唯一一次让这座城市真正感觉像一座大城市。</p><p>请注意，它仅 <i>感觉</i> 就像一座城市。与任何现实世界的城市相比，布局实际上并不是很复杂。少量的循环就足以让任何玩家感到困惑。</p><p>刺客从商店到拉米雷斯宅邸的路线是随机的，有不同的分支和停留点，但基本上只有三种可能的路径。当他们离开商店并穿过河边的金属桥时，他们可以带走：</p><ul><li><div><div></div></div><div><p>短路：他们向西走，直接到达宅邸。</p><ul><li><div><div></div></div><div><p>你基本上跳过了一半的关卡</p></div></li></ul></div></li><li><div><div></div></div><div><p>中间路径：他们向北走到一座雕像，然后向西走向宅邸。</p><ul><li><div><div></div></div><div><p>在困难和专家难度下，刺客向右分叉并绕行（紫色虚线）</p></div></li></ul></div></li><li><div><div></div></div><div><p>东路：他们向东走，然后蜿蜒回到雕像。</p></div></li></ul><div><div><div><picture><div><img height="736" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MavIPJYjeTzRXCT-5P6%252F-Mavi-h5vqwYJifyD7wH%252FLDB_Thief_Assassins2.png%3Falt%3Dmedia%26token%3D3f9f1593-e51d-4fe3-8686-fc8759092b58&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c0c6499d&amp;sv=2" width="1360"/></div><figcaption>布局可能的刺客路径，从商店开始；右上角附近的紫色虚线路径仅在困难/专家模式下可用</figcaption></picture></div></div></div><h4><div><a href="#stealth-encounter-design-masterpiece"></a></div><div>隐身遭遇战设计杰作</div></h4><p>在追逐结束时，刺客总是穿过特定的拱门，爬上坡道，然后拐过拐角。 </p><p>这部分是潜行遭遇战设计的杰作，将玩家所有的潜行技巧浓缩成一分钟信息不完整的紧张即兴创作。</p><p>首先，你跟随他们穿过拱门。拱门的 <span><a href="http://www.blog.radiator.debacle.us/2010/07/geocomp2-neorganic-epiphany-by-dubblian.html">圆形塔楼提供广阔的视野</a></span> 所以你可以很容易地注意到拱门下方的一片黑暗。关卡设计师显然希望你去那里，因为这是一个被危险的明亮区域包围的孤独的安全岛。</p><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLQgiGtRZaQ5n41ZGR4%252F-MLQm6DQ9PRsDTLYiRWT%252Fassassin2d.jpg%3Falt%3Dmedia%26token%3D81d8e9cd-ef7c-4ff5-a976-bbe44a6f63cb&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=85b39451&amp;sv=2" width="1280"/></div><figcaption>在《神偷》中，明亮的光区域是危险的；玩家必须快速从一个阴影到另一个阴影</figcaption></picture></div></div></div><p>然而，拱门下的那片黑暗具有误导性。这并不是很安全。你的光宝石指示器会发出黄色光，这意味着你仍然有些可见，足以引起人工智能的怀疑。</p><p>你有三个选择，但没有一个感觉很好：</p><ul><li><div><div></div></div><div><p>选项A：如果你呆在坡道底部的拱门下，那么刺客可能会转身看到你，并产生怀疑。失败。</p></div></li><li><div><div></div></div><div><p>选项B：如果你退回到拱门之前，那么你的视线就会被破坏，你将无法看到刺客在坡道顶部之后去了哪里。失败。</p></div></li><li><div><div></div></div><div><p>选项C：如果你继续沿着坡道走，明亮的路灯会暴露你的身份，即使没有，你也不知道顶部的地板材料是否会让你的脚步声太吵。失败。</p></div></li></ul><p>你不能原地踏步，不能逃跑，更不能前进。关卡设计师在逗你。这是一个陷阱。</p><div><div><div><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLQgiGtRZaQ5n41ZGR4%252F-MLQmBnnNCigjNFXFUxD%252Fassassin2b.jpg%3Falt%3Dmedia%26token%3Dfcfeeccb-f35c-44a4-b8d8-a438c7a2ef1a&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=89e9351&amp;sv=2" width="1280"/></div></div></div></div><p>大多数初次玩游戏的人都会因优柔寡断而陷入瘫痪，并选择选项A——站着不动祈祷。更具冒险精神的人会选择选项C，因为他们知道狭窄的90度角意味着刺客也看不到你，而且刺客永远不会后退。</p><p>但是，你如何从那里追踪刺客呢？他们可能就站在那里，看着你。你不能冒险扭转局面。所以相反，你必须倾听。</p><div><div><div><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLQgiGtRZaQ5n41ZGR4%252F-MLQmK4O50mnT4Yif-Eb%252Fassassin2c.jpg%3Falt%3Dmedia%26token%3Da9858bbb-8af5-42b7-983e-21135928b234&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=ee3e9522&amp;sv=2" width="1280"/></div></div></div></div><p>当他们转过那个拐角时，你听到靴子踩在金属上的叮当声，你会冻结并倾听你听到了多少金属脚步声。大量的金属台阶意味着很长的金属走道。这就是《神偷》脚步机制的美妙之处：它将声音转化为空间。
+当他们开始第四个任务“刺客”（由迈克·瑞恩（Mike Ryan）在格雷格·洛皮科洛（Greg LoPiccolo）的协助下）时，玩家已经习惯了这种公共外部与私人内部的节奏模式。这就是设计师翻转剧本并满足玩家期望的时候。刺客既体现又颠覆了游戏对公共与私人空间的使用，质疑谁真正拥有一座城市。</p><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mav5X5fQHslQaOpCXwW%252F-Mav771mT68ehjUIS03W%252FThief_assassins2a.jpg%3Falt%3Dmedia%26token%3Ddc9acd04-73e5-4361-9c11-3669101a810f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=3b1a4aa4&amp;sv=2" width="1280"/></div><figcaption>《刺客：黑暗计划》（1998 年）中，中世纪城市街道上参差不齐，窗户发光，背光窗户闪烁。</figcaption></picture></div></div></div><p>该特派团由四名将军组成 <span><a href="process__preproduction__pacing.html">节奏</a></span> 节拍：</p><ol><li><div><div></div></div><div><p>简介：站在商店里，差点被刺客 NPC 杀死</p></div></li><li><div><div></div></div><div><p>跟随：秘密跟随刺客 NPC 穿过城市，回到他们的雇主身边</p></div></li><li><div><div></div></div><div><p>豪宅：潜入雇主的豪宅并偷走他的东西</p></div></li><li><div><div></div></div><div><p>（可选）逃生：如果警报响起，你必须原路穿过城市<!-- --></p></div></li></ol><p>布局分为城市街道和府邸两部分。左上角的豪宅几乎占了地图的一半，最初它甚至更大，但在开发后期它必须缩小范围以方便记忆 <span><a href="process__env-art__optimization.html">优化</a></span> 运行游戏的目标系统要求。</p><div><div><div><picture><div><img height="736" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MavIPJYjeTzRXCT-5P6%252F-MavR6FectKlMqVAHVPA%252FLDB_Thief_Assassins.png%3Falt%3Dmedia%26token%3D88a42051-53ef-4ac9-958d-d249f17b7a92&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=3e2d4c48&amp;sv=2" width="1360"/></div><figcaption>刺客的最终布局；拉米雷斯大厦（左上）的内部布局未显示</figcaption></picture></div></div></div><h2><div><a href="#mission-structure"></a></div><div>任务结构</div></h2><h3><div><a href="#id-1.-intro-the-shop"></a></div><div>1. 店铺简介：</div></h3><p>你从一家商店开始，这在《神偷》中是不寻常的。之前的所有任务都是从外面开始的，通常就在主入口外面。这个房间也很不寻常，因为《神偷》在每次任务之前都会有一个商店机械师，这被严格视为菜单屏幕中的单独模式，而且它永远不是您可以访问的实际商店位置。 </p><p>当你向前迈出一步时，你会激活一个扳机，从窗户射出一支箭来谋杀店主。然后你无意中听到外面有两个刺客，他们以为他们谋杀了你而走开。 </p><p>你的任务目标现在完全改变了。你现在必须跟随刺客回到他们的秘密基地而不被发现，而不是闯入当地的寺庙。这种类型的诱饵和切换非常不寻常，并且在整个游戏中再也没有重复过。</p><div><div><div><picture><div><img height="592" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MavIPJYjeTzRXCT-5P6%252F-Mavm-lqh04TrEB7-g4Y%252FThief_Assassins_Shop.jpg%3Falt%3Dmedia%26token%3D706fce90-833c-42cd-92fc-069d8557f3d2&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=8c7bb171&amp;sv=2" width="1095"/></div><figcaption>店主法库斯在一支箭突然射入看不见的窗户并杀死他之前 </figcaption></picture></div></div></div><p>因此，刺客在第一分钟就颠覆了《神偷》中的许多设计规范。商店是假商店，任务简报是假简报，目标是假目标。这些惊喜预示着任务即将结束时更大的惊喜。 </p><p>但此时，玩家几乎没有时间思考（也没有时间抢劫商店），他们就必须立即离开去追随刺客。</p><h3><div><a href="#id-2.-follow-tailing-the-assassins"></a></div><div>2. 追踪：追踪刺客</div></h3><p>游戏从未解释如何追踪刺客回到他们的藏身处。缺乏这方面的教程 <i>未公布的惊喜游戏模式</i> 对于当今的当代玩家来说，这或许是令人沮丧的。玩家必须通过反复试验来猜测规则和策略，但你很快就会知道有 <strong>失败的三种方式</strong>:</p><ul><li><div><div></div></div><div><p>有时刺客会停下来并转身看看是否有人跟踪他们。 <strong>如果他们看到你 </strong>然后他们就会开始追你，你的任务就会失败。</p></div></li><li><div><div></div></div><div><p>如果你在金属板上行走或跑步距离它们太近，就会发出很大的声音。 <strong>如果他们听到你的声音</strong> 如果你太过怀疑，他们就会开始寻找你，而你基本上会失败。</p></div></li><li><div><div></div></div><div><p><strong>如果你落后太多</strong>，那么你就会失去他们的踪迹并很快迷失在迷宫般的街道中。如果你落后太远，那么你最终将引发艰难的任务失败。 </p><ul><li><div><div></div></div><div><p>最重要的是， <strong>当你有因距离而失败的危险时，你不会得到任何反馈。</strong> 因此，玩家学会了错误地靠近而不是退后——确切的限制永远不会显示。</p></div></li></ul></div></li></ul><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Lu045u3CaCHx8tynVj0%252F-Lu04_c2FWVkns-t-waJ%252Fimage.png%3Falt%3Dmedia%26token%3D0745f56a-4648-4ec5-a4be-34965f2fabd0&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=6e343050&amp;sv=2" width="1280"/></div><figcaption>在《神偷：黑暗计划》的“刺客”开头跟踪一名刺客 NPC</figcaption></picture></div></div></div><p>这个任务是你对这座城市的第一个广阔的感觉，它是一个由狭窄的中世纪街道和小巷组成的巨大迷宫，没有网格图案或标志。在这里，公共领域是未知的、巨大的、势不可挡的，很容易迷失方向。这是《神偷》中唯一一次让这座城市真正感觉像一座大城市。</p><p>请注意，它仅 <i>感觉</i> 就像一座城市。与任何现实世界的城市相比，布局实际上并不是很复杂。少量的循环就足以让任何玩家感到困惑。</p><p>刺客从商店到拉米雷斯宅邸的路线是随机的，有不同的分支和停留点，但基本上只有三种可能的路径。当他们离开商店并穿过河边的金属桥时，他们可以带走：</p><ul><li><div><div></div></div><div><p>短路：他们向西走，直接到达宅邸。</p><ul><li><div><div></div></div><div><p>你基本上跳过了一半的关卡</p></div></li></ul></div></li><li><div><div></div></div><div><p>中间路径：他们向北走到一座雕像，然后向西走向宅邸。</p><ul><li><div><div></div></div><div><p>在困难和专家难度下，刺客向右分叉并绕行（紫色虚线）</p></div></li></ul></div></li><li><div><div></div></div><div><p>东路：他们向东走，然后蜿蜒回到雕像。</p></div></li></ul><div><div><div><picture><div><img height="736" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MavIPJYjeTzRXCT-5P6%252F-Mavi-h5vqwYJifyD7wH%252FLDB_Thief_Assassins2.png%3Falt%3Dmedia%26token%3D3f9f1593-e51d-4fe3-8686-fc8759092b58&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c0c6499d&amp;sv=2" width="1360"/></div><figcaption>布局可能的刺客路径，从商店开始；右上角附近的紫色虚线路径仅在困难/专家模式下可用</figcaption></picture></div></div></div><h4><div><a href="#stealth-encounter-design-masterpiece"></a></div><div>隐身遭遇战设计杰作</div></h4><p>在追逐结束时，刺客总是穿过特定的拱门，爬上坡道，然后拐过拐角。 </p><p>这部分是潜行遭遇战设计的杰作，将玩家所有的潜行技巧浓缩成一分钟信息不完整的紧张即兴创作。</p><p>首先，你跟随他们穿过拱门。拱门的 <span><a href="http://www.blog.radiator.debacle.us/2010/07/geocomp2-neorganic-epiphany-by-dubblian.html">圆形塔楼提供广阔的视野</a></span> 所以你可以很容易地注意到拱门下方的一片黑暗。关卡设计师显然希望你去那里，因为这是一个被危险的明亮区域包围的孤独的安全岛。</p><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLQgiGtRZaQ5n41ZGR4%252F-MLQm6DQ9PRsDTLYiRWT%252Fassassin2d.jpg%3Falt%3Dmedia%26token%3D81d8e9cd-ef7c-4ff5-a976-bbe44a6f63cb&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=85b39451&amp;sv=2" width="1280"/></div><figcaption>在《神偷》中，明亮的光区域是危险的；玩家必须快速从一个阴影到另一个阴影</figcaption></picture></div></div></div><p>然而，拱门下的那片黑暗具有误导性。这并不是很安全。你的光宝石指示器会发出黄色光，这意味着你仍然有些可见，足以引起人工智能的怀疑。</p><p>你有三个选择，但没有一个感觉很好：</p><ul><li><div><div></div></div><div><p>选项A：如果你呆在坡道底部的拱门下，那么刺客可能会转身看到你，并产生怀疑。失败。</p></div></li><li><div><div></div></div><div><p>选项B：如果你退回到拱门之前，那么你的视线就会被破坏，你将无法看到刺客在坡道顶部之后去了哪里。失败。</p></div></li><li><div><div></div></div><div><p>选项C：如果你继续沿着坡道走，明亮的路灯会暴露你的身份，即使没有，你也不知道顶部的地板材料是否会让你的脚步声太吵。失败。</p></div></li></ul><p>你不能原地踏步，不能逃跑，更不能前进。关卡设计师在逗你。这是一个陷阱。</p><div><div><div><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLQgiGtRZaQ5n41ZGR4%252F-MLQmBnnNCigjNFXFUxD%252Fassassin2b.jpg%3Falt%3Dmedia%26token%3Dfcfeeccb-f35c-44a4-b8d8-a438c7a2ef1a&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=89e9351&amp;sv=2" width="1280"/></div></div></div></div><p>大多数初次玩游戏的人都会因优柔寡断而陷入瘫痪，并选择选项A——站着不动祈祷。更具冒险精神的人会选择选项C，因为他们知道狭窄的90度角意味着刺客也看不到你，而且刺客永远不会后退。</p><p>但是，你如何从那里追踪刺客呢？他们可能就站在那里，看着你。你不能冒险扭转局面。所以相反，你必须倾听。</p><div><div><div><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLQgiGtRZaQ5n41ZGR4%252F-MLQmK4O50mnT4Yif-Eb%252Fassassin2c.jpg%3Falt%3Dmedia%26token%3Da9858bbb-8af5-42b7-983e-21135928b234&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=ee3e9522&amp;sv=2" width="1280"/></div></div></div></div><p>当他们转过那个拐角时，你听到靴子踩在金属上的叮当声，你会冻结并倾听你听到了多少金属脚步声。大量的金属台阶意味着很长的金属走道。这就是《神偷》脚步机制的美妙之处：它将声音转化为空间。
 
 设计师甚至通过将三种不同的地板材料放在一起来强调金属桩，这在《神偷》中是很少见的。他们希望你注意到石头、金属和木头脚步声之间的快速对比。</p><h3><div><a href="#id-3.-ramirez-mansion"></a></div><div>3. 拉米雷斯大厦</div></h3><div><div><div><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLQgiGtRZaQ5n41ZGR4%252F-MLQltfuer69ACeUV35k%252Fimage.png%3Falt%3Dmedia%26token%3D7130a945-3c5a-41fe-880e-7f2454eaec30&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=67679f73&amp;sv=2" width="1280"/></div></div></div></div><div><div><div><div><img height="768" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLQgiGtRZaQ5n41ZGR4%252F-MLQmpwq6N4kiv-itMw7%252Fassassins_ramirez_map_thief.jpg%3Falt%3Dmedia%26token%3Dfa7bef8b-d3d2-4efc-a61e-3da670d3b252&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=53f0200b&amp;sv=2" width="1024"/></div></div></div></div><p>一旦你找到刺客的藏身处，一座由某个名叫拉米雷斯的人拥有的城堡，你的任务就是执行任务的第二阶段：抢劫他<strong> </strong>他所拥有的一切。
 
 这是出乎意料的。你觉得任务现在应该结束了，但实际上感觉像是两个任务合二为一。 （但是你期望什么？否则这件事怎么可能结束呢？）
 
-拉米雷斯豪宅比街道容易解决得多。顶层只有少数守卫巡逻，这意味着你可以很快控制整个区域。与我之前分析的真正深思熟虑的城市街道设计相比，这个室内平面图简单易懂，主要走廊狭窄且布置有些对称，许多地板是由相对柔和的石头制成的。</p><div><div><div><div><img height="527" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mav5X5fQHslQaOpCXwW%252F-Mav7bbczjYsfD0CYMLD%252FThief_BaffordsMap.jpg%3Falt%3Dmedia%26token%3D7579d088-9735-44c5-928d-af68f8ea9bc6&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=b6b84bf1&amp;sv=2" width="935"/></div></div></div></div><p>在比较第一个豪宅任务（巴福德勋爵的）和你玩的第二个豪宅任务时，会出现一些差异：</p><ul><li><div><div></div></div><div><p>巴福德的地方比拉米雷斯的地方更大、更广阔。</p></div></li><li><div><div></div></div><div><p>巴福德有一个王座室和独立的翼楼，到处都有很多艺术品。拉米雷斯的别墅规划简单、紧凑，带有中央庭院；墙壁纹理清晰；他还安装了隐藏的墙缝来监视卧室里的客人。 （令人毛骨悚然。）</p></div></li><li><div><div></div></div><div><p>巴福德的地下室很旧。拉米雷斯最近用非法动物围栏和办公室/计数室翻新了他的地下室。</p></div></li><li><div><div></div></div><div><p>巴福德的稀世珍宝是一把“皇家权杖”，外面还有拿着锣的守卫。拉米雷斯有一把“银火拨火棍”，以及某种通过房子布线的电子报警系统。警报的差异很明显，这两种宝藏都是非常个人化的、象征着权力的阴茎物品，但你发现火棍的“卧室西洋镜”背景更加阴险。 （你可以在壁炉后面的狭小空间中找到它，这使得它无法用来生火。）</p></div></li><li><div><div></div></div><div><p>最后，可读性巩固了比较。其中， <span><a href="http://thief.wikia.com/wiki/Assassins:_In-game_text">巴福德为延迟向拉米雷斯付款而道歉</a></span>，这意味着他在图腾柱上的地位比拉米雷斯低，尽管他的位置更大、更高档。就这样，镜子 <strong>使用阅读文本使阅读架构变得复杂</strong> ——哇哦。</p></div></li></ul><div><div><div><picture><div><img height="216" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F3.bp.blogspot.com%2F-qOiJvj7D2Dg%2FUBcBxg_5izI%2FAAAAAAAABIw%2FoCjfMG4NcG4%2Fs640%2Fassassins5a.jpg&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c2c1087a&amp;sv=2" width="540"/></div><figcaption>将巴福德勋爵的华丽横幅与拉米雷斯的简单设计进行比较；巴福德太努力了？来自 Thief 的纹理 </figcaption></picture></div></div></div><p>关卡设计的差异在于特征的形式：“B”或“R”横幅使这些空间变得私密和个性化。超大的尺寸和过度的装饰意味着巴福德只痴迷于权力的形象；与此同时，相对斯巴达的拉米雷斯更喜欢权力的力量。当你潜入这些城堡时，你实际上是在潜入他们的头脑并了解他们的秘密和不安全感。将其视为环境故事讲述的原始精神病人风格，将家视为其主人的隐喻。</p><h3><div><a href="#id-4.-escape"></a></div><div>4. 逃脱</div></h3><p>刺客的结局太精彩了。这可能是整个任务中最好的部分。不幸的是，这也是 Looking Glass 真正失败的地方。</p><p>仅当满足以下条件时，您才能播放结局：</p><ul><li><div><div></div></div><div><p>您正在玩“困难”或“专家”难度</p></div></li><li><div><div></div></div><div><p>你触发了拉米雷斯大厦的警报</p></div></li></ul><p>对于许多玩家来说，永远不会触发警报是很常见的。困难或专家玩家会发现刺客比以前的任务更容易一些。而在之前的《Down In The Bonehoard》任务中，Thief 糟糕的攀爬代码迫使玩家快速加载/快速保存大量内容。结合任务早期部分的零警告失败，玩家将非常愿意扮演完美主义者。</p><p>如果你从不触发警报，游戏就永远不会触发任务的最后部分：拉米雷斯的守卫占领了街道，你必须偷偷溜过他们才能回到你的邻居。</p><div><div><div><picture><div><img height="736" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MavIPJYjeTzRXCT-5P6%252F-MavqCFeEclIVPq2GoCt%252FLDB_Thief_Assassins3.png%3Falt%3Dmedia%26token%3Dceb8c16a-5c1e-444e-a843-b9b0fd4899b6&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=659946d8&amp;sv=2" width="1360"/></div><figcaption>在刺客可选的最后阶段，玩家必须溜出拉米雷斯大厦并回到自己的家</figcaption></picture></div></div></div><p>每个小偷关卡的“退出”部分通常是微不足道的。你通过一个回溯 <span><a href="http://www.blog.radiator.debacle.us/2011/07/dark-past-part-4-useful-post-or-randy.html">已经解决的水平</a></span>，经过那么多守卫昏迷不醒的尸体。即使他们仍在巡逻，您也已经知道他们的模式和藏身之处。</p><p>但在这里，游戏产生了压倒性的优势，大约有二十名新守卫——比宅邸中的人数还要多！ ——而且他们都处于永久警戒状态，在灯火通明的街道上以零可预测性随机漫游。这是赌注和世界状况的意外变化。当你从另一条路回来时，所有这些角落的功能突然变得非常不同。城市的街道既熟悉又陌生。
+拉米雷斯豪宅比街道容易解决得多。顶层只有少数守卫巡逻，这意味着你可以很快控制整个区域。与我之前分析的真正深思熟虑的城市街道设计相比，这个室内平面图简单易懂，主要走廊狭窄且布置有些对称，许多地板是由相对柔和的石头制成的。</p><div><div><div><div><img height="527" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mav5X5fQHslQaOpCXwW%252F-Mav7bbczjYsfD0CYMLD%252FThief_BaffordsMap.jpg%3Falt%3Dmedia%26token%3D7579d088-9735-44c5-928d-af68f8ea9bc6&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=b6b84bf1&amp;sv=2" width="935"/></div></div></div></div><p>在比较第一个豪宅任务（巴福德勋爵的）和你玩的第二个豪宅任务时，会出现一些差异：</p><ul><li><div><div></div></div><div><p>巴福德的地方比拉米雷斯的地方更大、更广阔。</p></div></li><li><div><div></div></div><div><p>巴福德有一个王座室和独立的翼楼，到处都有很多艺术品。拉米雷斯的别墅规划简单、紧凑，带有中央庭院；墙壁纹理清晰；他还安装了隐藏的墙缝来监视卧室里的客人。 （令人毛骨悚然。）</p></div></li><li><div><div></div></div><div><p>巴福德的地下室很旧。拉米雷斯最近用非法动物围栏和办公室/计数室翻新了他的地下室。</p></div></li><li><div><div></div></div><div><p>巴福德的稀世珍宝是一把“皇家权杖”，外面还有拿着锣的守卫。拉米雷斯有一把“银火拨火棍”，以及某种通过房子布线的电子报警系统。警报的差异很明显，这两种宝藏都是非常个人化的、象征着权力的阴茎物品，但你发现火棍的“卧室西洋镜”背景更加阴险。 （你可以在壁炉后面的狭小空间中找到它，这使得它无法用来生火。）</p></div></li><li><div><div></div></div><div><p>最后，可读性巩固了比较。其中， <span><a href="http://thief.wikia.com/wiki/Assassins:_In-game_text">巴福德为延迟向拉米雷斯付款而道歉</a></span>，这意味着他在图腾柱上的地位比拉米雷斯低，尽管他的位置更大、更高档。就这样，镜子 <strong>使用阅读文本使阅读架构变得复杂</strong> ——哇哦。</p></div></li></ul><div><div><div><picture><div><img height="216" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F3.bp.blogspot.com%2F-qOiJvj7D2Dg%2FUBcBxg_5izI%2FAAAAAAAABIw%2FoCjfMG4NcG4%2Fs640%2Fassassins5a.jpg&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c2c1087a&amp;sv=2" width="540"/></div><figcaption>将巴福德勋爵的华丽横幅与拉米雷斯的简单设计进行比较；巴福德太努力了？来自 《神偷》 的纹理 </figcaption></picture></div></div></div><p>关卡设计的差异在于特征的形式：“B”或“R”横幅使这些空间变得私密和个性化。超大的尺寸和过度的装饰意味着巴福德只痴迷于权力的形象；与此同时，相对斯巴达的拉米雷斯更喜欢权力的力量。当你潜入这些城堡时，你实际上是在潜入他们的头脑并了解他们的秘密和不安全感。将其视为环境故事讲述的原始精神病人风格，将家视为其主人的隐喻。</p><h3><div><a href="#id-4.-escape"></a></div><div>4. 逃脱</div></h3><p>刺客的结局太精彩了。这可能是整个任务中最好的部分。不幸的是，这也是 Looking Glass 真正失败的地方。</p><p>仅当满足以下条件时，您才能播放结局：</p><ul><li><div><div></div></div><div><p>您正在玩“困难”或“专家”难度</p></div></li><li><div><div></div></div><div><p>你触发了拉米雷斯大厦的警报</p></div></li></ul><p>对于许多玩家来说，永远不会触发警报是很常见的。困难或专家玩家会发现刺客比以前的任务更容易一些。而在之前的《Down In The Bonehoard》任务中，《神偷》 糟糕的攀爬代码迫使玩家快速加载/快速保存大量内容。结合任务早期部分的零警告失败，玩家将非常愿意扮演完美主义者。</p><p>如果你从不触发警报，游戏就永远不会触发任务的最后部分：拉米雷斯的守卫占领了街道，你必须偷偷溜过他们才能回到你的邻居。</p><div><div><div><picture><div><img height="736" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MavIPJYjeTzRXCT-5P6%252F-MavqCFeEclIVPq2GoCt%252FLDB_Thief_Assassins3.png%3Falt%3Dmedia%26token%3Dceb8c16a-5c1e-444e-a843-b9b0fd4899b6&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=659946d8&amp;sv=2" width="1360"/></div><figcaption>在刺客可选的最后阶段，玩家必须溜出拉米雷斯大厦并回到自己的家</figcaption></picture></div></div></div><p>每个小偷关卡的“退出”部分通常是微不足道的。你通过一个回溯 <span><a href="http://www.blog.radiator.debacle.us/2011/07/dark-past-part-4-useful-post-or-randy.html">已经解决的水平</a></span>，经过那么多守卫昏迷不醒的尸体。即使他们仍在巡逻，您也已经知道他们的模式和藏身之处。</p><p>但在这里，游戏产生了压倒性的优势，大约有二十名新守卫——比宅邸中的人数还要多！ ——而且他们都处于永久警戒状态，在灯火通明的街道上以零可预测性随机漫游。这是赌注和世界状况的意外变化。当你从另一条路回来时，所有这些角落的功能突然变得非常不同。城市的街道既熟悉又陌生。
 
 拉米雷斯已将这座城市私有化：公众现在很危险。该城市以中立空间的形式开始其使命。然后它是一个受害者，被拉米雷斯的私人空间一分为二，这是一座横跨十几个城市街区的大庄园。现在这座城市是你的敌人。 </p><div><div><div><div><img height="352" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MavIPJYjeTzRXCT-5P6%252F-MavtpbO205Kh1mO79Lo%252Fassassins6_map_city.jpg%3Falt%3Dmedia%26token%3D40958f6d-576a-49bf-8227-37db07356aa7&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=b79a69d5&amp;sv=2" width="540"/></div></div></div></div><h2><div><a href="#video"></a></div><div>视频</div></h2><p>您可以在此处观看本文的解说导览/视频版本： <span><a href="https://www.youtube.com/watch?v=K7e1i95VtiY">https://www.youtube.com/watch?v=K7e1i95VtiY</a></span></p><div><div><div><div><iframe></iframe></div></div></div></div><p></p></div></div></article>
-    <div class="page-links"><a class="page-link" href="studies__sp__undead-burg.html"><span>上一页</span>不死镇 (Dark Souls 1)</a><a class="page-link" href="studies__sp__cradle.html"><span>下一页</span>(存根) The Cradle (Thief 3)</a></div>
-  </main>
+<div class="page-links"><a class="page-link" href="studies__sp__undead-burg.html"><span>上一页</span>不死镇（《黑暗之魂》1）</a><a class="page-link" href="studies__sp__cradle.html"><span>下一页</span>(存根) The Cradle (《神偷》 3)</a></div>
+</main>
 </body>
 </html>

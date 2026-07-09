@@ -1,117 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>垂直性 | The Level Design Book 中文版</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>纵向/垂直空间 | The Level Design Book 中文版</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-  <aside class="sidebar">
-    <a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-    <nav><a class="" style="--depth:0" href="index.html">The Level Design Book 中文版</a>
-<a class="" style="--depth:1" href="introduction.html">✨ 什么是关卡设计</a>
-<a class="" style="--depth:2" href="process__overview.html">🗺️ 如何制作一个关卡</a>
-<a class="" style="--depth:2" href="process__preproduction.html">🧠 前期设计</a>
-<a class="" style="--depth:3" href="process__preproduction__pacing.html">节奏</a>
-<a class="" style="--depth:3" href="process__preproduction__research.html">调研</a>
-<a class="" style="--depth:3" href="process__preproduction__worldbuilding.html">世界构建</a>
-<a class="" style="--depth:3" href="process__preproduction__scope.html">范围控制</a>
-<a class="" style="--depth:2" href="process__combat.html">🔫 战斗</a>
-<a class="" style="--depth:3" href="process__combat__enemy.html">敌人设计</a>
-<a class="" style="--depth:3" href="process__combat__encounter.html">遭遇战</a>
-<a class="" style="--depth:3" href="process__combat__cover.html">掩体</a>
-<a class="" style="--depth:3" href="process__combat__balance.html">地图平衡</a>
-<a class="" style="--depth:2" href="process__layout.html">🛠️ 布局</a>
-<a class="" style="--depth:3" href="process__layout__flow.html">流动感</a>
-<a class="" style="--depth:4" href="process__layout__flow__circulation.html">循环动线</a>
-<a class="active" style="--depth:4" href="process__layout__flow__verticality.html">垂直性</a>
-<a class="" style="--depth:3" href="process__layout__criticalpath.html">关键路径</a>
-<a class="" style="--depth:3" href="process__layout__parti.html">Parti：概念布局</a>
-<a class="" style="--depth:3" href="process__layout__typology.html">类型学</a>
-<a class="" style="--depth:4" href="process__layout__typology__gates.html">门与关口</a>
-<a class="" style="--depth:2" href="process__blockout.html">🏠 白盒</a>
-<a class="" style="--depth:3" href="process__blockout__massing.html">体量</a>
-<a class="" style="--depth:4" href="process__blockout__massing__landscape.html">景观地形</a>
-<a class="" style="--depth:4" href="process__blockout__massing__composition.html">构图</a>
-<a class="" style="--depth:4" href="process__blockout__massing__prospect-refuge.html">眺望-庇护</a>
-<a class="" style="--depth:3" href="process__blockout__metrics.html">尺度指标</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__modular.html">模块化套件设计</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__doom.html">DOOM 尺度</a>
-<a class="" style="--depth:4" href="process__blockout__metrics__quake.html">Quake 尺度</a>
-<a class="" style="--depth:3" href="process__blockout__wayfinding.html">寻路与引导</a>
-<a class="" style="--depth:3" href="process__blockout__playtesting.html">试玩测试</a>
-<a class="" style="--depth:4" href="process__blockout__playtesting__persona.html">玩家画像</a>
-<a class="" style="--depth:2" href="process__scripting.html">📜 脚本</a>
-<a class="" style="--depth:3" href="process__scripting__nav.html">(存根) 导航</a>
-<a class="" style="--depth:3" href="process__scripting__doors.html">门</a>
-<a class="" style="--depth:2" href="process__lighting.html">☀️ 灯光</a>
-<a class="" style="--depth:3" href="process__lighting__three-point.html">三点布光</a>
-<a class="" style="--depth:3" href="process__lighting__d6-lighting.html">D6 灯光法</a>
-<a class="" style="--depth:3" href="process__lighting__darkness.html">黑暗场景灯光</a>
-<a class="" style="--depth:2" href="process__env-art.html">🏡 环境美术</a>
-<a class="" style="--depth:3" href="process__env-art__psychology.html">形状与色彩心理学</a>
-<a class="" style="--depth:3" href="process__env-art__texturing.html">材质</a>
-<a class="" style="--depth:3" href="process__env-art__storytelling.html">叙事</a>
-<a class="" style="--depth:3" href="process__env-art__optimization.html">优化</a>
-<a class="" style="--depth:2" href="process__release.html">🌈 发布</a>
-<a class="" style="--depth:2" href="culture__overview.html">🦜 作为文化的关卡设计</a>
-<a class="" style="--depth:2" href="culture__history-level-designer.html">关卡设计师简史</a>
-<a class="" style="--depth:2" href="culture__zero-player.html">零玩家关卡设计</a>
-<a class="" style="--depth:2" href="culture__unfinished-pages.html">未完成页面</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-architecture.html">建筑史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__structural-engineering-primer.html">结构工程入门</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-environment-art.html">环境美术史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-furniture.html">家具史</a>
-<a class="" style="--depth:3" href="culture__unfinished-pages__history-encounter-design.html">遭遇战设计史</a>
-<a class="" style="--depth:2" href="studies__overview.html">🔍 如何研究一个关卡</a>
-<a class="" style="--depth:2" href="studies__sp.html">单人关卡研究</a>
-<a class="" style="--depth:3" href="studies__sp__undead-burg.html">不死镇 (Dark Souls 1)</a>
-<a class="" style="--depth:3" href="studies__sp__assassins.html">Assassins (Thief 1)</a>
-<a class="" style="--depth:3" href="studies__sp__cradle.html">(存根) The Cradle (Thief 3)</a>
-<a class="" style="--depth:3" href="studies__sp__sapienza.html">(存根) Sapienza (Hitman)</a>
-<a class="" style="--depth:3" href="studies__sp__silent-cartographer.html">(存根) Silent Cartographer (Halo 1)</a>
-<a class="" style="--depth:2" href="studies__mp.html">多人关卡研究</a>
-<a class="" style="--depth:3" href="studies__mp__chill-out.html">Chill Out (Halo 1)</a>
-<a class="" style="--depth:3" href="studies__mp__de_dust2.html">(存根) de_dust2 (Counter-Strike)</a>
-<a class="" style="--depth:2" href="studies__irl.html">现实空间研究</a>
-<a class="" style="--depth:3" href="studies__irl__disneyland.html">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" style="--depth:3" href="studies__irl__stub-las-vegas-nevada-usa.html">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" style="--depth:2" href="learning__notes.html">🎒 给教学者的笔记</a>
-<a class="" style="--depth:2" href="learning__projects.html">项目计划</a>
-<a class="" style="--depth:3" href="learning__projects__classic-combat.html">经典战斗</a>
-<a class="" style="--depth:3" href="learning__projects__unfinished-wip-pages.html">未完成 WIP 页面</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-combat.html">现代战斗</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-stealth.html">现代潜行</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html">练习：直射光</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html">练习：2D 白板图</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html">关卡设计作品集</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__adaptation.html">设计测试：改编</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html">练习：布局</a>
-<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__verticality.html">练习：垂直性</a>
-<a class="" style="--depth:2" href="appendix__tools.html">工具</a>
-<a class="" style="--depth:3" href="appendix__tools__trenchbroom.html">TrenchBroom</a>
-<a class="" style="--depth:2" href="appendix__resources.html">资产与资源</a>
-<a class="" style="--depth:3" href="appendix__resources__talks.html">推荐演讲</a>
-<a class="" style="--depth:3" href="appendix__resources__books.html">推荐书目</a>
-<a class="" style="--depth:3" href="appendix__resources__quake.html">Quake 资源</a>
-<a class="" style="--depth:4" href="appendix__resources__quake__how-to-package.html">如何打包 Quake 地图/Mod</a>
-<a class="" style="--depth:3" href="appendix__resources__formats.html">文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__fgd.html">FGD 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__map.html">MAP 文件格式</a>
-<a class="" style="--depth:4" href="appendix__resources__formats__mdl.html">MDL 文件格式</a>
-<a class="" style="--depth:2" href="appendix__communities.html">社区</a>
-<a class="" style="--depth:2" href="appendix__about.html">关于本书与作者</a>
-<a class="" style="--depth:2" href="appendix__license.html">许可与版权</a></nav>
-  </aside>
-  <main class="page">
-    <div class="topbar">
-      <a href="https://book.leveldesignbook.com/process/layout/flow/verticality">查看原文</a>
-      <a href="https://book.leveldesignbook.com">原站首页</a>
-    </div>
-    <div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-    <article><header><nav><ol><li></li><li></li><li></li></ol></nav><h1>垂直性</h1><p>垂直流动，在水平面上向上和向下移动的感觉</p></header><div><div><p><strong>垂直性 </strong>是垂直流动，向上和向下移动的感觉。 </p><p>想象一下稳步爬上悬崖或深入到黑暗的地牢。这些高度变化体现了球员的进步，并帮助球员朝着他们的目标前进。任务可能会告诉玩家向北旅行，但如果他们无法分辨北方在哪里，那么这个目标就不可能实现。相反，如果任务要求玩家爬到山顶，或者下降到谷底，那么上下就更加明显和明确无误。</p><h2><div><a href="#verticality-mechanics"></a></div><div>垂直性力学</div></h2><p>在讨论垂直性时，我们假设我们正在为具有两个常见物理约束的典型 3D 动作游戏进行设计：</p><ol><li><div><div></div></div><div><p>重力将玩家向下拉<!-- --></p></div></li><li><div><div></div></div><div><p>玩家视角很少“滚动”，天空和地平线始终是直立的</p></div></li></ol><p>如果改变其中任何一个假设，那么“向上”就不再是向上，因此玩家的垂直感就会不同。例如，《超级马里奥银河》中的垂直性与《黑暗之魂》中的垂直性有很大不同。</p><p>（TODO：《超级马里奥银河》与其他游戏的图像垂直性比较）</p><h3><div><a href="#too-much-verticality"></a></div><div>垂直性太高？</div></h3><p>许多竞技性多人射击游戏和基于竞技场的游戏需要仔细限制垂直性的使用。</p><p>（TODO：溜冰场推文）</p><p>例如，在《反恐精英》中，竞技玩家将鼠标灵敏度调得很低，因为精度比反应更重要。随后，不断的高度变化会阻碍他们的瞄准，因此大多数 CS 关卡都相对平坦。 </p><p>也就是说，CS 具有堆叠/提升机制，队友可以跳到彼此之上以越过障碍物或到达其他无法到达的地方，从而奖励团队计划和协调。垂直流动可以是情境性的，也可以是战略性的。</p><div><div><div><picture><div><img height="649" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MR8YB_azJ6oSOLXsNSs%252F-MR8ZtIstuCnj97qH77P%252FLDB_CSGO_StackingBoosting_GDC2015.jpg%3Falt%3Dmedia%26token%3Dd1a71717-a9a5-4897-a9df-aa4f6781e13f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=96dd1c10&amp;sv=2" width="1153"/></div><figcaption>反恐精英 1.5 中玩家相互堆叠和提升的荒谬示例，摘自 GDC 2015：Competitive CS:GO 的社区关卡设计</figcaption></picture></div></div></div><h2><div><a href="#floor-planes"></a></div><div>地板飞机</div></h2><p>当规划关卡的垂直性时，尝试将其组合成 <strong>地板平面</strong> 并将较小的高度变化合并到一个楼层中。不要试图在脑海中记住 10 个不同的、不同的、重叠的平面图，因为玩家可能也无法处理那么复杂的情况。 </p><p>对于任何给定区域，大多数地图往往会在三个不同的楼层平面上达到最大值。为什么是三个？就像三车道类型一样，<strong> </strong>三平面格式由底层、中层和顶层组成。相比之下，第四条（p）车道不会添加新的动态，因为它只会添加另一个中间层或路径。</p><div><div></div><div><p><i>一些较老的关卡设计师将这些称为“Z 轴”，因为在 3DS Max、Doom、Quake 和 Unreal 中，Z 轴向上。但如今，许多引擎和工具都使用 Y 轴向上，更不用说图形程序员使用 Z 轴来表示相机深度，所以......我们不要这样做。</i></p></div></div><p>（展示地板平面的图像）</p><h2><div><a href="#downward-flow"></a></div><div>向下流动</div></h2><p>在重力作用下，下降比爬上来容易。向下的流动比向上的流动重。</p><p>关卡设计中向下流动最常见的用途是单向下降。当玩家从壁架上掉下来时，他们无法后退，只能继续前进。 </p><p>解谜探索游戏使用这种技术来限制玩家一次必须考虑的空间，这是一种表达“这次掉落之前的所有内容与下一个挑战无关”的方式。射手严重依赖这种模式来迫使玩家进入战斗 <span><a href="process__combat__encounter.html">遭遇战</a></span>，否则玩家可以简单地原路返回，将敌人拉过阻塞点。</p><p>(image showing one way drop)</p><h2><div><a href="#upward-flow"></a></div><div>向上流动</div></h2><p>为了对抗重力并创造更多的向上流动，你必须努力创造更多向上的机会。楼梯、坡道和梯子都是促进垂直的常用工具，但需要您预留足够的空间来容纳它们。 （电梯不太常见，因为 <span><a href="process__scripting.html">脚本编写</a></span> 复杂性，尤其是多层电梯。）</p><p>《Quake 3 Arena》（1999 年）多人太空漂浮地图 Q3DM17“最长的码”著名地使用了十几个跳跃垫和传送器来创造强大的向上流动。由于掩体很少且占地面积有限，玩家必须在空中飞行来躲避枪火，同时要小心不要摔死。设计师布兰登·詹姆斯 <span><a href="process__combat__balance.html">平衡的</a></span> 与右下图所示的远平台的垂直性；在这里，狙击手可以轻松躲避来袭的火箭弹，同时狙击所有采取可预测飞行弧线的玩家。</p><div><div><div><picture><div><img height="810" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M0LFFpYhA9pRoTbeeA_%252F-M0LYunLb3nF9nAK8RAW%252Fldb_q3dm17_verticality.png%3Falt%3Dmedia%26token%3D740db590-357f-4be3-a314-50156a3d4d20&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=2daded4d&amp;sv=2" width="1335"/></div><figcaption>Brandon James 为 Quake 3 Arena (1999) 制作的 Q3DM17“The Longest Yard”中的跳台和传送器轨迹图</figcaption></picture></div></div></div><h2><div><a href="#verticality-for-console-shooters"></a></div><div>Verticality for console shooters</div></h2><p>游戏机上的射击游戏面临着与输入相关的独特关卡设计挑战。由于游戏机玩家使用带有模拟摇杆的游戏手柄，因此模拟摇杆的固定转动速率使得快速转动和跟踪目标变得更加困难。相比之下，鼠标提供更高的加速度和精度。但我们并不是要就哪种输入更好的问题与玩家争论——我们只是想说，如果您预计您的关卡将有使用游戏手柄的受众，那么您必须进行相应的设计。</p><p>对于单人游戏关卡，这意味着在玩家身后生成敌人（“backspawning”）会感觉更加不公平，因为玩家无法快速旋转 180 度，而且飞行的敌人 AI 必须保持适度的距离并保持稳定的高度。</p><p>对于像《光环》或《使命召唤》这样的多人游戏机射击游戏，玩家通常将相机的垂直旋转瞄准大致头部/胸部的高度，并将瞄准运动限制在水平轴上。这些游戏的关卡很少包含非常高的高度变化（如果有的话），因为迫使玩家看起来很高或很低非常费力且不利。</p><p>这种类型的射击游戏手柄输入只有在关卡设计支持的情况下才会感觉良好：许多带有浅坡度的开阔景观，以及保持相对平坦的离散地板平面。下面的左侧示例具有高频高度变化，这会让游戏手柄用户感到沮丧，而右侧示例则使用更平滑的斜坡和更平坦的地板平面。</p><p>（待办事项：图像）</p><p></p></div></div></article>
-    <div class="page-links"><a class="page-link" href="process__layout__flow__circulation.html"><span>上一页</span>循环动线</a><a class="page-link" href="process__layout__criticalpath.html"><span>下一页</span>关键路径</a></div>
-  </main>
+<aside class="sidebar">
+<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
+<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
+<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
+<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
+<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
+<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
+<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
+<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
+<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
+<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
+<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
+<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
+<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
+<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
+<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
+<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
+<a class="active" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
+<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
+<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
+<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
+<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
+<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
+<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
+<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
+<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
+<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
+<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
+<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
+<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
+<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
+<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
+<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
+<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
+<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
+<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
+<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
+<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
+<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
+<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
+<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
+<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
+<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
+<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
+<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
+<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
+<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
+<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
+<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
+<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
+<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
+<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
+<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
+<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
+<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
+<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
+<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
+<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
+<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
+<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
+<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
+<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
+<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
+<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
+<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
+<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
+<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
+<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
+<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
+<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
+<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
+<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
+<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
+<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
+<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
+<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
+<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
+<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
+<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
+<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
+<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
+<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
+<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
+<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
+<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
+<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
+<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
+<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
+</aside>
+<main class="page">
+<div class="topbar">
+<a href="https://book.leveldesignbook.com/process/layout/flow/verticality">查看原文</a>
+<a href="https://book.leveldesignbook.com">原站首页</a>
+</div>
+<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+<article><header><nav><ol><li></li><li></li><li></li></ol></nav><h1>纵向/垂直空间</h1><p>纵向动线，在水平面上向上和向下移动的感觉</p></header><div><div><p><strong>纵向/垂直空间 </strong>是纵向动线，向上和向下移动的感觉。 </p><p>想象一下稳步爬上悬崖或深入到黑暗的地牢。这些高度变化体现了玩家的进步，并帮助玩家朝着他们的目标前进。任务可能会告诉玩家向北旅行，但如果他们无法分辨北方在哪里，那么这个目标就不可能实现。相反，如果任务要求玩家爬到山顶，或者下降到谷底，那么上下就更加明显和明确无误。</p><h2><div><a href="#verticality-mechanics"></a></div><div>纵向/垂直空间力学</div></h2><p>在讨论纵向/垂直空间时，我们假设我们正在为具有两个常见物理约束的典型 3D 动作游戏进行设计：</p><ol><li><div><div></div></div><div><p>重力将玩家向下拉<!-- --></p></div></li><li><div><div></div></div><div><p>玩家视角很少“滚动”，天空和地平线始终是直立的</p></div></li></ol><p>如果改变其中任何一个假设，那么“向上”就不再是向上，因此玩家的垂直感就会不同。例如，《超级马里奥银河》中的纵向/垂直空间与《黑暗之魂》中的纵向/垂直空间有很大不同。</p><p>（TODO：《超级马里奥银河》与其他游戏的图像纵向/垂直空间比较）</p><h3><div><a href="#too-much-verticality"></a></div><div>纵向/垂直空间太高？</div></h3><p>许多竞技性多人射击游戏和基于竞技场的游戏需要仔细限制纵向/垂直空间的使用。</p><p>（TODO：溜冰场推文）</p><p>例如，在《反恐精英》中，竞技玩家将鼠标灵敏度调得很低，因为精度比反应更重要。随后，不断的高度变化会阻碍他们的瞄准，因此大多数 CS 关卡都相对平坦。 </p><p>也就是说，CS 具有堆叠/提升机制，队友可以跳到彼此之上以越过障碍物或到达其他无法到达的地方，从而奖励团队计划和协调。纵向动线可以是情境性的，也可以是战略性的。</p><div><div><div><picture><div><img height="649" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MR8YB_azJ6oSOLXsNSs%252F-MR8ZtIstuCnj97qH77P%252FLDB_CSGO_StackingBoosting_GDC2015.jpg%3Falt%3Dmedia%26token%3Dd1a71717-a9a5-4897-a9df-aa4f6781e13f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=96dd1c10&amp;sv=2" width="1153"/></div><figcaption>反恐精英 1.5 中玩家相互堆叠和提升的荒谬示例，摘自 GDC 2015：Competitive CS:GO 的社区关卡设计</figcaption></picture></div></div></div><h2><div><a href="#floor-planes"></a></div><div>地板飞机</div></h2><p>当规划关卡的纵向/垂直空间时，尝试将其组合成 <strong>地板平面</strong> 并将较小的高度变化合并到一个楼层中。不要试图在脑海中记住 10 个不同的、不同的、重叠的平面图，因为玩家可能也无法处理那么复杂的情况。 </p><p>对于任何给定区域，大多数地图往往会在三个不同的楼层平面上达到最大值。为什么是三个？就像三通路类型一样，<strong> </strong>三平面格式由底层、中层和顶层组成。相比之下，第四条（p）通路不会添加新的动态，因为它只会添加另一个中间层或路径。</p><div><div></div><div><p><i>一些较老的关卡设计师将这些称为“Z 轴”，因为在 3DS Max、《毁灭战士》、《雷神之锤》 和 Unreal 中，Z 轴向上。但如今，许多引擎和工具都使用 Y 轴向上，更不用说图形程序员使用 Z 轴来表示相机深度，所以......我们不要这样做。</i></p></div></div><p>（展示地板平面的图像）</p><h2><div><a href="#downward-flow"></a></div><div>向下流动</div></h2><p>在重力作用下，下降比爬上来容易。向下的流动比向上的流动重。</p><p>关卡设计中向下流动最常见的用途是单向下降。当玩家从壁架上掉下来时，他们无法后退，只能继续前进。 </p><p>解谜探索游戏使用这种技术来限制玩家一次必须考虑的空间，这是一种表达“这次掉落之前的所有内容与下一个挑战无关”的方式。射手严重依赖这种模式来迫使玩家进入战斗 <span><a href="process__combat__encounter.html">遭遇战</a></span>，否则玩家可以简单地原路返回，将敌人拉过阻塞点。</p><p>(image showing one way drop)</p><h2><div><a href="#upward-flow"></a></div><div>向上流动</div></h2><p>为了对抗重力并创造更多的向上流动，你必须努力创造更多向上的机会。楼梯、坡道和梯子都是促进垂直的常用工具，但需要您预留足够的空间来容纳它们。 （电梯不太常见，因为 <span><a href="process__scripting.html">脚本编写</a></span> 复杂性，尤其是多层电梯。）</p><p>《雷神之锤》 3 Arena》（1999 年）多人太空漂浮地图 Q3DM17“最长的码”著名地使用了十几个跳跃垫和传送器来创造强大的向上流动。由于掩体很少且占地面积有限，玩家必须在空中飞行来躲避枪火，同时要小心不要摔死。设计师布兰登·詹姆斯 <span><a href="process__combat__balance.html">平衡的</a></span> 与右下图所示的远平台的纵向/垂直空间；在这里，狙击手可以轻松躲避来袭的火箭弹，同时狙击所有采取可预测飞行弧线的玩家。</p><div><div><div><picture><div><img height="810" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M0LFFpYhA9pRoTbeeA_%252F-M0LYunLb3nF9nAK8RAW%252Fldb_q3dm17_verticality.png%3Falt%3Dmedia%26token%3D740db590-357f-4be3-a314-50156a3d4d20&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=2daded4d&amp;sv=2" width="1335"/></div><figcaption>Brandon James 为 《雷神之锤》 3 Arena (1999) 制作的 Q3DM17“The Longest Yard”中的跳台和传送器轨迹图</figcaption></picture></div></div></div><h2><div><a href="#verticality-for-console-shooters"></a></div><div>Verticality for console shooters</div></h2><p>游戏机上的射击游戏面临着与输入相关的独特关卡设计挑战。由于游戏机玩家使用带有模拟摇杆的游戏手柄，因此模拟摇杆的固定转动速率使得快速转动和跟踪目标变得更加困难。相比之下，鼠标提供更高的加速度和精度。但我们并不是要就哪种输入更好的问题与玩家争论——我们只是想说，如果您预计您的关卡将有使用游戏手柄的受众，那么您必须进行相应的设计。</p><p>对于单人游戏关卡，这意味着在玩家身后生成敌人（“backspawning”）会感觉更加不公平，因为玩家无法快速旋转 180 度，而且飞行的敌人 AI 必须保持适度的距离并保持稳定的高度。</p><p>对于像《光环》或《使命召唤》这样的多人游戏机射击游戏，玩家通常将相机的垂直旋转瞄准大致头部/胸部的高度，并将瞄准运动限制在水平轴上。这些游戏的关卡很少包含非常高的高度变化（如果有的话），因为迫使玩家看起来很高或很低非常费力且不利。</p><p>这种类型的射击游戏手柄输入只有在关卡设计支持的情况下才会感觉良好：许多带有浅坡度的开阔景观，以及保持相对平坦的离散地板平面。下面的左侧示例具有高频高度变化，这会让游戏手柄用户感到沮丧，而右侧示例则使用更平滑的斜坡和更平坦的地板平面。</p><p>（待办事项：图像）</p><p></p></div></div></article>
+<div class="page-links"><a class="page-link" href="process__layout__flow__circulation.html"><span>上一页</span>空间流线</a><a class="page-link" href="process__layout__criticalpath.html"><span>下一页</span>主动线</a></div>
+</main>
 </body>
 </html>
