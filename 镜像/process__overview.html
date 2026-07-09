@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>如何制作一个关卡 | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
+    <nav><a class="" style="--depth:0" href="index.html">The Level Design Book 中文版</a>
+<a class="" style="--depth:1" href="introduction.html">✨ 什么是关卡设计</a>
+<a class="active" style="--depth:2" href="process__overview.html">🗺️ 如何制作一个关卡</a>
+<a class="" style="--depth:2" href="process__preproduction.html">🧠 前期设计</a>
+<a class="" style="--depth:3" href="process__preproduction__pacing.html">节奏</a>
+<a class="" style="--depth:3" href="process__preproduction__research.html">调研</a>
+<a class="" style="--depth:3" href="process__preproduction__worldbuilding.html">世界构建</a>
+<a class="" style="--depth:3" href="process__preproduction__scope.html">范围控制</a>
+<a class="" style="--depth:2" href="process__combat.html">🔫 战斗</a>
+<a class="" style="--depth:3" href="process__combat__enemy.html">敌人设计</a>
+<a class="" style="--depth:3" href="process__combat__encounter.html">遭遇战</a>
+<a class="" style="--depth:3" href="process__combat__cover.html">掩体</a>
+<a class="" style="--depth:3" href="process__combat__balance.html">地图平衡</a>
+<a class="" style="--depth:2" href="process__layout.html">🛠️ 布局</a>
+<a class="" style="--depth:3" href="process__layout__flow.html">流动感</a>
+<a class="" style="--depth:4" href="process__layout__flow__circulation.html">循环动线</a>
+<a class="" style="--depth:4" href="process__layout__flow__verticality.html">垂直性</a>
+<a class="" style="--depth:3" href="process__layout__criticalpath.html">关键路径</a>
+<a class="" style="--depth:3" href="process__layout__parti.html">Parti：概念布局</a>
+<a class="" style="--depth:3" href="process__layout__typology.html">类型学</a>
+<a class="" style="--depth:4" href="process__layout__typology__gates.html">门与关口</a>
+<a class="" style="--depth:2" href="process__blockout.html">🏠 白盒</a>
+<a class="" style="--depth:3" href="process__blockout__massing.html">体量</a>
+<a class="" style="--depth:4" href="process__blockout__massing__landscape.html">景观地形</a>
+<a class="" style="--depth:4" href="process__blockout__massing__composition.html">构图</a>
+<a class="" style="--depth:4" href="process__blockout__massing__prospect-refuge.html">眺望-庇护</a>
+<a class="" style="--depth:3" href="process__blockout__metrics.html">尺度指标</a>
+<a class="" style="--depth:4" href="process__blockout__metrics__modular.html">模块化套件设计</a>
+<a class="" style="--depth:4" href="process__blockout__metrics__doom.html">DOOM 尺度</a>
+<a class="" style="--depth:4" href="process__blockout__metrics__quake.html">Quake 尺度</a>
+<a class="" style="--depth:3" href="process__blockout__wayfinding.html">寻路与引导</a>
+<a class="" style="--depth:3" href="process__blockout__playtesting.html">试玩测试</a>
+<a class="" style="--depth:4" href="process__blockout__playtesting__persona.html">玩家画像</a>
+<a class="" style="--depth:2" href="process__scripting.html">📜 脚本</a>
+<a class="" style="--depth:3" href="process__scripting__nav.html">(存根) 导航</a>
+<a class="" style="--depth:3" href="process__scripting__doors.html">门</a>
+<a class="" style="--depth:2" href="process__lighting.html">☀️ 灯光</a>
+<a class="" style="--depth:3" href="process__lighting__three-point.html">三点布光</a>
+<a class="" style="--depth:3" href="process__lighting__d6-lighting.html">D6 灯光法</a>
+<a class="" style="--depth:3" href="process__lighting__darkness.html">黑暗场景灯光</a>
+<a class="" style="--depth:2" href="process__env-art.html">🏡 环境美术</a>
+<a class="" style="--depth:3" href="process__env-art__psychology.html">形状与色彩心理学</a>
+<a class="" style="--depth:3" href="process__env-art__texturing.html">材质</a>
+<a class="" style="--depth:3" href="process__env-art__storytelling.html">叙事</a>
+<a class="" style="--depth:3" href="process__env-art__optimization.html">优化</a>
+<a class="" style="--depth:2" href="process__release.html">🌈 发布</a>
+<a class="" style="--depth:2" href="culture__overview.html">🦜 作为文化的关卡设计</a>
+<a class="" style="--depth:2" href="culture__history-level-designer.html">关卡设计师简史</a>
+<a class="" style="--depth:2" href="culture__zero-player.html">零玩家关卡设计</a>
+<a class="" style="--depth:2" href="culture__unfinished-pages.html">未完成页面</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-architecture.html">建筑史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__structural-engineering-primer.html">结构工程入门</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-environment-art.html">环境美术史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-furniture.html">家具史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-encounter-design.html">遭遇战设计史</a>
+<a class="" style="--depth:2" href="studies__overview.html">🔍 如何研究一个关卡</a>
+<a class="" style="--depth:2" href="studies__sp.html">单人关卡研究</a>
+<a class="" style="--depth:3" href="studies__sp__undead-burg.html">不死镇 (Dark Souls 1)</a>
+<a class="" style="--depth:3" href="studies__sp__assassins.html">Assassins (Thief 1)</a>
+<a class="" style="--depth:3" href="studies__sp__cradle.html">(存根) The Cradle (Thief 3)</a>
+<a class="" style="--depth:3" href="studies__sp__sapienza.html">(存根) Sapienza (Hitman)</a>
+<a class="" style="--depth:3" href="studies__sp__silent-cartographer.html">(存根) Silent Cartographer (Halo 1)</a>
+<a class="" style="--depth:2" href="studies__mp.html">多人关卡研究</a>
+<a class="" style="--depth:3" href="studies__mp__chill-out.html">Chill Out (Halo 1)</a>
+<a class="" style="--depth:3" href="studies__mp__de_dust2.html">(存根) de_dust2 (Counter-Strike)</a>
+<a class="" style="--depth:2" href="studies__irl.html">现实空间研究</a>
+<a class="" style="--depth:3" href="studies__irl__disneyland.html">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="" style="--depth:3" href="studies__irl__stub-las-vegas-nevada-usa.html">(存根) 拉斯维加斯 (美国内华达)</a>
+<a class="" style="--depth:2" href="learning__notes.html">🎒 给教学者的笔记</a>
+<a class="" style="--depth:2" href="learning__projects.html">项目计划</a>
+<a class="" style="--depth:3" href="learning__projects__classic-combat.html">经典战斗</a>
+<a class="" style="--depth:3" href="learning__projects__unfinished-wip-pages.html">未完成 WIP 页面</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-combat.html">现代战斗</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-stealth.html">现代潜行</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html">练习：直射光</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html">练习：2D 白板图</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html">关卡设计作品集</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__adaptation.html">设计测试：改编</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html">练习：布局</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__verticality.html">练习：垂直性</a>
+<a class="" style="--depth:2" href="appendix__tools.html">工具</a>
+<a class="" style="--depth:3" href="appendix__tools__trenchbroom.html">TrenchBroom</a>
+<a class="" style="--depth:2" href="appendix__resources.html">资产与资源</a>
+<a class="" style="--depth:3" href="appendix__resources__talks.html">推荐演讲</a>
+<a class="" style="--depth:3" href="appendix__resources__books.html">推荐书目</a>
+<a class="" style="--depth:3" href="appendix__resources__quake.html">Quake 资源</a>
+<a class="" style="--depth:4" href="appendix__resources__quake__how-to-package.html">如何打包 Quake 地图/Mod</a>
+<a class="" style="--depth:3" href="appendix__resources__formats.html">文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__fgd.html">FGD 文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__map.html">MAP 文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__mdl.html">MDL 文件格式</a>
+<a class="" style="--depth:2" href="appendix__communities.html">社区</a>
+<a class="" style="--depth:2" href="appendix__about.html">关于本书与作者</a>
+<a class="" style="--depth:2" href="appendix__license.html">许可与版权</a></nav>
+  </aside>
+  <main class="page">
+    <div class="topbar">
+      <a href="https://book.leveldesignbook.com/process/overview">查看原文</a>
+      <a href="https://book.leveldesignbook.com">原站首页</a>
+    </div>
+    <div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+    <article><header><nav><ol><li></li></ol></nav><h1><span>🗺️</span>如何制作关卡</h1><p>视频游戏关卡设计的一般工作流程和概念概述</p></header><div><div><p>大多数 3D 关卡设计项目都涉及此过程：</p><ol><li><div><div></div></div><div><p><strong></strong><span><a href="process__preproduction.html"><strong>前期制作</strong></a></span>：规划出大创意和整体体验设计。</p></div></li><li><div><div></div></div><div><p><span><a href="process__combat.html"><strong>战斗</strong></a></span><strong> （选修的）</strong>：对于战斗游戏，定义玩家和敌人类型如何交互。</p></div></li><li><div><div></div></div><div><p><strong></strong><span><a href="process__layout.html"><strong>布局</strong></a></span><strong>:</strong> 绘制一个关卡的自上而下的可视化 2D 计划。</p></div></li><li><div><div></div></div><div><p><strong></strong><span><a href="process__blockout.html"><strong>白盒</strong></a></span><strong>:</strong> 构建基本的游戏内 3D 草稿并对其进行试玩测试。</p></div></li><li><div><div></div></div><div><p><strong></strong><span><a href="process__scripting.html"><strong>脚本编写</strong></a></span>：整合事件和行为（任务、任务、门、按钮、AI）</p></div></li><li><div><div></div></div><div><p><strong></strong><span><a href="process__lighting.html"><strong>灯光</strong></a></span><strong>:</strong> 安排光源以提高深度和可读性</p></div></li><li><div><div></div></div><div><p><strong></strong><span><a href="process__env-art.html"><strong>环境美术</strong></a></span>：“美术处理”带有道具和布景的关卡</p></div></li><li><div><div></div></div><div><p><strong></strong><span><a href="process__release.html"><strong>发布</strong></a></span>：记录、宣传和发布项目。</p></div></li></ol><p>如果您不知道从哪里开始，请尝试做所有事情。随着经验的积累，您将了解何时跳过或扩展某个阶段。</p><div><div><div><picture><div><img height="666" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Lu58xf7oEP7GGmBzX1_%252F-Lu59-ymdYcYVhp24tQN%252Fresearch_dust_underpass.jpg%3Falt%3Dmedia%26token%3D0a598225-b30d-46fa-8e67-f8c65e07a62a&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=eb1e11a1&amp;sv=2" width="1680"/></div><figcaption>Dave“DaveJ”Johnston 为《反恐精英》1.6 设计的 de_dust 地下通道</figcaption></picture></div></div></div><h2><div><a href="#tailor-the-process"></a></div><div>定制流程</div></h2><p>每个关卡/项目都有不同的需求。没有一种万无一失的制作关卡的方法。</p><ul><li><div><div></div></div><div><p><strong>团体项目</strong> 需要更多 <span><a href="process__preproduction.html"><strong>前期设计</strong></a></span> 和规划，比如 <span><a href="process__preproduction__pacing.html">踱步</a></span> 轮廓和 <span><a href="process__layout.html">布局</a></span> 图纸。如果没有足够的沟通和文档，协作者就无法协作。</p></div></li><li><div><div></div></div><div><p><strong></strong><span><a href="process__combat.html"><strong>战斗</strong></a></span><strong> 游戏/多人游戏地图 </strong>需要更多 <span><a href="process__blockout.html"><strong>白盒</strong></a></span> 调整时间 <span><a href="process__combat__encounter.html">遭遇战</a></span> 和 <span><a href="process__combat__balance.html">地图平衡</a></span> 重点关注 <span><a href="process__blockout__playtesting.html"><strong>试玩测试</strong></a></span><strong>.</strong></p></div></li><li><div><div></div></div><div><p><strong>单人游戏关卡 </strong><span><a href="process__env-art__storytelling.html"><strong>评书</strong></a></span><strong> 重点</strong> 从较长的白盒期中获益较少。这听起来可能很吸引人，但实际上这是一个零确定性的特殊地狱。什么时候一个故事“足够好”？你需要大量的迭代 <span><a href="process__scripting.html">脚本编写</a></span> 和 <span><a href="process__env-art.html">环境美术</a></span>。如果你的故事发生了变化，你就必须重做所有事情，而且很难保持所有事情同步。曾经玩过故事毫无意义的游戏吗？这可能也会成为你的游戏。<!-- --></p></div></li></ul><h2><div><a href="#process-overview"></a></div><div>流程概览</div></h2><h3><div><a href="#id-1.-pre-production"></a></div><div>1. <span><a href="process__preproduction.html">前期制作</a></span></div></h3><p><strong>前期制作</strong> 是关于规划项目的基本形状和范围。该项目是关于什么的？设计目标和限制是什么？</p><p>初学者常常完全忽视项目规划，而经验丰富的设计师有时会过度规划。大型商业工作室经常花费数月甚至数年的时间进行前期制作。在团队中协作时，此阶段非常重要，因为这是大家一致期望的时候。作为业余爱好者单独工作时，您可能不需要太多计划。</p><p>前期设计计划通常是文本文档、带有可移动卡片的看板和电子表格。</p><p><i>    有关概念规划的更多信息，请参阅 </i><span><a href="process__preproduction.html"><i>前期制作</i></a></span></p><div><div><div><picture><div><img height="957" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Lu4Y_E2F6Jj22AaTeoF%252F-Lu4cB1iELo7OzM1v7oa%252Fv%2526a_lastOfUs_planning_board.jpg%3Falt%3Dmedia%26token%3Ddb00790c-1290-4394-a553-15c3cc974967&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=a936745d&amp;sv=2" width="1280"/></div><figcaption>《最后生还者》（顽皮狗）内部规划板的照片，来自维多利亚和阿尔伯特博物馆的“电子游戏”</figcaption></picture></div></div></div><h3><div><a href="#id-2.-combat-design-optional"></a></div><div>2. <span><a href="process__combat.html">战斗设计</a></span> （选修的）</div></h3><p>如果您的项目是关于战斗的，那么典型的战斗是什么样的，战斗是由什么组成的？球员们如何准备？如何让战斗感觉多样化且新鲜？ </p><p>战斗就像任何其他游戏系统或机制一样。您应该定义这些体验设计目标 <i>前</i> 你为他们制作关卡。</p><p>如果您从头开始制作一款格斗游戏，那么只有程序员和美工使其具有功能性和可读性后，战斗才会“感觉良好”。基本上你必须先玩完整个游戏才能知道战斗的感觉！由于工作量太大，我们建议对战斗游戏进行改装，以便您可以在预先构建的经过战斗测试的系统上进行练习。</p><p><i>     有关设计战斗、武器和敌人的更多信息，请参阅 </i><span><a href="process__combat.html"><i>战斗</i></a></span><i>.</i></p><p><i>     有关推荐修改的战斗游戏列表，请参阅 </i><span><a href="appendix__tools.html"><i>工具</i></a></span><i>.</i></p><div><div><div><picture><div><img height="241" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MWv39_9hxX4YRTiVgLr%252F-MWvAiVCuI_Tvzecv6YL%252FLDB_Encounter_Matrix_GodOfWarValkyries_JasonDeHeras.png%3Falt%3Dmedia%26token%3D70e31f40-2846-46d2-a2ef-cc38d43e09c4&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=f6cc7221&amp;sv=2" width="829"/></div><figcaption>电子表格细分显示了《战神》（2018）中瓦尔基里 Boss 的移动矩阵，​<span><a href="https://twitter.com/jasondeheras/status/1376005158656638977">作者：杰森·德·赫拉斯（Jason de Heras）（来自 Twitter）</a></span></figcaption></picture></div></div></div><h3><div><a href="#id-3.-layout"></a></div><div>3. <span><a href="process__layout.html">布局</a></span></div></h3><p>这 <strong>布局</strong> 是关卡的基本结构，通常是核心区域和元素的平面 2D 绘图。 </p><p>对于一个小型的个人爱好项目，一个简单的布局草图，甚至是涂鸦就足够了。</p><p>对于团体/大型项目，详细的布局图是重要的沟通工具。没有人能读懂你的心思；如果你不想象它并谈论它，那么没有人会知道你想要什么。 </p><p>布局图通常是自上而下的二维平面图，但等轴测图/透视图也很常见。请记住，这并不是要成为一名伟大的艺术家；而是要成为一名伟大的艺术家。这是关于沟通的！绘图是玩家可以去哪里以及可以做什么的视觉计划。 </p><p><i>    有关视觉空间规划的更多信息，请参见 </i><span><a href="process__layout.html"><i>布局</i></a></span></p><div><div><div><picture><div><img height="811" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mcfk2SN77KBX1CK8_Ov%252F-McfmtS2lUdC3s1KFrgH%252FLDB_Layout_Warpath_TeamFortressClassic_RobinWalker.jpg%3Falt%3Dmedia%26token%3D9c21c702-5e14-44f4-a106-83e1e560a345&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=3f4ed4c9&amp;sv=2" width="1070"/></div><figcaption>《军团要塞经典》多人游戏地图“Warpath”的布局图，作者：Robin Walker</figcaption></picture></div></div></div><h3><div><a href="#id-4.-blockout"></a></div><div>4. <span><a href="process__blockout.html">白盒</a></span></div></h3><p>一个 <strong>白盒</strong> 是一个可玩的关卡草稿，由简单的块状 3D 形状构建而成，细节较少。 </p><p>我们对关卡的基本结构进行原型设计，以便我们可以在游戏引擎中对其进行测试。试玩测试帮助我们决定关卡是否太小或太大、令人困惑或有趣、平衡或破碎等。</p><p>这种试玩测试对于任何战斗游戏或任何重新布置房间可能导致玩家行为发生重大变化的游戏都很重要。如果您意识到房间设计不起作用，那么当它由简单的形状组成时，您可以更轻松地对其进行修改。</p><p>Blockout 文件是加载到游戏引擎中的可玩游戏关卡/场景文件。</p><p><i>    有关游戏内 3D 原型设计的更多信息，请参阅 </i><span><a href="process__blockout.html"><i>白盒</i></a></span><i></i></p><div><div><div><picture><div><img height="1080" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-LtwoKZ58xOGNTn9g_Qy%252F-Ltwq-JcDDEN7UHH9OLR%252Funcharted4_blockout_em_schatz.jpg%3Falt%3Dmedia%26token%3Dfe61470c-d734-4540-ab8e-a83eb330da7d&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=944be663&amp;sv=2" width="1920"/></div><figcaption>《神秘海域 4》（顽皮狗）中的悬崖关卡截图，作者：Em Schatz</figcaption></picture></div></div></div><h3><div><a href="#id-5.-scripting"></a></div><div>5. <span><a href="process__scripting.html">脚本编写</a></span></div></h3><p><strong>脚本编写</strong> 是将行为、事件和游戏逻辑集成到关卡中。</p><p><span><a href="process__scripting__doors.html">门脚本</a></span> 是游戏开发中最困难的问题之一。火车和移动平台更加复杂。最好从纽扣和收藏品开始。</p><p>任务目标、任务、过场动画、编排——以及任何人工智能控制/战斗/ <span><a href="process__combat__encounter.html">遭遇战设计</a></span> ——经常依赖脚本。如果您害怕编码，请不要害怕，许多游戏引擎和工具集都有特殊的脚本语言和工具来简化编程过程。</p><p>关卡设计文化往往会低估脚本编写者，但脚本编写可以让关卡感觉“生动”，并且对于将地图转变为体验至关重要。</p><p><i>    有关使关卡发挥作用的更多信息，请参阅 </i><span><a href="process__scripting.html"><i>脚本编写</i></a></span><i></i></p><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MVcmniYhUKeyxyT9VDg%252F-MVcnJ7nwe4eCruqHe55%252FLDB_DoorScripting_GoneHome_JohnnemannNordhagen.jpg%3Falt%3Dmedia%26token%3Dffcdfdb2-60f4-4517-b870-c80c44095d9c&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=648d5adb&amp;sv=2" width="1280"/></div><figcaption>在《Gone Home》的早期版本中，门无法正常工作......摘自博客文章 <span><a href="https://fullbright.company/2012/07/02/code-judo/">约翰内曼·诺德哈根的《柔道代码》</a></span></figcaption></picture></div></div></div><h3><div><a href="#id-6.-lighting"></a></div><div>6. <span><a href="process__lighting.html">灯光</a></span></div></h3><p><strong>灯光</strong> 为区块添加阴影和深度，帮助玩家理解关卡的核心形状。 </p><p>如果没有光，3D 游戏世界会感觉更像是平面 2D 图像，并且很难测量距离或理解完整布局。光和影也可以作为战斗游戏中必不可少的掩体/信息层。</p><p>虽然游戏行业通常将照明更多地视为环境美术的装饰性方面，但我们认为照明具有至关重要的游戏功能，并且必须与关卡设计师深入协商来设计。</p><p><i>     有关游戏照明设计的更多信息，请参阅 </i><span><a href="process__lighting.html"><i>灯光</i></a></span><i>.</i></p><div><div><div><picture><div><img height="1080" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Mh1jhg_FeQx6xy8Qe6b%252F-Mh1lkxbVgbUXAxBnb8b%252Fharley-wilson-natlight-b.jpg%3Falt%3Dmedia%26token%3D1874b909-60db-4a01-bec9-a70b46939966&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=3516290b&amp;sv=2" width="1920"/></div><figcaption>中世纪照明研究与光实体 <span><a href="https://www.artstation.com/artwork/lBLzJ">哈雷·威尔逊 (Harley Wilson) 创作（来自 Artstation.com）</a></span></figcaption></picture></div></div></div><h3><div><a href="#id-7.-environment-art"></a></div><div>7. <span><a href="process__env-art.html">环境美术</a></span></div></h3><p>一旦您对关卡的整体形状和流程有足够的确定性，您就可以开始添加更多内容 <strong>环境美术,</strong> 或视觉细节。</p><p>安 <strong>美术处理</strong> 就是添加这些细节的过程。大多数项目都需要多张美术处理。</p><p>许多人认为艺术传递是“有趣的部分”。初学者常常在没有充分规划、布局或草稿工作的情况下过快地进行艺术传递。过早的美术处理会锁定早期的设计错误，因为改变关卡并重做所有艺术作品变得“昂贵”。所以，一定要克制住这种冲动！不要急于获得美术处理！</p><p><i>    有关使关卡变得漂亮的更多信息，请参阅 </i><span><a href="process__env-art.html"><i>环境美术</i></a></span><i></i></p><div><div><div><picture><div><img height="703" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MVOe7gOtBO2fR1OaIjJ%252F-MVOeNGkYd_XvSwlSxn7%252FLDB_Sniper_Rebellion_BlockoutArtpass.gif%3Falt%3Dmedia%26token%3Da10f1d36-1367-4304-b106-8253f9b9ee1a&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c1989509&amp;sv=2" width="1272"/></div><figcaption>狙击精英中雪地军事码头关卡开发过程的 GIF 动画</figcaption></picture></div></div></div><h3><div><a href="#id-8.-release"></a></div><div>8. <span><a href="process__release.html">发布</a></span></div></h3><p>当项目完成时，是时候 <strong>发布</strong> 并确保它到达您的受众。</p><p>对于商业项目来说，游戏发布只是噩梦的开始——您必须继续营销和宣传项目、评估用户反馈、修复错误，甚至构建额外的发布后内容。 </p><p>对于个人作品集项目，您必须正确记录关卡设计，否则没有人会理解您所做的事情。没有有效的文档，该项目基本上不存在。 </p><p>初学者通常不会在发布阶段投入足够的时间，并假设项目会不言而喻—— <i>但如果没有人知道这一点，那么你的作品就没有人可以说话。</i></p><p><i>    有关发布关卡/构建作品集的更多信息，请参阅 </i><span><a href="process__release.html"><i>发布</i></a></span><i>.</i></p><h2><div><a href="#to-review"></a></div><div>审查</div></h2><p>关卡设计通常涉及多个步骤，按照以下一般顺序：（1）前期设计，（2）战斗设计（除非它不是战斗游戏），（3）布局，（4）草图，（5）脚本，（6）灯光，（7）环境美术，以及（8）发布。</p><p>但每个项目都是不同的。有时您可能想跳过布局阶段，或扩展脚本阶段，或在脚本编写之前进行环境美术等。 </p><p>如果您处于项目早期或关卡设计职业生涯早期，您可能应该尝试做所有事情，直到找出最适合您的流程。</p><h2><div><a href="#now-what"></a></div><div>现在怎么办？</div></h2><ul><li><div><div></div></div><div><p>从头开始——了解 <span><a href="process__preproduction.html">前期设计</a></span> 用于关卡设计。即使只是一点点计划也会有很大帮助。它将帮助你弄清楚你到底在做什么。</p></div></li><li><div><div></div></div><div><p>日常中，大多数关卡设计师倾向于关注 <span><a href="process__layout.html">布局</a></span> 和 <span><a href="process__blockout.html">白盒</a></span>.</p></div></li></ul><p></p></div></div></article>
+    <div class="page-links"><a class="page-link" href="introduction.html"><span>上一页</span>✨ 什么是关卡设计</a><a class="page-link" href="process__preproduction.html"><span>下一页</span>🧠 前期设计</a></div>
+  </main>
+</body>
+</html>

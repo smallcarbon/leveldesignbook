@@ -1,0 +1,385 @@
+{
+  "source": "https://book.leveldesignbook.com",
+  "page_count": 94,
+  "output": "C:\\Users\\liuyanchen\\Desktop\\学习\\LevelDesignBook中文",
+  "mirror": "C:\\Users\\liuyanchen\\Desktop\\学习\\LevelDesignBook中文\\镜像",
+  "license_note": "非商业中文翻译镜像；未特别署名文本遵循 CC BY-NC-SA 4.0；第三方媒体仍归原权利方所有。",
+  "pages": [
+    [
+      "index.html",
+      "The Level Design Book 中文版"
+    ],
+    [
+      "introduction.html",
+      "什么是关卡设计 | The Level Design Book 中文版"
+    ],
+    [
+      "process__overview.html",
+      "如何制作一个关卡 | The Level Design Book 中文版"
+    ],
+    [
+      "process__preproduction.html",
+      "前期设计 | The Level Design Book 中文版"
+    ],
+    [
+      "process__preproduction__pacing.html",
+      "节奏 | The Level Design Book 中文版"
+    ],
+    [
+      "process__preproduction__research.html",
+      "调研 | The Level Design Book 中文版"
+    ],
+    [
+      "process__preproduction__worldbuilding.html",
+      "世界构建 | The Level Design Book 中文版"
+    ],
+    [
+      "process__preproduction__scope.html",
+      "范围控制 | The Level Design Book 中文版"
+    ],
+    [
+      "process__combat.html",
+      "战斗 | The Level Design Book 中文版"
+    ],
+    [
+      "process__combat__enemy.html",
+      "敌人设计 | The Level Design Book 中文版"
+    ],
+    [
+      "process__combat__encounter.html",
+      "遭遇战 | The Level Design Book 中文版"
+    ],
+    [
+      "process__combat__cover.html",
+      "掩体 | The Level Design Book 中文版"
+    ],
+    [
+      "process__combat__balance.html",
+      "地图平衡 | The Level Design Book 中文版"
+    ],
+    [
+      "process__layout.html",
+      "布局 | The Level Design Book 中文版"
+    ],
+    [
+      "process__layout__flow.html",
+      "流动感 | The Level Design Book 中文版"
+    ],
+    [
+      "process__layout__flow__circulation.html",
+      "循环动线 | The Level Design Book 中文版"
+    ],
+    [
+      "process__layout__flow__verticality.html",
+      "垂直性 | The Level Design Book 中文版"
+    ],
+    [
+      "process__layout__criticalpath.html",
+      "关键路径 | The Level Design Book 中文版"
+    ],
+    [
+      "process__layout__parti.html",
+      "Parti：概念布局 | The Level Design Book 中文版"
+    ],
+    [
+      "process__layout__typology.html",
+      "类型学 | The Level Design Book 中文版"
+    ],
+    [
+      "process__layout__typology__gates.html",
+      "门与关口 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout.html",
+      "白盒 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout__massing.html",
+      "体量 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout__massing__landscape.html",
+      "景观地形 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout__massing__composition.html",
+      "构图 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout__massing__prospect-refuge.html",
+      "眺望-庇护 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout__metrics.html",
+      "尺度指标 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout__metrics__modular.html",
+      "模块化套件设计 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout__metrics__doom.html",
+      "DOOM 尺度 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout__metrics__quake.html",
+      "Quake 尺度 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout__wayfinding.html",
+      "寻路与引导 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout__playtesting.html",
+      "试玩测试 | The Level Design Book 中文版"
+    ],
+    [
+      "process__blockout__playtesting__persona.html",
+      "玩家画像 | The Level Design Book 中文版"
+    ],
+    [
+      "process__scripting.html",
+      "脚本 | The Level Design Book 中文版"
+    ],
+    [
+      "process__scripting__nav.html",
+      "(存根) 导航 | The Level Design Book 中文版"
+    ],
+    [
+      "process__scripting__doors.html",
+      "门 | The Level Design Book 中文版"
+    ],
+    [
+      "process__lighting.html",
+      "灯光 | The Level Design Book 中文版"
+    ],
+    [
+      "process__lighting__three-point.html",
+      "三点布光 | The Level Design Book 中文版"
+    ],
+    [
+      "process__lighting__d6-lighting.html",
+      "D6 灯光法 | The Level Design Book 中文版"
+    ],
+    [
+      "process__lighting__darkness.html",
+      "黑暗场景灯光 | The Level Design Book 中文版"
+    ],
+    [
+      "process__env-art.html",
+      "环境美术 | The Level Design Book 中文版"
+    ],
+    [
+      "process__env-art__psychology.html",
+      "形状与色彩心理学 | The Level Design Book 中文版"
+    ],
+    [
+      "process__env-art__texturing.html",
+      "材质 | The Level Design Book 中文版"
+    ],
+    [
+      "process__env-art__storytelling.html",
+      "叙事 | The Level Design Book 中文版"
+    ],
+    [
+      "process__env-art__optimization.html",
+      "优化 | The Level Design Book 中文版"
+    ],
+    [
+      "process__release.html",
+      "发布 | The Level Design Book 中文版"
+    ],
+    [
+      "culture__overview.html",
+      "🦜 作为文化的关卡设计 | The Level Design Book 中文版"
+    ],
+    [
+      "culture__history-level-designer.html",
+      "关卡设计师简史 | The Level Design Book 中文版"
+    ],
+    [
+      "culture__zero-player.html",
+      "零玩家关卡设计 | The Level Design Book 中文版"
+    ],
+    [
+      "culture__unfinished-pages.html",
+      "未完成页面 | The Level Design Book 中文版"
+    ],
+    [
+      "culture__unfinished-pages__history-of-architecture.html",
+      "建筑史 | The Level Design Book 中文版"
+    ],
+    [
+      "culture__unfinished-pages__structural-engineering-primer.html",
+      "结构工程入门 | The Level Design Book 中文版"
+    ],
+    [
+      "culture__unfinished-pages__history-of-environment-art.html",
+      "环境美术史 | The Level Design Book 中文版"
+    ],
+    [
+      "culture__unfinished-pages__history-of-furniture.html",
+      "家具史 | The Level Design Book 中文版"
+    ],
+    [
+      "culture__unfinished-pages__history-encounter-design.html",
+      "遭遇战设计史 | The Level Design Book 中文版"
+    ],
+    [
+      "studies__overview.html",
+      "🔍 如何研究一个关卡 | The Level Design Book 中文版"
+    ],
+    [
+      "studies__sp.html",
+      "单人关卡研究 | The Level Design Book 中文版"
+    ],
+    [
+      "studies__sp__undead-burg.html",
+      "不死镇 (Dark Souls 1) | The Level Design Book 中文版"
+    ],
+    [
+      "studies__sp__assassins.html",
+      "Assassins (Thief 1) | The Level Design Book 中文版"
+    ],
+    [
+      "studies__sp__cradle.html",
+      "(存根) The Cradle (Thief 3) | The Level Design Book 中文版"
+    ],
+    [
+      "studies__sp__sapienza.html",
+      "(存根) Sapienza (Hitman) | The Level Design Book 中文版"
+    ],
+    [
+      "studies__sp__silent-cartographer.html",
+      "(存根) Silent Cartographer (Halo 1) | The Level Design Book 中文版"
+    ],
+    [
+      "studies__mp.html",
+      "多人关卡研究 | The Level Design Book 中文版"
+    ],
+    [
+      "studies__mp__chill-out.html",
+      "Chill Out (Halo 1) | The Level Design Book 中文版"
+    ],
+    [
+      "studies__mp__de_dust2.html",
+      "(存根) de_dust2 (Counter-Strike) | The Level Design Book 中文版"
+    ],
+    [
+      "studies__irl.html",
+      "现实空间研究 | The Level Design Book 中文版"
+    ],
+    [
+      "studies__irl__disneyland.html",
+      "迪士尼乐园 (美国加利福尼亚) | The Level Design Book 中文版"
+    ],
+    [
+      "studies__irl__stub-las-vegas-nevada-usa.html",
+      "(存根) 拉斯维加斯 (美国内华达) | The Level Design Book 中文版"
+    ],
+    [
+      "learning__notes.html",
+      "🎒 给教学者的笔记 | The Level Design Book 中文版"
+    ],
+    [
+      "learning__projects.html",
+      "项目计划 | The Level Design Book 中文版"
+    ],
+    [
+      "learning__projects__classic-combat.html",
+      "经典战斗 | The Level Design Book 中文版"
+    ],
+    [
+      "learning__projects__unfinished-wip-pages.html",
+      "未完成 WIP 页面 | The Level Design Book 中文版"
+    ],
+    [
+      "learning__projects__unfinished-wip-pages__modern-combat.html",
+      "现代战斗 | The Level Design Book 中文版"
+    ],
+    [
+      "learning__projects__unfinished-wip-pages__modern-stealth.html",
+      "现代潜行 | The Level Design Book 中文版"
+    ],
+    [
+      "learning__projects__unfinished-wip-pages__exercise-direct-lighting.html",
+      "练习：直射光 | The Level Design Book 中文版"
+    ],
+    [
+      "learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html",
+      "练习：2D 白板图 | The Level Design Book 中文版"
+    ],
+    [
+      "learning__projects__unfinished-wip-pages__level-design-portfolio.html",
+      "关卡设计作品集 | The Level Design Book 中文版"
+    ],
+    [
+      "learning__projects__unfinished-wip-pages__adaptation.html",
+      "设计测试：改编 | The Level Design Book 中文版"
+    ],
+    [
+      "learning__projects__unfinished-wip-pages__exercise-floorplan.html",
+      "练习：布局 | The Level Design Book 中文版"
+    ],
+    [
+      "learning__projects__unfinished-wip-pages__verticality.html",
+      "练习：垂直性 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__tools.html",
+      "工具 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__tools__trenchbroom.html",
+      "TrenchBroom | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__resources.html",
+      "资产与资源 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__resources__talks.html",
+      "推荐演讲 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__resources__books.html",
+      "推荐书目 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__resources__quake.html",
+      "Quake 资源 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__resources__quake__how-to-package.html",
+      "如何打包 Quake 地图/Mod | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__resources__formats.html",
+      "文件格式 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__resources__formats__fgd.html",
+      "FGD 文件格式 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__resources__formats__map.html",
+      "MAP 文件格式 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__resources__formats__mdl.html",
+      "MDL 文件格式 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__communities.html",
+      "社区 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__about.html",
+      "关于本书与作者 | The Level Design Book 中文版"
+    ],
+    [
+      "appendix__license.html",
+      "许可与版权 | The Level Design Book 中文版"
+    ]
+  ]
+}

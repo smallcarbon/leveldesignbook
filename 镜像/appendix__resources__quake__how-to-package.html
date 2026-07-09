@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>如何打包 Quake 地图/Mod | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
+    <nav><a class="" style="--depth:0" href="index.html">The Level Design Book 中文版</a>
+<a class="" style="--depth:1" href="introduction.html">✨ 什么是关卡设计</a>
+<a class="" style="--depth:2" href="process__overview.html">🗺️ 如何制作一个关卡</a>
+<a class="" style="--depth:2" href="process__preproduction.html">🧠 前期设计</a>
+<a class="" style="--depth:3" href="process__preproduction__pacing.html">节奏</a>
+<a class="" style="--depth:3" href="process__preproduction__research.html">调研</a>
+<a class="" style="--depth:3" href="process__preproduction__worldbuilding.html">世界构建</a>
+<a class="" style="--depth:3" href="process__preproduction__scope.html">范围控制</a>
+<a class="" style="--depth:2" href="process__combat.html">🔫 战斗</a>
+<a class="" style="--depth:3" href="process__combat__enemy.html">敌人设计</a>
+<a class="" style="--depth:3" href="process__combat__encounter.html">遭遇战</a>
+<a class="" style="--depth:3" href="process__combat__cover.html">掩体</a>
+<a class="" style="--depth:3" href="process__combat__balance.html">地图平衡</a>
+<a class="" style="--depth:2" href="process__layout.html">🛠️ 布局</a>
+<a class="" style="--depth:3" href="process__layout__flow.html">流动感</a>
+<a class="" style="--depth:4" href="process__layout__flow__circulation.html">循环动线</a>
+<a class="" style="--depth:4" href="process__layout__flow__verticality.html">垂直性</a>
+<a class="" style="--depth:3" href="process__layout__criticalpath.html">关键路径</a>
+<a class="" style="--depth:3" href="process__layout__parti.html">Parti：概念布局</a>
+<a class="" style="--depth:3" href="process__layout__typology.html">类型学</a>
+<a class="" style="--depth:4" href="process__layout__typology__gates.html">门与关口</a>
+<a class="" style="--depth:2" href="process__blockout.html">🏠 白盒</a>
+<a class="" style="--depth:3" href="process__blockout__massing.html">体量</a>
+<a class="" style="--depth:4" href="process__blockout__massing__landscape.html">景观地形</a>
+<a class="" style="--depth:4" href="process__blockout__massing__composition.html">构图</a>
+<a class="" style="--depth:4" href="process__blockout__massing__prospect-refuge.html">眺望-庇护</a>
+<a class="" style="--depth:3" href="process__blockout__metrics.html">尺度指标</a>
+<a class="" style="--depth:4" href="process__blockout__metrics__modular.html">模块化套件设计</a>
+<a class="" style="--depth:4" href="process__blockout__metrics__doom.html">DOOM 尺度</a>
+<a class="" style="--depth:4" href="process__blockout__metrics__quake.html">Quake 尺度</a>
+<a class="" style="--depth:3" href="process__blockout__wayfinding.html">寻路与引导</a>
+<a class="" style="--depth:3" href="process__blockout__playtesting.html">试玩测试</a>
+<a class="" style="--depth:4" href="process__blockout__playtesting__persona.html">玩家画像</a>
+<a class="" style="--depth:2" href="process__scripting.html">📜 脚本</a>
+<a class="" style="--depth:3" href="process__scripting__nav.html">(存根) 导航</a>
+<a class="" style="--depth:3" href="process__scripting__doors.html">门</a>
+<a class="" style="--depth:2" href="process__lighting.html">☀️ 灯光</a>
+<a class="" style="--depth:3" href="process__lighting__three-point.html">三点布光</a>
+<a class="" style="--depth:3" href="process__lighting__d6-lighting.html">D6 灯光法</a>
+<a class="" style="--depth:3" href="process__lighting__darkness.html">黑暗场景灯光</a>
+<a class="" style="--depth:2" href="process__env-art.html">🏡 环境美术</a>
+<a class="" style="--depth:3" href="process__env-art__psychology.html">形状与色彩心理学</a>
+<a class="" style="--depth:3" href="process__env-art__texturing.html">材质</a>
+<a class="" style="--depth:3" href="process__env-art__storytelling.html">叙事</a>
+<a class="" style="--depth:3" href="process__env-art__optimization.html">优化</a>
+<a class="" style="--depth:2" href="process__release.html">🌈 发布</a>
+<a class="" style="--depth:2" href="culture__overview.html">🦜 作为文化的关卡设计</a>
+<a class="" style="--depth:2" href="culture__history-level-designer.html">关卡设计师简史</a>
+<a class="" style="--depth:2" href="culture__zero-player.html">零玩家关卡设计</a>
+<a class="" style="--depth:2" href="culture__unfinished-pages.html">未完成页面</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-architecture.html">建筑史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__structural-engineering-primer.html">结构工程入门</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-environment-art.html">环境美术史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-furniture.html">家具史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-encounter-design.html">遭遇战设计史</a>
+<a class="" style="--depth:2" href="studies__overview.html">🔍 如何研究一个关卡</a>
+<a class="" style="--depth:2" href="studies__sp.html">单人关卡研究</a>
+<a class="" style="--depth:3" href="studies__sp__undead-burg.html">不死镇 (Dark Souls 1)</a>
+<a class="" style="--depth:3" href="studies__sp__assassins.html">Assassins (Thief 1)</a>
+<a class="" style="--depth:3" href="studies__sp__cradle.html">(存根) The Cradle (Thief 3)</a>
+<a class="" style="--depth:3" href="studies__sp__sapienza.html">(存根) Sapienza (Hitman)</a>
+<a class="" style="--depth:3" href="studies__sp__silent-cartographer.html">(存根) Silent Cartographer (Halo 1)</a>
+<a class="" style="--depth:2" href="studies__mp.html">多人关卡研究</a>
+<a class="" style="--depth:3" href="studies__mp__chill-out.html">Chill Out (Halo 1)</a>
+<a class="" style="--depth:3" href="studies__mp__de_dust2.html">(存根) de_dust2 (Counter-Strike)</a>
+<a class="" style="--depth:2" href="studies__irl.html">现实空间研究</a>
+<a class="" style="--depth:3" href="studies__irl__disneyland.html">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="" style="--depth:3" href="studies__irl__stub-las-vegas-nevada-usa.html">(存根) 拉斯维加斯 (美国内华达)</a>
+<a class="" style="--depth:2" href="learning__notes.html">🎒 给教学者的笔记</a>
+<a class="" style="--depth:2" href="learning__projects.html">项目计划</a>
+<a class="" style="--depth:3" href="learning__projects__classic-combat.html">经典战斗</a>
+<a class="" style="--depth:3" href="learning__projects__unfinished-wip-pages.html">未完成 WIP 页面</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-combat.html">现代战斗</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-stealth.html">现代潜行</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html">练习：直射光</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html">练习：2D 白板图</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html">关卡设计作品集</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__adaptation.html">设计测试：改编</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html">练习：布局</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__verticality.html">练习：垂直性</a>
+<a class="" style="--depth:2" href="appendix__tools.html">工具</a>
+<a class="" style="--depth:3" href="appendix__tools__trenchbroom.html">TrenchBroom</a>
+<a class="" style="--depth:2" href="appendix__resources.html">资产与资源</a>
+<a class="" style="--depth:3" href="appendix__resources__talks.html">推荐演讲</a>
+<a class="" style="--depth:3" href="appendix__resources__books.html">推荐书目</a>
+<a class="" style="--depth:3" href="appendix__resources__quake.html">Quake 资源</a>
+<a class="active" style="--depth:4" href="appendix__resources__quake__how-to-package.html">如何打包 Quake 地图/Mod</a>
+<a class="" style="--depth:3" href="appendix__resources__formats.html">文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__fgd.html">FGD 文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__map.html">MAP 文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__mdl.html">MDL 文件格式</a>
+<a class="" style="--depth:2" href="appendix__communities.html">社区</a>
+<a class="" style="--depth:2" href="appendix__about.html">关于本书与作者</a>
+<a class="" style="--depth:2" href="appendix__license.html">许可与版权</a></nav>
+  </aside>
+  <main class="page">
+    <div class="topbar">
+      <a href="https://book.leveldesignbook.com/appendix/resources/quake/how-to-package">查看原文</a>
+      <a href="https://book.leveldesignbook.com">原站首页</a>
+    </div>
+    <div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+    <article><header><nav><ol><li></li><li></li><li></li></ol></nav><h1>如何打包 Quake 地图/Mod</h1><p>打包和发布可播放的 Quake 文件的一般规则和指南</p></header><div><div><p>本页介绍如何打包 Quake 地图/模组版本。</p><p>这些规则和指南基于大多数 Quake 引擎的工作方式以及过去几十年发展的一般社区礼仪和共识。</p><p>Quake诞生于1996年，其核心技术已有26年历史。就像任何 26 岁的人一样，现在改变他们身上任何不好或烦人的事情都为时已晚。我们必须弄清楚如何忍受它。</p><h2><div><a href="#folder-and-file-names"></a></div><div>文件夹和文件名</div></h2><ul><li><div><div></div></div><div><p>任何文件夹或文件名中都没有空格。</p></div></li><li><div><div></div></div><div><p>全部小写字母。 （有些 Quake 引擎 + 操作系统区分大小写，有些则不区分大小写。）</p></div></li><li><div><div></div></div><div><p>避免在开头使用数字或标点符号。</p></div></li><li><div><div></div></div><div><p>使用常见的 .ZIP 压缩格式，不要使用不常见的深奥格式，例如需要特殊工具的 .7Z 或 .RAR。</p></div></li></ul><h2><div><a href="#package-types"></a></div><div>封装类型</div></h2><ul><li><div><div></div></div><div><p><strong>地图包（简单）：</strong> 将所有内容放在 ZIP 的根目录中，没有子文件夹。</p><ul><li><div><div></div></div><div><p>适合简单的单一地图发布/您的第一张地图。</p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>模组包（复杂）：</strong> 将所有内容放入 mod 文件夹中，然后压缩整个 mod 文件夹。 </p><ul><li><div><div></div></div><div><p>这样您就可以包含自定义资产和游戏代码。</p></div></li><li><div><div></div></div><div><p>对于小版本来说，这样做也很常见，即使它们不是完整的模组。</p></div></li></ul></div></li></ul><h3><div><a href="#map-package-simple"></a></div><div>地图包（简单）</div></h3><p>如果您仅分发与地图相关的文件（.BSP / .LIT / .MAP / .TXT），那么可以使用最简单的打包方法：</p><p><strong>要打包单个地图，请将所有文件放在 </strong><i><strong>根</strong></i><strong> ZIP 文件的，ZIP 内没有文件夹或子文件夹。</strong></p>$?<template></template>/$<p>这是一种常见的结构，玩家知道他们必须自己将其解压到正确的地图文件夹中。我们假设这是 <code>/Quake/id1/maps/ </code>除非另有说明。</p><h3><div><a href="#mod-package-complex"></a></div><div>模组包（复杂）</div></h3><p>如果您使用自定义代码或资产，请将您的 Quake 版本打包为 mod：</p><p><strong>要打包 mod，请将所有文件放在 ZIP 文件内的一个大“mod 文件夹”中。 </strong></p><p>但是，mod 文件夹必须 <strong>遵循特定的文件夹名称和结构...</strong></p>$?<template></template>/$<ul><li><div><div></div></div><div><p><strong>Mod 文件夹名称必须全部为小写字母数字且不含空格。</strong></p></div></li><li><div><div></div></div><div><p><strong>地图文件（.BSP、.LIT）</strong> 必须位于 mod 子文件夹中 <code><strong>/地图/</strong></code><code> </code></p><ul><li><div><div></div></div><div><p>不要使用任何子文件夹。地图必须位于根目录 <code>/maps/</code> 否则引擎无法找到它们。<!-- --></p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>天空盒 (.TGA)</strong> 必须位于 mod 子文件夹中 <code><strong>/gfx/env/</strong></code><code> </code></p><ul><li><div><div></div></div><div><p>再次强调，不要使用任何其他子文件夹。</p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>声音 (.WAV)</strong> 必须进入 mod 子文件夹 <code><strong>/声音/</strong></code></p><ul><li><div><div></div></div><div><p>此处鼓励添加其他子文件夹。使用唯一的声音子文件夹名称以避免文件冲突，例如 <code>/sound/mymodname/</code></p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>型号 (.MDL)</strong> 必须进入子文件夹 <code><strong>/程序/</strong></code></p><ul><li><div><div></div></div><div><p>鼓励添加其他子文件夹，例如声音。</p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>游戏代码（progs.DAT）</strong> 必须在<i> </i><i><strong>mod文件夹的根目录</strong></i><i>.</i></p></div></li></ul><p>有些模组将所有内容都封装在一个 <strong>.PAK</strong> 文件以简化分发并避免此文件夹 soup. .PAK 文件就像 .ZIP 文件，Quake 引擎加载其中的文件，并且文件夹完好无损。有关 PAK 的更多信息，请参阅 <span><a href="https://quakewiki.org/wiki/.pak">QuakeWiki.org：PAK</a></span>.</p><h3><div><a href="#partial-mod-packages"></a></div><div>部分模组包</div></h3><p><strong>要打包部分 mod，请在根目录中包含多个 mod 子文件夹，但不要包含主 mod 文件夹。</strong></p><p><strong>包括有关解压缩位置的明确说明。</strong></p>$?<template></template>/$<ul><li><div><div></div></div><div><p>当您只有少量自定义资产时非常有用。</p></div></li><li><div><div></div></div><div><p>主要用于作为现有大型模组（如奥术维度）的附加组件的地图。 </p><ul><li><div><div></div></div><div><p>在您的版本中包含整个父模组是不切实际的。用户可能已经安装了自己的现有模组。</p></div></li><li><div><div></div></div><div><p>然而，覆盖父模组的现有文件被认为是非常糟糕的礼仪，例如不包含 progs.dat 文件。</p></div></li></ul></div></li></ul><h2><div><a href="#video-tutorial"></a></div><div>视频教程</div></h2><p>有关文件结构和打包的视频介绍，请参阅 David Spell 的视频教程 <span><a href="https://www.youtube.com/watch?v=eQ911Wphy0Q">“地震测绘：发布你的地图”</a></span> 从 4:08 开始：</p><div><div><div><div><iframe></iframe></div></div></div></div><h2><div><a href="#test-yourself-quake-packaging-examples"></a></div><div>测试一下自己：Quake 包装示例</div></h2><p><strong>测试一下你自己。这是一个好例子还是坏例子？</strong> 单击箭头以显示答案。</p><details><summary><code>MyMod.zip </code><a href="#mymod.zip"></a></summary><div><p>不好。文件名使用大写字母。</p></div></details><details><summary><code>mymod.zip/MyMap.bsp</code><a href="#mymod.zip-mymap.bsp"></a></summary><div><p>不好。文件名使用大写字母。</p></div></details><details><summary><code>mymod.zip/mymap.bsp</code><a href="#mymod.zip-mymap.bsp-1"></a></summary><div><p>好的。文件名全部小写，没有空格，BSP 文件位于 ZIP 的根目录下，没有子文件夹。如果作者只是发布地图文件而没有其他mod文件，那么这是可以接受的。</p></div></details><details><summary><code>mymod.zip/mymodfolder/mymap.bsp</code><a href="#mymod.zip-mymodfolder-mymap.bsp"></a></summary><div><p>不好。它是一个 mod 文件夹，但 BSP 不在名为 /maps/ 的子​​文件夹中。</p></div></details><details><summary><code>mymod.zip/mymodfolder/maps/mymap.bsp</code><a href="#mymod.zip-mymodfolder-maps-mymap.bsp"></a></summary><div><p>好。所有文件和文件夹名称均为小写且不带空格，并且 BSP 位于 mod 文件夹 /mymodfolder/ 的子文件夹 /maps/ 中。</p></div></details><details><summary><code>mymod.zip/mymodfolder/maps/mymod/mymap.bsp</code><a href="#mymod.zip-mymodfolder-maps-mymod-mymap.bsp"></a></summary><div><p>不好。 BSP 位于名为“mymod”的地图子文件夹中，因此 Quake 引擎将无法检测到地图文件。</p></div></details><details><summary><code>mymod.zip/mymodfolder/env/skybox_up.tga</code><a href="#mymod.zip-mymodfolder-env-skybox_up.tga"></a></summary><div><p>不好。 TGA 文件位于 /env/ 中，但不在 /gfx/env/ 中。</p></div></details><details><summary><code>mymod.zip/gfx/env/skybox_up.tga</code><a href="#mymod.zip-gfx-env-skybox_up.tga"></a></summary><div><p>好吧，也许吧。这是一种部分 mod 方法，只要用户知道将文件解压缩到哪个 mod 文件夹，它就可以工作。 </p></div></details><details><summary><code>mymod.zip/mymodfolder/gfx/env/skybox_up.tga</code><a href="#mymod.zip-mymodfolder-gfx-env-skybox_up.tga"></a></summary><div><p>好。天空盒 TGA 位于正确的位置。</p></div></details><details><summary><code>mymod.zip/mymodfolder/sounds/mymod/mysound.wav</code><a href="#mymod.zip-mymodfolder-sounds-mymod-mysound.wav"></a></summary><div><p>不好。 “sounds”是不正确的文件夹名称。它必须是“声音”。是的，我知道。</p></div></details><details><summary><code>mymod.zip/mymodfolder/gfx/env/skybox_up.tga
++ mymod.zip/mymap.bsp</code><a href="#mymod.zip-mymodfolder-gfx-env-skybox_up.tga--mymod.zip-mymap.bsp"></a></summary><div><p>不好。这是将一个文件打包到一个mod文件夹中，并将地图文件打包到根目录下。不要混合两种不同的方法。</p></div></details><h2><div><a href="#now-what"></a></div><div>现在怎么办？</div></h2><ul><li><div><div></div></div><div><p>我们有很多链接到更多内容 <span><a href="appendix__resources__quake.html">Quake 资源</a></span>.</p></div></li><li><div><div></div></div><div><p>了解更多一般信息 <span><a href="process__release.html">发布</a></span> 做法。</p></div></li></ul></div></div></article>
+    <div class="page-links"><a class="page-link" href="appendix__resources__quake.html"><span>上一页</span>Quake 资源</a><a class="page-link" href="appendix__resources__formats.html"><span>下一页</span>文件格式</a></div>
+  </main>
+</body>
+</html>

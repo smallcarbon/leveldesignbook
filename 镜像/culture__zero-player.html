@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>零玩家关卡设计 | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
+    <nav><a class="" style="--depth:0" href="index.html">The Level Design Book 中文版</a>
+<a class="" style="--depth:1" href="introduction.html">✨ 什么是关卡设计</a>
+<a class="" style="--depth:2" href="process__overview.html">🗺️ 如何制作一个关卡</a>
+<a class="" style="--depth:2" href="process__preproduction.html">🧠 前期设计</a>
+<a class="" style="--depth:3" href="process__preproduction__pacing.html">节奏</a>
+<a class="" style="--depth:3" href="process__preproduction__research.html">调研</a>
+<a class="" style="--depth:3" href="process__preproduction__worldbuilding.html">世界构建</a>
+<a class="" style="--depth:3" href="process__preproduction__scope.html">范围控制</a>
+<a class="" style="--depth:2" href="process__combat.html">🔫 战斗</a>
+<a class="" style="--depth:3" href="process__combat__enemy.html">敌人设计</a>
+<a class="" style="--depth:3" href="process__combat__encounter.html">遭遇战</a>
+<a class="" style="--depth:3" href="process__combat__cover.html">掩体</a>
+<a class="" style="--depth:3" href="process__combat__balance.html">地图平衡</a>
+<a class="" style="--depth:2" href="process__layout.html">🛠️ 布局</a>
+<a class="" style="--depth:3" href="process__layout__flow.html">流动感</a>
+<a class="" style="--depth:4" href="process__layout__flow__circulation.html">循环动线</a>
+<a class="" style="--depth:4" href="process__layout__flow__verticality.html">垂直性</a>
+<a class="" style="--depth:3" href="process__layout__criticalpath.html">关键路径</a>
+<a class="" style="--depth:3" href="process__layout__parti.html">Parti：概念布局</a>
+<a class="" style="--depth:3" href="process__layout__typology.html">类型学</a>
+<a class="" style="--depth:4" href="process__layout__typology__gates.html">门与关口</a>
+<a class="" style="--depth:2" href="process__blockout.html">🏠 白盒</a>
+<a class="" style="--depth:3" href="process__blockout__massing.html">体量</a>
+<a class="" style="--depth:4" href="process__blockout__massing__landscape.html">景观地形</a>
+<a class="" style="--depth:4" href="process__blockout__massing__composition.html">构图</a>
+<a class="" style="--depth:4" href="process__blockout__massing__prospect-refuge.html">眺望-庇护</a>
+<a class="" style="--depth:3" href="process__blockout__metrics.html">尺度指标</a>
+<a class="" style="--depth:4" href="process__blockout__metrics__modular.html">模块化套件设计</a>
+<a class="" style="--depth:4" href="process__blockout__metrics__doom.html">DOOM 尺度</a>
+<a class="" style="--depth:4" href="process__blockout__metrics__quake.html">Quake 尺度</a>
+<a class="" style="--depth:3" href="process__blockout__wayfinding.html">寻路与引导</a>
+<a class="" style="--depth:3" href="process__blockout__playtesting.html">试玩测试</a>
+<a class="" style="--depth:4" href="process__blockout__playtesting__persona.html">玩家画像</a>
+<a class="" style="--depth:2" href="process__scripting.html">📜 脚本</a>
+<a class="" style="--depth:3" href="process__scripting__nav.html">(存根) 导航</a>
+<a class="" style="--depth:3" href="process__scripting__doors.html">门</a>
+<a class="" style="--depth:2" href="process__lighting.html">☀️ 灯光</a>
+<a class="" style="--depth:3" href="process__lighting__three-point.html">三点布光</a>
+<a class="" style="--depth:3" href="process__lighting__d6-lighting.html">D6 灯光法</a>
+<a class="" style="--depth:3" href="process__lighting__darkness.html">黑暗场景灯光</a>
+<a class="" style="--depth:2" href="process__env-art.html">🏡 环境美术</a>
+<a class="" style="--depth:3" href="process__env-art__psychology.html">形状与色彩心理学</a>
+<a class="" style="--depth:3" href="process__env-art__texturing.html">材质</a>
+<a class="" style="--depth:3" href="process__env-art__storytelling.html">叙事</a>
+<a class="" style="--depth:3" href="process__env-art__optimization.html">优化</a>
+<a class="" style="--depth:2" href="process__release.html">🌈 发布</a>
+<a class="" style="--depth:2" href="culture__overview.html">🦜 作为文化的关卡设计</a>
+<a class="" style="--depth:2" href="culture__history-level-designer.html">关卡设计师简史</a>
+<a class="active" style="--depth:2" href="culture__zero-player.html">零玩家关卡设计</a>
+<a class="" style="--depth:2" href="culture__unfinished-pages.html">未完成页面</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-architecture.html">建筑史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__structural-engineering-primer.html">结构工程入门</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-environment-art.html">环境美术史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-furniture.html">家具史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-encounter-design.html">遭遇战设计史</a>
+<a class="" style="--depth:2" href="studies__overview.html">🔍 如何研究一个关卡</a>
+<a class="" style="--depth:2" href="studies__sp.html">单人关卡研究</a>
+<a class="" style="--depth:3" href="studies__sp__undead-burg.html">不死镇 (Dark Souls 1)</a>
+<a class="" style="--depth:3" href="studies__sp__assassins.html">Assassins (Thief 1)</a>
+<a class="" style="--depth:3" href="studies__sp__cradle.html">(存根) The Cradle (Thief 3)</a>
+<a class="" style="--depth:3" href="studies__sp__sapienza.html">(存根) Sapienza (Hitman)</a>
+<a class="" style="--depth:3" href="studies__sp__silent-cartographer.html">(存根) Silent Cartographer (Halo 1)</a>
+<a class="" style="--depth:2" href="studies__mp.html">多人关卡研究</a>
+<a class="" style="--depth:3" href="studies__mp__chill-out.html">Chill Out (Halo 1)</a>
+<a class="" style="--depth:3" href="studies__mp__de_dust2.html">(存根) de_dust2 (Counter-Strike)</a>
+<a class="" style="--depth:2" href="studies__irl.html">现实空间研究</a>
+<a class="" style="--depth:3" href="studies__irl__disneyland.html">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="" style="--depth:3" href="studies__irl__stub-las-vegas-nevada-usa.html">(存根) 拉斯维加斯 (美国内华达)</a>
+<a class="" style="--depth:2" href="learning__notes.html">🎒 给教学者的笔记</a>
+<a class="" style="--depth:2" href="learning__projects.html">项目计划</a>
+<a class="" style="--depth:3" href="learning__projects__classic-combat.html">经典战斗</a>
+<a class="" style="--depth:3" href="learning__projects__unfinished-wip-pages.html">未完成 WIP 页面</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-combat.html">现代战斗</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-stealth.html">现代潜行</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html">练习：直射光</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html">练习：2D 白板图</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html">关卡设计作品集</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__adaptation.html">设计测试：改编</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html">练习：布局</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__verticality.html">练习：垂直性</a>
+<a class="" style="--depth:2" href="appendix__tools.html">工具</a>
+<a class="" style="--depth:3" href="appendix__tools__trenchbroom.html">TrenchBroom</a>
+<a class="" style="--depth:2" href="appendix__resources.html">资产与资源</a>
+<a class="" style="--depth:3" href="appendix__resources__talks.html">推荐演讲</a>
+<a class="" style="--depth:3" href="appendix__resources__books.html">推荐书目</a>
+<a class="" style="--depth:3" href="appendix__resources__quake.html">Quake 资源</a>
+<a class="" style="--depth:4" href="appendix__resources__quake__how-to-package.html">如何打包 Quake 地图/Mod</a>
+<a class="" style="--depth:3" href="appendix__resources__formats.html">文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__fgd.html">FGD 文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__map.html">MAP 文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__mdl.html">MDL 文件格式</a>
+<a class="" style="--depth:2" href="appendix__communities.html">社区</a>
+<a class="" style="--depth:2" href="appendix__about.html">关于本书与作者</a>
+<a class="" style="--depth:2" href="appendix__license.html">许可与版权</a></nav>
+  </aside>
+  <main class="page">
+    <div class="topbar">
+      <a href="https://book.leveldesignbook.com/culture/zero-player">查看原文</a>
+      <a href="https://book.leveldesignbook.com">原站首页</a>
+    </div>
+    <div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+    <article><header><nav><ol><li></li></ol></nav><h1>零玩家关卡设计</h1><p>关于玩家零输入的杂技社区制作关卡的文章</p></header><div><div><p>在《TrackMania》等赛车游戏和《Super Mario Maker》等平台游戏中，用户构建了复杂的“Press Forward”和“Auto-Mario”关卡，推动玩家的游戏角色表演出令人眼花缭乱的杂技技巧，但玩家的输入却微不足道或最少。 </p><p>我们认为这种类型的“零玩家关卡设计”使游戏玩法和玩家的典型想法变得复杂：这些零玩家关卡是有趣的设计对象，玩而不玩，并强调建筑编排的精湛技艺。</p><div><div></div><div><p> 本文首次出现于 <span><a href="https://vgagallery.org/vga-reader"><i>VGA 读卡器卷。 3</i></a></span> 作为 <span><a href="https://vgagallery.org/vga-reader-articles/dancing-about-architecture-on-zero-player-level-design">“围绕建筑起舞：零玩家关卡设计”</a></span> 并已被编辑包含在本书中。</p></div></div><div><div><div><picture><div><img height="843" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Ml2Wt5iE9RXJMSKpPRh%252F-Ml2YHu8w1O1RRcJhIK2%252Fzeroplayer03_hyperions_wrath%252B%281%29.png%3Falt%3Dmedia%26token%3Ddfa402bd-aa3b-447e-b70b-2c11dbe499ce&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=502de546&amp;sv=2" width="1500"/></div><figcaption>《Trackmania Nations Forever》中玩家的汽车在精心制作的 PF“Hyperion’s Wrath”中倾斜的屏幕截图，来自用户 L4Bomb4 于 2016 年 4 月 18 日上传的 YouTube 视频“Trackmania [PF] - Hyperion’s Wrath | PRESS FORWARD”。</figcaption></picture></div></div></div><h2><div><a href="#on-local-level-design"></a></div><div>局部层面的设计</div></h2><p>许多当代视频游戏都具有强大的内置编辑器工具，让玩家无需任何专门的专业软件或硬件即可构建新的关卡。这些工具的可访问性和即时性通常会吸引那些通常不认为自己是游戏设计师的人，并且新的设计模式通常会从这些休闲玩家设计师社区中有机地出现。这些热情的业余爱好者使用的关卡设计与工业开发人员的规范设计模式非常不同，构成了我称之为“本地关卡设计”的实践。 </p><p>本地关卡设计通常发生在原始游戏的非常特定的环境和社区中。例如，2010 年，Valve 改变了玩家在其第一人称多人射击游戏《军团要塞 2》中解锁物品的方式；为了获得新的升级，玩家突然必须努力实现成就目标，例如使用特定武器杀死一定数量的敌人。对此，玩家社区迅速建立了成就研磨服务器，并配有专门设计的成就耕种地图，以便玩家可以轻松实现这些成就目标，并比典型的散漫游戏更快地获得这些升级。 Valve 官方强烈反对这些新的成就服务器和地图，认为这无异于作弊或利用。 <!-- --></p><div><div><div><picture><div><img height="859" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MTL-COGEHYHWbDfIw3b%252F-MTL0EzlKC-wNsJw4zGc%252Fzeroplayer01_achievement_all_v4.png%3Falt%3Dmedia%26token%3D055bd8fe-aa8b-47ae-bcda-f8088ced281e&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=d2af4612&amp;sv=2" width="1542"/></div><figcaption>图 1，《军团要塞 2》成就陷阱地图“achievement_all_v4”中一只大猫向玩家发射激光的屏幕截图，来自用户 jasonrawr 于 2010 年 6 月 25 日上传的 YouTube 视频“军团要塞 2 - 激光死亡猫”https://www.youtube.com/watch?v=vb_9vxXyqdU</figcaption></picture></div></div></div><p>为了反驳这场道德危机，一位名叫The303的用户制作了“achievement_all_v4”，这是一张新颖的成就陷阱地图，几分钟内一切看起来都像正常的成就农场地图，直到一只巨大的无敌巨猫从地底下爆发出来，用强大的激光束和大炮攻击每一个玩家。最后，整个服务器上所有幸存的玩家都会被核爆炸消灭。该地图的目标显然是欺骗玩家，让他们认为他们将在成就磨练地图上玩，然后以高度可见和幽默的方式惩罚他们。 </p><p>成就研磨地图和随之而来的成就陷阱都是地方关卡设计作为一种话语形式的明显例子，在这种情况下，这些地图充当了反映社区行为的道德对话。它举例说明了用户如何经常发明新的方法来理解游戏的核心构建块和假设，从而发现使用游戏设计语言的全新方法。</p><p>我想谈谈一种在几种不同的游戏和类型中出现的本地关卡设计形式：“零玩家关卡”，它自相矛盾地要求最少或微不足道的玩家输入才能成功完成。 </p><p>这些关卡使游戏中玩家代理的典型想法变得复杂，并将玩家设计师定位为优雅的编舞者，而不是讽刺的评论员或熟练的表演者。这种现象与这些社区如何开发（或辩论）游戏的设计语言、他们如何理解各种设计实践的边界以及玩家社区如何保持其身份相交叉。</p><div><div><div><div><iframe></iframe></div></div></div></div><h2><div><a href="#press-forwards-pfs-in-trackmania"></a></div><div>TrackMania 中的前压 (PF)</div></h2><p>Nadeo 的 TrackMania 赛车游戏具有内置赛道编辑器，在游戏的广告材料和主菜单中占据显着位置。为了促进文件共享，当玩家连接到多人服务器时，游戏客户端会自动下载新的用户制作的自定义曲目。名为 TrackMania Exchange 的社区运行数据库还允许玩家上传和存档他们的曲目文件，并作为玩家讨论和分析喜爱的曲目和构建技术的社交中心。</p><p>TrackMania 游戏通常包含 Nadeo 构建的一百条或更多赛道，这些赛道的长度、复杂性和难度逐渐增加。早期的 TrackMania 游戏甚至迫使玩家在这些赛道上比赛以赚取货币，他们可以用这些货币为赛道编辑器解锁新的区块。对于新玩家来说，这些预先构建的包含赛道建立了普遍接受的赛道设计模式的设计规范，并且许多自定义玩家构建的赛道依赖于这些库存赛道来指导某些技能和驾驶操作。后来的 TrackMania 游戏将赛道设计正式化为三种游戏模式/类型：竞赛（强调与其他车辆竞争的赛道）、平台（强调棘手的跳跃和下降的赛道）和拼图（进度和检查点不清楚的赛道）。 </p><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MTL-COGEHYHWbDfIw3b%252F-MTL1XRcgXPR6_myl0Kf%252Fzeroplayer02_trackmania_nations_forever.jpg%3Falt%3Dmedia%26token%3Da0d9c146-9bca-45b4-975a-fcf5d693d387&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=fd6c8a07&amp;sv=2" width="1280"/></div><figcaption>图 2，玩家的汽车驾驶通过 Trackmania Nations Forever 中典型赛道“D02-Race”的屏幕截图，来自用户 TechmsTutorials 于 2012 年 8 月 4 日上传的 YouTube 视频“Free Steam Games - #2 TrackMania Nations Forever (+ Gameplay )” https://www.youtube.com/watch?v=pZIoYjsotK0</figcaption></picture></div></div></div><p>值得注意的是，Nadeo 的分类中并未包含社区最喜爱的“Press Forward”（PF）曲目。 </p><p>PF 并没有要求玩家在赛道上磨练他们的反应能力和智慧，而是让玩家只需按住“前进”按钮，然后以更加被动的旁观者的身份观看会发生什么。玩家无需凭借自己的技巧，就能根据赛道上鲁布·戈德堡 (Rube Goldberg) 般精致的空气动力学交响乐团，驾驶汽车执行惊人的特技和机动——一辆汽车可能会在空中旋转 1080 度，然后以正确的方式勉强擦过坡道，完美地降落在下面的赛道上。矛盾的是，如果玩家做出任何选择，比如放开“前进”键，或者（上帝禁止）向左转 0.1 度，任何微小的偏差都会导致灾难性的崩溃。 </p><p>PF 曲目失败的唯一方法就是播放它并做出实际的选择。成功完成 PF 需要玩家基本上放弃他们在游戏世界中的代理权。从这个意义上说，纳德奥试图压制新闻界的原因就很明显了。这是一种激进的设计实践，违背了《赛道狂飙》的预期游戏模式。这是一个令人惊讶的存在主义电子游戏世界，它基本上会惩罚试图运用任何代理或控制权的玩家，并进一步贬低在“正常”赛道上比赛的熟练车手的成就。当德行得到保证的时候，就不再是德行了！ PF 触及本地关卡设计社区的核心，并询问我们，是什么造就了一个强大的玩家社区——玩家还是设计师？</p><picture><div><div><div><div><iframe></iframe></div></div></div></div><figcaption>图3，《赛道狂飙：国度永恒》中玩家的赛车通过精心制作的PF“Hyperion's Wrath”倾斜的视频</figcaption></picture><p>前锋的“发挥”和“技巧”不在于其表现，而在于其结构。最广受好评的 PF 似乎专注于巨大的尺寸、复杂的层层交叉口和意想不到的非标准轨道部件的即兴创作。例如，ThunderClap 的 PF“Hyperion’s Wrath”以某种方式引导玩家的车辆以奇怪的角度撞上赛道，看似不太理想地驶过赛道，掉落，不稳定地旋转，沿着装饰性镀铬雕像滑行，然后完美地降落在半管上。设计目标是创造一种人类玩家在人类看不见和难以辨认的赛道上可能永远无法实现的不可思议的表现。相反，赛道会自己表演，而人类演奏者只是它的乐器。</p><p>PF 有一个值得注意的变体：“什么都不按”（PN），它要求玩家在键盘上绝对不按任何东西。这些赛道设计无需任何玩家输入即可加速玩家的汽车，通常在玩家开始后直接放置一条“助推垫”轨道块的路径。然而，PN 远不如 PF 受欢迎，这可能是因为汽车在通过赛道时逐渐失去速度；为了保持足够的速度，PN 设计师必须定期留出足够的空间来放置加速垫，这与 PF 超现实即时性的美学相比是不利的。 </p><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MTL-COGEHYHWbDfIw3b%252F-MTL2DyB0989zo0OlAuk%252Fzeroplayer04_trackmania_nations_forever_editor.jpg%3Falt%3Dmedia%26token%3D72fe62f1-448c-4cc2-9f2b-0f441b6cd265&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=7565bee2&amp;sv=2" width="1280"/></div><figcaption>图 4，用户在 Trackmania Nations Forever 编辑器中构建简单的不完整赛道的屏幕截图，来自用户 LuccassCZ 于 2012 年 9 月 14 日上传的 YouTube 视频“Trackmania Nations Forever Editor Tratě [CZ]” https://www.youtube.com/watch?v=JlNU1yecz7M</figcaption></picture></div></div></div><h2><div><a href="#auto-marios-in-super-mario-maker"></a></div><div>《超级马里奥制造》中的自动马里奥</div></h2><p>任天堂的《超级马里奥制造者》系列 (SMM) 拥有一个由开发者积极管理的用户社区（有时太多或太少，取决于你问的是谁），邀请用户使用流行的超级马里奥游戏的常见构建块和平台游戏风格来构建新课程。 </p><p>与典型的马里奥游戏有很大不同，SMM 游戏不再强调完成预先制作的关卡序列。 </p><p>虽然《超级马里奥制造者 2》确实具有幽默的故事模式，其中马里奥必须通过完成各种“工作”（由任天堂构建的预先制作的示例课程）来重建一座意外拆除的城堡，但这些一次性工作课程显然是为了演示各种游戏机制、能力提升和建筑模式，并且不像其他超级马里奥游戏那样具有任何连贯的故事情节或进展。</p><p>SMM 2 的主菜单按钮布局与玩任天堂库存课程的转变相呼应：顶部的第一个选项是“课程制作器”，然后是“故事模式”、“课程世界”（用于浏览其他用户的关卡），最后是“CourseBot”（用于管理现有课程文件和下载的实用菜单）。</p><div><div><div><picture><div><img height="844" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MTL-COGEHYHWbDfIw3b%252F-MTL2ipEAVw-08BxJ0XK%252Fzeroplayer05_smm2_menu.png%3Falt%3Dmedia%26token%3Debc07611-65b2-4869-a66f-b5b9c595a412&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=696c5e5c&amp;sv=2" width="1541"/></div><figcaption>图 5，《Super Mario Maker 2》中故事模式之前列出的主菜单侧边栏屏幕截图，来自用户 ZackScottGames 于 2019 年 6 月 28 日上传的“Super Mario Maker 2 - 游戏玩法演练第 1 部分 - 故事模式和课程世界！（Nintendo Switch）” https://www.youtube.com/watch?v=ISWqMgouaxs</figcaption></picture></div></div></div><p>演示课程只是任天堂尝试开发共享设计语言和/或将设计规范强加给 SMM 社区的尝试之一。 SMM2 特别具有新的社区“标签”系统，用户可以在其中附加标签来描述课程。 </p><p>当一门课程让人想起马里奥系列的常见平台游戏玩法时，用户应该将其标记为“标准”。与此同时，关于以最少的屏幕滚动进行缓慢有条理的推理的课程获得了“解谜”标签，而“快速奔跑”标签意味着大量使用快速熟练的连续移动来对抗计时器。请注意与 Nadeo 的 TrackMania 赛道类别（竞赛、平台、拼图）的相似之处。另请注意，某些课程标签可能只是描述性的，例如“简短而甜蜜”标签。</p><p>SMM2 的标签系统有两个关键限制： </p><p>(1) 课程最多可以有两个主标签显示在主浏览器菜单中</p><p>(2) 标签是由任天堂预定义（和本地化）的，这意味着用户无法发明自己的标签。相反，草根社区类型必须直接在课程标题中标记，这限制了全球 SMM 社区其他成员对这些关卡的发现。</p><div><div><div><picture><div><img height="865" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MTL-COGEHYHWbDfIw3b%252F-MTL3GwMaaayR_zt0eST%252Fzeroplayer06_smm2_course_browser.jpg.png%3Falt%3Dmedia%26token%3D5bb17917-a73d-4fb6-af24-6447403c6de0&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=2e6ed040&amp;sv=2" width="1544"/></div><figcaption>图 6，《Super Mario Maker 2》课程浏览界面的屏幕截图，其中包含每个缩略图、课程标题、游戏统计数据和标签，摘自用户 ZackScottGames 于 2019 年 6 月 28 日上传的“Super Mario Maker 2 - 游戏玩法演练第 1 部分 - 故事模式和课程世界！（Nintendo Switch）” https://www.youtube.com/watch?v=ISWqMgouaxs</figcaption></picture></div></div></div><p>可以预见的是，标签限制会在 SMM2 社区内引发激烈的类型争论。标准标签下允许什么？当该标签本地化为“传统”时，西班牙语玩家是否会以不同的方式理解该标签？标准课程是否也可以包含解谜和速通部分？当任天堂拒绝为某些社区类型（例如专注于滑稽不公平难度的流行“Kaizo”课程）赋予官方标签时，这意味着什么？是的，SMM2 的标签相对于 SMM1 缺乏过滤器和分类来说是一个很大的改进，但当然这种新的分类形式也有其自身的问题。 </p><p>与 TrackMania 中相对流行的 PF / PN 不同，SMM 社区非常喜欢自己的 PN 变体，即“自动”关卡或“自动马里奥”。 《自动马里奥》课程与典型的标准、解谜或速通框架不同，并且要求玩家在游戏控制器上完全不按任何东西。虽然这种自动关卡是 SMM1 社区设计的非官方类型，但 SMM2 中官方“自动马里奥”标签的存在和使用现在代表了官方的经典化，也希望任天堂真正关注社区输出。</p><p>“Keep”赛道相当于SMM 赛道，相当于TrackMania 中的PF 赛道。 Keep Walks、Keep Runs、Keep As、Keep Bs，所有这些都鼓励玩家不断保持右侧或跳跃并不断提高速度，教程就在标题中。这些课程不像典型的无输入自动马里奥课程那么受欢迎，可能是因为 SMM 设计师已经有多种方法来保持速度并重定向玩家 - 因此要求玩家按住按钮并不像 TrackMania 那样必要。</p><div><div><div><picture><div><img height="867" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MTL-COGEHYHWbDfIw3b%252F-MTL42rwmpHHQZ012QnV%252Fzeroplayer07_smm2_banedarake.png%3Falt%3Dmedia%26token%3D1c9cde88-762c-4bc0-80b5-318796e76d45&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=9dd720b8&amp;sv=2" width="1541"/></div><figcaption>图 7，《超级马里奥制造 2》中马里奥在 Auto-Mario 课程“Bane-darake no zenjidōmario ritānzu”中穿过充满 koopa paratroopas 和蹦床的繁忙屏幕的屏幕截图，来自 YouTube 视频“バネだらけの役マリオ リターンズ by そよもぎ - 超级马里奥” Maker 2 - 无评论”由用户 NinThumbWorldArchive 于 2019 年 7 月 4 日上传 https://www.youtube.com/watch?v=EFRdX3PM6ro</figcaption></picture></div></div></div><p>自动关卡通常严重依赖于蹦床对象，它可以向左/向右或向上/向下推动玩家。开始自动关卡最常见的方法是在玩家起始位置上方几格处放置一个蹦床，这样当蹦床因重力而下落时，它会立即将玩家推向右侧。 </p><p>蹦床的多功能性导致许多用户设计了以蹦床为主题的《汽车马里奥》课程，例如用户 So yo mogi (そよもぎ) 的课程“Bane-darake no zenjidōmario ritānzu”(バネだらけの)マ里オoriターンズ (《汽车马里奥归来：充满了Springs”），他们使用数十个蹦床来创造复杂的突发行为，例如用大炮射击蹦床，然后在其他蹦床上弹跳，并用一个完美定时的蹦床将马里奥推过十几个弹跳蹦床之间的瞬间间隙。 </p><p>这种对复杂模拟的兴趣在自动“RNG”（随机数生成器）课程中达到了顶峰，玩家只有在发生非常罕见的随机生成对象或交互时才能完成这些课程，例如用户 Phenotype 的课程“幸运抽奖”，该课程依赖于一系列 Magikoopa 敌人有七百五十万分之一的机会随机召唤硬币而不是任何其他对象。正如课程标题所示，Lucky Draw 基本上是一台用 Mario 积木构建的老虎机，在撰写本文时，只有 35 个游戏（全球超过 18,000,000 次尝试）取得了成功。唯一可行的玩家策略是让 Nintendo Switch 控制台持续整夜运行课程，就好像它在挖掘加密货币或训练机器学习网络一样。通过这种方式，Auto RNG 完全否定了典型马里奥玩家的平台跳跃技能，有利于暴露游戏引擎的阴谋。</p><div><div><div><div><img height="865" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MTL-COGEHYHWbDfIw3b%252F-MTL4OliWlMIQk4JZR6r%252Fzeroplayer08_smm2_luckydraw.png%3Falt%3Dmedia%26token%3Dadcab054-669b-4b9d-8928-39f33d971ed2&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=5d8d31b0&amp;sv=2" width="1540"/></div></div></div></div><h2><div><a href="#dancing-about-architecture"></a></div><div>与建筑共舞</div></h2><p>与大多数以玩家表现为中心的关卡不同，零玩家关卡的形状和几何结构就是表现。这种表演是一种舞蹈，是一种有节奏的空间运动。 </p><p>一些《自动马里奥》关卡甚至兼作“音乐”标记的课程，这些课程使用特殊的音符块，可以顺序激活以播放歌曲。在 Media Molecule 的游戏《小小大星球》中，创作者还使用游戏内编辑器创建了无输入的“音乐关卡”过山车，并带有长长的动作激活音乐墙。 Metanet Software 的独立平台游戏 N 还以粉丝制作的 Don't Do Anything (DDA) 关卡为特色，而 Metanet 的续集 N++ 的广告则重点关注舞者的照片。 </p><p>这些游戏的玩家、玩家设计者和开发者似乎都将这种活动与音乐和舞蹈联系起来。这是有道理的，因为很多零玩家关卡设计都涉及具体的直觉。每个 TrackMania PF 设计师都必须对 TrackMania 的赛车物理和操控性达到最低程度的熟练程度，否则他们怎么能预测特定的坡道将如何导致赛车以特定的速率转弯并以特定的速度启动呢？唯一的方法是通过反复试验、练习和耐心。每个 PF 都代表至少几天的艰苦试玩测试和反复排练——如果不是几周、几个月，或者就 PF Hyperion’s Wrath 而言，则需要两年的工作。</p><div><div><div><picture><div><img height="870" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MTL-COGEHYHWbDfIw3b%252F-MTL50MY-N_ge5Xmhn8I%252Fzeroplayer09_smm2_mariotrail.png%3Falt%3Dmedia%26token%3D63bf5088-4013-422c-afeb-97ce3bfc5b96&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=a32db586&amp;sv=2" width="1545"/></div><figcaption>图 9，“Mario's Trail”屏幕截图，在 Super Mario Maker 2 课程编辑器中可视化 Mario 的路径和轨迹，来自用户 GameSpot 于 2019 年 6 月 28 日上传的 YouTube 视频“Hot Tips For Course Maker In Super Mario Maker 2” https://www.youtube.com/watch?v=rX7-JANlWak</figcaption></picture></div></div></div><p>《超级马里奥制作家》课程构建器有助于可视化玩家的跳跃和轨迹，帮助课程创建者微调他们的对象放置。对于大多数关卡编辑器来说，这种类型的调试功能非常罕见。常见的第一人称射击游戏关卡设计工具（例如 Hammer 或 Radiant）无法轻松可视化尺寸或玩家的能力，而常见的行业关卡设计实践将关卡设计师的责任放在了记忆和测量玩家在空间中可以跳跃或移动多远的准确距离（或“指标”）上。</p><p>音乐家马丁·马尔（Martin Mull）有句名言：“写音乐就像跳舞建筑”。我认为零玩家关卡设计本质上是一种“围绕架构跳舞”的形式，因为游戏的虚拟架构正在自我表演和激活，通过玩家设计师对游戏感觉的现象学体验来引导。 </p><p>在关卡设计中，我们经常认为我们必须从建筑这个领域中学习更多。当行业从业者提到这一点时，他们通常指的是建筑绘图和规划过程的正式严谨性。 </p><p>然而，关卡设计已经与建筑可视化和 CAD 实践共享工作流程和技术。我们在游戏中需要的架构是将自身理解为社会理论、经济学和艺术的交叉点的架构。 </p><p>关卡设计不仅仅是 AAA 射击游戏系列的 3D 布局。关卡设计也是《赛道狂飙》或《超级马里奥制造》的设计趋势史；关卡设计是休闲设计师如何运用休闲创作工具并将自己理解为艺术家；关卡设计是对我们如何体验和居住空间的丰富研究。所以，是的，让我们从建筑学中了解更多。舞池见。
+</p></div></div></article>
+    <div class="page-links"><a class="page-link" href="culture__history-level-designer.html"><span>上一页</span>关卡设计师简史</a><a class="page-link" href="culture__unfinished-pages.html"><span>下一页</span>未完成页面</a></div>
+  </main>
+</body>
+</html>

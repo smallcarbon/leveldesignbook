@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>模块化套件设计 | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
+    <nav><a class="" style="--depth:0" href="index.html">The Level Design Book 中文版</a>
+<a class="" style="--depth:1" href="introduction.html">✨ 什么是关卡设计</a>
+<a class="" style="--depth:2" href="process__overview.html">🗺️ 如何制作一个关卡</a>
+<a class="" style="--depth:2" href="process__preproduction.html">🧠 前期设计</a>
+<a class="" style="--depth:3" href="process__preproduction__pacing.html">节奏</a>
+<a class="" style="--depth:3" href="process__preproduction__research.html">调研</a>
+<a class="" style="--depth:3" href="process__preproduction__worldbuilding.html">世界构建</a>
+<a class="" style="--depth:3" href="process__preproduction__scope.html">范围控制</a>
+<a class="" style="--depth:2" href="process__combat.html">🔫 战斗</a>
+<a class="" style="--depth:3" href="process__combat__enemy.html">敌人设计</a>
+<a class="" style="--depth:3" href="process__combat__encounter.html">遭遇战</a>
+<a class="" style="--depth:3" href="process__combat__cover.html">掩体</a>
+<a class="" style="--depth:3" href="process__combat__balance.html">地图平衡</a>
+<a class="" style="--depth:2" href="process__layout.html">🛠️ 布局</a>
+<a class="" style="--depth:3" href="process__layout__flow.html">流动感</a>
+<a class="" style="--depth:4" href="process__layout__flow__circulation.html">循环动线</a>
+<a class="" style="--depth:4" href="process__layout__flow__verticality.html">垂直性</a>
+<a class="" style="--depth:3" href="process__layout__criticalpath.html">关键路径</a>
+<a class="" style="--depth:3" href="process__layout__parti.html">Parti：概念布局</a>
+<a class="" style="--depth:3" href="process__layout__typology.html">类型学</a>
+<a class="" style="--depth:4" href="process__layout__typology__gates.html">门与关口</a>
+<a class="" style="--depth:2" href="process__blockout.html">🏠 白盒</a>
+<a class="" style="--depth:3" href="process__blockout__massing.html">体量</a>
+<a class="" style="--depth:4" href="process__blockout__massing__landscape.html">景观地形</a>
+<a class="" style="--depth:4" href="process__blockout__massing__composition.html">构图</a>
+<a class="" style="--depth:4" href="process__blockout__massing__prospect-refuge.html">眺望-庇护</a>
+<a class="" style="--depth:3" href="process__blockout__metrics.html">尺度指标</a>
+<a class="active" style="--depth:4" href="process__blockout__metrics__modular.html">模块化套件设计</a>
+<a class="" style="--depth:4" href="process__blockout__metrics__doom.html">DOOM 尺度</a>
+<a class="" style="--depth:4" href="process__blockout__metrics__quake.html">Quake 尺度</a>
+<a class="" style="--depth:3" href="process__blockout__wayfinding.html">寻路与引导</a>
+<a class="" style="--depth:3" href="process__blockout__playtesting.html">试玩测试</a>
+<a class="" style="--depth:4" href="process__blockout__playtesting__persona.html">玩家画像</a>
+<a class="" style="--depth:2" href="process__scripting.html">📜 脚本</a>
+<a class="" style="--depth:3" href="process__scripting__nav.html">(存根) 导航</a>
+<a class="" style="--depth:3" href="process__scripting__doors.html">门</a>
+<a class="" style="--depth:2" href="process__lighting.html">☀️ 灯光</a>
+<a class="" style="--depth:3" href="process__lighting__three-point.html">三点布光</a>
+<a class="" style="--depth:3" href="process__lighting__d6-lighting.html">D6 灯光法</a>
+<a class="" style="--depth:3" href="process__lighting__darkness.html">黑暗场景灯光</a>
+<a class="" style="--depth:2" href="process__env-art.html">🏡 环境美术</a>
+<a class="" style="--depth:3" href="process__env-art__psychology.html">形状与色彩心理学</a>
+<a class="" style="--depth:3" href="process__env-art__texturing.html">材质</a>
+<a class="" style="--depth:3" href="process__env-art__storytelling.html">叙事</a>
+<a class="" style="--depth:3" href="process__env-art__optimization.html">优化</a>
+<a class="" style="--depth:2" href="process__release.html">🌈 发布</a>
+<a class="" style="--depth:2" href="culture__overview.html">🦜 作为文化的关卡设计</a>
+<a class="" style="--depth:2" href="culture__history-level-designer.html">关卡设计师简史</a>
+<a class="" style="--depth:2" href="culture__zero-player.html">零玩家关卡设计</a>
+<a class="" style="--depth:2" href="culture__unfinished-pages.html">未完成页面</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-architecture.html">建筑史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__structural-engineering-primer.html">结构工程入门</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-environment-art.html">环境美术史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-of-furniture.html">家具史</a>
+<a class="" style="--depth:3" href="culture__unfinished-pages__history-encounter-design.html">遭遇战设计史</a>
+<a class="" style="--depth:2" href="studies__overview.html">🔍 如何研究一个关卡</a>
+<a class="" style="--depth:2" href="studies__sp.html">单人关卡研究</a>
+<a class="" style="--depth:3" href="studies__sp__undead-burg.html">不死镇 (Dark Souls 1)</a>
+<a class="" style="--depth:3" href="studies__sp__assassins.html">Assassins (Thief 1)</a>
+<a class="" style="--depth:3" href="studies__sp__cradle.html">(存根) The Cradle (Thief 3)</a>
+<a class="" style="--depth:3" href="studies__sp__sapienza.html">(存根) Sapienza (Hitman)</a>
+<a class="" style="--depth:3" href="studies__sp__silent-cartographer.html">(存根) Silent Cartographer (Halo 1)</a>
+<a class="" style="--depth:2" href="studies__mp.html">多人关卡研究</a>
+<a class="" style="--depth:3" href="studies__mp__chill-out.html">Chill Out (Halo 1)</a>
+<a class="" style="--depth:3" href="studies__mp__de_dust2.html">(存根) de_dust2 (Counter-Strike)</a>
+<a class="" style="--depth:2" href="studies__irl.html">现实空间研究</a>
+<a class="" style="--depth:3" href="studies__irl__disneyland.html">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="" style="--depth:3" href="studies__irl__stub-las-vegas-nevada-usa.html">(存根) 拉斯维加斯 (美国内华达)</a>
+<a class="" style="--depth:2" href="learning__notes.html">🎒 给教学者的笔记</a>
+<a class="" style="--depth:2" href="learning__projects.html">项目计划</a>
+<a class="" style="--depth:3" href="learning__projects__classic-combat.html">经典战斗</a>
+<a class="" style="--depth:3" href="learning__projects__unfinished-wip-pages.html">未完成 WIP 页面</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-combat.html">现代战斗</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__modern-stealth.html">现代潜行</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html">练习：直射光</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html">练习：2D 白板图</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html">关卡设计作品集</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__adaptation.html">设计测试：改编</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html">练习：布局</a>
+<a class="" style="--depth:4" href="learning__projects__unfinished-wip-pages__verticality.html">练习：垂直性</a>
+<a class="" style="--depth:2" href="appendix__tools.html">工具</a>
+<a class="" style="--depth:3" href="appendix__tools__trenchbroom.html">TrenchBroom</a>
+<a class="" style="--depth:2" href="appendix__resources.html">资产与资源</a>
+<a class="" style="--depth:3" href="appendix__resources__talks.html">推荐演讲</a>
+<a class="" style="--depth:3" href="appendix__resources__books.html">推荐书目</a>
+<a class="" style="--depth:3" href="appendix__resources__quake.html">Quake 资源</a>
+<a class="" style="--depth:4" href="appendix__resources__quake__how-to-package.html">如何打包 Quake 地图/Mod</a>
+<a class="" style="--depth:3" href="appendix__resources__formats.html">文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__fgd.html">FGD 文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__map.html">MAP 文件格式</a>
+<a class="" style="--depth:4" href="appendix__resources__formats__mdl.html">MDL 文件格式</a>
+<a class="" style="--depth:2" href="appendix__communities.html">社区</a>
+<a class="" style="--depth:2" href="appendix__about.html">关于本书与作者</a>
+<a class="" style="--depth:2" href="appendix__license.html">许可与版权</a></nav>
+  </aside>
+  <main class="page">
+    <div class="topbar">
+      <a href="https://book.leveldesignbook.com/process/blockout/metrics/modular">查看原文</a>
+      <a href="https://book.leveldesignbook.com">原站首页</a>
+    </div>
+    <div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+    <article><header><nav><ol><li></li><li></li><li></li></ol></nav><h1>模块化套件设计</h1><p>如何测量和设计建筑水平的模块化套件、3D 图块集</p></header><div><div><p>当做一个 <span><a href="process__blockout.html">白盒</a></span> 或 <span><a href="process__env-art.html">美术处理</a></span>，你可能会使用 <strong>模块化套件</strong> -- 3D 图块集 <strong>模块</strong>，网格设计为咬合在一起。这来自现实生活中的建筑实践 <span><a href="https://en.wikipedia.org/wiki/Modular_building">预制模块化建筑</a></span>.</p><p>如果您不熟悉 3D 建模或关卡设计，那么先不要尝试设计自己的套件。设计一个强大的套件需要考虑很多因素。您的第一个工具包可能会很难使用，特别是如果您还没有从使用其他人的工具包中学习的话。相反，请参阅我们的列表 <span><a href="appendix__resources.html">资源</a></span> 下载适合原型设计的免费预制模块化套件。</p><p>但如果您有关卡设计和 3D 工具经验，那么您就已经准备好了。在此页面上，我们将详细介绍设计您自己的模块化套件的许多注意事项和最佳实践。</p><div><div></div><div><p>此页面上的大部分信息来自 Joel Burgess 关于为大型开放世界游戏设计模块化套件的精彩 GDC 演讲： <span><a href="http://blog.joelburgess.com/2013/04/skyrims-modular-level-design-gdc-2013.html">“GDC 2013：Skyrim 的模块化关卡设计方法”</a></span> (<span><a href="http://www.slideshare.net/JoelBurgess/gdc2013-kit-buildingfinal">幻灯片</a></span>）和 <span><a href="https://www.youtube.com/watch?v=QBAM27YbKZg">《GDC 2016：辐射 4 的模块化关卡设计》</a></span> (<span><a href="https://www.slideshare.net/JoelBurgess/gdc-2016-modular-level-design-of-fallout-4">幻灯片</a></span>, <span><a href="https://www.youtube.com/watch?v=QBAM27YbKZg">视频</a></span>).</p></div></div><div><div><div><picture><div><img height="688" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MbP95G-5HmMHoWYwCU_%252F-MbPCnRZ5hG8N-m7rBYW%252FLDB_ModularKitZoo_JoelBurgess_Skyrim.jpg%3Falt%3Dmedia%26token%3D33800a74-93d4-469c-b4eb-44c704fb609e&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=e453b10e&amp;sv=2" width="1600"/></div><figcaption>《天际》中“Dwemer 废墟”的核心建筑套件，由 Joel Burgess 拍摄 (http://blog.joelburgess.com/2013/04/skyrims-modular-level-design-gdc-2013.html)</figcaption></picture></div></div></div><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MbPP-21y2wJpBDQmUla%252F-MbPRwQZBzjZOk5Wo6c7%252FLDB_DwemerRuin_JoelBurgess_SkyrimCompressed.jpg%3Falt%3Dmedia%26token%3Daba35fda-cd7f-4b08-8f72-f81aa13c5b64&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=2018de4c&amp;sv=2" width="1280"/></div><figcaption>在《Skyrim》中使用 Dwemer 套件构建的示例地下城环境，由 Joel Burgess 拍摄 (http://blog.joelburgess.com/2013/04/skyrims-modular-level-design-gdc-2013.html)</figcaption></picture></div></div></div><h2><div><a href="#id-1.-pre-production"></a></div><div>1. 前期制作</div></h2><p>您是否有大量的关卡设计师时间，并且需要多次重复使用有限的美术资源？<!-- --></p><p>规划装备百分比，首先决定什么是最重要的</p><p>该套件应该有多细/粗？取决于设计师需要/想要什么关卡，更多的定制还是更快的原型设计时间？</p><h2><div><a href="#id-2.-blockout-the-kit"></a></div><div>2. 封闭套件</div></h2><p>暂时不要制作变体，只需先构建基本部分</p><h3><div><a href="#prototype-metrics"></a></div><div>原型指标</div></h3><p>决定你的单位...按照人性化的规模建造</p><div><div><div><picture><div><img height="898" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MbPKH6N-42OiV-DO9VZ%252F-MbPN_IgBzHktzYbUn_2%252FLDB_ModularMetrics_JoelBurgess_Skyrim.jpg%3Falt%3Dmedia%26token%3Dc380a2ee-77aa-43af-b162-a827f53db3bf&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=ed4e5a7b&amp;sv=2" width="3160"/></div><figcaption>玩家大小与环境指标图，图片由 Joel Burgess 提供 (http://blog.joelburgess.com/2013/04/skyrims-modular-level-design-gdc-2013.html)</figcaption></picture></div></div></div><h3><div><a href="#common-module-types"></a></div><div>常见模块类型</div></h3><ul><li><div><div></div></div><div><p>地板、天花板、墙壁、门口（单）、门口（双）、窗户、角落</p></div></li><li><div><div></div></div><div><p>平台（景观）</p></div></li><li><div><div></div></div><div><p>胶水</p></div></li><li><div><div></div></div><div><p>法兰和拱门（洞穴）<!-- --></p></div></li><li><div><div></div></div><div><p>贝壳（洞穴）</p></div></li></ul><div><div><div><picture><div><img height="964" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MbP02oa-qIyy5tjCgbG%252F-MbP6Rdo6HOddzlUrPo1%252FLDB_ModularGraybox_Transparent_JoelBurgess_Skyrim.png%3Falt%3Dmedia%26token%3D4a1cd17d-c36a-4edd-bb5f-2c457385153c&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=95e431ed&amp;sv=2" width="1600"/></div><figcaption>用于《天际》中关卡白盒的“灰盒”模块化套件，由 Joel Burgess 拍摄 (http://blog.joelburgess.com/2013/04/skyrims-modular-level-design-gdc-2013.html)</figcaption></picture></div></div></div><h3><div><a href="#define-a-footprint"></a></div><div>定义足迹</div></h3><p>留在足迹/边界框内</p><div><div><div><div><img height="693" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MbPP-21y2wJpBDQmUla%252F-MbPQQLxVthRSRJr0Nci%252FLDB_ModularFootprint_JoelBurgess_Skyrim.jpg%3Falt%3Dmedia%26token%3D951a8c51-8f4a-4519-9e98-e543e5e7912f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=ad397fa0&amp;sv=2" width="1486"/></div></div></div></div><h3><div><a href="#asset-naming"></a></div><div>资产命名</div></h3><p>注意命名，关卡设计师和套件艺术家需要就模式达成一致</p><p>Epic 推荐的命名方案？</p><div><div><div><div><img height="644" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MbPP-21y2wJpBDQmUla%252F-MbPPuNqAVxippxQETd3%252FwebNameBreakdown.jpg%3Falt%3Dmedia%26token%3D56500d47-5151-474f-946e-40a363e58749&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=368c9296&amp;sv=2" width="1600"/></div></div></div></div><h2><div><a href="#id-3.-metrics-stress-test-the-kit"></a></div><div>3. 指标：对套件进行压力测试</div></h2><p>不要仅仅停留在理想情况</p><p>碰撞是最大的问题之一，确保你不会被卡住？</p><h3><div><a href="#loopback-test"></a></div><div>环回测试</div></h3><div><div><div><div><img height="266" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MbPP-21y2wJpBDQmUla%252F-MbPPcm4lqsQ4Y9xdCXm%252FwebLoopbackStressTest.jpg%3Falt%3Dmedia%26token%3D6e4e6912-3604-4392-b39a-931922076e63&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=7bc81e3d&amp;sv=2" width="922"/></div></div></div></div><h3><div><a href="#stack-test"></a></div><div>堆栈测试</div></h3><p>你能构建多层次的环境吗？地板不应该像纸一样薄，它们有像墙壁一样的厚度和质量</p><div><div><div><div><img height="375" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MbPP-21y2wJpBDQmUla%252F-MbPPgPOkQoF0rm9FBnr%252FwebVerticalFootprint.jpg%3Falt%3Dmedia%26token%3Dbcdd332c-8b15-4c3f-b5cc-2f4b610c12f3&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=6fd7b25d&amp;sv=2" width="1600"/></div></div></div></div><h3><div><a href="#gap-test"></a></div><div>间隙测试</div></h3><p>你们有足够的胶水用于斜角结构的内饰套件吗？对于隧道或洞穴套件至关重要</p><h2><div><a href="#id-4.-art-pass-the-kit-make-variants"></a></div><div>4.艺术通过套件，制作变体</div></h2><p>纹理变化有很长的路要走，而且“便宜”——您不必再次测试和验证模块几何形状</p><p>考虑构建一个可以轻松交换模块类型的工具，这将使艺术传递和重新网格化速度更快</p><h2><div><a href="#sources"></a></div><div>来源</div></h2><p>正如本页顶部所述，此处的大部分信息来自 Joel Burgess 的两场精彩的 GDC 演讲，这是 <strong>必读</strong> 对于任何从事模块化建设的人：</p><ul><li><div><div></div></div><div><p><span><a href="http://blog.joelburgess.com/2013/04/skyrims-modular-level-design-gdc-2013.html">“GDC 2013：Skyrim 的模块化关卡设计方法”</a></span> (<span><a href="http://www.slideshare.net/JoelBurgess/gdc2013-kit-buildingfinal">幻灯片</a></span>）是“101”介绍性演讲，介绍了模块化套件设计注意事项，以及他们如何构建《辐射 3》和《天际》的关卡，同时避免《湮灭》中最严重的错误。</p></div></li><li><div><div></div></div><div><p><span><a href="https://www.youtube.com/watch?v=QBAM27YbKZg">《GDC 2016：辐射 4 的模块化关卡设计》</a></span> (<span><a href="https://www.slideshare.net/JoelBurgess/gdc-2016-modular-level-design-of-fallout-4">幻灯片</a></span>, <span><a href="https://www.youtube.com/watch?v=QBAM27YbKZg">视频</a></span>）是“201”中间谈话，详细说明了他们为《天际》的模块化套件所做的工作，并在构建《辐射 4》时进行了扩展。</p></div></li></ul><h2><div><a href="#further-reading"></a></div><div>进一步阅读</div></h2><ul><li><div><div></div></div><div><p><span><a href="https://docs.unrealengine.com/udk/Three/ModularLevelDesign.html">Lee Perry 的《模块化关卡和组件设计》</a></span> 《游戏开发者》杂志，2002 年 11 月。《战争机器》(2006) 的首席关卡设计师撰写的一篇内容扎实的文章，是最早详细介绍模块化构造实践的游戏开发著作之一，这种做法直到 2000 年代初期才开始出现，当时基于笔刷的 CSG 构造开始不再流行。包含在这里主要是为了历史兴趣；比较 <span><a href="culture__history-level-designer.html">关卡设计师简史</a></span>.</p></div></li></ul></div></div></article>
+    <div class="page-links"><a class="page-link" href="process__blockout__metrics.html"><span>上一页</span>尺度指标</a><a class="page-link" href="process__blockout__metrics__doom.html"><span>下一页</span>DOOM 尺度</a></div>
+  </main>
+</body>
+</html>
