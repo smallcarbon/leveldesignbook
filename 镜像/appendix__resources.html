@@ -1,118 +1,192 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>资产与资源 | The Level Design Book 中文版</title>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="在哪里可以获得用于关卡的免费艺术资源（模型、纹理、材质）">
+  <title>资产与资源 | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="site-data.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body>
-<aside class="sidebar">
-<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
-<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
-<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
-<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
-<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
-<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
-<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
-<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
-<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
-<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
-<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
-<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
-<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
-<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
-<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
-<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
-<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
-<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
-<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
-<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
-<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
-<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
-<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
-<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
-<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
-<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
-<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
-<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
-<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
-<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
-<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
-<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
-<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
-<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
-<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
-<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
-<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
-<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
-<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
-<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
-<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
-<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
-<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
-<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
-<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
-<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
-<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
-<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
-<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
-<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
-<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
-<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
-<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
-<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
-<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
-<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
-<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
-<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
-<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
-<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
-<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
-<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
-<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
-<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
-<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
-<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
-<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
-<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
-<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
-<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
-<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
-<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
-<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
-<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
-<a class="active" href="appendix__resources.html" style="--depth:2">资产与资源</a>
-<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
-<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
-<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
-<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
-<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
-<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
-<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
-<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
-<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
-<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
-<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
-</aside>
-<main class="page">
-<div class="topbar">
-<a href="https://book.leveldesignbook.com/appendix/resources">查看原文</a>
-<a href="https://book.leveldesignbook.com">原站首页</a>
+<body class="gb-body" data-page="appendix__resources.html" data-article-hash="11dfb9b2bd214838b3807ce77e8c3ddfdc670a9bc9d62ce1112dc0bbeb256d36">
+  <div class="gb-scrim" data-close-panels></div>
+  <header class="gb-header">
+    <div class="gb-header-inner">
+      <button class="gb-icon-button gb-menu-button" type="button" data-open-sidebar aria-label="打开目录">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="gb-header-logo" href="index.html">
+        <span class="gb-logo-dot"></span>
+        <span>The Level Design Book</span>
+      </a>
+      <nav class="gb-header-links" aria-label="Top links">
+        <a href="process__overview.html">Book</a>
+        <a href="appendix__resources.html">Resources</a>
+        <a href="https://book.leveldesignbook.com/appendix/resources">原文</a>
+      </nav>
+      <button class="gb-search-trigger" type="button" data-open-search>
+        <span class="gb-search-icon"></span>
+        <span class="gb-search-label">搜索...</span>
+        <span class="gb-shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+      </button>
+    </div>
+  </header>
+  <div class="gb-layout">
+    <aside class="gb-sidebar" data-sidebar>
+      <div class="gb-sidebar-scroll">
+<a class="gb-sidebar-brand" href="index.html"><span class="gb-brand-mark">◆</span><span><strong>The Level Design Book</strong><small>中文版</small></span></a>
+<nav class="gb-nav" aria-label="Table of contents">
+<a class="gb-nav-link" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="gb-nav-link" href="introduction.html" style="--depth:0">✨ 什么是关卡设计</a>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 1, PROCESS</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="process__overview.html" style="--depth:1">🗺️ 如何制作一个关卡</a>
+<a class="gb-nav-link" href="process__preproduction.html" style="--depth:1">🧠 前期设计</a>
+<a class="gb-nav-link" href="process__preproduction__pacing.html" style="--depth:2">节奏</a>
+<a class="gb-nav-link" href="process__preproduction__research.html" style="--depth:2">调研</a>
+<a class="gb-nav-link" href="process__preproduction__worldbuilding.html" style="--depth:2">世界构建</a>
+<a class="gb-nav-link" href="process__preproduction__scope.html" style="--depth:2">范围控制</a>
+<a class="gb-nav-link" href="process__combat.html" style="--depth:1">🔫 战斗</a>
+<a class="gb-nav-link" href="process__combat__enemy.html" style="--depth:2">敌人设计</a>
+<a class="gb-nav-link" href="process__combat__encounter.html" style="--depth:2">遭遇战</a>
+<a class="gb-nav-link" href="process__combat__cover.html" style="--depth:2">掩体</a>
+<a class="gb-nav-link" href="process__combat__balance.html" style="--depth:2">地图平衡</a>
+<a class="gb-nav-link" href="process__layout.html" style="--depth:1">🛠️ 布局</a>
+<a class="gb-nav-link" href="process__layout__flow.html" style="--depth:2">动线</a>
+<a class="gb-nav-link" href="process__layout__flow__circulation.html" style="--depth:3">空间流线</a>
+<a class="gb-nav-link" href="process__layout__flow__verticality.html" style="--depth:3">纵向/垂直空间</a>
+<a class="gb-nav-link" href="process__layout__criticalpath.html" style="--depth:2">主动线</a>
+<a class="gb-nav-link" href="process__layout__parti.html" style="--depth:2">设计概念草图</a>
+<a class="gb-nav-link" href="process__layout__typology.html" style="--depth:2">类型学</a>
+<a class="gb-nav-link" href="process__layout__typology__gates.html" style="--depth:3">门与关口</a>
+<a class="gb-nav-link" href="process__blockout.html" style="--depth:1">🏠 白盒</a>
+<a class="gb-nav-link" href="process__blockout__massing.html" style="--depth:2">体块</a>
+<a class="gb-nav-link" href="process__blockout__massing__landscape.html" style="--depth:3">景观地形</a>
+<a class="gb-nav-link" href="process__blockout__massing__composition.html" style="--depth:3">构图</a>
+<a class="gb-nav-link" href="process__blockout__massing__prospect-refuge.html" style="--depth:3">眺望-庇护</a>
+<a class="gb-nav-link" href="process__blockout__metrics.html" style="--depth:2">标准尺度规范</a>
+<a class="gb-nav-link" href="process__blockout__metrics__modular.html" style="--depth:3">模块化套件设计</a>
+<a class="gb-nav-link" href="process__blockout__metrics__doom.html" style="--depth:3">《毁灭战士》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__metrics__quake.html" style="--depth:3">《雷神之锤》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__wayfinding.html" style="--depth:2">寻路与引导</a>
+<a class="gb-nav-link" href="process__blockout__playtesting.html" style="--depth:2">试玩测试</a>
+<a class="gb-nav-link" href="process__blockout__playtesting__persona.html" style="--depth:3">玩家画像</a>
+<a class="gb-nav-link" href="process__scripting.html" style="--depth:1">📜 脚本</a>
+<a class="gb-nav-link" href="process__scripting__nav.html" style="--depth:2">(存根) 导航</a>
+<a class="gb-nav-link" href="process__scripting__doors.html" style="--depth:2">门</a>
+<a class="gb-nav-link" href="process__lighting.html" style="--depth:1">☀️ 灯光</a>
+<a class="gb-nav-link" href="process__lighting__three-point.html" style="--depth:2">三点布光</a>
+<a class="gb-nav-link" href="process__lighting__d6-lighting.html" style="--depth:2">D6 灯光法</a>
+<a class="gb-nav-link" href="process__lighting__darkness.html" style="--depth:2">黑暗场景灯光</a>
+<a class="gb-nav-link" href="process__env-art.html" style="--depth:1">🏡 环境美术</a>
+<a class="gb-nav-link" href="process__env-art__psychology.html" style="--depth:2">形状与色彩心理学</a>
+<a class="gb-nav-link" href="process__env-art__texturing.html" style="--depth:2">材质</a>
+<a class="gb-nav-link" href="process__env-art__storytelling.html" style="--depth:2">叙事</a>
+<a class="gb-nav-link" href="process__env-art__optimization.html" style="--depth:2">优化</a>
+<a class="gb-nav-link" href="process__release.html" style="--depth:1">🌈 发布</a>
 </div>
-<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-<article><header><nav><ol><li></li></ol></nav><h1>资产与资源</h1><p>在哪里可以获得用于关卡的免费艺术资源（模型、纹理、材质）</p></header><div><div><p>此页面列出了关卡中使用的免费艺术资源（模型、纹理、材质）。</p><ul><li><div><div></div></div><div><p>我们只列出具有强大功能的网站 <strong>免费</strong> 下载计划+ <strong>通用文件格式</strong> 适用于大多数引擎。</p></div></li><li><div><div></div></div><div><p>“CC许可证”是指获得许可的免费资产 <span><a href="https://en.wikipedia.org/wiki/Creative_Commons_license">知识共享</a></span> 或 <span><a href="https://en.wikipedia.org/wiki/Public_domain">公共领域</a></span> 风格许可证。可能需要注明出处。</p></div></li><li><div><div></div></div><div><p>更多资源：</p><ul><li><div><div></div></div><div><p><span><a href="appendix__resources__books.html"><strong>书籍</strong></a></span>：其他The Level Design Book 中文版列表，附有简短摘要</p></div></li><li><div><div></div></div><div><p><span><a href="appendix__resources__quake.html"><strong>《雷神之锤》资源</strong></a></span>：免费纹理 .WAD 和其他 《雷神之锤》特定文件的列表</p></div></li></ul></div></li></ul><h2><div><a href="#id-3d-models-and-props-free"></a></div><div>3D模型和道具（免费）</div></h2><div><div><div><div></div></div><div><div><label>CC 许可证？</label></div></div></div><div><div><div><div><div><div>网站</div><div>内容</div><div>CC 许可证？</div></div></div><div><div><div><div><div><p><span><a href="https://sketchfab.com/"><strong>素描工厂</strong></a></span></p></div></div><div><div><p>互联网上最大的免费低多边形+现实+3D扫描资产选择；质量参差不齐；确保过滤“可下载”！</p></div></div><div></div></div><div><div><div><p><span><a href="https://opengameart.org/art-search-advanced?keys=&amp;title=&amp;field_art_tags_tid_op=or&amp;field_art_tags_tid=&amp;name=&amp;field_art_type_tid%5B%5D=10&amp;sort_by=count&amp;sort_order=DESC&amp;items_per_page=48&amp;Collection="><strong>开放游戏艺术</strong></a></span></p></div></div><div><div><p>有很多专为游戏设计的免费模型，但质量参差不齐</p></div></div><div></div></div><div><div><div><p><span><a href="https://www.kenney.nl/assets?q=3d"><strong>肯尼</strong></a></span></p></div></div><div><div><p>游戏中最多产的免费资产创造者；许多精心设计的低多边形 3D 图块集</p></div></div><div></div></div><div><div><div><p><span><a href="http://quaternius.com/"><strong>夸特尼乌斯</strong></a></span></p></div></div><div><div><p>另一个多产的免费资源创建者，大量免费的低多边形 3D 道具和角色</p></div></div><div></div></div><div><div><div><p><span><a href="https://www.fertilesoilproductions.com/"><strong>肥沃的土壤</strong></a></span></p></div></div><div><div><p>许多良好的低多边形 3D 模块/图块集，特殊的 Unity 集成，但适用于任何</p></div></div><div></div></div><div><div><div><p><span><a href="https://www.blendswap.com/"><strong>混合交换</strong></a></span></p></div></div><div><div><p>为 Blender 用户提供免费社区模型交换...学习如何将模型从 .blend 导出到 .fbx / .obj 并不难</p></div></div><div></div></div><div><div><div><p><span><a href="https://turbosquid.com"><strong>涡轮鱿鱼</strong></a></span></p></div></div><div><div><p>曾经是互联网上最大的股票3D平台；还有一些免费的好东西</p></div></div><div></div></div></div></div></div></div></div></div><h2><div><a href="#materials-and-textures-free"></a></div><div>材质和纹理（免费）</div></h2><div><div><div><div><div><div><div>网站</div><div>内容</div><div>CC 许可证？</div></div></div><div><div><div><div><div><p><span><a href="https://polyhaven.com/"><strong>波利哈文</strong></a></span></p></div></div><div><div><p>许多免费的照片扫描 8k+ PBR 材料，以及高多边形模型库</p></div></div><div></div></div><div><div><div><p><span><a href="https://ambientcg.com/"><strong>环境CG</strong></a></span></p></div></div><div><div><p>以前是 CC0Textures；大量具有 PBR 支持的固体 4k / 8k 材质</p></div></div><div></div></div><div><div><div><p><span><a href="https://opengameart.org/art-search-advanced?keys=&amp;title=&amp;field_art_tags_tid_op=or&amp;field_art_tags_tid=&amp;name=&amp;field_art_type_tid%5B%5D=14&amp;sort_by=count&amp;sort_order=DESC&amp;items_per_page=48&amp;Collection="><strong>开放游戏艺术</strong></a></span></p></div></div><div><div><p>很多为手绘风格的游戏设计的免费纹理，质量参差不齐</p></div></div><div></div></div><div><div><div><p><span><a href="https://texture.ninja/"><strong>纹理忍者</strong></a></span></p></div></div><div><div><p>免费照片源适合复古氛围</p></div></div><div></div></div><div><div><div><p><span><a href="https://texturelabs.org/"><strong>纹理实验室</strong></a></span></p></div></div><div><div><p>较小的免费图片源集合</p></div></div><div></div></div></div></div></div></div></div></div><h3><div><a href="#prototyping-blockout-textures"></a></div><div>原型遮挡纹理</div></h3><p>制作时 <span><a href="process__blockout.html">白盒</a></span>，我们建议使用网格占位符纹理来制作关卡几何形状的原型。这有助于建立一致的规模和 <span><a href="process__blockout__metrics.html">标准尺度规范</a></span> 对于水平。</p><ul><li><div><div></div></div><div><p><span><a href="https://assetstore.unity.com/packages/2d/textures-materials/gridbox-prototype-materials-129127">Gridbox 原型材料</a></span> 作者：Ciathyza（Unity）</p></div></li><li><div><div></div></div><div><p><span><a href="https://github.com/coderespawn/proto-tools-ue4">原型工具</a></span> 作者：Code Respawn (虚幻 4)</p></div></li><li><div><div></div></div><div><p><span><a href="https://www.tomlooman.com/updated-mockup-material-for-unreal-4/">遮光材料</a></span> 作者：汤姆·卢曼（虚幻 4）</p></div></li><li><div><div></div></div><div><p><span><a href="https://www.kenney.nl/assets/prototype-textures">原型纹理</a></span> 作者：肯尼 (.png)<!-- --></p></div></li></ul><h3><div><a href="#skyboxes"></a></div><div>天空包厢</div></h3><p>天空盒是一种特殊类型的 6 面立方体贴图纹理，给人一种遥远天空背景的错觉。现代游戏引擎通常使用程序天空着色器/天空穹顶，但有时老式的方法更有效。</p><h4><div><a href="#quake-half-life-style-skyboxes"></a></div><div>《雷神之锤》/《半条命》风格的天空盒</div></h4><ul><li><div><div></div></div><div><p><span><a href="https://www.quaddicted.com/webarchive/kell.quaddicted.com/skyboxes.html">https://www.quaddicted.com/webarchive/kell.quaddicted.com/skyboxes.html</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="https://lvlworld.com/review/Quake%203%20Arena%20skybox%20collection">https://lvlworld.com/review/《雷神之锤》%203%20Arena%20skybox%20collection</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="http://www.simonoc.com/pages/artwork.htm">http://www.simonoc.com/pages/artwork.htm</a></span></p></div></li></ul><h2><div><a href="#id-2d-tilesets-and-sprites-free"></a></div><div>2D 图块集和精灵（免费）</div></h2><p><i>     要制作 2D 关卡，您通常需要一个基于图块的关卡编辑器。参见 </i><span><a href="appendix__tools.html#2d-level-editors"><i>工具</i></a></span><i>.</i></p><div><div><div><div><div><div><div>网站</div><div>内容</div><div>CC 许可证？</div></div></div><div><div><div><div><div><p><span><a href="https://opengameart.org/art-search-advanced?keys=&amp;field_art_type_tid%5B%5D=9&amp;sort_by=count&amp;sort_order=DESC"><strong>开放游戏艺术</strong></a></span></p></div></div><div><div><p>10000+个免费图块包和精灵，大多是复古/像素艺术风格，但种类繁多，基本上是第一个看的地方</p></div></div><div></div></div><div><div><div><p><span><a href="https://www.kenney.nl/assets?q=2d"><strong>肯尼</strong></a></span></p></div></div><div><div><p>光滑的厚块瓷砖包和精灵，非常好，但也非常容易辨认</p></div></div><div></div></div></div></div></div></div></div></div><p></p></div></div></article>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 2, CULTURE</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="culture__overview.html" style="--depth:1">🦜 作为文化的关卡设计</a>
+<a class="gb-nav-link" href="culture__history-level-designer.html" style="--depth:1">关卡设计师简史</a>
+<a class="gb-nav-link" href="culture__zero-player.html" style="--depth:1">零玩家关卡设计</a>
+<a class="gb-nav-link" href="culture__unfinished-pages.html" style="--depth:1">未完成页面</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:2">建筑史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:2">结构工程入门</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:2">环境美术史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:2">家具史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:2">遭遇战设计史</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 3, STUDIES</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="studies__overview.html" style="--depth:1">🔍 如何研究一个关卡</a>
+<a class="gb-nav-link" href="studies__sp.html" style="--depth:1">单人关卡研究</a>
+<a class="gb-nav-link" href="studies__sp__undead-burg.html" style="--depth:2">不死镇（《黑暗之魂》1）</a>
+<a class="gb-nav-link" href="studies__sp__assassins.html" style="--depth:2">Assassins (《神偷》 1)</a>
+<a class="gb-nav-link" href="studies__sp__cradle.html" style="--depth:2">(存根) The Cradle (《神偷》 3)</a>
+<a class="gb-nav-link" href="studies__sp__sapienza.html" style="--depth:2">(存根) Sapienza (《杀手》)</a>
+<a class="gb-nav-link" href="studies__sp__silent-cartographer.html" style="--depth:2">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp.html" style="--depth:1">多人关卡研究</a>
+<a class="gb-nav-link" href="studies__mp__chill-out.html" style="--depth:2">Chill Out (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp__de_dust2.html" style="--depth:2">(存根) de_dust2 (《反恐精英》)</a>
+<a class="gb-nav-link" href="studies__irl.html" style="--depth:1">现实空间研究</a>
+<a class="gb-nav-link" href="studies__irl__disneyland.html" style="--depth:2">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="gb-nav-link" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:2">(存根) 拉斯维加斯 (美国内华达)</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 4, LEARNING</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="learning__notes.html" style="--depth:1">🎒 给教学者的笔记</a>
+<a class="gb-nav-link" href="learning__projects.html" style="--depth:1">项目计划</a>
+<a class="gb-nav-link" href="learning__projects__classic-combat.html" style="--depth:2">经典战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages.html" style="--depth:2">未完成 WIP 页面</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:3">现代战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:3">现代潜行</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:3">练习：直射光</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:3">练习：2D 白板图</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:3">关卡设计作品集</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:3">设计测试：改编</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:3">练习：布局</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:3">练习：纵向/垂直空间</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>APPENDIX</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="appendix__tools.html" style="--depth:1">工具</a>
+<a class="gb-nav-link" href="appendix__tools__trenchbroom.html" style="--depth:2">TrenchBroom</a>
+<a class="gb-nav-link active" href="appendix__resources.html" style="--depth:1">资产与资源</a>
+<a class="gb-nav-link" href="appendix__resources__talks.html" style="--depth:2">推荐演讲</a>
+<a class="gb-nav-link" href="appendix__resources__books.html" style="--depth:2">推荐书目</a>
+<a class="gb-nav-link" href="appendix__resources__quake.html" style="--depth:2">《雷神之锤》资源</a>
+<a class="gb-nav-link" href="appendix__resources__quake__how-to-package.html" style="--depth:3">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="gb-nav-link" href="appendix__resources__formats.html" style="--depth:2">文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__fgd.html" style="--depth:3">FGD 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__map.html" style="--depth:3">MAP 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__mdl.html" style="--depth:3">MDL 文件格式</a>
+<a class="gb-nav-link" href="appendix__communities.html" style="--depth:1">社区</a>
+<a class="gb-nav-link" href="appendix__about.html" style="--depth:1">关于本书与作者</a>
+<a class="gb-nav-link" href="appendix__license.html" style="--depth:1">许可与版权</a>
+</div>
+</nav>
+
+      </div>
+    </aside>
+    <main class="gb-main" id="content">
+      <div class="gb-mobile-tools">
+        <button type="button" data-open-sidebar>目录</button>
+        <button type="button" data-open-outline>本页目录</button>
+      </div>
+      <div class="gb-page-actions">
+        <div class="gb-breadcrumbs"><span>APPENDIX</span></div>
+        <div class="gb-action-links">
+          <a href="https://book.leveldesignbook.com/appendix/resources">查看原文</a>
+          <a href="https://book.leveldesignbook.com">原站首页</a>
+        </div>
+      </div>
+      <div class="gb-license"><div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div></div>
+      <div class="gb-article-wrap">
+<article><header><nav><ol><li></li></ol></nav><h1>资产与资源</h1><p>在哪里可以获得用于关卡的免费艺术资源（模型、纹理、材质）</p></header><div><div><p>此页面列出了关卡中使用的免费艺术资源（模型、纹理、材质）。</p><ul><li><div><div></div></div><div><p>我们只列出具有强大功能的网站 <strong>免费</strong> 下载计划+ <strong>通用文件格式</strong> 适用于大多数引擎。</p></div></li><li><div><div></div></div><div><p>“CC许可证”是指获得许可的免费资产 <span><a href="https://en.wikipedia.org/wiki/Creative_Commons_license">知识共享</a></span> 或 <span><a href="https://en.wikipedia.org/wiki/Public_domain">公共领域</a></span> 风格许可证。可能需要注明出处。</p></div></li><li><div><div></div></div><div><p>更多资源：</p><ul><li><div><div></div></div><div><p><span><a href="appendix__resources__books.html"><strong>书籍</strong></a></span>：其他关卡设计书籍列表，附有简短摘要</p></div></li><li><div><div></div></div><div><p><span><a href="appendix__resources__quake.html"><strong>《雷神之锤》资源</strong></a></span>：免费纹理 .WAD 和其他 《雷神之锤》（<a class="game-store-link" href="https://store.steampowered.com/app/2310/Quake/" rel="noopener noreferrer" target="_blank">Steam</a>）特定文件的列表</p></div></li></ul></div></li></ul><h2><div><a href="#id-3d-models-and-props-free"></a></div><div>3D模型和道具（免费）</div></h2><div><div><div><div></div></div><div><div><label>CC 许可证？</label></div></div></div><div><div><div><div><div><div>网站</div><div>内容</div><div>CC 许可证？</div></div></div><div><div><div><div><div><p><span><a href="https://sketchfab.com/"><strong>素描工厂</strong></a></span></p></div></div><div><div><p>互联网上最大的免费低多边形+现实+3D扫描资产选择；质量参差不齐；确保过滤“可下载”！</p></div></div><div></div></div><div><div><div><p><span><a href="https://opengameart.org/art-search-advanced?keys=&amp;title=&amp;field_art_tags_tid_op=or&amp;field_art_tags_tid=&amp;name=&amp;field_art_type_tid%5B%5D=10&amp;sort_by=count&amp;sort_order=DESC&amp;items_per_page=48&amp;Collection="><strong>开放游戏艺术</strong></a></span></p></div></div><div><div><p>有很多专为游戏设计的免费模型，但质量参差不齐</p></div></div><div></div></div><div><div><div><p><span><a href="https://www.kenney.nl/assets?q=3d"><strong>肯尼</strong></a></span></p></div></div><div><div><p>游戏中最多产的免费资产创造者；许多精心设计的低多边形 3D 图块集</p></div></div><div></div></div><div><div><div><p><span><a href="http://quaternius.com/"><strong>夸特尼乌斯</strong></a></span></p></div></div><div><div><p>另一个多产的免费资源创建者，大量免费的低多边形 3D 道具和角色</p></div></div><div></div></div><div><div><div><p><span><a href="https://www.fertilesoilproductions.com/"><strong>肥沃的土壤</strong></a></span></p></div></div><div><div><p>许多良好的低多边形 3D 模块/图块集，特殊的 Unity 集成，但适用于任何</p></div></div><div></div></div><div><div><div><p><span><a href="https://www.blendswap.com/"><strong>混合交换</strong></a></span></p></div></div><div><div><p>为 Blender 用户提供免费社区模型交换...学习如何将模型从 .blend 导出到 .fbx / .obj 并不难</p></div></div><div></div></div><div><div><div><p><span><a href="https://turbosquid.com"><strong>涡轮鱿鱼</strong></a></span></p></div></div><div><div><p>曾经是互联网上最大的股票3D平台；还有一些免费的好东西</p></div></div><div></div></div></div></div></div></div></div></div><h2><div><a href="#materials-and-textures-free"></a></div><div>材质和纹理（免费）</div></h2><div><div><div><div><div><div><div>网站</div><div>内容</div><div>CC 许可证？</div></div></div><div><div><div><div><div><p><span><a href="https://polyhaven.com/"><strong>波利哈文</strong></a></span></p></div></div><div><div><p>许多免费的照片扫描 8k+ PBR 材料，以及高多边形模型库</p></div></div><div></div></div><div><div><div><p><span><a href="https://ambientcg.com/"><strong>环境CG</strong></a></span></p></div></div><div><div><p>以前是 CC0Textures；大量具有 PBR 支持的固体 4k / 8k 材质</p></div></div><div></div></div><div><div><div><p><span><a href="https://opengameart.org/art-search-advanced?keys=&amp;title=&amp;field_art_tags_tid_op=or&amp;field_art_tags_tid=&amp;name=&amp;field_art_type_tid%5B%5D=14&amp;sort_by=count&amp;sort_order=DESC&amp;items_per_page=48&amp;Collection="><strong>开放游戏艺术</strong></a></span></p></div></div><div><div><p>很多为手绘风格的游戏设计的免费纹理，质量参差不齐</p></div></div><div></div></div><div><div><div><p><span><a href="https://texture.ninja/"><strong>纹理忍者</strong></a></span></p></div></div><div><div><p>免费照片源适合复古氛围</p></div></div><div></div></div><div><div><div><p><span><a href="https://texturelabs.org/"><strong>纹理实验室</strong></a></span></p></div></div><div><div><p>较小的免费图片源集合</p></div></div><div></div></div></div></div></div></div></div></div><h3><div><a href="#prototyping-blockout-textures"></a></div><div>白盒原型纹理</div></h3><p>制作时 <span><a href="process__blockout.html">白盒</a></span>，我们建议使用网格占位符纹理来制作关卡几何形状的原型。这有助于建立一致的规模和 <span><a href="process__blockout__metrics.html">标准尺度规范</a></span> 对关卡。</p><ul><li><div><div></div></div><div><p><span><a href="https://assetstore.unity.com/packages/2d/textures-materials/gridbox-prototype-materials-129127">Gridbox 原型材料</a></span> 作者：Ciathyza（Unity）</p></div></li><li><div><div></div></div><div><p><span><a href="https://github.com/coderespawn/proto-tools-ue4">原型工具</a></span> 作者：Code Respawn (虚幻 4)</p></div></li><li><div><div></div></div><div><p><span><a href="https://www.tomlooman.com/updated-mockup-material-for-unreal-4/">白盒材质</a></span> 作者：汤姆·卢曼（虚幻 4）</p></div></li><li><div><div></div></div><div><p><span><a href="https://www.kenney.nl/assets/prototype-textures">原型纹理</a></span> 作者：肯尼 (.png)<!-- --></p></div></li></ul><h3><div><a href="#skyboxes"></a></div><div>天空盒</div></h3><p>天空盒是一种特殊类型的 6 面立方体贴图纹理，给人一种遥远天空背景的错觉。现代游戏引擎通常使用程序天空着色器/天空穹顶，但有时老式的方法更有效。</p><h4><div><a href="#quake-half-life-style-skyboxes"></a></div><div>《雷神之锤》/《半条命》风格的天空盒</div></h4><ul><li><div><div></div></div><div><p><span><a href="https://www.quaddicted.com/webarchive/kell.quaddicted.com/skyboxes.html">https://www.quaddicted.com/webarchive/kell.quaddicted.com/skyboxes.html</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="https://lvlworld.com/review/Quake%203%20Arena%20skybox%20collection">https://lvlworld.com/review/《雷神之锤》%203%20Arena%20skybox%20collection</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="http://www.simonoc.com/pages/artwork.htm">http://www.simonoc.com/pages/artwork.htm</a></span></p></div></li></ul><h2><div><a href="#id-2d-tilesets-and-sprites-free"></a></div><div>2D 图块集和精灵（免费）</div></h2><p><i>     要制作 2D 关卡，您通常需要一个基于图块的关卡编辑器。参见 </i><span><a href="appendix__tools.html#2d-level-editors"><i>工具</i></a></span><i>.</i></p><div><div><div><div><div><div><div>网站</div><div>内容</div><div>CC 许可证？</div></div></div><div><div><div><div><div><p><span><a href="https://opengameart.org/art-search-advanced?keys=&amp;field_art_type_tid%5B%5D=9&amp;sort_by=count&amp;sort_order=DESC"><strong>开放游戏艺术</strong></a></span></p></div></div><div><div><p>10000+个免费图块包和精灵，大多是复古/像素艺术风格，但种类繁多，基本上是第一个看的地方</p></div></div><div></div></div><div><div><div><p><span><a href="https://www.kenney.nl/assets?q=2d"><strong>肯尼</strong></a></span></p></div></div><div><div><p>光滑的厚块瓷砖包和精灵，非常好，但也非常容易辨认</p></div></div><div></div></div></div></div></div></div></div></div><p></p></div></div></article>
+      </div>
+      <div class="gb-page-links-wrap">
 <div class="page-links"><a class="page-link" href="appendix__tools__trenchbroom.html"><span>上一页</span>TrenchBroom</a><a class="page-link" href="appendix__resources__talks.html"><span>下一页</span>推荐演讲</a></div>
-</main>
+
+      </div>
+    </main>
+    <aside class="gb-outline" data-outline>
+      <div class="gb-outline-inner">
+        <button class="gb-outline-title" type="button" data-toggle-outline>ON THIS PAGE</button>
+        <nav class="gb-outline-list" data-outline-list></nav>
+      </div>
+    </aside>
+  </div>
+  <div class="gb-search-modal" role="dialog" aria-modal="true" aria-label="搜索" data-search-modal>
+    <div class="gb-search-box">
+      <div class="gb-search-input-row">
+        <span class="gb-search-icon"></span>
+        <input type="search" data-search-input placeholder="搜索页面、章节或正文内容" autocomplete="off">
+        <button type="button" data-close-search>关闭</button>
+      </div>
+      <div class="gb-search-results" data-search-results></div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,117 +1,170 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>FGD 文件格式 | The Level Design Book 中文版</title>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雷神之锤》（ Steam ） 时代关卡编辑器的实体定义文件/映射辅助">
+  <title>FGD 文件格式 | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="site-data.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body>
-<aside class="sidebar">
-<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
-<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
-<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
-<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
-<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
-<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
-<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
-<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
-<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
-<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
-<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
-<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
-<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
-<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
-<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
-<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
-<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
-<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
-<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
-<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
-<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
-<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
-<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
-<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
-<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
-<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
-<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
-<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
-<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
-<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
-<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
-<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
-<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
-<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
-<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
-<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
-<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
-<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
-<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
-<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
-<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
-<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
-<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
-<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
-<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
-<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
-<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
-<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
-<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
-<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
-<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
-<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
-<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
-<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
-<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
-<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
-<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
-<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
-<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
-<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
-<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
-<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
-<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
-<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
-<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
-<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
-<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
-<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
-<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
-<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
-<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
-<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
-<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
-<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
-<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
-<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
-<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
-<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
-<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
-<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
-<a class="active" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
-<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
-<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
-<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
-<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
-<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
-</aside>
-<main class="page">
-<div class="topbar">
-<a href="https://book.leveldesignbook.com/appendix/resources/formats/fgd">查看原文</a>
-<a href="https://book.leveldesignbook.com">原站首页</a>
+<body class="gb-body" data-page="appendix__resources__formats__fgd.html" data-article-hash="4fbb56209d1b12f5e5e6b8ea50d1d453931101333e56876ee7b64bc8eae299ef">
+  <div class="gb-scrim" data-close-panels></div>
+  <header class="gb-header">
+    <div class="gb-header-inner">
+      <button class="gb-icon-button gb-menu-button" type="button" data-open-sidebar aria-label="打开目录">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="gb-header-logo" href="index.html">
+        <span class="gb-logo-dot"></span>
+        <span>The Level Design Book</span>
+      </a>
+      <nav class="gb-header-links" aria-label="Top links">
+        <a href="process__overview.html">Book</a>
+        <a href="appendix__resources.html">Resources</a>
+        <a href="https://book.leveldesignbook.com/appendix/resources/formats/fgd">原文</a>
+      </nav>
+      <button class="gb-search-trigger" type="button" data-open-search>
+        <span class="gb-search-icon"></span>
+        <span class="gb-search-label">搜索...</span>
+        <span class="gb-shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+      </button>
+    </div>
+  </header>
+  <div class="gb-layout">
+    <aside class="gb-sidebar" data-sidebar>
+      <div class="gb-sidebar-scroll">
+<a class="gb-sidebar-brand" href="index.html"><span class="gb-brand-mark">◆</span><span><strong>The Level Design Book</strong><small>中文版</small></span></a>
+<nav class="gb-nav" aria-label="Table of contents">
+<a class="gb-nav-link" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="gb-nav-link" href="introduction.html" style="--depth:0">✨ 什么是关卡设计</a>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 1, PROCESS</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="process__overview.html" style="--depth:1">🗺️ 如何制作一个关卡</a>
+<a class="gb-nav-link" href="process__preproduction.html" style="--depth:1">🧠 前期设计</a>
+<a class="gb-nav-link" href="process__preproduction__pacing.html" style="--depth:2">节奏</a>
+<a class="gb-nav-link" href="process__preproduction__research.html" style="--depth:2">调研</a>
+<a class="gb-nav-link" href="process__preproduction__worldbuilding.html" style="--depth:2">世界构建</a>
+<a class="gb-nav-link" href="process__preproduction__scope.html" style="--depth:2">范围控制</a>
+<a class="gb-nav-link" href="process__combat.html" style="--depth:1">🔫 战斗</a>
+<a class="gb-nav-link" href="process__combat__enemy.html" style="--depth:2">敌人设计</a>
+<a class="gb-nav-link" href="process__combat__encounter.html" style="--depth:2">遭遇战</a>
+<a class="gb-nav-link" href="process__combat__cover.html" style="--depth:2">掩体</a>
+<a class="gb-nav-link" href="process__combat__balance.html" style="--depth:2">地图平衡</a>
+<a class="gb-nav-link" href="process__layout.html" style="--depth:1">🛠️ 布局</a>
+<a class="gb-nav-link" href="process__layout__flow.html" style="--depth:2">动线</a>
+<a class="gb-nav-link" href="process__layout__flow__circulation.html" style="--depth:3">空间流线</a>
+<a class="gb-nav-link" href="process__layout__flow__verticality.html" style="--depth:3">纵向/垂直空间</a>
+<a class="gb-nav-link" href="process__layout__criticalpath.html" style="--depth:2">主动线</a>
+<a class="gb-nav-link" href="process__layout__parti.html" style="--depth:2">设计概念草图</a>
+<a class="gb-nav-link" href="process__layout__typology.html" style="--depth:2">类型学</a>
+<a class="gb-nav-link" href="process__layout__typology__gates.html" style="--depth:3">门与关口</a>
+<a class="gb-nav-link" href="process__blockout.html" style="--depth:1">🏠 白盒</a>
+<a class="gb-nav-link" href="process__blockout__massing.html" style="--depth:2">体块</a>
+<a class="gb-nav-link" href="process__blockout__massing__landscape.html" style="--depth:3">景观地形</a>
+<a class="gb-nav-link" href="process__blockout__massing__composition.html" style="--depth:3">构图</a>
+<a class="gb-nav-link" href="process__blockout__massing__prospect-refuge.html" style="--depth:3">眺望-庇护</a>
+<a class="gb-nav-link" href="process__blockout__metrics.html" style="--depth:2">标准尺度规范</a>
+<a class="gb-nav-link" href="process__blockout__metrics__modular.html" style="--depth:3">模块化套件设计</a>
+<a class="gb-nav-link" href="process__blockout__metrics__doom.html" style="--depth:3">《毁灭战士》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__metrics__quake.html" style="--depth:3">《雷神之锤》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__wayfinding.html" style="--depth:2">寻路与引导</a>
+<a class="gb-nav-link" href="process__blockout__playtesting.html" style="--depth:2">试玩测试</a>
+<a class="gb-nav-link" href="process__blockout__playtesting__persona.html" style="--depth:3">玩家画像</a>
+<a class="gb-nav-link" href="process__scripting.html" style="--depth:1">📜 脚本</a>
+<a class="gb-nav-link" href="process__scripting__nav.html" style="--depth:2">(存根) 导航</a>
+<a class="gb-nav-link" href="process__scripting__doors.html" style="--depth:2">门</a>
+<a class="gb-nav-link" href="process__lighting.html" style="--depth:1">☀️ 灯光</a>
+<a class="gb-nav-link" href="process__lighting__three-point.html" style="--depth:2">三点布光</a>
+<a class="gb-nav-link" href="process__lighting__d6-lighting.html" style="--depth:2">D6 灯光法</a>
+<a class="gb-nav-link" href="process__lighting__darkness.html" style="--depth:2">黑暗场景灯光</a>
+<a class="gb-nav-link" href="process__env-art.html" style="--depth:1">🏡 环境美术</a>
+<a class="gb-nav-link" href="process__env-art__psychology.html" style="--depth:2">形状与色彩心理学</a>
+<a class="gb-nav-link" href="process__env-art__texturing.html" style="--depth:2">材质</a>
+<a class="gb-nav-link" href="process__env-art__storytelling.html" style="--depth:2">叙事</a>
+<a class="gb-nav-link" href="process__env-art__optimization.html" style="--depth:2">优化</a>
+<a class="gb-nav-link" href="process__release.html" style="--depth:1">🌈 发布</a>
 </div>
-<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-<article><header><nav><ol><li></li><li></li><li></li></ol></nav><h1>FGD 文件格式</h1><p>《雷神之锤》 时代关卡编辑器的实体定义文件/映射辅助</p></header><div><div><p><strong>烟气脱硫</strong> 是一种常见的文本文件格式，在多个 《雷神之锤》 时代的关卡编辑器工具中使用（例如 <span><a href="appendix__tools__trenchbroom.html">TrenchBroom</a></span>) 来定义实体。</p><p>安 <strong>实体</strong> 基本上是任何非静态世界几何体的游戏对象——NPC、物品、灯光、声音、门、玩家生成点等。任何可以移动、改变或反应的东西。</p><p>请注意，FGD 只是添加模板和文档的编辑辅助工具。<strong> 它本身不实现任何引擎内游戏功能。</strong> 它只是帮助关卡设计师理解和配置对象。从技术上讲，您不需要 FGD 来为游戏绘制地图；理论上，您可以简单地手动记住并验证所有关卡脚本数据。</p><p><i>     有关常见游戏对象类型和行为的更多信息，请参阅 </i><span><a href="process__scripting.html"><i>脚本编写</i></a></span><i>.</i></p><div><div></div><div><p>本页假定您对常见的 《雷神之锤》 映射术语有一定的了解。</p></div></div><h2><div><a href="#history"></a></div><div>历史</div></h2><p>FGD 代表“Forge Game Data”，是《半条命 2》关卡编辑器 Hammer 成为《半条命 1》编辑器 Worldcraft 时的遗留物，在此之前是名为 Forge 的 《雷神之锤》 工具。<!-- --></p><p>由于多个工作室、引擎和编辑器工具都使用了 FGD，因此 FGD 有几种不同的“风格”。例如，Valve 在 Source Engine 中添加了语法来支持其独特的实体输入/输出脚本系统。 <strong>目前尚无正式的 FGD 文件规范标准。</strong></p><p>本页涵盖了 FGD 中使用的核心语法 <span><a href="appendix__tools__trenchbroom.html">TrenchBroom</a></span> 适用于《雷神之锤 1》/《半条命》引擎。</p><h2><div><a href="#syntax-basic"></a></div><div>语法（基本）</div></h2><p>FGD 是一种基于文本的格式。我们建议使用 UTF-8 编码以支持更多语言。 TrenchBroom 需要 UTF-8，不带 <span><a href="https://en.wikipedia.org/wiki/Byte_order_mark">物料清单</a></span>.</p><p>每个实体条目都遵循以下模式：</p><div><span></span><div></div><div><div></div><pre><code><span><span>// 注释以“//”开头<!-- -->
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 2, CULTURE</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="culture__overview.html" style="--depth:1">🦜 作为文化的关卡设计</a>
+<a class="gb-nav-link" href="culture__history-level-designer.html" style="--depth:1">关卡设计师简史</a>
+<a class="gb-nav-link" href="culture__zero-player.html" style="--depth:1">零玩家关卡设计</a>
+<a class="gb-nav-link" href="culture__unfinished-pages.html" style="--depth:1">未完成页面</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:2">建筑史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:2">结构工程入门</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:2">环境美术史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:2">家具史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:2">遭遇战设计史</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 3, STUDIES</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="studies__overview.html" style="--depth:1">🔍 如何研究一个关卡</a>
+<a class="gb-nav-link" href="studies__sp.html" style="--depth:1">单人关卡研究</a>
+<a class="gb-nav-link" href="studies__sp__undead-burg.html" style="--depth:2">不死镇（《黑暗之魂》1）</a>
+<a class="gb-nav-link" href="studies__sp__assassins.html" style="--depth:2">Assassins (《神偷》 1)</a>
+<a class="gb-nav-link" href="studies__sp__cradle.html" style="--depth:2">(存根) The Cradle (《神偷》 3)</a>
+<a class="gb-nav-link" href="studies__sp__sapienza.html" style="--depth:2">(存根) Sapienza (《杀手》)</a>
+<a class="gb-nav-link" href="studies__sp__silent-cartographer.html" style="--depth:2">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp.html" style="--depth:1">多人关卡研究</a>
+<a class="gb-nav-link" href="studies__mp__chill-out.html" style="--depth:2">Chill Out (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp__de_dust2.html" style="--depth:2">(存根) de_dust2 (《反恐精英》)</a>
+<a class="gb-nav-link" href="studies__irl.html" style="--depth:1">现实空间研究</a>
+<a class="gb-nav-link" href="studies__irl__disneyland.html" style="--depth:2">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="gb-nav-link" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:2">(存根) 拉斯维加斯 (美国内华达)</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 4, LEARNING</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="learning__notes.html" style="--depth:1">🎒 给教学者的笔记</a>
+<a class="gb-nav-link" href="learning__projects.html" style="--depth:1">项目计划</a>
+<a class="gb-nav-link" href="learning__projects__classic-combat.html" style="--depth:2">经典战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages.html" style="--depth:2">未完成 WIP 页面</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:3">现代战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:3">现代潜行</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:3">练习：直射光</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:3">练习：2D 白板图</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:3">关卡设计作品集</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:3">设计测试：改编</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:3">练习：布局</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:3">练习：纵向/垂直空间</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>APPENDIX</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="appendix__tools.html" style="--depth:1">工具</a>
+<a class="gb-nav-link" href="appendix__tools__trenchbroom.html" style="--depth:2">TrenchBroom</a>
+<a class="gb-nav-link" href="appendix__resources.html" style="--depth:1">资产与资源</a>
+<a class="gb-nav-link" href="appendix__resources__talks.html" style="--depth:2">推荐演讲</a>
+<a class="gb-nav-link" href="appendix__resources__books.html" style="--depth:2">推荐书目</a>
+<a class="gb-nav-link" href="appendix__resources__quake.html" style="--depth:2">《雷神之锤》资源</a>
+<a class="gb-nav-link" href="appendix__resources__quake__how-to-package.html" style="--depth:3">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="gb-nav-link" href="appendix__resources__formats.html" style="--depth:2">文件格式</a>
+<a class="gb-nav-link active" href="appendix__resources__formats__fgd.html" style="--depth:3">FGD 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__map.html" style="--depth:3">MAP 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__mdl.html" style="--depth:3">MDL 文件格式</a>
+<a class="gb-nav-link" href="appendix__communities.html" style="--depth:1">社区</a>
+<a class="gb-nav-link" href="appendix__about.html" style="--depth:1">关于本书与作者</a>
+<a class="gb-nav-link" href="appendix__license.html" style="--depth:1">许可与版权</a>
+</div>
+</nav>
+
+      </div>
+    </aside>
+    <main class="gb-main" id="content">
+      <div class="gb-mobile-tools">
+        <button type="button" data-open-sidebar>目录</button>
+        <button type="button" data-open-outline>本页目录</button>
+      </div>
+      <div class="gb-page-actions">
+        <div class="gb-breadcrumbs"><span>APPENDIX</span><span class="gb-breadcrumb-sep">/</span><span>资产与资源</span><span class="gb-breadcrumb-sep">/</span><span>文件格式</span></div>
+        <div class="gb-action-links">
+          <a href="https://book.leveldesignbook.com/appendix/resources/formats/fgd">查看原文</a>
+          <a href="https://book.leveldesignbook.com">原站首页</a>
+        </div>
+      </div>
+      <div class="gb-license"><div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div></div>
+      <div class="gb-article-wrap">
+<article><header><nav><ol><li></li><li></li><li></li></ol></nav><h1>FGD 文件格式</h1><p>《雷神之锤》（<a class="game-store-link" href="https://store.steampowered.com/app/2310/Quake/" rel="noopener noreferrer" target="_blank">Steam</a>） 时代关卡编辑器的实体定义文件/映射辅助</p></header><div><div><p><strong>烟气脱硫</strong> 是一种常见的文本文件格式，在多个 《雷神之锤》 时代的关卡编辑器工具中使用（例如 <span><a href="appendix__tools__trenchbroom.html">TrenchBroom</a></span>) 来定义实体。</p><p>安 <strong>实体</strong> 基本上是任何非静态世界几何体的游戏对象——NPC、物品、灯光、声音、门、玩家生成点等。任何可以移动、改变或反应的东西。</p><p>请注意，FGD 只是添加模板和文档的编辑辅助工具。<strong> 它本身不实现任何引擎内游戏功能。</strong> 它只是帮助关卡设计师理解和配置对象。从技术上讲，您不需要 FGD 来为游戏绘制地图；理论上，您可以简单地手动记住并验证所有关卡脚本数据。</p><p><i>     有关常见游戏对象类型和行为的更多信息，请参阅 </i><span><a href="process__scripting.html"><i>脚本编写</i></a></span><i>.</i></p><div><div></div><div><p>本页假定您对常见的 《雷神之锤》 映射术语有一定的了解。</p></div></div><h2><div><a href="#history"></a></div><div>历史</div></h2><p>FGD 代表“Forge Game Data”，是《半条命 2》（<a class="game-store-link" href="https://store.steampowered.com/app/220/HalfLife_2/" rel="noopener noreferrer" target="_blank">Steam</a>）关卡编辑器 Hammer 成为《半条命 1》编辑器 Worldcraft 时的遗留物，在此之前是名为 Forge 的 《雷神之锤》 工具。<!-- --></p><p>由于多个工作室、引擎和编辑器工具都使用了 FGD，因此 FGD 有几种不同的“风格”。例如，Valve 在 Source Engine 中添加了语法来支持其独特的实体输入/输出脚本系统。 <strong>目前尚无正式的 FGD 文件规范标准。</strong></p><p>本页涵盖了 FGD 中使用的核心语法 <span><a href="appendix__tools__trenchbroom.html">TrenchBroom</a></span> 适用于《雷神之锤 1》/《半条命》引擎。</p><h2><div><a href="#syntax-basic"></a></div><div>语法（基本）</div></h2><p>FGD 是一种基于文本的格式。我们建议使用 UTF-8 编码以支持更多语言。 TrenchBroom 需要 UTF-8，不带 <span><a href="https://en.wikipedia.org/wiki/Byte_order_mark">物料清单</a></span>.</p><p>每个实体条目都遵循以下模式：</p><div><span></span><div></div><div><div></div><pre><code><span><span>// 注释以“//”开头<!-- -->
 </span></span><span><span>@EntityType EntitySettings() = EntityClassName :“编辑器内帮助”<!-- -->
 </span></span><span><span>[<!-- -->
 </span></span><span><span>    propertyKey(propertyType) : "编辑器内名称" : defaultValue : "编辑器内帮助"<!-- -->
@@ -119,7 +172,28 @@
 </code>是点实体的轴对齐边界框 (AABB) 大小，定义为两个 3D 向量：最小范围（最小角）和最大范围（最大角）</p></div></li><li><div><div></div></div><div><p><code><strong>型号</strong></code><code>(path, skin, frame, scale)</code>
 显示实体的 3D 模型。这可能会变得有点复杂，请参阅 <span><a href="appendix__resources__formats__fgd.html#display-models-for-entities">实体的显示模型</a></span>.</p></div></li></ul></div></li><li><div><div></div></div><div><p><code><strong>@SolidClass</strong></code> 开始画笔实体定义，如 worldspawn 或 func_wall</p></div></li><li><div><div></div></div><div><p><code><strong>@基类</strong></code> 开始实体基础模板；您可以将实体设置为“继承”公共基础。 </p><ul><li><div><div></div></div><div><p><code><strong>基地</strong></code><code>(BaseClassName1, BaseClassName2, ... )</code>
 设置一个实体以包含列出的基类...您还可以设置一个基类以包含一个基类，因此此功能可能非常强大/有用，但要注意递归</p></div></li></ul></div></li></ul><p>例如，如果游戏中的所有怪物都有生命值，那么您可以创建一个具有生命值属性的 BaseClass Monster，然后将所有怪物类型设置为包含该怪物基础：</p>$?<template></template>/$<h3><div><a href="#entity-properties-basic"></a></div><div>实体属性（基本）</div></h3><p>实体属性是遵循以下一般模式的类型化键值对：</p><p><code><strong>键名(类型)</strong></code><code> : "In-Editor Display Name" : </code><code><strong>默认值</strong></code><code> : "In-Editor Help"</code></p><ul><li><div><div></div></div><div><p><strong>按键名称：</strong> 像变量名一样，通常是小写字符串</p><ul><li><div><div></div></div><div><p>有时开头带有下划线，表示它是编译器时属性，不会出现在游戏中</p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>类型：</strong> 有四 (4) 种基本属性类型： <code>string</code>, <code>integer</code>, <!-- --><code>choices</code> （多项选择整数 <!-- --><span><a href="https://en.wikipedia.org/wiki/Enumerated_type">枚举</a></span>），以及 <code>flags</code> （位掩码）。<!-- --></p><ul><li><div><div></div></div><div><p><code><strong>旗帜</strong></code> 是一组布尔（真/假）值，通过数学的魔力将它们存储为单个数字（<span><a href="https://en.wikipedia.org/wiki/Mask_(computing">位掩码</a></span>)</p></div></li><li><div><div></div></div><div><p>在大多数关卡编辑器中，一个实体只能有一个 flags 属性，并且必须调用它 <i>“产卵标志”</i></p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>价值：</strong> 无论关卡设计师在关卡编辑器中输入什么内容</p></div></li></ul><p>演示所有四种属性类型的画笔实体定义示例：</p>$?<template></template>/$<h3><div><a href="#display-models-for-entities"></a></div><div>实体的显示模型</div></h3><p>如果 FGD 文件指定，TrenchBroom 可以显示点实体的 3D 模型。这对于放置 NPC 或道具非常有用，其中预览模型大小/旋转/外观非常有用。</p><ul><li><div><div></div></div><div><p>TB 使用资产导入器 (AssImp)，它对大多数 3D 格式（.OBJ、.FBX 等）具有基本支持。</p></div></li><li><div><div></div></div><div><p>对于某些模型格式（例如 《雷神之锤》 .MDL 或 《半条命》 .MDL），您还可以根据实体属性交换纹理或预览动画帧。使用方法见下文。</p></div></li></ul><div><div></div><div><p>记住： <code><strong>模型（）</strong></code> 仅限 TrenchBroom，不一定适用于其他编辑器。</p></div></div><p>最基本的硬编码用法如下：</p>$?<template></template>/$<p>基本硬编码模型的示例来自 <span><a href="https://github.com/TrenchBroom/TrenchBroom/blob/master/app/resources/games/Quake/Quake.fgd">《雷神之锤》.FGD</a></span>:</p>$?<template></template>/$<p>然而，对于可交换的“道具”实体或具有多个皮肤或脚本动画的 NPC，在 FGD 中对模型设置进行硬编码可能过于限制。</p><p>支持 <strong>地图定义的每个实体模型显示设置，</strong> TrenchBroom 可以解析 <strong>动态 FGD 占位符 </strong>使用类似 JSON 的语法（大括号、引号中的命名参数）：</p>$?<template></template>/$<p>将“MODEL”或“FRAME”等替换为您想要的键值属性名称，TrenchBroom 将交换占位符的实际值。</p><p>使用占位符的通用“prop”实体示例：</p>$?<template></template>/$<p>带有占位符的示例来自 <span><a href="https://github.com/TrenchBroom/TrenchBroom/blob/master/app/resources/games/Halflife/HalfLife.fgd">HalfLife.FGD</a></span>:</p>$?<template></template>/$<p>TrenchBroom 的 FGD 风格也支持 <strong>条件表达式</strong>。带有表达式的示例：</p>$?<template></template>/$<p>有关占位符和表达式的更多信息，请参见 <span><a href="https://trenchbroom.github.io/manual/latest/#display-models-for-entities">Trenchbroom 手册 &gt;“显示实体模型”：</a></span></p><div><a href="https://trenchbroom.github.io/manual/latest/#display-models-for-entities"><img alt="标识" height="150" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2Ftrenchbroom.github.io%2Fmanual%2Flatest%2Fimages%2Ficon.png&amp;width=20&amp;dpr=3&amp;quality=100&amp;sign=95c587f0&amp;sv=2" width="150"/><span><span>TrenchBroom 2026.1 参考手册</span><span>Trenchbroom.github.io</span></span></a></div><h2><div><a href="#fgd-resources-and-links"></a></div><div>FGD 资源和链接</div></h2><h3><div><a href="#fgd-examples"></a></div><div>烟气脱硫示例</div></h3><ul><li><div><div></div></div><div><p><span><a href="https://github.com/TrenchBroom/TrenchBroom/tree/master/app/resources/games">TrenchBroom 默认内置 FGD（通过 GitHub）</a></span></p></div></li></ul><h3><div><a href="#fgd-authoring"></a></div><div>FGD 创作</div></h3><ul><li><div><div></div></div><div><p><span><a href="https://valvedev.info/guides/anatomy-of-an-fgd-and-how-to-write-your-own/">阀门开发商联盟： <strong>“FGD 剖析（以及如何编写自己的剖析）”</strong></a></span> 是一个很好的介绍</p></div></li><li><div><div></div></div><div><p><span><a href="https://valvedev.info/guides/advanced-fgd-editing-made-easy/">阀门开发商联盟： <strong>“高级 FGD 编辑变得简单”</strong></a></span> 展示提示和技巧</p></div></li><li><div><div></div></div><div><p><span><a href="https://developer.valvesoftware.com/wiki/FGD">Valve 开发者社区： <strong>“烟气脱硫”</strong></a></span> 详细介绍 Source Engine 1 特定的 FGD 扩展和怪癖...但对 TrenchBroom 没有用</p></div></li></ul><h3><div><a href="#fgd-parsers"></a></div><div>FGD 解析器</div></h3><ul><li><div><div></div></div><div><p><strong>C++ FGD 解析器示例：</strong> <span><a href="https://github.com/TrenchBroom/TrenchBroom/blob/master/common/src/IO/FgdParser.cpp">TrenchBroom（来自 GitHub）</a></span></p></div></li><li><div><div></div></div><div><p><strong>C# FGD 解析器库：</strong> <span><a href="https://github.com/LogicAndTrick/sledge-formats/blob/master/Sledge.Formats.GameData/FgdFormat.cs">Sledge.Formats（来自 GitHub）</a></span></p></div></li></ul><p></p></div></div></article>
+      </div>
+      <div class="gb-page-links-wrap">
 <div class="page-links"><a class="page-link" href="appendix__resources__formats.html"><span>上一页</span>文件格式</a><a class="page-link" href="appendix__resources__formats__map.html"><span>下一页</span>MAP 文件格式</a></div>
-</main>
+
+      </div>
+    </main>
+    <aside class="gb-outline" data-outline>
+      <div class="gb-outline-inner">
+        <button class="gb-outline-title" type="button" data-toggle-outline>ON THIS PAGE</button>
+        <nav class="gb-outline-list" data-outline-list></nav>
+      </div>
+    </aside>
+  </div>
+  <div class="gb-search-modal" role="dialog" aria-modal="true" aria-label="搜索" data-search-modal>
+    <div class="gb-search-box">
+      <div class="gb-search-input-row">
+        <span class="gb-search-icon"></span>
+        <input type="search" data-search-input placeholder="搜索页面、章节或正文内容" autocomplete="off">
+        <button type="button" data-close-search>关闭</button>
+      </div>
+      <div class="gb-search-results" data-search-results></div>
+    </div>
+  </div>
 </body>
 </html>

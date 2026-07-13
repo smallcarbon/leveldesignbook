@@ -1,123 +1,197 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>世界构建 | The Level Design Book 中文版</title>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="如何概念化和设计游戏世界的虚构历史">
+  <title>世界构建 | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="site-data.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body>
-<aside class="sidebar">
-<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
-<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
-<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
-<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
-<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
-<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
-<a class="active" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
-<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
-<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
-<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
-<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
-<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
-<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
-<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
-<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
-<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
-<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
-<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
-<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
-<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
-<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
-<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
-<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
-<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
-<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
-<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
-<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
-<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
-<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
-<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
-<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
-<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
-<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
-<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
-<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
-<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
-<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
-<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
-<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
-<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
-<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
-<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
-<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
-<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
-<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
-<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
-<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
-<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
-<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
-<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
-<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
-<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
-<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
-<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
-<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
-<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
-<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
-<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
-<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
-<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
-<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
-<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
-<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
-<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
-<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
-<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
-<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
-<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
-<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
-<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
-<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
-<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
-<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
-<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
-<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
-<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
-<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
-<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
-<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
-<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
-<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
-<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
-<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
-<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
-<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
-<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
-</aside>
-<main class="page">
-<div class="topbar">
-<a href="https://book.leveldesignbook.com/process/preproduction/worldbuilding">查看原文</a>
-<a href="https://book.leveldesignbook.com">原站首页</a>
+<body class="gb-body" data-page="process__preproduction__worldbuilding.html" data-article-hash="7ae2b19f4d1acd4d202dd671b07b36e0e6f066bbbc4e2a17ca5ecbea321a71b8">
+  <div class="gb-scrim" data-close-panels></div>
+  <header class="gb-header">
+    <div class="gb-header-inner">
+      <button class="gb-icon-button gb-menu-button" type="button" data-open-sidebar aria-label="打开目录">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="gb-header-logo" href="index.html">
+        <span class="gb-logo-dot"></span>
+        <span>The Level Design Book</span>
+      </a>
+      <nav class="gb-header-links" aria-label="Top links">
+        <a href="process__overview.html">Book</a>
+        <a href="appendix__resources.html">Resources</a>
+        <a href="https://book.leveldesignbook.com/process/preproduction/worldbuilding">原文</a>
+      </nav>
+      <button class="gb-search-trigger" type="button" data-open-search>
+        <span class="gb-search-icon"></span>
+        <span class="gb-search-label">搜索...</span>
+        <span class="gb-shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+      </button>
+    </div>
+  </header>
+  <div class="gb-layout">
+    <aside class="gb-sidebar" data-sidebar>
+      <div class="gb-sidebar-scroll">
+<a class="gb-sidebar-brand" href="index.html"><span class="gb-brand-mark">◆</span><span><strong>The Level Design Book</strong><small>中文版</small></span></a>
+<nav class="gb-nav" aria-label="Table of contents">
+<a class="gb-nav-link" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="gb-nav-link" href="introduction.html" style="--depth:0">✨ 什么是关卡设计</a>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 1, PROCESS</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="process__overview.html" style="--depth:1">🗺️ 如何制作一个关卡</a>
+<a class="gb-nav-link" href="process__preproduction.html" style="--depth:1">🧠 前期设计</a>
+<a class="gb-nav-link" href="process__preproduction__pacing.html" style="--depth:2">节奏</a>
+<a class="gb-nav-link" href="process__preproduction__research.html" style="--depth:2">调研</a>
+<a class="gb-nav-link active" href="process__preproduction__worldbuilding.html" style="--depth:2">世界构建</a>
+<a class="gb-nav-link" href="process__preproduction__scope.html" style="--depth:2">范围控制</a>
+<a class="gb-nav-link" href="process__combat.html" style="--depth:1">🔫 战斗</a>
+<a class="gb-nav-link" href="process__combat__enemy.html" style="--depth:2">敌人设计</a>
+<a class="gb-nav-link" href="process__combat__encounter.html" style="--depth:2">遭遇战</a>
+<a class="gb-nav-link" href="process__combat__cover.html" style="--depth:2">掩体</a>
+<a class="gb-nav-link" href="process__combat__balance.html" style="--depth:2">地图平衡</a>
+<a class="gb-nav-link" href="process__layout.html" style="--depth:1">🛠️ 布局</a>
+<a class="gb-nav-link" href="process__layout__flow.html" style="--depth:2">动线</a>
+<a class="gb-nav-link" href="process__layout__flow__circulation.html" style="--depth:3">空间流线</a>
+<a class="gb-nav-link" href="process__layout__flow__verticality.html" style="--depth:3">纵向/垂直空间</a>
+<a class="gb-nav-link" href="process__layout__criticalpath.html" style="--depth:2">主动线</a>
+<a class="gb-nav-link" href="process__layout__parti.html" style="--depth:2">设计概念草图</a>
+<a class="gb-nav-link" href="process__layout__typology.html" style="--depth:2">类型学</a>
+<a class="gb-nav-link" href="process__layout__typology__gates.html" style="--depth:3">门与关口</a>
+<a class="gb-nav-link" href="process__blockout.html" style="--depth:1">🏠 白盒</a>
+<a class="gb-nav-link" href="process__blockout__massing.html" style="--depth:2">体块</a>
+<a class="gb-nav-link" href="process__blockout__massing__landscape.html" style="--depth:3">景观地形</a>
+<a class="gb-nav-link" href="process__blockout__massing__composition.html" style="--depth:3">构图</a>
+<a class="gb-nav-link" href="process__blockout__massing__prospect-refuge.html" style="--depth:3">眺望-庇护</a>
+<a class="gb-nav-link" href="process__blockout__metrics.html" style="--depth:2">标准尺度规范</a>
+<a class="gb-nav-link" href="process__blockout__metrics__modular.html" style="--depth:3">模块化套件设计</a>
+<a class="gb-nav-link" href="process__blockout__metrics__doom.html" style="--depth:3">《毁灭战士》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__metrics__quake.html" style="--depth:3">《雷神之锤》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__wayfinding.html" style="--depth:2">寻路与引导</a>
+<a class="gb-nav-link" href="process__blockout__playtesting.html" style="--depth:2">试玩测试</a>
+<a class="gb-nav-link" href="process__blockout__playtesting__persona.html" style="--depth:3">玩家画像</a>
+<a class="gb-nav-link" href="process__scripting.html" style="--depth:1">📜 脚本</a>
+<a class="gb-nav-link" href="process__scripting__nav.html" style="--depth:2">(存根) 导航</a>
+<a class="gb-nav-link" href="process__scripting__doors.html" style="--depth:2">门</a>
+<a class="gb-nav-link" href="process__lighting.html" style="--depth:1">☀️ 灯光</a>
+<a class="gb-nav-link" href="process__lighting__three-point.html" style="--depth:2">三点布光</a>
+<a class="gb-nav-link" href="process__lighting__d6-lighting.html" style="--depth:2">D6 灯光法</a>
+<a class="gb-nav-link" href="process__lighting__darkness.html" style="--depth:2">黑暗场景灯光</a>
+<a class="gb-nav-link" href="process__env-art.html" style="--depth:1">🏡 环境美术</a>
+<a class="gb-nav-link" href="process__env-art__psychology.html" style="--depth:2">形状与色彩心理学</a>
+<a class="gb-nav-link" href="process__env-art__texturing.html" style="--depth:2">材质</a>
+<a class="gb-nav-link" href="process__env-art__storytelling.html" style="--depth:2">叙事</a>
+<a class="gb-nav-link" href="process__env-art__optimization.html" style="--depth:2">优化</a>
+<a class="gb-nav-link" href="process__release.html" style="--depth:1">🌈 发布</a>
 </div>
-<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 2, CULTURE</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="culture__overview.html" style="--depth:1">🦜 作为文化的关卡设计</a>
+<a class="gb-nav-link" href="culture__history-level-designer.html" style="--depth:1">关卡设计师简史</a>
+<a class="gb-nav-link" href="culture__zero-player.html" style="--depth:1">零玩家关卡设计</a>
+<a class="gb-nav-link" href="culture__unfinished-pages.html" style="--depth:1">未完成页面</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:2">建筑史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:2">结构工程入门</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:2">环境美术史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:2">家具史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:2">遭遇战设计史</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 3, STUDIES</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="studies__overview.html" style="--depth:1">🔍 如何研究一个关卡</a>
+<a class="gb-nav-link" href="studies__sp.html" style="--depth:1">单人关卡研究</a>
+<a class="gb-nav-link" href="studies__sp__undead-burg.html" style="--depth:2">不死镇（《黑暗之魂》1）</a>
+<a class="gb-nav-link" href="studies__sp__assassins.html" style="--depth:2">Assassins (《神偷》 1)</a>
+<a class="gb-nav-link" href="studies__sp__cradle.html" style="--depth:2">(存根) The Cradle (《神偷》 3)</a>
+<a class="gb-nav-link" href="studies__sp__sapienza.html" style="--depth:2">(存根) Sapienza (《杀手》)</a>
+<a class="gb-nav-link" href="studies__sp__silent-cartographer.html" style="--depth:2">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp.html" style="--depth:1">多人关卡研究</a>
+<a class="gb-nav-link" href="studies__mp__chill-out.html" style="--depth:2">Chill Out (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp__de_dust2.html" style="--depth:2">(存根) de_dust2 (《反恐精英》)</a>
+<a class="gb-nav-link" href="studies__irl.html" style="--depth:1">现实空间研究</a>
+<a class="gb-nav-link" href="studies__irl__disneyland.html" style="--depth:2">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="gb-nav-link" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:2">(存根) 拉斯维加斯 (美国内华达)</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 4, LEARNING</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="learning__notes.html" style="--depth:1">🎒 给教学者的笔记</a>
+<a class="gb-nav-link" href="learning__projects.html" style="--depth:1">项目计划</a>
+<a class="gb-nav-link" href="learning__projects__classic-combat.html" style="--depth:2">经典战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages.html" style="--depth:2">未完成 WIP 页面</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:3">现代战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:3">现代潜行</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:3">练习：直射光</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:3">练习：2D 白板图</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:3">关卡设计作品集</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:3">设计测试：改编</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:3">练习：布局</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:3">练习：纵向/垂直空间</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>APPENDIX</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="appendix__tools.html" style="--depth:1">工具</a>
+<a class="gb-nav-link" href="appendix__tools__trenchbroom.html" style="--depth:2">TrenchBroom</a>
+<a class="gb-nav-link" href="appendix__resources.html" style="--depth:1">资产与资源</a>
+<a class="gb-nav-link" href="appendix__resources__talks.html" style="--depth:2">推荐演讲</a>
+<a class="gb-nav-link" href="appendix__resources__books.html" style="--depth:2">推荐书目</a>
+<a class="gb-nav-link" href="appendix__resources__quake.html" style="--depth:2">《雷神之锤》资源</a>
+<a class="gb-nav-link" href="appendix__resources__quake__how-to-package.html" style="--depth:3">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="gb-nav-link" href="appendix__resources__formats.html" style="--depth:2">文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__fgd.html" style="--depth:3">FGD 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__map.html" style="--depth:3">MAP 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__mdl.html" style="--depth:3">MDL 文件格式</a>
+<a class="gb-nav-link" href="appendix__communities.html" style="--depth:1">社区</a>
+<a class="gb-nav-link" href="appendix__about.html" style="--depth:1">关于本书与作者</a>
+<a class="gb-nav-link" href="appendix__license.html" style="--depth:1">许可与版权</a>
+</div>
+</nav>
+
+      </div>
+    </aside>
+    <main class="gb-main" id="content">
+      <div class="gb-mobile-tools">
+        <button type="button" data-open-sidebar>目录</button>
+        <button type="button" data-open-outline>本页目录</button>
+      </div>
+      <div class="gb-page-actions">
+        <div class="gb-breadcrumbs"><span>BOOK 1, PROCESS</span><span class="gb-breadcrumb-sep">/</span><span>🧠 前期设计</span></div>
+        <div class="gb-action-links">
+          <a href="https://book.leveldesignbook.com/process/preproduction/worldbuilding">查看原文</a>
+          <a href="https://book.leveldesignbook.com">原站首页</a>
+        </div>
+      </div>
+      <div class="gb-license"><div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div></div>
+      <div class="gb-article-wrap">
 <article><header><nav><ol><li></li><li></li></ol></nav><h1>世界构建</h1><p>如何概念化和设计游戏世界的虚构历史</p></header><div><div><h2><div><a href="#what-is-worldbuilding"></a></div><div>什么是世界构建？</div></h2><p><strong>世界构建</strong> 是设计虚构游戏世界的背景和历史的高级概念过程。 </p><p>我们从小说写作中继承了这个过程，尤其是从科幻小说和奇幻小说（SFF）作家那里继承了这个过程，他们经常构建“圣经”，以详尽的百科全书式细节详细描述背景故事、传说和人物关系。 </p><p>你的世界构建文档可以描述地球的气候、游戏中事件之前的详细政治历史，甚至是平凡的细节，比如每个人早上什么时候起床，或者主角的母亲喜欢吃什么晚餐。</p><div><div><div><picture><div><img height="1698" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252F231xLJzcGCmTNmiT8WHW%252FLDB_Worldbuilding_Arkane_Dishonored_DunwallMapConcept.jpg%3Falt%3Dmedia%26token%3D003749d6-2f59-44e5-9507-9bbdebfebf0b&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=bd5a0c88&amp;sv=2" width="2499"/></div><figcaption>的地图 <span><a href="https://dishonored.fandom.com/wiki/Dunwall">《顿沃》</a></span>，Arkane Studios 的《耻辱》(2012) 中的虚构城市；深受伦敦的启发</figcaption></picture></div></div></div><h2><div><a href="#worldbuilding-for-games"></a></div><div>游戏世界构建</div></h2><h3><div><a href="#avoid-premature-worldbuilding"></a></div><div>避免过早构建世界</div></h3><p>因为这是一本The Level Design Book 中文版，而不是一本叙事设计书，所以我们在这里采取一个可预见的立场： <i><strong>避免过早构建世界。 </strong></i>世界构建是一项工作，如果你过早地进行太多的世界构建，那么这也是没有成效的、不必要的浪费工作。起初， <strong>worldbuild 只构建您需要的内容。</strong></p><p>在整个前期设计过程中，游戏世界的形状和内容可能会发生巨大变化。如果你太早开始构建世界的小细节，那么它很可能是浪费的工作。如果你写了 10 页关于一座房子的历史，但房子关卡却从项目中删除了怎么办？如果您写了 20 页关于某些怪物及其文化的内容，只是为了您或您的团队稍后缩小范围并用回收的人类 NPC 替换怪物，该怎么办？避免细节可以帮助您保持灵活性并减少对项目的沮丧。</p><p>虽然世界构建可能既有趣又有用，但对于新手来说，它常常会分散人们对用角色和动作讲述引人入胜的故事的基本核心工作的注意力。请记住，您最喜欢的史诗奇幻、科幻和超级英雄世界是由数千名经验丰富的专业人士在数十年（或数百年）的时间里用大量资金经过无数次迭代建造而成的。当独自工作时，将自己的世界构建成一个洞是避免制作游戏的好方法。</p><h3><div><a href="#embrace-functional-worldbuilding"></a></div><div>拥抱功能性的世界构建</div></h3><p><span><a href="https://clicknothing.typepad.com/click_nothing/2007/10/ludonarrative-d.html">克林特·霍金创造 <i>游戏叙事的不和谐</i></a></span> 描述玩家的表演（“ludo”）和设计师的预期故事（“叙事”）不协调（“不和谐”）的情况。</p><p>然而，绝大多数玩家倾向于容忍游戏世界中的大量不和谐。粉丝维基评论员会争论传说的一致性，游戏评论家会指出令人尴尬的不连贯性，但普通玩家会耸耸肩并继续前进。射击游戏的墙壁完全不受核爆炸和毁灭世界的魔法能量的影响。每个角色扮演游戏都会在游戏过程中复活死去的角色，但又会任意永久地杀死角色，而没有详细阐述永久死亡的形而上学。每个动作英雄都是反社会者，他们毫无悔意地谋杀了数千人。这些不连贯的现象并没有让观众感到特别不和谐。</p><p>所以在这本书中我们拥抱 <strong>功能主义者</strong> 对游戏叙事的态度：视频游戏中的虚构故事世界具有至关重要的设计功能，可以消除交互系统固有的不连贯性。也就是说， <i><strong>故事解决了游戏问题。 </strong></i></p><ul><li><div><div></div></div><div><p>设计问题：玩家是“穿过重复的走廊并射击方块”，还是玩家 <i>“逃离外星人入侵巨大的地下军事设施”？ </i></p></div></li><li><div><div></div></div><div><p>技术问题：怪物是“由于寻路人工智能损坏而无法在水中航行”，还是怪物本身 <i>“怕水”？</i></p></div></li></ul><h2><div><a href="#minimal-worldbuilding"></a></div><div>最小的世界构建</div></h2><p>对于大多数关卡设计项目，我们建议从最小的心理方法开始： <i><strong>worldbuild 最低限度的必要条件</strong></i> 建立关卡设置并支持体验目标。 </p><p>要规划基本关卡，您只需要构建足够的世界来回答三个基本问题：</p><ol><li><div><div></div></div><div><p><strong>（过去）谁创造了这个地方？</strong> （为什么？玩家怎么知道？）</p></div></li><li><div><div></div></div><div><p><strong>（现在）现在谁住在这里？</strong> （为什么？玩家怎么知道？）</p></div></li><li><div><div></div></div><div><p><strong>（未来）玩家如何影响这个地方？</strong> （为什么？玩家如何知道发生了什么？居民会如何反应？）</p></div></li></ol><p>这些答案可以很简单。以下是故事最少的动作游戏关卡示例： </p><ol><li><div><div></div></div><div><p>谁创造了这个地方？ <strong>一个人类家庭建造了一座小木屋。 </strong><i>
 （玩家怎么知道？...它看起来像一个小木屋，按照人体尺寸建造，里面有人体家具和多张床。）</i></p></div></li><li><div><div></div></div><div><p>现在谁住在这里？ <strong>有些怪物吃掉了人类。</strong> <i>
 （玩家怎么知道？……里面有怪物和老骨头，没有活人。）</i></p></div></li><li><div><div></div></div><div><p>玩家如何影响这个地方？ <strong>玩家可以杀死怪物。</strong><i>
-（玩家怎么知道？...怪物是敌对的，会攻击玩家。）</i></p></div></li></ol><p>即使是这个简短的前提也已经具有未来讲故事的巨大潜力。这是什么类型的小木屋，这个家庭有多大，为什么他们定居在这个地方？怪物为何攻击人类？如果有另一种方法来解决这次遭遇战而不杀死怪物怎么办？ “家庭与怪物”的主题如何在关卡的其余部分或游戏的其余部分中产生共鸣？</p><h2><div><a href="#comprehensive-worldbuilding"></a></div><div>综合世界构建</div></h2><p>对于大型长期项目（超过几个关卡/几个月），那么更充分地致力于游戏世界及其虚构是有意义的。世界建筑圣经通常由三种类型的世界建筑设计文档组成： <strong>地图</strong>, <strong>时间线</strong>， 和 <strong>笔记。 </strong></p><p><i>    要组织世界构建文档，请使用个人维基或笔记数据库 - 请参阅 </i><span><a href="appendix__tools.html"><i>工具</i></a></span><i>.</i></p><h3><div><a href="#maps"></a></div><div>地图</div></h3><p>绘制超出游戏可玩区域的虚构游戏世界的地图。该关卡与更大的世界或宇宙有什么关系？地图制作是奇幻类型小说中非常常见的世界构建比喻。对于关卡设计师来说，地图可能是最直接有用的世界构建工具。 </p><p>吸引玩家的最简单方法就是合理性。如果你是世界构建的新手，你现在应该从熟悉的、类似地球的东西开始。 </p><h4><div><a href="#terrain-climate-map"></a></div><div>地形/气候图</div></h4><p>首先，绘制一张重点关注地形和气候的大比例地图。要设计出类似地球的东西，请从一些基本的地球科学原理开始：</p><ol><li><div><div></div></div><div><p>抽奖 <strong>各大洲</strong>。模拟 <span><a href="https://en.wikipedia.org/wiki/Continental_drift">大陆漂移 </a></span>并确保它们像拼图一样拼凑在一起。</p></div></li><li><div><div></div></div><div><p>抽奖 <strong>风</strong> 系统和 <strong>纬度</strong>. <span><a href="https://en.wikipedia.org/wiki/Prevailing_winds">盛行风</a></span> 随纬度变化并与陆地相互作用。</p></div></li><li><div><div></div></div><div><p>抽奖 <strong>山</strong> 和 <strong>湖泊</strong>. <span><a href="https://en.wikipedia.org/wiki/Mountain_formation">山脉形态</a></span> 沿着断层线或火山。 <span><a href="https://en.wikipedia.org/wiki/River">河流</a></span> 通常从山顶或湖泊顶部流向海洋。<!-- --></p></div></li><li><div><div></div></div><div><p>标签 <strong>气候</strong>。越靠近赤道越热，越靠近两极越冷。山脉可以阻挡或滞留降雨。是否潮湿、多风、多雨、暴风雨？</p></div></li></ol><p> <i>   有关研究和设计地形/生物群落的更多信息，请参阅 </i><span><a href="process__blockout__massing__landscape.html"><i>景观地形</i></a></span><i>.</i></p><div><div><div><picture><div><img height="514" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MX-NkzcwhAsylBb7wL1%252F-MX-aecnPbQ0gpCuNmJ4%252FLDB_Worldbuilding_NKJemisin_ClimateMap.png%3Falt%3Dmedia%26token%3Df50f5a5e-58cf-4f68-9ddd-ea9496a1ae77&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=2068117f&amp;sv=2" width="1954"/></div><figcaption>示例世界建筑气候地图，来自 N.K. Jemisin 的“Growing Your Iceberg”（<span><a href="https://nkjemisin.com/2015/08/worldbuilding-101/">通过 nkjemisin.com</a></span>)</figcaption></picture></div></div></div><p>一旦你有了一个坚实的基础世界，你就可以通过有选择地夸大某些方面来让它感觉更独特或更梦幻。 </p><p>在上面的示例地图中，作者 N.K.杰米辛创造了一个位于赤道上方、有两个大陆的世界。随后杰米辛将目光聚焦于两块大陆之间的一段高能量赤道海洋，并将其放大为一条名为“泪海”的“地狱走廊”，沿岸生长着珍贵的“Furywood”树木。虽然一个经常遭受海啸袭击、影响魔法树木的地区本身就令人难以置信，但当它融入到一个更平凡的世界中时，它会让人感觉更加合理和特别。</p><h4><div><a href="#political-maps"></a></div><div>政治地图</div></h4><p>自然世界建立完毕后，你现在就可以开始在其中居住人类了。他们住在哪里以及为什么？什么对他们来说重要？ </p><p>在设计社会时，作者 N.K. Jemisin 强烈推荐一些基本的原则 <span><a href="https://en.wikipedia.org/wiki/Sociology">社会学</a></span> 并进行研究——并避免依赖对现有现实世界文化的几乎不加掩饰的刻板印象。</p><p>不用说，在现实世界中绘制社会和领土地图是极其复杂的。人们总是因为边界、地区名称和政治身份而发生战争。这种冲突和紧张可能会让你的世界变得有趣，所以拥抱地图制作作为混乱的政治设计过程。</p><ul><li><div><div></div></div><div><p><strong>定义地图制作者，</strong> 他们是谁？他们的动机是什么？它们与所绘制的区域有什么关系？</p></div></li><li><div><div></div></div><div><p><strong>绘制同一区域的多张地图</strong>，但从不同的角度来看。 100 年前或 500 年前，该地区是什么样子？不同背景的不同角色会以不同的方式绘制同一地点或使用不同的名称吗？你的世界里的暧昧和冲突在哪里？ “错误的地图”可能比准确的地图更有趣。</p></div></li><li><div><div></div></div><div><p><strong>绘制非地理地图</strong>，没有边界或陆地。城市的“社交地图”会是什么样子？经济地图还是情感地图呢？</p></div></li><li><div><div></div></div><div><p><strong>将某些区域留空</strong>，因为并非世界上的每个地方都与每个人立即相关或了解。没有神秘，任何冒险或探索都是不可能的。</p></div></li></ul><div><div><div><picture><div><img height="520" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FpYhBkcFd8ajvNsXU2kR2%252FLDB_ThiefTheDarkProject_ConstantineMap.jpg%3Falt%3Dmedia%26token%3D2c7f3e80-6a5d-4f32-beb7-a3388a44495f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c69b0135&amp;sv=2" width="800"/></div><figcaption>不确定性是自然的； 《神偷：黑暗计划》（1998 年）中“剑”任务的游戏内玩家地图，帮助不大</figcaption></picture></div></div></div><h3><div><a href="#timelines"></a></div><div>时间表</div></h3><p>绘制游戏世界的历史，跨越几天、几个月、几年甚至几个世纪，并附有简短的注释和标签。 </p><p>这个地区或地方的历史是什么？人们发生了怎样的变化？就像地理一样，历史也是一门深刻的政治技艺，它会根据从事这件事的人而改变。在撰写历史时，您必须考虑历史学家及其背景、他们的受众是谁，最重要的是，他们夸大了什么以及他们在叙述中遗漏了什么。</p><p>再次强调，我们的目标并不是明确回答每个问题的权威史实。想想每段历史所唤起的伟大思想或主题。</p><p>（例如天堂穹顶的时间线？）</p><ul><li><div><div></div></div><div><p><strong>定义历史学家，</strong> 他们在何时何地写信？他们的时间和地点会如何影响他们的感知、记忆或访问？</p></div></li><li><div><div></div></div><div><p><strong>设计多个重叠的时间线</strong>，最好具有特定的相似点和矛盾。</p></div></li><li><div><div></div></div><div><p><strong>在每个时间线上留下被遗忘的漏洞</strong>，想想历史学家忘记了什么或他们记错了什么。你的游戏体验的一部分可能涉及重写历史、填补这些空白，或者识别历史中无人知道的新漏洞。</p></div></li></ul><h3><div><a href="#notes"></a></div><div>注释</div></h3><p>虽然关卡设计师可能更喜欢视觉文档，但叙事设计师和作家往往主要依赖书面文档 <strong>笔记，</strong> 通常存储在索引卡、私人维基或其他一些组织系统中。这些注释可能包括：</p><ul><li><div><div></div></div><div><p>人物传记、日常生活、家族史</p></div></li><li><div><div></div></div><div><p>位置描述、旅行指南、地质或生态调查</p></div></li><li><div><div></div></div><div><p>文化入门、宗教经典、当地历史</p></div></li><li><div><div></div></div><div><p>世界上的书籍、小册子、演讲<!-- --></p></div></li></ul><div><div><div><picture><div><img height="908" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252F0tdkfKqONso5W9HGSbj3%252FLDB_Worldbuilding_Valve_WeatherControl_HalfLife2.jpg%3Falt%3Dmedia%26token%3D1990df0e-9b1e-4669-a56a-0f7d8145cf94&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=f55f8fd9&amp;sv=2" width="2100"/></div><figcaption>《半条命 2》(2004)/第 3 集的世界构建文档/概念艺术； Marc Laidlaw 的短篇小说，Andrea Wicklund 的概念艺术 </figcaption></picture></div></div></div><h3><div><a href="#do-some-dove-shit"></a></div><div>做一些鸽子屎</div></h3><p>已被删除的 tumblr 用户 kuusamaagi 提出了一条被广泛分享的世界建设建议：</p><blockquote><p><i>...你可以而且实际上应该拥有奇怪且不切实际的文化事物。只要你也解决现实的后果，它们本质上并不是不现实的。</i></p><p><i>假设你有一座城市，到处都有驯服的白鸽。它们不是害虫，它们被视为城市的神圣守护者，整个城市都像宠物一样照顾它们、喂养它们。它们之所以如此温顺，是因为伤害或吓唬人是一种社会禁忌。好漂亮的鸽子:)</i></p><p><i>然后有人指出，即使它们不被视为害虫，野鸽数量完全不受控制——不仅没有被扑杀，而且还被积极喂养和照顾——是否意味着到处都会有鸟粪？</i></p><p><i>你内心的一部分想说不，因为这些是你可爱的、漂亮的鸽子。要解释为什么它们不会随地拉屎是有原因的，也许它们超级聪明，经过专门培育和训练，不会随地拉屎。确切地说，任何人如何繁殖和训练一群野鸟的后勤工作都没有得到解决。</i></p><p><i>更糟糕的解决方案是不拥有这些鸟类，将它们从世界上删除。不，它们会激发快乐，你不能把它们扔掉！</i></p><p><i>现在，考虑一下：是的，是的，他们会的，但这座城市也有广泛的公共卫生服务，90% 的时间都在清理所有东西上的鸟粪。该地区最常见的姓氏之一实际上翻译为“刮掉鸽子粪便的人”，这是一项备受尊敬的职业。由于不断定期清洁一切的绝对必要性，这座城市的清洁标准要高得多，并且因公共卫生条件差而引起的公共卫生问题也更少。</i></p><p><i>鸽子确实保护着这座城市。到处乱搞。</i></p><p>-- <span><a href="https://kuusamaagi.tumblr.com/post/622993755717402624/hey-btw-another-worldbuilding-thing-you-can">kuusamaagi（通过现已损坏的 tumblr 链接）</a></span></p></blockquote><div><div><div><picture><div><img height="964" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FScEmiJKbM64hRXidOrll%252FLDB_Photo_Doves_TambakoTheJaguarFlickr.jpg%3Falt%3Dmedia%26token%3D267f6743-2373-4a26-8aa5-4c5d0a2a5b1f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=9f49c67b&amp;sv=2" width="2048"/></div><figcaption>瑞士树枝上鸽子的照片，作者： <span><a href="https://www.flickr.com/photos/tambako/5961293932">Tambako 捷豹（来自 Flickr）</a></span> 根据 CC-BY-ND 2.0 许可</figcaption></picture></div></div></div><h2><div><a href="#examples-of-worldbuilding"></a></div><div>世界构建的例子</div></h2><h3><div><a href="#the-witness-2016"></a></div><div>证人 (2016)</div></h3><p>如果您有大量的时间和金钱，对您的游戏世界进行全面的生态、历史和建筑开发可能会有所回报。 Thekla Studios 在七 (7) 年时间里花费了 600 万美元打造第一人称解谜探索游戏《The Witness》，并聘请景观建筑设计公司 Fletcher Studio 为其主岛建立建筑历史和逻辑。 </p><p><span><a href="https://www.fletcher.studio/blog/2017/5/26/the-witness-designing-video-game-environments">弗莱彻着手重新设计该岛</a></span> 融入游戏世界的不同生态、气候、地质和建筑风格，同时使这个世界建筑与现有的白盒和谜题设计相协调。</p><div><div><div><picture><div><img height="1080" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MN5sj8GS2re-hTgR7y8%252F-MN5zbnoe2UF1qx2gHlp%252FTheWitness_Screenshot.jpg%3Falt%3Dmedia%26token%3D9bce79f9-ed73-4984-9bf9-a9d3cdf70e7c&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=daa18427&amp;sv=2" width="1920"/></div><figcaption>Thekla Studios 的《见证者》（2016）最终发行版本中岛区的屏幕截图</figcaption></picture></div></div></div><blockquote><p><i>“我们首先着手对这个岛屿进行逆向工程，因为它可能在文明出现之前就已经存在了。在寻找具有丰富的孤立文明历史的温带小岛屿的过程中，我们对数百个岛屿进行了识别和研究。亚速尔群岛被称为欧洲的秘密岛屿，提供了最多的研究材料。事实证明，从古代文明到葡萄牙君主制，再到当今的渔村，不同文化的层次是最相似的。可用的航空图像是从亚速尔群岛收集的，然后拼贴在一起创建了一个虚构的岛屿，现在有地形、海滩、水体等……”</i></p></blockquote><div><div><div><picture><div><img height="516" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MN5oEFV1hr2F6zFUqMa%252F-MN5s-BRijszOl1-knHB%252FTheWitness_Fletcher_WorldbuildingAerialCollage.jpg%3Falt%3Dmedia%26token%3D1b226d5a-328b-47ee-9d1b-ca5e76f277c3&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=181b76af&amp;sv=2" width="872"/></div><figcaption>建筑公司 Fletcher Studio 于 2011 年为 The Witness 进行的空中生态拼贴研究（<span><a href="https://www.fletcher.studio/blog/2017/5/26/the-witness-designing-video-game-environments">通过弗莱彻工作室</a></span>)</figcaption></picture></div></div></div><div><div><div><picture><div><img height="579" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MN5sj8GS2re-hTgR7y8%252F-MN5xYWILGvilrrCTxgO%252FTheWitness_Fletcher_WorldbuildingGeologyStudy.jpg%3Falt%3Dmedia%26token%3Dadf1ba41-502f-4df9-a496-6db966a2628f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=5bdfef50&amp;sv=2" width="1000"/></div><figcaption>Fletcher Studio 于 2011 年为《见证者》进行的地质拼贴研究（<span><a href="https://www.fletcher.studio/blog/2017/5/26/the-witness-designing-video-game-environments">通过弗莱彻工作室</a></span>)</figcaption></picture></div></div></div><blockquote><p><i>“我们还为该岛撰写了环境叙述，为后续阶段的设计奠定了基础。通过确定太阳方向和主导风，工作室能够建立干湿、迎风和背风的关键梯度。然后，我们绘制了底层地质图，建立了有关岩石类型、土壤和基质的假设。由此产生的花岗岩、玄武岩煤渣锥、石灰岩和松散砂岩的混搭位于特定区域，并指导了建筑材料、土壤类型和后续设计。利用这些基本的气候和地质假设，我们开始制定一套简单的生态规则，确定了该岛的生态及其边界生态交错带的构成。</i></p><p><i>……过去被分为三个连续的时代，我们称之为文明（CIV）第一、第二和第三。对每个项目进行简单的描述，然后生成一个更大的矩阵，在基础设施、建筑和景观方面与每个项目相关。这三个类别中的每一个都有其技术、农业、宗教和文化。从物质上讲，每个时代都有自己的构建技术，基于分配的资源和技术，每种 CIV 方法和产品随着时间的推移变得更加完善......”</i></p></blockquote><div><div><div><picture><div><img height="861" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MN5sj8GS2re-hTgR7y8%252F-MN5zyt-JDJYgXHKIPAD%252FTheWitness_Fletcher_CivilizationsTimeline.jpg%3Falt%3Dmedia%26token%3D27828cff-057b-4c62-b51a-594a1488e537&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=7c0287a3&amp;sv=2" width="2500"/></div><figcaption>《见证者》中居住在岛上的三个虚构文明的时间线，由 Fletcher Studio 构建的世界 (https://www.fletcher.studio/blog/2017/5/26/the-witness-designing-video-game-environments)</figcaption></picture></div></div></div><blockquote><p><i>“……在我们的叙述中，风车一开始是 CIV One 的一座圣土丘，其岩石被重新用来建造 CIV One 中的瞭望塔的地基。随后，第三文明改造了这座塔，作为将淡水从水库泵送到岛上其他地方的一种手段。</i></p></blockquote><blockquote><p><i>通常，一旦一个结构被赋予意义，它就会激发其他景观和基础设施的增加。风车的存在需要增加一个湖泊、一条小溪，最终需要一座水坝和一个伐木水槽。玩法、建筑和景观与岛屿环境和故事之间的相互作用日益增强。 </i></p><p><i>例如，使用特定的建筑材料可以建造砍伐的森林、采石场、玻璃工厂。添加了谜题来支持资源开采和制造叙述：添加了一艘货轮来证明岛上使用钢铁的合理性。这艘船可能是岛上不容易制造的东西的来源，其中大部分铁已经被收获，并且可以在整个过程中看到不同的再利用状态。”</i>
+（玩家怎么知道？...怪物是敌对的，会攻击玩家。）</i></p></div></li></ol><p>即使是这个简短的前提也已经具有未来讲故事的巨大潜力。这是什么类型的小木屋，这个家庭有多大，为什么他们定居在这个地方？怪物为何攻击人类？如果有另一种方法来解决这次遭遇战而不杀死怪物怎么办？ “家庭与怪物”的主题如何在关卡的其余部分或游戏的其余部分中产生共鸣？</p><h2><div><a href="#comprehensive-worldbuilding"></a></div><div>综合世界构建</div></h2><p>对于大型长期项目（超过几个关卡/几个月），那么更充分地致力于游戏世界及其虚构是有意义的。世界建筑圣经通常由三种类型的世界建筑设计文档组成： <strong>地图</strong>, <strong>时间线</strong>， 和 <strong>笔记。 </strong></p><p><i>    要组织世界构建文档，请使用个人维基或笔记数据库 - 请参阅 </i><span><a href="appendix__tools.html"><i>工具</i></a></span><i>.</i></p><h3><div><a href="#maps"></a></div><div>地图</div></h3><p>绘制超出游戏可玩区域的虚构游戏世界的地图。该关卡与更大的世界或宇宙有什么关系？地图制作是奇幻类型小说中非常常见的世界构建比喻。对于关卡设计师来说，地图可能是最直接有用的世界构建工具。 </p><p>吸引玩家的最简单方法就是合理性。如果你是世界构建的新手，你现在应该从熟悉的、类似地球的东西开始。 </p><h4><div><a href="#terrain-climate-map"></a></div><div>地形/气候图</div></h4><p>首先，绘制一张重点关注地形和气候的大比例地图。要设计出类似地球的东西，请从一些基本的地球科学原理开始：</p><ol><li><div><div></div></div><div><p>抽奖 <strong>各大洲</strong>。模拟 <span><a href="https://en.wikipedia.org/wiki/Continental_drift">大陆漂移 </a></span>并确保它们像拼图一样拼凑在一起。</p></div></li><li><div><div></div></div><div><p>抽奖 <strong>风</strong> 系统和 <strong>纬度</strong>. <span><a href="https://en.wikipedia.org/wiki/Prevailing_winds">盛行风</a></span> 随纬度变化并与陆地相互作用。</p></div></li><li><div><div></div></div><div><p>抽奖 <strong>山</strong> 和 <strong>湖泊</strong>. <span><a href="https://en.wikipedia.org/wiki/Mountain_formation">山脉形态</a></span> 沿着断层线或火山。 <span><a href="https://en.wikipedia.org/wiki/River">河流</a></span> 通常从山顶或湖泊顶部流向海洋。<!-- --></p></div></li><li><div><div></div></div><div><p>标签 <strong>气候</strong>。越靠近赤道越热，越靠近两极越冷。山脉可以阻挡或滞留降雨。是否潮湿、多风、多雨、暴风雨？</p></div></li></ol><p> <i>   有关研究和设计地形/生物群落的更多信息，请参阅 </i><span><a href="process__blockout__massing__landscape.html"><i>景观地形</i></a></span><i>.</i></p><div><div><div><picture><div><img height="514" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MX-NkzcwhAsylBb7wL1%252F-MX-aecnPbQ0gpCuNmJ4%252FLDB_Worldbuilding_NKJemisin_ClimateMap.png%3Falt%3Dmedia%26token%3Df50f5a5e-58cf-4f68-9ddd-ea9496a1ae77&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=2068117f&amp;sv=2" width="1954"/></div><figcaption>示例世界建筑气候地图，来自 N.K. Jemisin 的“Growing Your Iceberg”（<span><a href="https://nkjemisin.com/2015/08/worldbuilding-101/">通过 nkjemisin.com</a></span>)</figcaption></picture></div></div></div><p>一旦你有了一个坚实的基础世界，你就可以通过有选择地夸大某些方面来让它感觉更独特或更梦幻。 </p><p>在上面的示例地图中，作者 N.K.杰米辛创造了一个位于赤道上方、有两个大陆的世界。随后杰米辛将目光聚焦于两块大陆之间的一段高能量赤道海洋，并将其放大为一条名为“泪海”的“地狱走廊”，沿岸生长着珍贵的“Furywood”树木。虽然一个经常遭受海啸袭击、影响魔法树木的地区本身就令人难以置信，但当它融入到一个更平凡的世界中时，它会让人感觉更加合理和特别。</p><h4><div><a href="#political-maps"></a></div><div>政治地图</div></h4><p>自然世界建立完毕后，你现在就可以开始在其中居住人类了。他们住在哪里以及为什么？什么对他们来说重要？ </p><p>在设计社会时，作者 N.K. Jemisin 强烈推荐一些基本的原则 <span><a href="https://en.wikipedia.org/wiki/Sociology">社会学</a></span> 并进行研究——并避免依赖对现有现实世界文化的几乎不加掩饰的刻板印象。</p><p>不用说，在现实世界中绘制社会和领土地图是极其复杂的。人们总是因为边界、地区名称和政治身份而发生战争。这种冲突和紧张可能会让你的世界变得有趣，所以拥抱地图制作作为混乱的政治设计过程。</p><ul><li><div><div></div></div><div><p><strong>定义地图制作者，</strong> 他们是谁？他们的动机是什么？它们与所绘制的区域有什么关系？</p></div></li><li><div><div></div></div><div><p><strong>绘制同一区域的多张地图</strong>，但从不同的角度来看。 100 年前或 500 年前，该地区是什么样子？不同背景的不同角色会以不同的方式绘制同一地点或使用不同的名称吗？你的世界里的暧昧和冲突在哪里？ “错误的地图”可能比准确的地图更有趣。</p></div></li><li><div><div></div></div><div><p><strong>绘制非地理地图</strong>，没有边界或陆地。城市的“社交地图”会是什么样子？经济地图还是情感地图呢？</p></div></li><li><div><div></div></div><div><p><strong>将某些区域留空</strong>，因为并非世界上的每个地方都与每个人立即相关或了解。没有神秘，任何冒险或探索都是不可能的。</p></div></li></ul><div><div><div><picture><div><img height="520" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FpYhBkcFd8ajvNsXU2kR2%252FLDB_ThiefTheDarkProject_ConstantineMap.jpg%3Falt%3Dmedia%26token%3D2c7f3e80-6a5d-4f32-beb7-a3388a44495f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c69b0135&amp;sv=2" width="800"/></div><figcaption>不确定性是自然的； 《神偷：黑暗计划》（1998 年）中“剑”任务的游戏内玩家地图，帮助不大</figcaption></picture></div></div></div><h3><div><a href="#timelines"></a></div><div>时间表</div></h3><p>绘制游戏世界的历史，跨越几天、几个月、几年甚至几个世纪，并附有简短的注释和标签。 </p><p>这个地区或地方的历史是什么？人们发生了怎样的变化？就像地理一样，历史也是一门深刻的政治技艺，它会根据从事这件事的人而改变。在撰写历史时，您必须考虑历史学家及其背景、他们的受众是谁，最重要的是，他们夸大了什么以及他们在叙述中遗漏了什么。</p><p>再次强调，我们的目标并不是明确回答每个问题的权威史实。想想每段历史所唤起的伟大思想或主题。</p><p>（例如天堂穹顶的时间线？）</p><ul><li><div><div></div></div><div><p><strong>定义历史学家，</strong> 他们在何时何地写信？他们的时间和地点会如何影响他们的感知、记忆或访问？</p></div></li><li><div><div></div></div><div><p><strong>设计多个重叠的时间线</strong>，最好具有特定的相似点和矛盾。</p></div></li><li><div><div></div></div><div><p><strong>在每个时间线上留下被遗忘的漏洞</strong>，想想历史学家忘记了什么或他们记错了什么。你的游戏体验的一部分可能涉及重写历史、填补这些空白，或者识别历史中无人知道的新漏洞。</p></div></li></ul><h3><div><a href="#notes"></a></div><div>注释</div></h3><p>虽然关卡设计师可能更喜欢视觉文档，但叙事设计师和作家往往主要依赖书面文档 <strong>笔记，</strong> 通常存储在索引卡、私人维基或其他一些组织系统中。这些注释可能包括：</p><ul><li><div><div></div></div><div><p>人物传记、日常生活、家族史</p></div></li><li><div><div></div></div><div><p>位置描述、旅行指南、地质或生态调查</p></div></li><li><div><div></div></div><div><p>文化入门、宗教经典、当地历史</p></div></li><li><div><div></div></div><div><p>世界上的书籍、小册子、演讲<!-- --></p></div></li></ul><div><div><div><picture><div><img height="908" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252F0tdkfKqONso5W9HGSbj3%252FLDB_Worldbuilding_Valve_WeatherControl_HalfLife2.jpg%3Falt%3Dmedia%26token%3D1990df0e-9b1e-4669-a56a-0f7d8145cf94&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=f55f8fd9&amp;sv=2" width="2100"/></div><figcaption>《半条命 2》（<a class="game-store-link" href="https://store.steampowered.com/app/220/HalfLife_2/" rel="noopener noreferrer" target="_blank">Steam</a>）(2004)/第 3 集的世界构建文档/概念艺术； Marc Laidlaw 的短篇小说，Andrea Wicklund 的概念艺术 </figcaption></picture></div></div></div><h3><div><a href="#do-some-dove-shit"></a></div><div>做一些鸽子屎</div></h3><p>已被删除的 tumblr 用户 kuusamaagi 提出了一条被广泛分享的世界建设建议：</p><blockquote><p><i>...你可以而且实际上应该拥有奇怪且不切实际的文化事物。只要你也解决现实的后果，它们本质上并不是不现实的。</i></p><p><i>假设你有一座城市，到处都有驯服的白鸽。它们不是害虫，它们被视为城市的神圣守护者，整个城市都像宠物一样照顾它们、喂养它们。它们之所以如此温顺，是因为伤害或吓唬人是一种社会禁忌。好漂亮的鸽子:)</i></p><p><i>然后有人指出，即使它们不被视为害虫，野鸽数量完全不受控制——不仅没有被扑杀，而且还被积极喂养和照顾——是否意味着到处都会有鸟粪？</i></p><p><i>你内心的一部分想说不，因为这些是你可爱的、漂亮的鸽子。要解释为什么它们不会随地拉屎是有原因的，也许它们超级聪明，经过专门培育和训练，不会随地拉屎。确切地说，任何人如何繁殖和训练一群野鸟的后勤工作都没有得到解决。</i></p><p><i>更糟糕的解决方案是不拥有这些鸟类，将它们从世界上删除。不，它们会激发快乐，你不能把它们扔掉！</i></p><p><i>现在，考虑一下：是的，是的，他们会的，但这座城市也有广泛的公共卫生服务，90% 的时间都在清理所有东西上的鸟粪。该地区最常见的姓氏之一实际上翻译为“刮掉鸽子粪便的人”，这是一项备受尊敬的职业。由于不断定期清洁一切的绝对必要性，这座城市的清洁标准要高得多，并且因公共卫生条件差而引起的公共卫生问题也更少。</i></p><p><i>鸽子确实保护着这座城市。到处乱搞。</i></p><p>-- <span><a href="https://kuusamaagi.tumblr.com/post/622993755717402624/hey-btw-another-worldbuilding-thing-you-can">kuusamaagi（通过现已损坏的 tumblr 链接）</a></span></p></blockquote><div><div><div><picture><div><img height="964" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FScEmiJKbM64hRXidOrll%252FLDB_Photo_Doves_TambakoTheJaguarFlickr.jpg%3Falt%3Dmedia%26token%3D267f6743-2373-4a26-8aa5-4c5d0a2a5b1f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=9f49c67b&amp;sv=2" width="2048"/></div><figcaption>瑞士树枝上鸽子的照片，作者： <span><a href="https://www.flickr.com/photos/tambako/5961293932">Tambako 捷豹（来自 Flickr）</a></span> 根据 CC-BY-ND 2.0 许可</figcaption></picture></div></div></div><h2><div><a href="#examples-of-worldbuilding"></a></div><div>世界构建的例子</div></h2><h3><div><a href="#the-witness-2016"></a></div><div>证人 (2016)</div></h3><p>如果您有大量的时间和金钱，对您的游戏世界进行全面的生态、历史和建筑开发可能会有所回报。 Thekla Studios 在七 (7) 年时间里花费了 600 万美元打造第一人称解谜探索游戏《The Witness》（<a class="game-store-link" href="https://store.steampowered.com/app/210970/The_Witness/" rel="noopener noreferrer" target="_blank">Steam</a>），并聘请景观建筑设计公司 Fletcher Studio 为其主岛建立建筑历史和逻辑。 </p><p><span><a href="https://www.fletcher.studio/blog/2017/5/26/the-witness-designing-video-game-environments">弗莱彻着手重新设计该岛</a></span> 融入游戏世界的不同生态、气候、地质和建筑风格，同时使这个世界建筑与现有的白盒和谜题设计相协调。</p><div><div><div><picture><div><img height="1080" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MN5sj8GS2re-hTgR7y8%252F-MN5zbnoe2UF1qx2gHlp%252FTheWitness_Screenshot.jpg%3Falt%3Dmedia%26token%3D9bce79f9-ed73-4984-9bf9-a9d3cdf70e7c&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=daa18427&amp;sv=2" width="1920"/></div><figcaption>Thekla Studios 的《见证者》（2016）最终发行版本中岛区的屏幕截图</figcaption></picture></div></div></div><blockquote><p><i>“我们首先着手对这个岛屿进行逆向工程，因为它可能在文明出现之前就已经存在了。在寻找具有丰富的孤立文明历史的温带小岛屿的过程中，我们对数百个岛屿进行了识别和研究。亚速尔群岛被称为欧洲的秘密岛屿，提供了最多的研究材料。事实证明，从古代文明到葡萄牙君主制，再到当今的渔村，不同文化的层次是最相似的。可用的航空图像是从亚速尔群岛收集的，然后拼贴在一起创建了一个虚构的岛屿，现在有地形、海滩、水体等……”</i></p></blockquote><div><div><div><picture><div><img height="516" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MN5oEFV1hr2F6zFUqMa%252F-MN5s-BRijszOl1-knHB%252FTheWitness_Fletcher_WorldbuildingAerialCollage.jpg%3Falt%3Dmedia%26token%3D1b226d5a-328b-47ee-9d1b-ca5e76f277c3&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=181b76af&amp;sv=2" width="872"/></div><figcaption>建筑公司 Fletcher Studio 于 2011 年为 The Witness 进行的空中生态拼贴研究（<span><a href="https://www.fletcher.studio/blog/2017/5/26/the-witness-designing-video-game-environments">通过弗莱彻工作室</a></span>)</figcaption></picture></div></div></div><div><div><div><picture><div><img height="579" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MN5sj8GS2re-hTgR7y8%252F-MN5xYWILGvilrrCTxgO%252FTheWitness_Fletcher_WorldbuildingGeologyStudy.jpg%3Falt%3Dmedia%26token%3Dadf1ba41-502f-4df9-a496-6db966a2628f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=5bdfef50&amp;sv=2" width="1000"/></div><figcaption>Fletcher Studio 于 2011 年为《见证者》进行的地质拼贴研究（<span><a href="https://www.fletcher.studio/blog/2017/5/26/the-witness-designing-video-game-environments">通过弗莱彻工作室</a></span>)</figcaption></picture></div></div></div><blockquote><p><i>“我们还为该岛撰写了环境叙述，为后续阶段的设计奠定了基础。通过确定太阳方向和主导风，工作室能够建立干湿、迎风和背风的关键梯度。然后，我们绘制了底层地质图，建立了有关岩石类型、土壤和基质的假设。由此产生的花岗岩、玄武岩煤渣锥、石灰岩和松散砂岩的混搭位于特定区域，并指导了建筑材料、土壤类型和后续设计。利用这些基本的气候和地质假设，我们开始制定一套简单的生态规则，确定了该岛的生态及其边界生态交错带的构成。</i></p><p><i>……过去被分为三个连续的时代，我们称之为文明（CIV）第一、第二和第三。对每个项目进行简单的描述，然后生成一个更大的矩阵，在基础设施、建筑和景观方面与每个项目相关。这三个类别中的每一个都有其技术、农业、宗教和文化。从物质上讲，每个时代都有自己的构建技术，基于分配的资源和技术，每种 CIV 方法和产品随着时间的推移变得更加完善......”</i></p></blockquote><div><div><div><picture><div><img height="861" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MN5sj8GS2re-hTgR7y8%252F-MN5zyt-JDJYgXHKIPAD%252FTheWitness_Fletcher_CivilizationsTimeline.jpg%3Falt%3Dmedia%26token%3D27828cff-057b-4c62-b51a-594a1488e537&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=7c0287a3&amp;sv=2" width="2500"/></div><figcaption>《见证者》中居住在岛上的三个虚构文明的时间线，由 Fletcher Studio 构建的世界 (https://www.fletcher.studio/blog/2017/5/26/the-witness-designing-video-game-environments)</figcaption></picture></div></div></div><blockquote><p><i>“……在我们的叙述中，风车一开始是 CIV One 的一座圣土丘，其岩石被重新用来建造 CIV One 中的瞭望塔的地基。随后，第三文明改造了这座塔，作为将淡水从水库泵送到岛上其他地方的一种手段。</i></p></blockquote><blockquote><p><i>通常，一旦一个结构被赋予意义，它就会激发其他景观和基础设施的增加。风车的存在需要增加一个湖泊、一条小溪，最终需要一座水坝和一个伐木水槽。玩法、建筑和景观与岛屿环境和故事之间的相互作用日益增强。 </i></p><p><i>例如，使用特定的建筑材料可以建造砍伐的森林、采石场、玻璃工厂。添加了谜题来支持资源开采和制造叙述：添加了一艘货轮来证明岛上使用钢铁的合理性。这艘船可能是岛上不容易制造的东西的来源，其中大部分铁已经被收获，并且可以在整个过程中看到不同的再利用状态。”</i>
 
 ——来自 <span><a href="https://www.fletcher.studio/blog/2017/5/26/the-witness-designing-video-game-environments">“证人：设计视频游戏环境”</a></span> 弗莱彻工作室，2017 年 5 月 26 日</p></blockquote><h2><div><a href="#to-review"></a></div><div>要审查...</div></h2><ul><li><div><div></div></div><div><p><strong>世界构建</strong> 是关于设计整个游戏世界的历史和概念设置。</p><ul><li><div><div></div></div><div><p>游戏中的世界构建要么面向开发者（<strong>文档</strong>) 或面向玩家 (<strong>传说</strong>).</p></div></li><li><div><div></div></div><div><p>对于动作游戏的关卡设计， <strong>不要过早做太多的世界建设。 </strong>改变世界构建以适应关卡要容易得多，而不是相反。</p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>最小 </strong>世界建设：谁建造了这个地方，现在谁住在这里，玩家可以在这里做什么？对于大多数关卡，简单的暗示答案就足够了。</p></div></li><li><div><div></div></div><div><p><strong>综合 </strong>世界构建：设计地图、时间表和注释。再次强调，只有当您的项目很大或者您在团队中工作时才这样做。</p></div></li></ul><h2><div><a href="#further-reading-sources"></a></div><div>进一步阅读/来源</div></h2><ul><li><div><div></div></div><div><p><i><strong></strong></i><span><a href="https://nkjemisin.com/2015/08/worldbuilding-101/"><i><strong>《世界建筑 101：扩大你的冰山》</strong></i></a></span><strong> </strong>通过 <span><a href="https://nkjemisin.com/about/">N.K.杰米辛</a></span>，《2015 年作家文摘在线研讨会》是我们推荐的对世界构建的一般介绍。本页的大部分内容均摘自 Jemisin 的精彩演讲。</p></div></li><li><div><div></div></div><div><p><strong></strong><span><a href="https://researchportal.port.ac.uk/portal/en/theses/story-as-a-function-of-gameplay-in-first-person-shooters-and-an-analysis-of-fps-diegetic-content-19982007(ae0dcf2e-43a0-4549-973f-340c88ba4815).html"><i><strong>“作为第一人称射击游戏游戏功能的故事以及 1998-2007 年 FPS 剧情内容的分析”</strong></i></a></span><strong> </strong><i> </i>作者：丹·平奇贝克。对应用于动作游戏设计的学术理论进行了有用的概述，重点是吉布森的可供性、suzjet / fabula、巴特的函数和指数，这是本书关于功能世界构建立场的学术基础。</p></div></li><li><div><div></div></div><div><p><i><strong></strong></i><span><a href="https://www.twitch.tv/videos/812129511?collection=UN1IuGeWSRYgBA"><i><strong>“在 30 分钟或更短的时间内构建关键的协作世界”(@ 13m 33s)</strong></i></a></span> 通过 <span><a href="https://kaelan.online/">凯兰·多伊尔·迈尔斯科</a></span>, 对于 <span><a href="https://www.handeyesociety.com/event/wordplay2020/">文字游戏 2020</a></span> 探索世界构建的替代方法，特别是在团体中。<!-- --></p></div></li><li><div><div></div></div><div><p><i><strong></strong></i><span><a href="https://emshort.blog/2018/03/06/books-on-worldbuilding/"><i><strong>《关于世界建设的书籍》</strong></i></a></span> （2018）由 <span><a href="https://emshort.blog/">艾米丽·肖特</a></span> 是一个很棒的世界构建书籍和资源列表，以及肖特关于将这些方法应用于游戏叙事的富有洞察力的评论。</p></div></li><li><div><div></div></div><div><p><span><a href="https://www.game-cities.com/virtual-cities"><strong>《虚拟城市：电子游戏城市地图集与探索》</strong></a></span><strong> </strong>(2020)<strong> </strong>由城市规划师 <span><a href="https://www.game-cities.com/">康斯坦丁诺斯·迪莫普洛斯</a></span> 本书分析了 45 个不同虚拟城市的城市世界建设，主要关注西方/欧洲城市。</p></div></li></ul><p></p></div></div></article>
+      </div>
+      <div class="gb-page-links-wrap">
 <div class="page-links"><a class="page-link" href="process__preproduction__research.html"><span>上一页</span>调研</a><a class="page-link" href="process__preproduction__scope.html"><span>下一页</span>范围控制</a></div>
-</main>
+
+      </div>
+    </main>
+    <aside class="gb-outline" data-outline>
+      <div class="gb-outline-inner">
+        <button class="gb-outline-title" type="button" data-toggle-outline>ON THIS PAGE</button>
+        <nav class="gb-outline-list" data-outline-list></nav>
+      </div>
+    </aside>
+  </div>
+  <div class="gb-search-modal" role="dialog" aria-modal="true" aria-label="搜索" data-search-modal>
+    <div class="gb-search-box">
+      <div class="gb-search-input-row">
+        <span class="gb-search-icon"></span>
+        <input type="search" data-search-input placeholder="搜索页面、章节或正文内容" autocomplete="off">
+        <button type="button" data-close-search>关闭</button>
+      </div>
+      <div class="gb-search-results" data-search-results></div>
+    </div>
+  </div>
 </body>
 </html>

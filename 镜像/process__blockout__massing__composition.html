@@ -1,118 +1,192 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>构图 | The Level Design Book 中文版</title>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="关卡中形状的整体视觉排列和组织；地标、远景、途径；另外，为什么“引导线”不是真实的">
+  <title>构图 | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="site-data.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body>
-<aside class="sidebar">
-<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
-<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
-<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
-<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
-<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
-<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
-<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
-<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
-<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
-<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
-<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
-<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
-<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
-<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
-<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
-<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
-<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
-<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
-<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
-<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
-<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
-<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
-<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
-<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
-<a class="active" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
-<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
-<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
-<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
-<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
-<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
-<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
-<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
-<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
-<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
-<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
-<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
-<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
-<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
-<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
-<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
-<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
-<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
-<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
-<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
-<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
-<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
-<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
-<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
-<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
-<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
-<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
-<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
-<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
-<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
-<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
-<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
-<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
-<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
-<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
-<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
-<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
-<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
-<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
-<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
-<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
-<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
-<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
-<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
-<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
-<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
-<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
-<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
-<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
-<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
-<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
-<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
-<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
-<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
-<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
-<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
-<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
-<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
-<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
-<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
-<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
-<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
-</aside>
-<main class="page">
-<div class="topbar">
-<a href="https://book.leveldesignbook.com/process/blockout/massing/composition">查看原文</a>
-<a href="https://book.leveldesignbook.com">原站首页</a>
+<body class="gb-body" data-page="process__blockout__massing__composition.html" data-article-hash="4a7e81fd57182e3ca65437e94b1e95bffaf65110e60c824257de6f975eebdd8b">
+  <div class="gb-scrim" data-close-panels></div>
+  <header class="gb-header">
+    <div class="gb-header-inner">
+      <button class="gb-icon-button gb-menu-button" type="button" data-open-sidebar aria-label="打开目录">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="gb-header-logo" href="index.html">
+        <span class="gb-logo-dot"></span>
+        <span>The Level Design Book</span>
+      </a>
+      <nav class="gb-header-links" aria-label="Top links">
+        <a href="process__overview.html">Book</a>
+        <a href="appendix__resources.html">Resources</a>
+        <a href="https://book.leveldesignbook.com/process/blockout/massing/composition">原文</a>
+      </nav>
+      <button class="gb-search-trigger" type="button" data-open-search>
+        <span class="gb-search-icon"></span>
+        <span class="gb-search-label">搜索...</span>
+        <span class="gb-shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+      </button>
+    </div>
+  </header>
+  <div class="gb-layout">
+    <aside class="gb-sidebar" data-sidebar>
+      <div class="gb-sidebar-scroll">
+<a class="gb-sidebar-brand" href="index.html"><span class="gb-brand-mark">◆</span><span><strong>The Level Design Book</strong><small>中文版</small></span></a>
+<nav class="gb-nav" aria-label="Table of contents">
+<a class="gb-nav-link" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="gb-nav-link" href="introduction.html" style="--depth:0">✨ 什么是关卡设计</a>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 1, PROCESS</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="process__overview.html" style="--depth:1">🗺️ 如何制作一个关卡</a>
+<a class="gb-nav-link" href="process__preproduction.html" style="--depth:1">🧠 前期设计</a>
+<a class="gb-nav-link" href="process__preproduction__pacing.html" style="--depth:2">节奏</a>
+<a class="gb-nav-link" href="process__preproduction__research.html" style="--depth:2">调研</a>
+<a class="gb-nav-link" href="process__preproduction__worldbuilding.html" style="--depth:2">世界构建</a>
+<a class="gb-nav-link" href="process__preproduction__scope.html" style="--depth:2">范围控制</a>
+<a class="gb-nav-link" href="process__combat.html" style="--depth:1">🔫 战斗</a>
+<a class="gb-nav-link" href="process__combat__enemy.html" style="--depth:2">敌人设计</a>
+<a class="gb-nav-link" href="process__combat__encounter.html" style="--depth:2">遭遇战</a>
+<a class="gb-nav-link" href="process__combat__cover.html" style="--depth:2">掩体</a>
+<a class="gb-nav-link" href="process__combat__balance.html" style="--depth:2">地图平衡</a>
+<a class="gb-nav-link" href="process__layout.html" style="--depth:1">🛠️ 布局</a>
+<a class="gb-nav-link" href="process__layout__flow.html" style="--depth:2">动线</a>
+<a class="gb-nav-link" href="process__layout__flow__circulation.html" style="--depth:3">空间流线</a>
+<a class="gb-nav-link" href="process__layout__flow__verticality.html" style="--depth:3">纵向/垂直空间</a>
+<a class="gb-nav-link" href="process__layout__criticalpath.html" style="--depth:2">主动线</a>
+<a class="gb-nav-link" href="process__layout__parti.html" style="--depth:2">设计概念草图</a>
+<a class="gb-nav-link" href="process__layout__typology.html" style="--depth:2">类型学</a>
+<a class="gb-nav-link" href="process__layout__typology__gates.html" style="--depth:3">门与关口</a>
+<a class="gb-nav-link" href="process__blockout.html" style="--depth:1">🏠 白盒</a>
+<a class="gb-nav-link" href="process__blockout__massing.html" style="--depth:2">体块</a>
+<a class="gb-nav-link" href="process__blockout__massing__landscape.html" style="--depth:3">景观地形</a>
+<a class="gb-nav-link active" href="process__blockout__massing__composition.html" style="--depth:3">构图</a>
+<a class="gb-nav-link" href="process__blockout__massing__prospect-refuge.html" style="--depth:3">眺望-庇护</a>
+<a class="gb-nav-link" href="process__blockout__metrics.html" style="--depth:2">标准尺度规范</a>
+<a class="gb-nav-link" href="process__blockout__metrics__modular.html" style="--depth:3">模块化套件设计</a>
+<a class="gb-nav-link" href="process__blockout__metrics__doom.html" style="--depth:3">《毁灭战士》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__metrics__quake.html" style="--depth:3">《雷神之锤》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__wayfinding.html" style="--depth:2">寻路与引导</a>
+<a class="gb-nav-link" href="process__blockout__playtesting.html" style="--depth:2">试玩测试</a>
+<a class="gb-nav-link" href="process__blockout__playtesting__persona.html" style="--depth:3">玩家画像</a>
+<a class="gb-nav-link" href="process__scripting.html" style="--depth:1">📜 脚本</a>
+<a class="gb-nav-link" href="process__scripting__nav.html" style="--depth:2">(存根) 导航</a>
+<a class="gb-nav-link" href="process__scripting__doors.html" style="--depth:2">门</a>
+<a class="gb-nav-link" href="process__lighting.html" style="--depth:1">☀️ 灯光</a>
+<a class="gb-nav-link" href="process__lighting__three-point.html" style="--depth:2">三点布光</a>
+<a class="gb-nav-link" href="process__lighting__d6-lighting.html" style="--depth:2">D6 灯光法</a>
+<a class="gb-nav-link" href="process__lighting__darkness.html" style="--depth:2">黑暗场景灯光</a>
+<a class="gb-nav-link" href="process__env-art.html" style="--depth:1">🏡 环境美术</a>
+<a class="gb-nav-link" href="process__env-art__psychology.html" style="--depth:2">形状与色彩心理学</a>
+<a class="gb-nav-link" href="process__env-art__texturing.html" style="--depth:2">材质</a>
+<a class="gb-nav-link" href="process__env-art__storytelling.html" style="--depth:2">叙事</a>
+<a class="gb-nav-link" href="process__env-art__optimization.html" style="--depth:2">优化</a>
+<a class="gb-nav-link" href="process__release.html" style="--depth:1">🌈 发布</a>
 </div>
-<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-<article><header><nav><ol><li></li><li></li><li></li></ol></nav><h1>构图</h1><p>关卡中形状的整体视觉排列和组织；地标、远景、途径；另外，为什么“引导线”不是真实的</p></header><div><div><h2><div><a href="#what-is-composition"></a></div><div>什么是组合？</div></h2><p><strong>构图 </strong>是关卡的整体视觉组织。有两种类型的组合：</p><ul><li><div><div></div></div><div><p><strong>空间构成：</strong> 核心整体大图3D排列 <span><a href="process__blockout__massing.html">群众</a></span>。我们无法保证特定的视图，而是考虑了各种视角和位置。 </p><ul><li><div><div></div></div><div><p>这是建筑、室内设计和雕塑等 3D 艺术中实践的“构图”。<!-- --></p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>镜头构成：</strong> 从特定位置的特定角度，关卡在玩家的 2D 相机框架/屏幕中的外观如何。 </p><ul><li><div><div></div></div><div><p>这是绘画、绘画、摄影和电影等二维艺术中实践的“构图”。</p></div></li></ul></div></li></ul><p>许多关卡设计教程和资源都声称特定的镜头构图非常重要。由于许多原因，我们意见不一致，并且对构图有不同的定义。相反，我们认为 <strong>空间构图比镜头构图重要得多。</strong></p><p><strong>（待办事项：图像）</strong></p><h2><div><a href="#spatial-composition"></a></div><div>空间构图</div></h2><p>空间组织包括建立一个空间 <strong>关卡制度</strong>，其中关卡的某些部分应该比其他部分更重要。层次结构的顶部是关键地标、焦点和中心区域， <strong>对比</strong> 与周围环境有意义地结合在一起，并锚定构图的其余部分。建立空间对比的一些方法：</p><ul><li><div><div></div></div><div><p><strong>高度。</strong> 拥挤空间中的高大塔，或开放空间中的小矮物体。</p></div></li><li><div><div></div></div><div><p><strong>密度/分布。 </strong>更宽的开放空间，周围环绕着更小、更窄的结构。</p></div></li><li><div><div></div></div><div><p><strong>方向。</strong> 脱离周围网格的有角度的物体。</p></div></li><li><div><div></div></div><div><p><strong>形状。</strong> 附近有很多长方形的东西吗？尝试在那里放一个圆形的东西。</p></div></li></ul><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M0isy7e8jw280GjIL4F%252F-M0iygMfihkdo816-30s%252FFormSpaceAndOrder_HierarchyColumnComposition_FrancisChing.png%3Falt%3Dmedia%26token%3D6c57026f-5e6e-40a1-9278-26935df66e14&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=a27ea0b7&amp;sv=2" width="1280"/></div><figcaption>昌迪加尔议会（左下）、德尔坎波广场（中上）和 Shokin-Tei 馆（中下）的焦点策略。摘自弗朗西斯·程（Francis Ching）的《建筑：形式、空间和秩序》第三章的图画。 </figcaption></picture></div></div></div><p>在上图中，请注意中央立法院如何 <span><a href="https://en.wikipedia.org/wiki/Palace_of_Assembly,_Chandigarh">昌迪加尔议会宫</a></span> 勒·柯布西耶（Le Corbusier）（左下）在其平面图中使用了几种对比类型。它很大，是一个盒子里的圆圈，并且以与网格的其余部分分开的倾斜角度/轴旋转。所以感觉对于这座建筑的功能来说是非常重要和至关重要的！如果这是一个关卡，那么主要的场景或最终的 Boss 战斗可能会发生在这个圆形房间里。</p><p>房间偏离中心，几乎触及东墙。但它并不感觉偏离中心，不是吗？这是因为焦点在空间组织内创建了新的中心。想象一个来自重要区域的影响力区域；它有点“拉动”周围构图的其余部分。 （请参阅右下角的图表，了解焦点如何影响我们感知空间“中心”的方式。）</p><p>请记住， <strong>层次结构取决于当地的对比和背景。 </strong>高大的物体只有被矮小的物体包围时才会显得特别。如果一件小事被大事包围，就会感觉更特别。</p><h3><div><a href="#landmark"></a></div><div><strong>地标</strong></div></h3><p>一个 <strong>地标</strong> 或 <strong>兴趣点 (POI)</strong> 是关卡中独特且令人难忘的形状、质量或位置。</p><p>待办事项：示例</p><p>TODO / 重要提示：地标必须让人感觉相关且有用！否则它们就不能起到地标的作用！</p><p>实际地标（玩家在游戏过程中注意到的内容）与假装地标（例如《最后生还者》中的随机天空盒元素不会引导玩家，实际上没有用）</p><h3><div><a href="#saliency"></a></div><div>显着性</div></h3><h2><div><a href="#sightlines"></a></div><div>视线</div></h2><p>一个 <strong>视线</strong> 是空旷空间的轨迹，提供了另一个空间的可能视图。</p><p>视线是玩家在与当前游戏状态和目标相关时使用的工具。如果玩家没有理由沿着视线看，那么他们很可能根本不会使用视线。视线是玩家可能会忽略的机会/情境工具，它不能保证玩家的行为。</p><p>即使玩家看向某个方向， <strong>无法保证他们会记住或处理他们所看到的内容。 </strong>（想象一下阅读一本无聊的书或观看一部无聊的电影；您的眼睛可能会看到文字/图像，但这并不意味着您实际上阅读或处理了它。）</p><div><div><div><picture><div><img height="931" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MR8WB5rVfnBQdXWxFL3%252F-MR8WkVWev9aDknYqIcS%252FLDB_CSGO_de-cache-sightlines_SalGarazzo_GDC2015.jpg%3Falt%3Dmedia%26token%3D917a0ee2-1f24-48e2-ba98-5acb8ed7896c&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=6650c87&amp;sv=2" width="1652"/></div><figcaption>Sal Garozzo 和 Shawn Snelling 在《反恐精英：全球攻势》中对 de_cache 的视线分析，来自 <span><a href="https://www.youtube.com/watch?v=Y5RZP52jYy4">GDC 2015：竞技 CS:GO 的社区级设计（来自 YouTube）</a></span></figcaption></picture></div></div></div><p>在上图中，关卡设计师 Sal Garozzo 重点介绍了 2015 版多人竞技射击游戏地图上的常见战略视线 <i>去缓存</i> 在《反恐精英：全球攻势》中。每个视线提供不同程度的覆盖范围和信息，用于攻击/防御炸弹点 A 区域。</p><p>然而，所有这些视线对于初次玩游戏的玩家来说，第一眼看上去会很明显吗？</p><p>不。事实上，识别和记住这些视线是学习游戏/学习地图的一部分。竞技选手必须积极研究这些视线；是的 <i>不</i> 一种自然的、潜意识的、明显的环顾四周的方式。 <strong>视线的存在并不意味着玩家会使用它，甚至不知道它的存在。</strong></p><p><i>    有关多人游戏环境中视线的更多信息，请参阅 </i><span><a href="process__combat__balance.html"><i>平衡</i></a></span><i>.</i></p><h3><div><a href="#vista"></a></div><div>维斯塔</div></h3><p>那么我们如何让玩家第一眼看到视线很重要呢？</p><p>一个 <strong>远景</strong> 是一个非常有深度的场景构图，提供了下一个区域的概览，让玩家有机会制定策略。在现代遭遇战设计中，预先引入具有远景的竞技场是很常见的，特别是当竞技场布局复杂时。</p><p>（TODO：通过示例更多地讨论 vista，这些示例也强调 vista 的流程/布局）</p><h3><div><a href="#approach"></a></div><div>方法</div></h3><p>安 <strong>方法</strong> 是一条有远景的路。</p><p>（TODO：显示方法示例）</p><p>（TODO：例如……流水别墅？）</p><h3><div><a href="#prospect-refuge"></a></div><div><strong>眺望-庇护</strong></div></h3><p><strong></strong><span><a href="process__blockout__massing__prospect-refuge.html"><strong>前景避难理论</strong></a></span> 是现实世界建筑中普遍存在的信念/设计模式，它认为人类通过寻找来导航空间 <i>前景</i> （有利位置）对比 <i>避难所</i> （安全区域），唤起他们与生俱来的生存本能。</p><p>我们认为前景避难是糟糕的理论（也是糟糕的科学/糟糕的艺术） <i>关卡设计的有限应用</i>。相反，我们建议使用较少哲学包袱的现有概念和术语，例如视线与掩护。</p><p><i>     有关为什么我们认为这是糟糕的理论的更多信息，请参阅 </i><span><a href="process__blockout__massing__prospect-refuge.html"><i>眺望-庇护</i></a></span><i>.</i></p><p>（TODO：包括前景避难所图像）</p><h2><div><a href="#shot-composition-fallacy"></a></div><div>镜头构图（谬误）</div></h2><p><strong>镜头构图</strong> 是关卡几何形状相对于玩家相机视角的 2D 排列。 </p><p>好吧，有时其中一些很重要。视线、方法、颜色和照明、视角——有时所有这些方面都很重要。 </p><p>但一些关卡设计师将镜头合成误解为关卡设计。他们认为，如果你安排关卡中的所有内容以形成精美的框架视图，那么玩家将神奇地无言地知道要做什么和去哪里。</p><p>构图不是精神控制。这是关卡设计理论中非常常见的误解，我们将用一整个章节来揭穿它。出于这个原因，我们称其为 <strong>镜头构图谬误</strong>：一种看似正确且有用的信念，但实际上是严重错误的，会导致更糟糕的理解。</p><h3><div><a href="#screenshots-arent-levels"></a></div><div>截图不是关卡</div></h3><p>首先，截图并不是一个关卡。这似乎是显而易见的，但许多关卡设计师似乎已经忘记了。</p><p>相反，屏幕截图是游戏在特定位置、角度和时间的图像。 <strong>截图是一种摄影行为</strong>.</p><p>照片是否捕捉到了某个地点或时间的客观事实？不。摄影师是选择地点和时间来创作图像的艺术家。即使是白盒的开发概述屏幕截图也会强调或淡化某些元素。照片是一种艺术诠释，捕捉 <i>只有一方面</i> 真实的人、地点或事物。 </p><p>没有照片可以取代参观某个地方或与某人会面的体验，也没有屏幕截图可以取代试玩测试。 </p><p>更重要的是，无法保证玩家会想象相同的取景或构图。 <strong>播放器永远不会播放您的屏幕截图。</strong></p><div><div></div><div><p><i>有关摄影和意义长达数十年的争论的更多信息，请参阅 </i><span><a href="https://en.wikipedia.org/wiki/On_Photography"><i>关于摄影</i></a></span><i> 作者：Susan Sontag（关于照片和美国政治）或 </i><span><a href="https://en.wikipedia.org/wiki/Camera_Lucida_(book)"><i>露西达相机</i></a></span><i> 罗兰·巴特（Roland Barthes）（关于照片和死亡）。</i></p></div></div><div><div><div><picture><div><img height="1125" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M3gP4GjF2JG1uUy0cVn%252F-M3gfTTYOQOpTbGeLFmA%252FLDB_CeciNestPasUnNiveau.jpg%3Falt%3Dmedia%26token%3D46f6b0c6-2125-4ff2-b92f-530725821199&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=f074ef61&amp;sv=2" width="1500"/></div><figcaption>“Ceci n'est pas un niveau”（“这不是一个关卡”）改编自名画中的“Ceci n'est pas une pipe”（“这不是一支烟斗”） <span><a href="https://en.wikipedia.org/wiki/The_Treachery_of_Images">雷内·马格里特的《图像的背叛》</a></span>.</figcaption></picture></div></div></div><h3><div><a href="#leading-lines-are-bullshit"></a></div><div>引导线（都是废话）</div></h3><p>当前关卡设计的趋势是通过绘制“引导线”来分析屏幕截图，这些“引导线”似乎指向/引导玩家的眼睛看向远处的地标。 </p><p>然而我们认为<strong> 引导线实际上并不有效</strong>，而且，引导线在它们自己的逻辑中甚至没有意义。</p><p><strong>引导线误解了人类的凝视、感知和信息处理。</strong> 视网膜扫描和 <span><a href="https://en.wikipedia.org/wiki/Eye_tracking">视线追踪</a></span> 技术展示了 2D 视觉构图的引导线和其他传统原则如何不像我们想象的那样“引导眼睛”。即使他们这样做了，也不能保证玩家确实处理了视觉信息。</p><p><strong>几乎是你建造的每条走廊</strong> <strong>似乎会在远处汇聚</strong>。这种现象称为 <i>透视缩短，</i> 在平坦的 2D 图像中创建深度错觉。使用等距或平行投影的游戏使引导线变得不可能。的 <span><a href="https://en.wikipedia.org/wiki/Perspective_(graphical)">透视画的艺术史</a></span> 很有趣，但这不是关卡设计。</p><div><div><div><picture><div><img height="623" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M3gP4GjF2JG1uUy0cVn%252F-M3gaWAFSxsJrBaXhu3x%252FLDB_LeadingLinesIsJustLinearPerspective.jpg%3Falt%3Dmedia%26token%3D1d6bc921-420f-4ac6-b02b-fc36bc91df7d&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=d3634fc0&amp;sv=2" width="1551"/></div><figcaption>“引导线”始终存在于任何线性透视的屏幕截图中；你不能——不做引导线</figcaption></picture></div></div></div><p><strong>讽刺的是，引导线会误导关卡设计师</strong> 相信镜头构图、环境美术和布景是核心关卡的设计问题，而不是 <span><a href="process__blockout__metrics.html">标准尺度规范</a></span>, <span><a href="process__combat__encounter.html">遭遇战设计</a></span>, 或 <span><a href="process__blockout__playtesting.html">试玩测试</a></span>。即使引导线有效（实际上没有），您也会在关卡设计过程接近结束时进行。先关注关卡最基础的东西。</p><p><strong>如果你真的费心进行试玩测试，引导线通常会失败。</strong> 您会发现玩家有 99% 的几率会看向其他地方，有 1% 的几率会朝预期方向看 0.5 秒。<strong> </strong>截图不是关卡，没有人玩过截图。 </p><p><strong>引导线是 </strong><span><a href="https://en.wikipedia.org/wiki/Self-fulfilling_prophecy"><strong>自我实现的预言</strong></a></span> 当您将游戏摄像机移动到特定位置以构建特定视图时。 <i>当然截图要遵循构图规则！那是因为你就是这样写的！然后你在上面画了线！</i>  这是摄影，不是关卡设计。咨询 <span><a href="https://knowyourmeme.com/memes/the-golden-ratio">“黄金比例”梗</a></span> 关于自我实现的构图模式的荒谬。</p><div><div><div><picture><div><img height="540" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M3gP4GjF2JG1uUy0cVn%252F-M3ga3HPZLKYkYno9olH%252FLDB_LeadingLinesAsConfirmationBias.jpg%3Falt%3Dmedia%26token%3D26744a57-6b37-43e2-843f-b71e23f9331b&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=f7e7f73&amp;sv=2" width="1534"/></div><figcaption>“引导线”的存在是因为您在图像上绘制了图案，就像“黄金比例”模因一样</figcaption></picture></div></div></div><p><strong>这不是人们导航空间的方式。</strong> 人们利用模式识别、先验知识和文化联想在头脑中构建思维导图。 <span><a href="process__blockout__wayfinding.html">寻路与引导</a></span> 是移动和使用环境的复杂主动过程，而不仅仅是从一个角度观看关卡中的一个点。</p><p>在空间内构建视图称为摄影，这是人类练习和发展的一项技能。这不是一个自然的潜意识过程。</p><p><strong>镜头构图对于摄影、电影和其他静态平面 2D 媒体更有意义</strong> 作者对镜头的控制力很强，观众可以特别关注整个图像。然而，对于玩家可以在错误的时间将相机移动到错误的位置的交互式环境来说，它没有什么意义。 <strong>视频游戏关卡是一个地方，而不是绘画、照片或电影。</strong></p><p><i><strong> </strong></i><i>对于 </i><i><strong>更好的方法</strong></i><i> 影响/“指导”玩家，请参阅 </i><span><a href="process__blockout__wayfinding.html"><i>寻路与引导</i></a></span><i>.</i></p><div><div><div><picture><div><img height="539" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252F8HjIOiiX6XoPOVLLPt3u%252FLDB-Movie-Cinematography-Video-Film-Cinema-Camera-943569.jpg%3Falt%3Dmedia%26token%3Dee7d243a-7b97-46c8-bab7-8530730c43d1&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=a66476c0&amp;sv=2" width="960"/></div><figcaption> 关卡设计不是摄影/电影摄影，抱歉（CC0 许可下的照片）</figcaption></picture></div></div></div><h2><div><a href="#sightlines-vs.-leading-lines"></a></div><div>视线与引导线</div></h2><p>视线和引导线似乎是相同的。它们都与追踪玩家从摄像机角度看到的内容有关。 </p><p>然而，视线和引导线强调的东西截然不同：</p><ul><li><div><div></div></div><div><p><strong>视线：</strong> 空旷空间的轨迹，提供了另一个空间的可能视图</p><ul><li><div><div></div></div><div><p>玩家在与当前游戏状态和目标相关时使用的工具</p></div></li><li><div><div></div></div><div><p>我们想再次强调： </p><ul><li><div><div></div></div><div><p>视线由空旷的空间组成</p></div></li><li><div><div></div></div><div><p>视线是情境工具，不能保证行为</p></div></li></ul></div></li></ul></div></li><li><div><div></div></div><div><p><strong>引导线：</strong> 假想的现象，墙壁和线性布景似乎在远处汇聚，下意识地引导玩家去往哪里</p><ul><li><div><div></div></div><div><p>没有人在这样的空间中航行</p></div></li><li><div><div></div></div><div><p>没有人玩这样的电子游戏</p></div></li><li><div><div></div></div><div><p><strong>不要为任何人制作关卡</strong></p></div></li></ul></div></li></ul><h2><div><a href="#to-review"></a></div><div>要审查...</div></h2><ul><li><div><div></div></div><div><p><strong>空间构图</strong> 是关卡中 3D 质量的整体组织。</p><ul><li><div><div></div></div><div><p><strong>层次结构</strong> 是指某些事物看起来比其他事物更重要，通常是因为它们在大小、形状、分布或角度方面存在对比。</p><ul><li><div><div></div></div><div><p>地标</p></div></li><li><div><div></div></div><div><p>显着性</p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>视线</strong> 是玩家可以用来查看另一个区域的空白空间线。</p><ul><li><div><div></div></div><div><p>维斯塔</p></div></li><li><div><div></div></div><div><p>方法</p></div></li></ul></div></li></ul></div></li><li><div><div></div></div><div><p><strong>镜头构图</strong> 这是一种有点扯淡的理论，认为玩家的观点决定了他们的行为，而不是玩家对空间的实际理解。</p><ul><li><div><div></div></div><div><p><strong>屏幕截图不是关卡；而是关卡。</strong> 关卡是玩家使用的空间</p></div></li><li><div><div></div></div><div><p><strong>引导线</strong> 是脑毒，不要使用它们</p></div></li><li><div><div></div></div><div><p>不要将引导线与视线混淆，它们实际上是真实的</p></div></li></ul></div></li></ul><h2><div><a href="#now-what"></a></div><div>现在怎么办？</div></h2><ul><li><div><div></div></div><div><p>将这个理论应用到 <span><a href="process__blockout.html"><strong>白盒</strong></a></span>.</p></div></li><li><div><div></div></div><div><p>有关通过架构“引导玩家”的更多信息，请参阅 <span><a href="process__blockout__massing.html">体块</a></span> 和 <span><a href="process__blockout__wayfinding.html">寻路与引导</a></span>.</p></div></li></ul><h2><div><a href="#further-reading"></a></div><div>进一步阅读</div></h2><p>我们在关卡设计中反对引导线/镜头构图的立场目前在游戏行业中还不是常态。虽然我们认为 99% 是脑毒，但其他可信的设计师不同意：</p><ul><li><div><div></div></div><div><p><strong></strong><span><a href="https://www.youtube.com/watch?v=L27Qb20AYmc"><strong>“环境设计作为空间摄影：理论与实践”</strong></a></span><strong> </strong>作者：Miriam Bellard，Rockstar North（GDC 2019）介绍了 Rockstar 在侠盗猎车手 5 关卡中的电影环境构图方法。贝拉德提出了一种采用三分法叠加的演练方法，并强调体现空间的可供性/显着性模型。她还“打破了”主导线和小细节，同时认为它们仍然有用。总的来说，这可能是关于镜头构图最“平衡”的行业讨论，但也许只是不要喝太多 evo psych / <span><a href="process__env-art__psychology.html">形状心理学酷援助</a></span>.</p></div></li><li><div><div></div></div><div><p><span><a href="https://www.youtube.com/watch?v=GZ99gAb4T0o">“什么都没有的重要性：在关卡设计中使用负空间”</a></span> 作者：Jim Brown，Epic Games（GDC 2014）</p></div></li></ul></div></div></article>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 2, CULTURE</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="culture__overview.html" style="--depth:1">🦜 作为文化的关卡设计</a>
+<a class="gb-nav-link" href="culture__history-level-designer.html" style="--depth:1">关卡设计师简史</a>
+<a class="gb-nav-link" href="culture__zero-player.html" style="--depth:1">零玩家关卡设计</a>
+<a class="gb-nav-link" href="culture__unfinished-pages.html" style="--depth:1">未完成页面</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:2">建筑史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:2">结构工程入门</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:2">环境美术史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:2">家具史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:2">遭遇战设计史</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 3, STUDIES</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="studies__overview.html" style="--depth:1">🔍 如何研究一个关卡</a>
+<a class="gb-nav-link" href="studies__sp.html" style="--depth:1">单人关卡研究</a>
+<a class="gb-nav-link" href="studies__sp__undead-burg.html" style="--depth:2">不死镇（《黑暗之魂》1）</a>
+<a class="gb-nav-link" href="studies__sp__assassins.html" style="--depth:2">Assassins (《神偷》 1)</a>
+<a class="gb-nav-link" href="studies__sp__cradle.html" style="--depth:2">(存根) The Cradle (《神偷》 3)</a>
+<a class="gb-nav-link" href="studies__sp__sapienza.html" style="--depth:2">(存根) Sapienza (《杀手》)</a>
+<a class="gb-nav-link" href="studies__sp__silent-cartographer.html" style="--depth:2">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp.html" style="--depth:1">多人关卡研究</a>
+<a class="gb-nav-link" href="studies__mp__chill-out.html" style="--depth:2">Chill Out (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp__de_dust2.html" style="--depth:2">(存根) de_dust2 (《反恐精英》)</a>
+<a class="gb-nav-link" href="studies__irl.html" style="--depth:1">现实空间研究</a>
+<a class="gb-nav-link" href="studies__irl__disneyland.html" style="--depth:2">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="gb-nav-link" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:2">(存根) 拉斯维加斯 (美国内华达)</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 4, LEARNING</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="learning__notes.html" style="--depth:1">🎒 给教学者的笔记</a>
+<a class="gb-nav-link" href="learning__projects.html" style="--depth:1">项目计划</a>
+<a class="gb-nav-link" href="learning__projects__classic-combat.html" style="--depth:2">经典战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages.html" style="--depth:2">未完成 WIP 页面</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:3">现代战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:3">现代潜行</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:3">练习：直射光</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:3">练习：2D 白板图</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:3">关卡设计作品集</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:3">设计测试：改编</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:3">练习：布局</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:3">练习：纵向/垂直空间</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>APPENDIX</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="appendix__tools.html" style="--depth:1">工具</a>
+<a class="gb-nav-link" href="appendix__tools__trenchbroom.html" style="--depth:2">TrenchBroom</a>
+<a class="gb-nav-link" href="appendix__resources.html" style="--depth:1">资产与资源</a>
+<a class="gb-nav-link" href="appendix__resources__talks.html" style="--depth:2">推荐演讲</a>
+<a class="gb-nav-link" href="appendix__resources__books.html" style="--depth:2">推荐书目</a>
+<a class="gb-nav-link" href="appendix__resources__quake.html" style="--depth:2">《雷神之锤》资源</a>
+<a class="gb-nav-link" href="appendix__resources__quake__how-to-package.html" style="--depth:3">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="gb-nav-link" href="appendix__resources__formats.html" style="--depth:2">文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__fgd.html" style="--depth:3">FGD 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__map.html" style="--depth:3">MAP 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__mdl.html" style="--depth:3">MDL 文件格式</a>
+<a class="gb-nav-link" href="appendix__communities.html" style="--depth:1">社区</a>
+<a class="gb-nav-link" href="appendix__about.html" style="--depth:1">关于本书与作者</a>
+<a class="gb-nav-link" href="appendix__license.html" style="--depth:1">许可与版权</a>
+</div>
+</nav>
+
+      </div>
+    </aside>
+    <main class="gb-main" id="content">
+      <div class="gb-mobile-tools">
+        <button type="button" data-open-sidebar>目录</button>
+        <button type="button" data-open-outline>本页目录</button>
+      </div>
+      <div class="gb-page-actions">
+        <div class="gb-breadcrumbs"><span>BOOK 1, PROCESS</span><span class="gb-breadcrumb-sep">/</span><span>🏠 白盒</span><span class="gb-breadcrumb-sep">/</span><span>体块</span></div>
+        <div class="gb-action-links">
+          <a href="https://book.leveldesignbook.com/process/blockout/massing/composition">查看原文</a>
+          <a href="https://book.leveldesignbook.com">原站首页</a>
+        </div>
+      </div>
+      <div class="gb-license"><div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div></div>
+      <div class="gb-article-wrap">
+<article><header><nav><ol><li></li><li></li><li></li></ol></nav><h1>构图</h1><p>关卡中形状的整体视觉排列和组织；地标、远景、途径；另外，为什么“引导线”不是真实的</p></header><div><div><h2><div><a href="#what-is-composition"></a></div><div>什么是组合？</div></h2><p><strong>构图 </strong>是关卡的整体视觉组织。有两种类型的组合：</p><ul><li><div><div></div></div><div><p><strong>空间构图：</strong> 核心整体大图3D排列 <span><a href="process__blockout__massing.html">体块</a></span>。我们无法保证特定的视图，而是考虑了各种视角和位置。 </p><ul><li><div><div></div></div><div><p>这是建筑、室内设计和雕塑等 3D 艺术中实践的“构图”。<!-- --></p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>镜头构图：</strong> 从特定位置的特定角度，关卡在玩家的 2D 相机框架/屏幕中的外观如何。 </p><ul><li><div><div></div></div><div><p>这是绘画、绘画、摄影和电影等二维艺术中实践的“构图”。</p></div></li></ul></div></li></ul><p>许多关卡设计教程和资源都声称特定的镜头构图非常重要。由于许多原因，我们意见不一致，并且对构图有不同的定义。相反，我们认为 <strong>空间构图比镜头构图重要得多。</strong></p><p><strong>（待办事项：图像）</strong></p><h2><div><a href="#spatial-composition"></a></div><div>空间构图</div></h2><p>空间组织包括建立一个空间 <strong>关卡制度</strong>，其中关卡的某些部分应该比其他部分更重要。层次结构的顶部是关键地标、焦点和中心区域， <strong>对比</strong> 与周围环境有意义地结合在一起，并锚定构图的其余部分。建立空间对比的一些方法：</p><ul><li><div><div></div></div><div><p><strong>高度。</strong> 拥挤空间中的高大塔，或开放空间中的小矮物体。</p></div></li><li><div><div></div></div><div><p><strong>密度/分布。 </strong>更宽的开放空间，周围环绕着更小、更窄的结构。</p></div></li><li><div><div></div></div><div><p><strong>方向。</strong> 脱离周围网格的有角度的物体。</p></div></li><li><div><div></div></div><div><p><strong>形状。</strong> 附近有很多长方形的东西吗？尝试在那里放一个圆形的东西。</p></div></li></ul><div><div><div><picture><div><img height="720" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M0isy7e8jw280GjIL4F%252F-M0iygMfihkdo816-30s%252FFormSpaceAndOrder_HierarchyColumnComposition_FrancisChing.png%3Falt%3Dmedia%26token%3D6c57026f-5e6e-40a1-9278-26935df66e14&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=a27ea0b7&amp;sv=2" width="1280"/></div><figcaption>昌迪加尔议会（左下）、德尔坎波广场（中上）和 Shokin-Tei 馆（中下）的焦点策略。摘自弗朗西斯·程（Francis Ching）的《建筑：形式、空间和秩序》第三章的图画。 </figcaption></picture></div></div></div><p>在上图中，请注意中央立法院如何 <span><a href="https://en.wikipedia.org/wiki/Palace_of_Assembly,_Chandigarh">昌迪加尔议会宫</a></span> 勒·柯布西耶（Le Corbusier）（左下）在其平面图中使用了几种对比类型。它很大，是一个盒子里的圆圈，并且以与网格的其余部分分开的倾斜角度/轴旋转。所以感觉对于这座建筑的功能来说是非常重要和至关重要的！如果这是一个关卡，那么主要的场景或最终的 Boss 战斗可能会发生在这个圆形房间里。</p><p>房间偏离中心，几乎触及东墙。但它并不感觉偏离中心，不是吗？这是因为焦点在空间组织内创建了新的中心。想象一个来自重要区域的影响力区域；它有点“拉动”周围构图的其余部分。 （请参阅右下角的图表，了解焦点如何影响我们感知空间“中心”的方式。）</p><p>请记住， <strong>层次结构取决于当地的对比和背景。 </strong>高大的物体只有被矮小的物体包围时才会显得特别。如果一件小事被大事包围，就会感觉更特别。</p><h3><div><a href="#landmark"></a></div><div><strong>地标</strong></div></h3><p>一个 <strong>地标</strong> 或 <strong>兴趣点 (POI)</strong> 是关卡中独特且令人难忘的形状、质量或位置。</p><p>待办事项：示例</p><p>TODO / 重要提示：地标必须让人感觉相关且有用！否则它们就不能起到地标的作用！</p><p>实际地标（玩家在游戏过程中注意到的内容）与假装地标（例如《最后生还者》中的随机天空盒元素不会引导玩家，实际上没有用）</p><h3><div><a href="#saliency"></a></div><div>显着性</div></h3><h2><div><a href="#sightlines"></a></div><div>视线</div></h2><p>一个 <strong>视线</strong> 是空旷空间的轨迹，提供了另一个空间的可能视图。</p><p>视线是玩家在与当前游戏状态和目标相关时使用的工具。如果玩家没有理由沿着视线看，那么他们很可能根本不会使用视线。视线是玩家可能会忽略的机会/情境工具，它不能保证玩家的行为。</p><p>即使玩家看向某个方向， <strong>无法保证他们会记住或处理他们所看到的内容。 </strong>（想象一下阅读一本无聊的书或观看一部无聊的电影；您的眼睛可能会看到文字/图像，但这并不意味着您实际上阅读或处理了它。）</p><div><div><div><picture><div><img height="931" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MR8WB5rVfnBQdXWxFL3%252F-MR8WkVWev9aDknYqIcS%252FLDB_CSGO_de-cache-sightlines_SalGarazzo_GDC2015.jpg%3Falt%3Dmedia%26token%3D917a0ee2-1f24-48e2-ba98-5acb8ed7896c&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=6650c87&amp;sv=2" width="1652"/></div><figcaption>Sal Garozzo 和 Shawn Snelling 在《反恐精英（<a class="game-store-link" href="https://store.steampowered.com/app/730/CounterStrike_2/" rel="noopener noreferrer" target="_blank">Steam</a>）：全球攻势》中对 de_cache 的视线分析，来自 <span><a href="https://www.youtube.com/watch?v=Y5RZP52jYy4">GDC 2015：竞技 CS:GO 的社区级设计（来自 YouTube）</a></span></figcaption></picture></div></div></div><p>在上图中，关卡设计师 Sal Garozzo 重点介绍了 2015 版多人竞技射击游戏地图上的常见战略视线 <i>去缓存</i> 在《反恐精英：全球攻势》中。每个视线提供不同程度的覆盖范围和信息，用于攻击/防御炸弹点 A 区域。</p><p>然而，所有这些视线对于初次玩游戏的玩家来说，第一眼看上去会很明显吗？</p><p>不。事实上，识别和记住这些视线是学习游戏/学习地图的一部分。竞技选手必须积极研究这些视线；是的 <i>不</i> 一种自然的、潜意识的、明显的环顾四周的方式。 <strong>视线的存在并不意味着玩家会使用它，甚至不知道它的存在。</strong></p><p><i>    有关多人游戏环境中视线的更多信息，请参阅 </i><span><a href="process__combat__balance.html"><i>平衡</i></a></span><i>.</i></p><h3><div><a href="#vista"></a></div><div>维斯塔</div></h3><p>那么我们如何让玩家第一眼看到视线很重要呢？</p><p>一个 <strong>远景</strong> 是一个非常有深度的场景构图，提供了下一个区域的概览，让玩家有机会制定策略。在现代遭遇战设计中，预先引入具有远景的竞技场是很常见的，特别是当竞技场布局复杂时。</p><p>（TODO：通过示例更多地讨论 vista，这些示例也强调 vista 的流程/布局）</p><h3><div><a href="#approach"></a></div><div>方法</div></h3><p>安 <strong>方法</strong> 是一条有远景的路。</p><p>（TODO：显示方法示例）</p><p>（TODO：例如……流水别墅？）</p><h3><div><a href="#prospect-refuge"></a></div><div><strong>眺望-庇护</strong></div></h3><p><strong></strong><span><a href="process__blockout__massing__prospect-refuge.html"><strong>前景避难理论</strong></a></span> 是现实世界建筑中普遍存在的信念/设计模式，它认为人类通过寻找来导航空间 <i>前景</i> （有利位置）对比 <i>避难所</i> （安全区域），唤起他们与生俱来的生存本能。</p><p>我们认为前景避难是糟糕的理论（也是糟糕的科学/糟糕的艺术） <i>关卡设计的有限应用</i>。相反，我们建议使用较少哲学包袱的现有概念和术语，例如视线与掩护。</p><p><i>     有关为什么我们认为这是糟糕的理论的更多信息，请参阅 </i><span><a href="process__blockout__massing__prospect-refuge.html"><i>眺望-庇护</i></a></span><i>.</i></p><p>（TODO：包括前景避难所图像）</p><h2><div><a href="#shot-composition-fallacy"></a></div><div>镜头构图（谬误）</div></h2><p><strong>镜头构图</strong> 是关卡几何形状相对于玩家相机视角的 2D 排列。 </p><p>好吧，有时其中一些很重要。视线、方法、颜色和照明、视角——有时所有这些方面都很重要。 </p><p>但一些关卡设计师将镜头合成误解为关卡设计。他们认为，如果你安排关卡中的所有内容以形成精美的框架视图，那么玩家将神奇地无言地知道要做什么和去哪里。</p><p>构图不是精神控制。这是关卡设计理论中非常常见的误解，我们将用一整个章节来揭穿它。出于这个原因，我们称其为 <strong>镜头构图谬误</strong>：一种看似正确且有用的信念，但实际上是严重错误的，会导致更糟糕的理解。</p><h3><div><a href="#screenshots-arent-levels"></a></div><div>截图不是关卡</div></h3><p>首先，截图并不是一个关卡。这似乎是显而易见的，但许多关卡设计师似乎已经忘记了。</p><p>相反，屏幕截图是游戏在特定位置、角度和时间的图像。 <strong>截图是一种摄影行为</strong>.</p><p>照片是否捕捉到了某个地点或时间的客观事实？不。摄影师是选择地点和时间来创作图像的艺术家。即使是白盒的开发概述屏幕截图也会强调或淡化某些元素。照片是一种艺术诠释，捕捉 <i>只有一方面</i> 真实的人、地点或事物。 </p><p>没有照片可以取代参观某个地方或与某人会面的体验，也没有屏幕截图可以取代试玩测试。 </p><p>更重要的是，无法保证玩家会想象相同的取景或构图。 <strong>玩家永远不会游玩你的屏幕截图。</strong></p><div><div></div><div><p><i>有关摄影和意义长达数十年的争论的更多信息，请参阅 </i><span><a href="https://en.wikipedia.org/wiki/On_Photography"><i>关于摄影</i></a></span><i> 作者：Susan Sontag（关于照片和美国政治）或 </i><span><a href="https://en.wikipedia.org/wiki/Camera_Lucida_(book)"><i>露西达相机</i></a></span><i> 罗兰·巴特（Roland Barthes）（关于照片和死亡）。</i></p></div></div><div><div><div><picture><div><img height="1125" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M3gP4GjF2JG1uUy0cVn%252F-M3gfTTYOQOpTbGeLFmA%252FLDB_CeciNestPasUnNiveau.jpg%3Falt%3Dmedia%26token%3D46f6b0c6-2125-4ff2-b92f-530725821199&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=f074ef61&amp;sv=2" width="1500"/></div><figcaption>“Ceci n'est pas un niveau”（“这不是一个关卡”）改编自名画中的“Ceci n'est pas une pipe”（“这不是一支烟斗”） <span><a href="https://en.wikipedia.org/wiki/The_Treachery_of_Images">雷内·马格里特的《图像的背叛》</a></span>.</figcaption></picture></div></div></div><h3><div><a href="#leading-lines-are-bullshit"></a></div><div>引导线（都是废话）</div></h3><p>当前关卡设计的趋势是通过绘制“引导线”来分析屏幕截图，这些“引导线”似乎指向/引导玩家的眼睛看向远处的地标。 </p><p>然而我们认为<strong> 引导线实际上并不有效</strong>，而且，引导线在它们自己的逻辑中甚至没有意义。</p><p><strong>引导线误解了人类的凝视、感知和信息处理。</strong> 视网膜扫描和 <span><a href="https://en.wikipedia.org/wiki/Eye_tracking">视线追踪</a></span> 技术展示了 2D 视觉构图的引导线和其他传统原则如何不像我们想象的那样“引导眼睛”。即使他们这样做了，也不能保证玩家确实处理了视觉信息。</p><p><strong>几乎是你建造的每条走廊</strong> <strong>似乎会在远处汇聚</strong>。这种现象称为 <i>透视缩短，</i> 在平坦的 2D 图像中创建深度错觉。使用等距或平行投影的游戏使引导线变得不可能。的 <span><a href="https://en.wikipedia.org/wiki/Perspective_(graphical)">透视画的艺术史</a></span> 很有趣，但这不是关卡设计。</p><div><div><div><picture><div><img height="623" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M3gP4GjF2JG1uUy0cVn%252F-M3gaWAFSxsJrBaXhu3x%252FLDB_LeadingLinesIsJustLinearPerspective.jpg%3Falt%3Dmedia%26token%3D1d6bc921-420f-4ac6-b02b-fc36bc91df7d&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=d3634fc0&amp;sv=2" width="1551"/></div><figcaption>“引导线”始终存在于任何线性透视的屏幕截图中；你不能——不做引导线</figcaption></picture></div></div></div><p><strong>讽刺的是，引导线会误导关卡设计师</strong> 相信镜头构图、环境美术和布景是核心关卡的设计问题，而不是 <span><a href="process__blockout__metrics.html">标准尺度规范</a></span>, <span><a href="process__combat__encounter.html">遭遇战设计</a></span>, 或 <span><a href="process__blockout__playtesting.html">试玩测试</a></span>。即使引导线有效（实际上没有），您也会在关卡设计过程接近结束时进行。先关注关卡最基础的东西。</p><p><strong>如果你真的费心进行试玩测试，引导线通常会失败。</strong> 您会发现玩家有 99% 的几率会看向其他地方，有 1% 的几率会朝预期方向看 0.5 秒。<strong> </strong>截图不是关卡，没有人玩过截图。 </p><p><strong>引导线是 </strong><span><a href="https://en.wikipedia.org/wiki/Self-fulfilling_prophecy"><strong>自我实现的预言</strong></a></span> 当您将游戏摄像机移动到特定位置以构建特定视图时。 <i>当然截图要遵循构图规则！那是因为你就是这样写的！然后你在上面画了线！</i>  这是摄影，不是关卡设计。咨询 <span><a href="https://knowyourmeme.com/memes/the-golden-ratio">“黄金比例”梗</a></span> 关于自我实现的构图模式的荒谬。</p><div><div><div><picture><div><img height="540" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M3gP4GjF2JG1uUy0cVn%252F-M3ga3HPZLKYkYno9olH%252FLDB_LeadingLinesAsConfirmationBias.jpg%3Falt%3Dmedia%26token%3D26744a57-6b37-43e2-843f-b71e23f9331b&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=f7e7f73&amp;sv=2" width="1534"/></div><figcaption>“引导线”的存在是因为您在图像上绘制了图案，就像“黄金比例”模因一样</figcaption></picture></div></div></div><p><strong>这不是人们导航空间的方式。</strong> 人们利用模式识别、先验知识和文化联想在头脑中构建思维导图。 <span><a href="process__blockout__wayfinding.html">寻路与引导</a></span> 是移动和使用环境的复杂主动过程，而不仅仅是从一个角度观看关卡中的一个点。</p><p>在空间内构建视图称为摄影，这是人类练习和发展的一项技能。这不是一个自然的潜意识过程。</p><p><strong>镜头构图对于摄影、电影和其他静态平面 2D 媒体更有意义</strong> 作者对镜头的控制力很强，观众可以特别关注整个图像。然而，对于玩家可以在错误的时间将相机移动到错误的位置的交互式环境来说，它没有什么意义。 <strong>视频游戏关卡是一个地方，而不是绘画、照片或电影。</strong></p><p><i><strong> </strong></i><i>对于 </i><i><strong>更好的方法</strong></i><i> 影响/“指导”玩家，请参阅 </i><span><a href="process__blockout__wayfinding.html"><i>寻路与引导</i></a></span><i>.</i></p><div><div><div><picture><div><img height="539" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252F8HjIOiiX6XoPOVLLPt3u%252FLDB-Movie-Cinematography-Video-Film-Cinema-Camera-943569.jpg%3Falt%3Dmedia%26token%3Dee7d243a-7b97-46c8-bab7-8530730c43d1&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=a66476c0&amp;sv=2" width="960"/></div><figcaption> 关卡设计不是摄影/电影摄影，抱歉（CC0 许可下的照片）</figcaption></picture></div></div></div><h2><div><a href="#sightlines-vs.-leading-lines"></a></div><div>视线与引导线</div></h2><p>视线和引导线似乎是相同的。它们都与追踪玩家从摄像机角度看到的内容有关。 </p><p>然而，视线和引导线强调的东西截然不同：</p><ul><li><div><div></div></div><div><p><strong>视线：</strong> 空旷空间的轨迹，提供了另一个空间的可能视图</p><ul><li><div><div></div></div><div><p>玩家在与当前游戏状态和目标相关时使用的工具</p></div></li><li><div><div></div></div><div><p>我们想再次强调： </p><ul><li><div><div></div></div><div><p>视线由空旷的空间组成</p></div></li><li><div><div></div></div><div><p>视线是情境工具，不能保证行为</p></div></li></ul></div></li></ul></div></li><li><div><div></div></div><div><p><strong>引导线：</strong> 假想的现象，墙壁和线性布景似乎在远处汇聚，下意识地引导玩家去往哪里</p><ul><li><div><div></div></div><div><p>没有人在这样的空间中航行</p></div></li><li><div><div></div></div><div><p>没有人玩这样的电子游戏</p></div></li><li><div><div></div></div><div><p><strong>不要为任何人制作关卡</strong></p></div></li></ul></div></li></ul><h2><div><a href="#to-review"></a></div><div>要审查...</div></h2><ul><li><div><div></div></div><div><p><strong>空间构图</strong> 是关卡中 3D 质量的整体组织。</p><ul><li><div><div></div></div><div><p><strong>层次结构</strong> 是指某些事物看起来比其他事物更重要，通常是因为它们在大小、形状、分布或角度方面存在对比。</p><ul><li><div><div></div></div><div><p>地标</p></div></li><li><div><div></div></div><div><p>显着性</p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>视线</strong> 是玩家可以用来查看另一个区域的空白空间线。</p><ul><li><div><div></div></div><div><p>维斯塔</p></div></li><li><div><div></div></div><div><p>方法</p></div></li></ul></div></li></ul></div></li><li><div><div></div></div><div><p><strong>镜头构图</strong> 这是一种有点扯淡的理论，认为玩家的观点决定了他们的行为，而不是玩家对空间的实际理解。</p><ul><li><div><div></div></div><div><p><strong>屏幕截图不是关卡；而是关卡。</strong> 关卡是玩家使用的空间</p></div></li><li><div><div></div></div><div><p><strong>引导线</strong> 是脑毒，不要使用它们</p></div></li><li><div><div></div></div><div><p>不要将引导线与视线混淆，它们实际上是真实的</p></div></li></ul></div></li></ul><h2><div><a href="#now-what"></a></div><div>现在怎么办？</div></h2><ul><li><div><div></div></div><div><p>将这个理论应用到 <span><a href="process__blockout.html"><strong>白盒</strong></a></span>.</p></div></li><li><div><div></div></div><div><p>有关通过架构“引导玩家”的更多信息，请参阅 <span><a href="process__blockout__massing.html">体块</a></span> 和 <span><a href="process__blockout__wayfinding.html">寻路与引导</a></span>.</p></div></li></ul><h2><div><a href="#further-reading"></a></div><div>进一步阅读</div></h2><p>我们在关卡设计中反对引导线/镜头构图的立场目前在游戏行业中还不是常态。虽然我们认为 99% 是脑毒，但其他可信的设计师不同意：</p><ul><li><div><div></div></div><div><p><strong></strong><span><a href="https://www.youtube.com/watch?v=L27Qb20AYmc"><strong>“环境设计作为空间摄影：理论与实践”</strong></a></span><strong> </strong>作者：Miriam Bellard，Rockstar North（GDC 2019）介绍了 Rockstar 在侠盗猎车手 5 关卡中的电影环境构图方法。贝拉德提出了一种采用三分法叠加的演练方法，并强调体现空间的可供性/显着性模型。她还“打破了”主导线和小细节，同时认为它们仍然有用。总的来说，这可能是关于镜头构图最“平衡”的行业讨论，但也许只是不要喝太多 evo psych / <span><a href="process__env-art__psychology.html">形状心理学酷援助</a></span>.</p></div></li><li><div><div></div></div><div><p><span><a href="https://www.youtube.com/watch?v=GZ99gAb4T0o">“什么都没有的重要性：在关卡设计中使用负空间”</a></span> 作者：Jim Brown，Epic Games（GDC 2014）</p></div></li></ul></div></div></article>
+      </div>
+      <div class="gb-page-links-wrap">
 <div class="page-links"><a class="page-link" href="process__blockout__massing__landscape.html"><span>上一页</span>景观地形</a><a class="page-link" href="process__blockout__massing__prospect-refuge.html"><span>下一页</span>眺望-庇护</a></div>
-</main>
+
+      </div>
+    </main>
+    <aside class="gb-outline" data-outline>
+      <div class="gb-outline-inner">
+        <button class="gb-outline-title" type="button" data-toggle-outline>ON THIS PAGE</button>
+        <nav class="gb-outline-list" data-outline-list></nav>
+      </div>
+    </aside>
+  </div>
+  <div class="gb-search-modal" role="dialog" aria-modal="true" aria-label="搜索" data-search-modal>
+    <div class="gb-search-box">
+      <div class="gb-search-input-row">
+        <span class="gb-search-icon"></span>
+        <input type="search" data-search-input placeholder="搜索页面、章节或正文内容" autocomplete="off">
+        <button type="button" data-close-search>关闭</button>
+      </div>
+      <div class="gb-search-results" data-search-results></div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,118 +1,192 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>未完成 WIP 页面 | The Level Design Book 中文版</title>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="">
+  <title>未完成 WIP 页面 | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="site-data.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body>
-<aside class="sidebar">
-<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
-<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
-<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
-<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
-<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
-<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
-<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
-<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
-<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
-<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
-<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
-<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
-<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
-<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
-<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
-<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
-<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
-<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
-<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
-<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
-<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
-<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
-<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
-<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
-<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
-<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
-<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
-<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
-<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
-<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
-<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
-<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
-<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
-<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
-<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
-<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
-<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
-<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
-<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
-<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
-<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
-<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
-<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
-<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
-<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
-<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
-<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
-<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
-<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
-<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
-<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
-<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
-<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
-<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
-<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
-<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
-<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
-<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
-<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
-<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
-<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
-<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
-<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
-<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
-<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
-<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
-<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
-<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
-<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
-<a class="active" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
-<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
-<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
-<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
-<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
-<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
-<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
-<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
-<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
-<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
-<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
-<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
-<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
-<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
-<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
-<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
-<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
-<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
-</aside>
-<main class="page">
-<div class="topbar">
-<a href="https://book.leveldesignbook.com/learning/projects/unfinished-wip-pages">查看原文</a>
-<a href="https://book.leveldesignbook.com">原站首页</a>
+<body class="gb-body" data-page="learning__projects__unfinished-wip-pages.html" data-article-hash="60a38d306fdc925346ae8a13bae0d1bf00d981e992bcb567152dad85f8e78143">
+  <div class="gb-scrim" data-close-panels></div>
+  <header class="gb-header">
+    <div class="gb-header-inner">
+      <button class="gb-icon-button gb-menu-button" type="button" data-open-sidebar aria-label="打开目录">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="gb-header-logo" href="index.html">
+        <span class="gb-logo-dot"></span>
+        <span>The Level Design Book</span>
+      </a>
+      <nav class="gb-header-links" aria-label="Top links">
+        <a href="process__overview.html">Book</a>
+        <a href="appendix__resources.html">Resources</a>
+        <a href="https://book.leveldesignbook.com/learning/projects/unfinished-wip-pages">原文</a>
+      </nav>
+      <button class="gb-search-trigger" type="button" data-open-search>
+        <span class="gb-search-icon"></span>
+        <span class="gb-search-label">搜索...</span>
+        <span class="gb-shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+      </button>
+    </div>
+  </header>
+  <div class="gb-layout">
+    <aside class="gb-sidebar" data-sidebar>
+      <div class="gb-sidebar-scroll">
+<a class="gb-sidebar-brand" href="index.html"><span class="gb-brand-mark">◆</span><span><strong>The Level Design Book</strong><small>中文版</small></span></a>
+<nav class="gb-nav" aria-label="Table of contents">
+<a class="gb-nav-link" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="gb-nav-link" href="introduction.html" style="--depth:0">✨ 什么是关卡设计</a>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 1, PROCESS</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="process__overview.html" style="--depth:1">🗺️ 如何制作一个关卡</a>
+<a class="gb-nav-link" href="process__preproduction.html" style="--depth:1">🧠 前期设计</a>
+<a class="gb-nav-link" href="process__preproduction__pacing.html" style="--depth:2">节奏</a>
+<a class="gb-nav-link" href="process__preproduction__research.html" style="--depth:2">调研</a>
+<a class="gb-nav-link" href="process__preproduction__worldbuilding.html" style="--depth:2">世界构建</a>
+<a class="gb-nav-link" href="process__preproduction__scope.html" style="--depth:2">范围控制</a>
+<a class="gb-nav-link" href="process__combat.html" style="--depth:1">🔫 战斗</a>
+<a class="gb-nav-link" href="process__combat__enemy.html" style="--depth:2">敌人设计</a>
+<a class="gb-nav-link" href="process__combat__encounter.html" style="--depth:2">遭遇战</a>
+<a class="gb-nav-link" href="process__combat__cover.html" style="--depth:2">掩体</a>
+<a class="gb-nav-link" href="process__combat__balance.html" style="--depth:2">地图平衡</a>
+<a class="gb-nav-link" href="process__layout.html" style="--depth:1">🛠️ 布局</a>
+<a class="gb-nav-link" href="process__layout__flow.html" style="--depth:2">动线</a>
+<a class="gb-nav-link" href="process__layout__flow__circulation.html" style="--depth:3">空间流线</a>
+<a class="gb-nav-link" href="process__layout__flow__verticality.html" style="--depth:3">纵向/垂直空间</a>
+<a class="gb-nav-link" href="process__layout__criticalpath.html" style="--depth:2">主动线</a>
+<a class="gb-nav-link" href="process__layout__parti.html" style="--depth:2">设计概念草图</a>
+<a class="gb-nav-link" href="process__layout__typology.html" style="--depth:2">类型学</a>
+<a class="gb-nav-link" href="process__layout__typology__gates.html" style="--depth:3">门与关口</a>
+<a class="gb-nav-link" href="process__blockout.html" style="--depth:1">🏠 白盒</a>
+<a class="gb-nav-link" href="process__blockout__massing.html" style="--depth:2">体块</a>
+<a class="gb-nav-link" href="process__blockout__massing__landscape.html" style="--depth:3">景观地形</a>
+<a class="gb-nav-link" href="process__blockout__massing__composition.html" style="--depth:3">构图</a>
+<a class="gb-nav-link" href="process__blockout__massing__prospect-refuge.html" style="--depth:3">眺望-庇护</a>
+<a class="gb-nav-link" href="process__blockout__metrics.html" style="--depth:2">标准尺度规范</a>
+<a class="gb-nav-link" href="process__blockout__metrics__modular.html" style="--depth:3">模块化套件设计</a>
+<a class="gb-nav-link" href="process__blockout__metrics__doom.html" style="--depth:3">《毁灭战士》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__metrics__quake.html" style="--depth:3">《雷神之锤》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__wayfinding.html" style="--depth:2">寻路与引导</a>
+<a class="gb-nav-link" href="process__blockout__playtesting.html" style="--depth:2">试玩测试</a>
+<a class="gb-nav-link" href="process__blockout__playtesting__persona.html" style="--depth:3">玩家画像</a>
+<a class="gb-nav-link" href="process__scripting.html" style="--depth:1">📜 脚本</a>
+<a class="gb-nav-link" href="process__scripting__nav.html" style="--depth:2">(存根) 导航</a>
+<a class="gb-nav-link" href="process__scripting__doors.html" style="--depth:2">门</a>
+<a class="gb-nav-link" href="process__lighting.html" style="--depth:1">☀️ 灯光</a>
+<a class="gb-nav-link" href="process__lighting__three-point.html" style="--depth:2">三点布光</a>
+<a class="gb-nav-link" href="process__lighting__d6-lighting.html" style="--depth:2">D6 灯光法</a>
+<a class="gb-nav-link" href="process__lighting__darkness.html" style="--depth:2">黑暗场景灯光</a>
+<a class="gb-nav-link" href="process__env-art.html" style="--depth:1">🏡 环境美术</a>
+<a class="gb-nav-link" href="process__env-art__psychology.html" style="--depth:2">形状与色彩心理学</a>
+<a class="gb-nav-link" href="process__env-art__texturing.html" style="--depth:2">材质</a>
+<a class="gb-nav-link" href="process__env-art__storytelling.html" style="--depth:2">叙事</a>
+<a class="gb-nav-link" href="process__env-art__optimization.html" style="--depth:2">优化</a>
+<a class="gb-nav-link" href="process__release.html" style="--depth:1">🌈 发布</a>
 </div>
-<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 2, CULTURE</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="culture__overview.html" style="--depth:1">🦜 作为文化的关卡设计</a>
+<a class="gb-nav-link" href="culture__history-level-designer.html" style="--depth:1">关卡设计师简史</a>
+<a class="gb-nav-link" href="culture__zero-player.html" style="--depth:1">零玩家关卡设计</a>
+<a class="gb-nav-link" href="culture__unfinished-pages.html" style="--depth:1">未完成页面</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:2">建筑史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:2">结构工程入门</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:2">环境美术史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:2">家具史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:2">遭遇战设计史</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 3, STUDIES</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="studies__overview.html" style="--depth:1">🔍 如何研究一个关卡</a>
+<a class="gb-nav-link" href="studies__sp.html" style="--depth:1">单人关卡研究</a>
+<a class="gb-nav-link" href="studies__sp__undead-burg.html" style="--depth:2">不死镇（《黑暗之魂》1）</a>
+<a class="gb-nav-link" href="studies__sp__assassins.html" style="--depth:2">Assassins (《神偷》 1)</a>
+<a class="gb-nav-link" href="studies__sp__cradle.html" style="--depth:2">(存根) The Cradle (《神偷》 3)</a>
+<a class="gb-nav-link" href="studies__sp__sapienza.html" style="--depth:2">(存根) Sapienza (《杀手》)</a>
+<a class="gb-nav-link" href="studies__sp__silent-cartographer.html" style="--depth:2">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp.html" style="--depth:1">多人关卡研究</a>
+<a class="gb-nav-link" href="studies__mp__chill-out.html" style="--depth:2">Chill Out (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp__de_dust2.html" style="--depth:2">(存根) de_dust2 (《反恐精英》)</a>
+<a class="gb-nav-link" href="studies__irl.html" style="--depth:1">现实空间研究</a>
+<a class="gb-nav-link" href="studies__irl__disneyland.html" style="--depth:2">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="gb-nav-link" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:2">(存根) 拉斯维加斯 (美国内华达)</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 4, LEARNING</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="learning__notes.html" style="--depth:1">🎒 给教学者的笔记</a>
+<a class="gb-nav-link" href="learning__projects.html" style="--depth:1">项目计划</a>
+<a class="gb-nav-link" href="learning__projects__classic-combat.html" style="--depth:2">经典战斗</a>
+<a class="gb-nav-link active" href="learning__projects__unfinished-wip-pages.html" style="--depth:2">未完成 WIP 页面</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:3">现代战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:3">现代潜行</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:3">练习：直射光</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:3">练习：2D 白板图</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:3">关卡设计作品集</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:3">设计测试：改编</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:3">练习：布局</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:3">练习：纵向/垂直空间</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>APPENDIX</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="appendix__tools.html" style="--depth:1">工具</a>
+<a class="gb-nav-link" href="appendix__tools__trenchbroom.html" style="--depth:2">TrenchBroom</a>
+<a class="gb-nav-link" href="appendix__resources.html" style="--depth:1">资产与资源</a>
+<a class="gb-nav-link" href="appendix__resources__talks.html" style="--depth:2">推荐演讲</a>
+<a class="gb-nav-link" href="appendix__resources__books.html" style="--depth:2">推荐书目</a>
+<a class="gb-nav-link" href="appendix__resources__quake.html" style="--depth:2">《雷神之锤》资源</a>
+<a class="gb-nav-link" href="appendix__resources__quake__how-to-package.html" style="--depth:3">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="gb-nav-link" href="appendix__resources__formats.html" style="--depth:2">文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__fgd.html" style="--depth:3">FGD 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__map.html" style="--depth:3">MAP 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__mdl.html" style="--depth:3">MDL 文件格式</a>
+<a class="gb-nav-link" href="appendix__communities.html" style="--depth:1">社区</a>
+<a class="gb-nav-link" href="appendix__about.html" style="--depth:1">关于本书与作者</a>
+<a class="gb-nav-link" href="appendix__license.html" style="--depth:1">许可与版权</a>
+</div>
+</nav>
+
+      </div>
+    </aside>
+    <main class="gb-main" id="content">
+      <div class="gb-mobile-tools">
+        <button type="button" data-open-sidebar>目录</button>
+        <button type="button" data-open-outline>本页目录</button>
+      </div>
+      <div class="gb-page-actions">
+        <div class="gb-breadcrumbs"><span>BOOK 4, LEARNING</span><span class="gb-breadcrumb-sep">/</span><span>项目计划</span></div>
+        <div class="gb-action-links">
+          <a href="https://book.leveldesignbook.com/learning/projects/unfinished-wip-pages">查看原文</a>
+          <a href="https://book.leveldesignbook.com">原站首页</a>
+        </div>
+      </div>
+      <div class="gb-license"><div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div></div>
+      <div class="gb-article-wrap">
 <article><header><nav><ol><li></li><li></li></ol></nav><h1>未完成 WIP 页面</h1></header><header><div><div></div></div><nav><ol><li><a href="https://book.leveldesignbook.com/learning">第 4 册，学习</a></li><li><a href="learning__projects.html">项目计划</a></li></ol></nav><h1>未完成 WIP 页面</h1></header><div><a href="learning__projects__unfinished-wip-pages__modern-combat.html"><span><span>现代战斗</span></span></a><a href="learning__projects__unfinished-wip-pages__modern-stealth.html"><span><span>现代潜行</span></span></a><a href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html"><span><span>练习：直射光</span></span></a><a href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html"><span><span>练习：2D 白板图</span></span></a><a href="learning__projects__unfinished-wip-pages__level-design-portfolio.html"><span><span>关卡设计作品集</span></span></a><a href="learning__projects__unfinished-wip-pages__adaptation.html"><span><span>设计测试：改编</span></span></a><a href="learning__projects__unfinished-wip-pages__exercise-floorplan.html"><span><span>练习：布局</span></span></a><a href="learning__projects__unfinished-wip-pages__verticality.html"><span><span>练习：纵向/垂直空间</span></span></a></div><div><a href="learning__projects__classic-combat.html"><span><span>上一页</span><span>经典战斗</span></span></a><a href="learning__projects__unfinished-wip-pages__modern-combat.html"><span><span>下一步</span><span>现代战斗</span></span></a></div><div></div></article>
+      </div>
+      <div class="gb-page-links-wrap">
 <div class="page-links"><a class="page-link" href="learning__projects__classic-combat.html"><span>上一页</span>经典战斗</a><a class="page-link" href="learning__projects__unfinished-wip-pages__modern-combat.html"><span>下一页</span>现代战斗</a></div>
-</main>
+
+      </div>
+    </main>
+    <aside class="gb-outline" data-outline>
+      <div class="gb-outline-inner">
+        <button class="gb-outline-title" type="button" data-toggle-outline>ON THIS PAGE</button>
+        <nav class="gb-outline-list" data-outline-list></nav>
+      </div>
+    </aside>
+  </div>
+  <div class="gb-search-modal" role="dialog" aria-modal="true" aria-label="搜索" data-search-modal>
+    <div class="gb-search-box">
+      <div class="gb-search-input-row">
+        <span class="gb-search-icon"></span>
+        <input type="search" data-search-input placeholder="搜索页面、章节或正文内容" autocomplete="off">
+        <button type="button" data-close-search>关闭</button>
+      </div>
+      <div class="gb-search-results" data-search-results></div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,118 +1,192 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>什么是关卡设计 | The Level Design Book 中文版</title>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="什么是关卡，什么是关卡设计，以及如何使用这本书">
+  <title>✨ 什么是关卡设计 | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="site-data.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body>
-<aside class="sidebar">
-<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
-<a class="active" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
-<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
-<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
-<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
-<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
-<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
-<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
-<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
-<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
-<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
-<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
-<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
-<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
-<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
-<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
-<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
-<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
-<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
-<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
-<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
-<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
-<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
-<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
-<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
-<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
-<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
-<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
-<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
-<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
-<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
-<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
-<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
-<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
-<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
-<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
-<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
-<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
-<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
-<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
-<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
-<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
-<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
-<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
-<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
-<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
-<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
-<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
-<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
-<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
-<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
-<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
-<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
-<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
-<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
-<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
-<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
-<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
-<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
-<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
-<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
-<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
-<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
-<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
-<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
-<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
-<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
-<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
-<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
-<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
-<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
-<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
-<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
-<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
-<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
-<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
-<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
-<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
-<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
-<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
-<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
-<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
-<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
-<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
-<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
-<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
-</aside>
-<main class="page">
-<div class="topbar">
-<a href="https://book.leveldesignbook.com/introduction">查看原文</a>
-<a href="https://book.leveldesignbook.com">原站首页</a>
+<body class="gb-body" data-page="introduction.html" data-article-hash="100108557261d37a014c3867e0fd3a0b93ac9f5b379b97db52f05dddddcbb3c8">
+  <div class="gb-scrim" data-close-panels></div>
+  <header class="gb-header">
+    <div class="gb-header-inner">
+      <button class="gb-icon-button gb-menu-button" type="button" data-open-sidebar aria-label="打开目录">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="gb-header-logo" href="index.html">
+        <span class="gb-logo-dot"></span>
+        <span>The Level Design Book</span>
+      </a>
+      <nav class="gb-header-links" aria-label="Top links">
+        <a href="process__overview.html">Book</a>
+        <a href="appendix__resources.html">Resources</a>
+        <a href="https://book.leveldesignbook.com/introduction">原文</a>
+      </nav>
+      <button class="gb-search-trigger" type="button" data-open-search>
+        <span class="gb-search-icon"></span>
+        <span class="gb-search-label">搜索...</span>
+        <span class="gb-shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+      </button>
+    </div>
+  </header>
+  <div class="gb-layout">
+    <aside class="gb-sidebar" data-sidebar>
+      <div class="gb-sidebar-scroll">
+<a class="gb-sidebar-brand" href="index.html"><span class="gb-brand-mark">◆</span><span><strong>The Level Design Book</strong><small>中文版</small></span></a>
+<nav class="gb-nav" aria-label="Table of contents">
+<a class="gb-nav-link" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="gb-nav-link active" href="introduction.html" style="--depth:0">✨ 什么是关卡设计</a>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 1, PROCESS</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="process__overview.html" style="--depth:1">🗺️ 如何制作一个关卡</a>
+<a class="gb-nav-link" href="process__preproduction.html" style="--depth:1">🧠 前期设计</a>
+<a class="gb-nav-link" href="process__preproduction__pacing.html" style="--depth:2">节奏</a>
+<a class="gb-nav-link" href="process__preproduction__research.html" style="--depth:2">调研</a>
+<a class="gb-nav-link" href="process__preproduction__worldbuilding.html" style="--depth:2">世界构建</a>
+<a class="gb-nav-link" href="process__preproduction__scope.html" style="--depth:2">范围控制</a>
+<a class="gb-nav-link" href="process__combat.html" style="--depth:1">🔫 战斗</a>
+<a class="gb-nav-link" href="process__combat__enemy.html" style="--depth:2">敌人设计</a>
+<a class="gb-nav-link" href="process__combat__encounter.html" style="--depth:2">遭遇战</a>
+<a class="gb-nav-link" href="process__combat__cover.html" style="--depth:2">掩体</a>
+<a class="gb-nav-link" href="process__combat__balance.html" style="--depth:2">地图平衡</a>
+<a class="gb-nav-link" href="process__layout.html" style="--depth:1">🛠️ 布局</a>
+<a class="gb-nav-link" href="process__layout__flow.html" style="--depth:2">动线</a>
+<a class="gb-nav-link" href="process__layout__flow__circulation.html" style="--depth:3">空间流线</a>
+<a class="gb-nav-link" href="process__layout__flow__verticality.html" style="--depth:3">纵向/垂直空间</a>
+<a class="gb-nav-link" href="process__layout__criticalpath.html" style="--depth:2">主动线</a>
+<a class="gb-nav-link" href="process__layout__parti.html" style="--depth:2">设计概念草图</a>
+<a class="gb-nav-link" href="process__layout__typology.html" style="--depth:2">类型学</a>
+<a class="gb-nav-link" href="process__layout__typology__gates.html" style="--depth:3">门与关口</a>
+<a class="gb-nav-link" href="process__blockout.html" style="--depth:1">🏠 白盒</a>
+<a class="gb-nav-link" href="process__blockout__massing.html" style="--depth:2">体块</a>
+<a class="gb-nav-link" href="process__blockout__massing__landscape.html" style="--depth:3">景观地形</a>
+<a class="gb-nav-link" href="process__blockout__massing__composition.html" style="--depth:3">构图</a>
+<a class="gb-nav-link" href="process__blockout__massing__prospect-refuge.html" style="--depth:3">眺望-庇护</a>
+<a class="gb-nav-link" href="process__blockout__metrics.html" style="--depth:2">标准尺度规范</a>
+<a class="gb-nav-link" href="process__blockout__metrics__modular.html" style="--depth:3">模块化套件设计</a>
+<a class="gb-nav-link" href="process__blockout__metrics__doom.html" style="--depth:3">《毁灭战士》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__metrics__quake.html" style="--depth:3">《雷神之锤》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__wayfinding.html" style="--depth:2">寻路与引导</a>
+<a class="gb-nav-link" href="process__blockout__playtesting.html" style="--depth:2">试玩测试</a>
+<a class="gb-nav-link" href="process__blockout__playtesting__persona.html" style="--depth:3">玩家画像</a>
+<a class="gb-nav-link" href="process__scripting.html" style="--depth:1">📜 脚本</a>
+<a class="gb-nav-link" href="process__scripting__nav.html" style="--depth:2">(存根) 导航</a>
+<a class="gb-nav-link" href="process__scripting__doors.html" style="--depth:2">门</a>
+<a class="gb-nav-link" href="process__lighting.html" style="--depth:1">☀️ 灯光</a>
+<a class="gb-nav-link" href="process__lighting__three-point.html" style="--depth:2">三点布光</a>
+<a class="gb-nav-link" href="process__lighting__d6-lighting.html" style="--depth:2">D6 灯光法</a>
+<a class="gb-nav-link" href="process__lighting__darkness.html" style="--depth:2">黑暗场景灯光</a>
+<a class="gb-nav-link" href="process__env-art.html" style="--depth:1">🏡 环境美术</a>
+<a class="gb-nav-link" href="process__env-art__psychology.html" style="--depth:2">形状与色彩心理学</a>
+<a class="gb-nav-link" href="process__env-art__texturing.html" style="--depth:2">材质</a>
+<a class="gb-nav-link" href="process__env-art__storytelling.html" style="--depth:2">叙事</a>
+<a class="gb-nav-link" href="process__env-art__optimization.html" style="--depth:2">优化</a>
+<a class="gb-nav-link" href="process__release.html" style="--depth:1">🌈 发布</a>
 </div>
-<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-<article><header><h1><span>✨</span>什么是关卡设计</h1><p>什么是关卡，什么是关卡设计，以及如何使用这本书</p></header><div><div><h2><div><a href="#what-is-a-level"></a></div><div>什么是关卡</div></h2><div><div><div><picture><div><img height="1052" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FQ6fLyf3fBmZnzHP8Qm0k%252FLDB_Halo_BloodGulch_BasketballCourt.jpg%3Falt%3Dmedia%26token%3D50234527-5221-4178-a91a-4f99e6344f08&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=909b004a&amp;sv=2" width="1924"/></div><figcaption>叠加在血峡谷（光环 1）概览上的篮球场图，作者： <span><a href="https://twitter.com/neilsonks/status/1658549380691968003">@neilsonks（通过推特）</a></span></figcaption></picture></div></div></div><p>一个 <strong>关卡</strong> 是进行游戏的空间。一些例子：</p><ul><li><div><div></div></div><div><p>《堡垒之夜》 岛，Roblox 中的障碍训练场（“obby”）</p></div></li><li><div><div></div></div><div><p>篮球场、赛马场或游乐场</p></div></li><li><div><div></div></div><div><p>大富翁棋盘、填字游戏、图画书</p></div></li></ul><p>所有这些游戏空间都已设置 <strong>边界</strong> 供玩家移动和互动。</p><p>不同关卡会提供 <strong>变化。</strong> 例如，所有篮球场都有相似的形状，但室外球场和室内体育馆提供不同的 <strong>经历</strong>, <strong>文化， </strong>和 <strong>心情。</strong></p><p>关卡设计师关注不同的游戏空间如何让玩家 <strong>感觉</strong> 和 <strong>表现</strong>.</p><h2><div><a href="#what-is-level-design"></a></div><div>什么是关卡设计</div></h2><p>我们对关卡设计进行了广泛的定义，但有一个具体的免责声明：</p><p><strong>关卡设计是规划和构建视频游戏空间的实践...... </strong></p><p><strong>...通常是第一人称或第三人称动作射击游戏。</strong></p><p>这本书对于横向卷轴平台游戏、自上而下的策略游戏或非战斗游戏仍然有用。但无论好坏，大多数关卡设计理论都将 3D 射击游戏作为默认媒介，这可以追溯到射击游戏盛行的 20 世纪 90 年代关卡设计师角色的发明。</p><p><i>    有关关卡设计师角色历史的更多信息，请参阅 </i><span><a href="culture__history-level-designer.html"><i>关卡设计师简史</i></a></span><i>.</i></p><div><div><div><picture><div><img height="1080" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-LtwoKZ58xOGNTn9g_Qy%252F-Ltwq-JcDDEN7UHH9OLR%252Funcharted4_blockout_em_schatz.jpg%3Falt%3Dmedia%26token%3Dfe61470c-d734-4540-ab8e-a83eb330da7d&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=944be663&amp;sv=2" width="1920"/></div><figcaption>Em Schatz 为《神秘海域 4》制作的“岛屿到来”白盒开发截图</figcaption></picture></div></div></div><h3><div><a href="#functional-level-design-vs.-environment-art"></a></div><div>功能性关卡设计与环境美术</div></h3><p>关卡设计师专注于塑造玩家行为。在大型工作室中，他们经常编写文档、草稿 <span><a href="process__layout.html">布局</a></span>， 建造 <span><a href="process__blockout.html">白盒</a></span>， 观察 <span><a href="process__blockout__playtesting.html">试玩测试</a></span>， 和 <span><a href="process__combat__balance.html">平衡</a></span> 地图和 <span><a href="process__combat__encounter.html">遭遇战</a></span>. </p><p>相比之下，一个 <strong>环境美术家</strong> 更注重图形。他们 <span><a href="process__env-art.html">美术处理</a></span> 模型、材料、布景和 <span><a href="process__lighting.html">灯光</a></span> 完善关卡的视觉外观。虽然这主要是装饰，但良好的环境美术支持体验设计目标并帮助玩家玩耍。</p><p>所以理解关卡设计有两种方法：</p><ul><li><div><div></div></div><div><p><i>正式的工业意义</i> 大写-L 大写-D “关卡设计” <i>没有环境美术</i></p></div></li><li><div><div></div></div><div><p><i>广泛的常识</i> 「关卡设计」 <i>包括环境美术</i> / 关卡中的任何内容</p></div></li></ul><p>在本书中我们强调 <i>正规工业</i> “关卡设计”用于学习目的，但请始终记住，您的玩家会参与其中 <i>广泛的常识</i> “关卡设计”作为一个整体。</p><div><div><div><picture><div><img height="811" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Maev3jxp4WpKXebg88n%252F-Maf5hE1bqDx4IO2HGuP%252FLDB_leveldesign_env-art_compare.jpg%3Falt%3Dmedia%26token%3Da921482a-e5bf-42f5-83a6-78975cbc4078&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=f6ed56b&amp;sv=2" width="1373"/></div><figcaption>使用来自 Dust 514 的盖伦特研究设施的过程图像比较“关卡设计”与“关卡设计”与“环境美术”的图表</figcaption></picture></div></div></div><h3><div><a href="#room-design-vs.-world-design"></a></div><div>房间设计与世界设计</div></h3><p>关卡设计师可以花费几天甚至几周的时间来设计一个房间。</p><p>但对于大型大逃杀游戏、开放世界或拥有数百/数千个房间的 MMO 来说，为单个房间而苦恼是不切实际的。一个 <strong>世界设计师</strong> 考虑 <span><a href="process__layout__flow.html">动线</a></span> 和 <span><a href="process__blockout__wayfinding.html">寻路</a></span> 对于社区而不是房屋，生物群落而不是地点，类别而不是实例。这种通用方法可以让玩家和系统呼吸。但如果没有玩家或系统来填补这个空白，最终的世界可能会感觉空虚或乏味。</p><p>要构建定向或脚本化的体验，请像建筑师一样关注每个房间。 </p><p>但对于空间大、玩家重、系统重的游戏来说，世界设计提供了城市规划师的轻松触感。</p><div><div><div><picture><div><img height="911" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MPphiBNyOFqTcMnqNAF%252F-MPppJ9ZGig_wxc7cSE0%252FFortnite_PleasantPark_TopDownOverview.jpg%3Falt%3Dmedia%26token%3D3fd67bec-7be1-4eb5-98f7-e0a3fbc3c6d6&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=5dff83d7&amp;sv=2" width="2427"/></div><figcaption>在《堡垒之夜》的“Pleasant Park”中，每间房屋的单独房间布局都不如社区的整体形状重要</figcaption></picture></div></div></div><h3><div><a href="#theory-vs.-go-map"></a></div><div>理论与“走地图”</div></h3><p>这是一本书，所以显然我们认为阅读是好的。 </p><p>但与任何其他艺术一样，一本书只能向您介绍这门手艺。在某些时候，你只需要合上书并去构建一些关卡即可。 </p><p>如果你向《雷神之锤》社区制图者提出很多问题，按照传统，你会直截了当地回答： <strong>“去地图吧。”</strong> 这种简短的表达方式可能看起来很粗鲁，但它的意图是培养——就好像在说，“别再拖延了，你会找到答案的；现在就去尝试吧，你已经准备好了。”</p><p>成为关卡设计师的唯一方法...就是制作关卡。理想情况下，有很多关卡。</p><p><i>    不知道要做什么？请参阅我们的建议列表 </i><span><a href="learning__projects.html"><i>项目</i></a></span><i>.</i></p><div><div></div><div><p>有时我们说“地图”而不是“关卡”。地图意味着支持多样性的自由形式空间，而关卡则意味着更加脚本化的方向。 </p><p>但这没什么大不了的。互换使用这些词。</p></div></div><div><div><div><picture><div><img height="576" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MDj_ngSOdI6jitZ76zx%252F-MDjzO9IvS-gUFWrgq6l%252FArcaneDimensions.jpg%3Falt%3Dmedia%26token%3D7162ef12-dc38-4cd9-8999-ab0c0869e6f2&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=a33d8755&amp;sv=2" width="1024"/></div><figcaption>《雷神之锤》1 mod 中启动中心的屏幕截图 <span><a href="https://www.quaddicted.com/reviews/ad_v1_80p1final.html">奥术维度</a></span>，西蒙“袜子”奥卡拉汉等人 </figcaption></picture></div></div></div><h2><div><a href="#philosophy"></a></div><div>哲学</div></h2><p>本书是带着关于关卡设计的具体理想和信念而写的。</p><h3><div><a href="#cleaner-theory"></a></div><div>清洁理论</div></h3><p>大多数The Level Design Book 中文版要么过于学术化和概念化，要么过于商业化和简化。我们的目标是解释和扩展工作关卡设计师使用的相同语言，同时保持足够的批判性以消除懒惰的思维。</p><p>关卡设计师通常缺乏讨论形状和体积的语言，并且可以从以下建筑概念中受益匪浅： <span><a href="process__blockout__massing.html">体块</a></span>。我们引用外部概念而没有意识到更深层次的根源；例如， <span><a href="process__layout__flow.html#critical-path">主动线</a></span> 来自主动线方法，工程中的范围界定和依赖性检查工具。当我们的言语和理论不精确时，思考和沟通就会受到影响。</p><div><div><div><picture><div><img height="500" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M0j1masUKQWiwiDGXN8%252F-M0j2-GH3OSU0m4JRUf2%252FFormSpaceAndOrder_Light_FrancisChing.png%3Falt%3Dmedia%26token%3Da65a1dcf-1b00-47e4-b858-fea1a643e4d5&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=27e54560&amp;sv=2" width="862"/></div><figcaption>建筑中使用的各种采光策略，作者：Francis Ching，摘自《形式、空间和秩序》</figcaption></picture></div></div></div><h3><div><a href="#zooming-out"></a></div><div>缩小</div></h3><p>虽然关卡设计师应该关注玩家行为，但有时我们必须缩小视野并看到大局。</p><p>一个关卡是空间设计、艺术、心理学、编程和文化的结合。从玩家的角度来看，关卡设计和环境美术没有区别。任何影响游戏世界的都是关卡设计。</p><p>避免简单化的注意事项的诱惑。关卡不仅仅是房间和盒子的集合，也不仅仅是上面散布着岩石和树木的风景。关卡拥有历史、文化和意图，作为负责任的设计师，我们必须考虑整个游戏体验。</p><div><div><div><picture><div><img height="492" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-LtwiHYWTP0HfTGol6GY%252F-Ltwj6_WXropnQEVl4pb%252Fan_approach_to_holistic_level_design_gdc2017.png%3Falt%3Dmedia%26token%3Dcffc6cf2-28f9-4247-b90d-46110d7ecbe5&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c471feda&amp;sv=2" width="1216"/></div><figcaption>仍然来自 Steve Lee 在 GDC 2017 上的“整体关卡设计方法”</figcaption></picture></div></div></div><h3><div><a href="#stay-alive-and-free"></a></div><div>保持活力和自由</div></h3><p>印刷版的关卡设计书籍往往会在几年内过时。幸运的是，这本书可以在线阅读。在可预见的未来，随着关卡设计的新发展或趋势的出现，我们打算继续更新本书。别死。</p><p>这本在线书籍将保持免费和开放访问，直到其服务器关闭 - 即使如此，其内容也可能会通过互联网进行存档。关卡设计社区集体进行了关卡设计，因此它应该继续自由地属于社区。 <strong>我们绝不会为这本书付费，也不会出售这本书的任何副本。</strong></p><p>未注明出处的书籍文本（以及未注明出处的图像/内容）是 <span><a href="appendix__license.html">许可的</a></span> 根据许可的 Creative Commons BY-NC-SA 4.0 许可证。您不能出售这本书，也不能出售任何移植/翻译。 <strong>所有副本、翻译和衍生作品必须保持免费和开放获取。</strong></p><div><div><div><picture><div><img height="107" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-LtfRE6vMa7dIv6OW2I1%252F-Ltf_CKhdLuJKGDXZ0IR%252Fcreative_commons_BY-NC-SA_4.png%3Falt%3Dmedia%26token%3D67bdaaa2-ed85-4dc1-8933-9e00c1193c91&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=3de51925&amp;sv=2" width="433"/></div><figcaption>所有未注明来源的文本和图像均 <span><a href="appendix__license.html">许可的</a></span> 根据 CC-BY-NC-SA 4.0</figcaption></picture></div></div></div><h2><div><a href="#how-to-use-this-book"></a></div><div>如何使用这本书</div></h2><p>本书由四个部分组成：</p><p><span><a href="process__overview.html"><strong>过程</strong></a></span> 详细介绍了关卡设计的核心概念，对于初学者和需要学习关卡设计工作流程和语言的学生来说是必不可少的。大多数读者应该从这里开始。</p><p><span><a href="culture__overview.html"><strong>文化</strong></a></span> 从不同角度涵盖了关卡设计趋势，并提供了有关建筑、照明和与关卡设计相关的其他工艺的历史的简短入门知识。</p><p><span><a href="studies__overview.html"><strong>研究</strong></a></span> 分析和解开特定关卡的工作原理，并附上图表和屏幕截图。</p><p><span><a href="learning__projects.html"><strong>项目</strong></a></span> 是为学生和爱好者提供的自学教程和项目想法。教师应检查 <span><a href="learning__notes.html">给教学者的笔记</a></span>. </p><p>还有一个附录，其中包含 <span><a href="appendix__tools.html"><strong>工具</strong> </a></span>列出推荐的软件和游戏引擎，以及其他关卡设计的链接 <span><a href="appendix__resources.html"><strong>资产和资源</strong></a></span><strong> </strong>（免费模型和贴图，其他The Level Design Book 中文版推荐等）最后强烈建议加入关卡设计 <span><a href="appendix__communities.html"><strong>社区</strong></a></span>，因为一本书无法回报你的爱。</p><div><div><div><picture><div><img height="1152" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MeE6S6RE84hTY0E4Lwf%252F-MeEBQvgO3g54xMOuO9K%252FLDB_Alba_Blockout2019_Jesse_UsTwo.jpg%3Falt%3Dmedia%26token%3Dc5e8dc22-5eef-44a8-bf25-44c3f605047f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=9149acad&amp;sv=2" width="2048"/></div><figcaption>由 ustwo Games 制作的 Alba 早期开放世界白盒的编辑截图； <span><a href="https://medium.com/@ustwogames/the-environment-art-of-alba-a-wildlife-adventure-6bddd8b56955">杰西·范·艾尔斯特摄</a></span></figcaption></picture></div></div></div><h2><div><a href="#now-what"></a></div><div>现在怎么办？</div></h2><ul><li><div><div></div></div><div><p><strong>初学者：</strong> 大致了解 <span><a href="process__overview.html">过程</a></span>， 尤其 <span><a href="process__preproduction.html">前期制作</a></span>, <span><a href="process__layout.html">布局</a></span>， 和 <span><a href="process__blockout.html">白盒</a></span>。然后选择一个 <span><a href="appendix__tools.html">工具</a></span>，加入关卡设计 <span><a href="appendix__communities.html">社区</a></span>， 和 <i>去地图。</i></p></div></li><li><div><div></div></div><div><p><strong>有点经验：</strong> 阅读特定主题，例如 <span><a href="process__preproduction__pacing.html">节奏</a></span>, <span><a href="process__layout__flow.html">动线</a></span>, <span><a href="process__combat__balance.html">平衡</a></span>, <span><a href="process__blockout__massing.html">体块</a></span>, <span><a href="process__blockout__metrics.html">标准尺度规范</a></span>， 和 <span><a href="process__lighting.html">灯光</a></span> 在大多数在线关卡设计教程中通常会被忽视。 </p><ul><li><div><div></div></div><div><p>我们也采取强硬立场 <span><a href="process__blockout__massing__composition.html">反对“引导线”</a></span> 和 <span><a href="process__env-art__psychology.html">反对形状心理学/色彩心理学</a></span>，认为这些理论要么具有误导性，要么无效，要么对关卡设计师的用途有限。 </p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>非常有经验：</strong> 看看我们的关键设计 <span><a href="studies__overview.html">研究</a></span>，甚至可能贡献一些你自己的。</p></div></li></ul><p></p></div></div></article>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 2, CULTURE</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="culture__overview.html" style="--depth:1">🦜 作为文化的关卡设计</a>
+<a class="gb-nav-link" href="culture__history-level-designer.html" style="--depth:1">关卡设计师简史</a>
+<a class="gb-nav-link" href="culture__zero-player.html" style="--depth:1">零玩家关卡设计</a>
+<a class="gb-nav-link" href="culture__unfinished-pages.html" style="--depth:1">未完成页面</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:2">建筑史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:2">结构工程入门</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:2">环境美术史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:2">家具史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:2">遭遇战设计史</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 3, STUDIES</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="studies__overview.html" style="--depth:1">🔍 如何研究一个关卡</a>
+<a class="gb-nav-link" href="studies__sp.html" style="--depth:1">单人关卡研究</a>
+<a class="gb-nav-link" href="studies__sp__undead-burg.html" style="--depth:2">不死镇（《黑暗之魂》1）</a>
+<a class="gb-nav-link" href="studies__sp__assassins.html" style="--depth:2">Assassins (《神偷》 1)</a>
+<a class="gb-nav-link" href="studies__sp__cradle.html" style="--depth:2">(存根) The Cradle (《神偷》 3)</a>
+<a class="gb-nav-link" href="studies__sp__sapienza.html" style="--depth:2">(存根) Sapienza (《杀手》)</a>
+<a class="gb-nav-link" href="studies__sp__silent-cartographer.html" style="--depth:2">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp.html" style="--depth:1">多人关卡研究</a>
+<a class="gb-nav-link" href="studies__mp__chill-out.html" style="--depth:2">Chill Out (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp__de_dust2.html" style="--depth:2">(存根) de_dust2 (《反恐精英》)</a>
+<a class="gb-nav-link" href="studies__irl.html" style="--depth:1">现实空间研究</a>
+<a class="gb-nav-link" href="studies__irl__disneyland.html" style="--depth:2">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="gb-nav-link" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:2">(存根) 拉斯维加斯 (美国内华达)</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 4, LEARNING</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="learning__notes.html" style="--depth:1">🎒 给教学者的笔记</a>
+<a class="gb-nav-link" href="learning__projects.html" style="--depth:1">项目计划</a>
+<a class="gb-nav-link" href="learning__projects__classic-combat.html" style="--depth:2">经典战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages.html" style="--depth:2">未完成 WIP 页面</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:3">现代战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:3">现代潜行</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:3">练习：直射光</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:3">练习：2D 白板图</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:3">关卡设计作品集</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:3">设计测试：改编</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:3">练习：布局</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:3">练习：纵向/垂直空间</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>APPENDIX</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="appendix__tools.html" style="--depth:1">工具</a>
+<a class="gb-nav-link" href="appendix__tools__trenchbroom.html" style="--depth:2">TrenchBroom</a>
+<a class="gb-nav-link" href="appendix__resources.html" style="--depth:1">资产与资源</a>
+<a class="gb-nav-link" href="appendix__resources__talks.html" style="--depth:2">推荐演讲</a>
+<a class="gb-nav-link" href="appendix__resources__books.html" style="--depth:2">推荐书目</a>
+<a class="gb-nav-link" href="appendix__resources__quake.html" style="--depth:2">《雷神之锤》资源</a>
+<a class="gb-nav-link" href="appendix__resources__quake__how-to-package.html" style="--depth:3">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="gb-nav-link" href="appendix__resources__formats.html" style="--depth:2">文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__fgd.html" style="--depth:3">FGD 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__map.html" style="--depth:3">MAP 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__mdl.html" style="--depth:3">MDL 文件格式</a>
+<a class="gb-nav-link" href="appendix__communities.html" style="--depth:1">社区</a>
+<a class="gb-nav-link" href="appendix__about.html" style="--depth:1">关于本书与作者</a>
+<a class="gb-nav-link" href="appendix__license.html" style="--depth:1">许可与版权</a>
+</div>
+</nav>
+
+      </div>
+    </aside>
+    <main class="gb-main" id="content">
+      <div class="gb-mobile-tools">
+        <button type="button" data-open-sidebar>目录</button>
+        <button type="button" data-open-outline>本页目录</button>
+      </div>
+      <div class="gb-page-actions">
+        <div class="gb-breadcrumbs"><span>中文版</span></div>
+        <div class="gb-action-links">
+          <a href="https://book.leveldesignbook.com/introduction">查看原文</a>
+          <a href="https://book.leveldesignbook.com">原站首页</a>
+        </div>
+      </div>
+      <div class="gb-license"><div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div></div>
+      <div class="gb-article-wrap">
+<article><header><h1><span>✨</span>什么是关卡设计</h1><p>什么是关卡，什么是关卡设计，以及如何使用这本书</p></header><div><div><h2><div><a href="#what-is-a-level"></a></div><div>什么是关卡</div></h2><div><div><div><picture><div><img height="1052" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FQ6fLyf3fBmZnzHP8Qm0k%252FLDB_Halo_BloodGulch_BasketballCourt.jpg%3Falt%3Dmedia%26token%3D50234527-5221-4178-a91a-4f99e6344f08&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=909b004a&amp;sv=2" width="1924"/></div><figcaption>叠加在血峡谷（光环 1）概览上的篮球场图，作者： <span><a href="https://twitter.com/neilsonks/status/1658549380691968003">@neilsonks（通过推特）</a></span></figcaption></picture></div></div></div><p>一个 <strong>关卡</strong> 是进行游戏的空间。一些例子：</p><ul><li><div><div></div></div><div><p>《堡垒之夜》（<a class="game-store-link" href="https://store.epicgames.com/p/fortnite?lang=en-US" rel="noopener noreferrer" target="_blank">Epic</a>） 岛，Roblox 中的障碍训练场（“obby”）</p></div></li><li><div><div></div></div><div><p>篮球场、赛马场或游乐场</p></div></li><li><div><div></div></div><div><p>大富翁棋盘、填字游戏、图画书</p></div></li></ul><p>所有这些游戏空间都已设置 <strong>边界</strong> 供玩家移动和互动。</p><p>不同关卡会提供 <strong>变化。</strong> 例如，所有篮球场都有相似的形状，但室外球场和室内体育馆提供不同的 <strong>经历</strong>, <strong>文化， </strong>和 <strong>心情。</strong></p><p>关卡设计师关注不同的游戏空间如何让玩家 <strong>感觉</strong> 和 <strong>表现</strong>.</p><h2><div><a href="#what-is-level-design"></a></div><div>什么是关卡设计</div></h2><p>我们对关卡设计进行了广泛的定义，但有一个具体的免责声明：</p><p><strong>关卡设计是规划和构建视频游戏空间的实践...... </strong></p><p><strong>...通常是第一人称或第三人称动作射击游戏。</strong></p><p>这本书对于横向卷轴平台游戏、自上而下的策略游戏或非战斗游戏仍然有用。但无论好坏，大多数关卡设计理论都将 3D 射击游戏作为默认媒介，这可以追溯到射击游戏盛行的 20 世纪 90 年代关卡设计师角色的发明。</p><p><i>    有关关卡设计师角色历史的更多信息，请参阅 </i><span><a href="culture__history-level-designer.html"><i>关卡设计师简史</i></a></span><i>.</i></p><div><div><div><picture><div><img height="1080" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-LtwoKZ58xOGNTn9g_Qy%252F-Ltwq-JcDDEN7UHH9OLR%252Funcharted4_blockout_em_schatz.jpg%3Falt%3Dmedia%26token%3Dfe61470c-d734-4540-ab8e-a83eb330da7d&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=944be663&amp;sv=2" width="1920"/></div><figcaption>Em Schatz 为《神秘海域 4》制作的“岛屿到来”白盒开发截图</figcaption></picture></div></div></div><h3><div><a href="#functional-level-design-vs.-environment-art"></a></div><div>功能性关卡设计与环境美术</div></h3><p>关卡设计师专注于塑造玩家行为。在大型工作室中，他们经常编写文档、草稿 <span><a href="process__layout.html">布局</a></span>， 建造 <span><a href="process__blockout.html">白盒</a></span>， 观察 <span><a href="process__blockout__playtesting.html">试玩测试</a></span>， 和 <span><a href="process__combat__balance.html">平衡</a></span> 地图和 <span><a href="process__combat__encounter.html">遭遇战</a></span>. </p><p>相比之下，一个 <strong>环境美术家</strong> 更注重图形。他们 <span><a href="process__env-art.html">美术处理</a></span> 模型、材料、布景和 <span><a href="process__lighting.html">灯光</a></span> 完善关卡的视觉外观。虽然这主要是装饰，但良好的环境美术支持体验设计目标并帮助玩家玩耍。</p><p>所以理解关卡设计有两种方法：</p><ul><li><div><div></div></div><div><p><i>正式的工业意义</i> 大写-L 大写-D “关卡设计” <i>没有环境美术</i></p></div></li><li><div><div></div></div><div><p><i>广泛的常识</i> 「关卡设计」 <i>包括环境美术</i> / 关卡中的任何内容</p></div></li></ul><p>在本书中我们强调 <i>正规工业</i> “关卡设计”用于学习目的，但请始终记住，您的玩家会参与其中 <i>广泛的常识</i> “关卡设计”作为一个整体。</p><div><div><div><picture><div><img height="811" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Maev3jxp4WpKXebg88n%252F-Maf5hE1bqDx4IO2HGuP%252FLDB_leveldesign_env-art_compare.jpg%3Falt%3Dmedia%26token%3Da921482a-e5bf-42f5-83a6-78975cbc4078&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=f6ed56b&amp;sv=2" width="1373"/></div><figcaption>使用来自 Dust 514 的盖伦特研究设施的过程图像比较“关卡设计”与“关卡设计”与“环境美术”的图表</figcaption></picture></div></div></div><h3><div><a href="#room-design-vs.-world-design"></a></div><div>房间设计与世界设计</div></h3><p>关卡设计师可以花费几天甚至几周的时间来设计一个房间。</p><p>但对于大型大逃杀游戏、开放世界或拥有数百/数千个房间的 MMO 来说，为单个房间而苦恼是不切实际的。一个 <strong>世界设计师</strong> 考虑 <span><a href="process__layout__flow.html">动线</a></span> 和 <span><a href="process__blockout__wayfinding.html">寻路</a></span> 对于社区而不是房屋，生物群落而不是地点，类别而不是实例。这种通用方法可以让玩家和系统呼吸。但如果没有玩家或系统来填补这个空白，最终的世界可能会感觉空虚或乏味。</p><p>要构建定向或脚本化的体验，请像建筑师一样关注每个房间。 </p><p>但对于空间大、玩家重、系统重的游戏来说，世界设计提供了城市规划师的轻松触感。</p><div><div><div><picture><div><img height="911" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MPphiBNyOFqTcMnqNAF%252F-MPppJ9ZGig_wxc7cSE0%252FFortnite_PleasantPark_TopDownOverview.jpg%3Falt%3Dmedia%26token%3D3fd67bec-7be1-4eb5-98f7-e0a3fbc3c6d6&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=5dff83d7&amp;sv=2" width="2427"/></div><figcaption>在《堡垒之夜》的“Pleasant Park”中，每间房屋的单独房间布局都不如社区的整体形状重要</figcaption></picture></div></div></div><h3><div><a href="#theory-vs.-go-map"></a></div><div>理论与“走地图”</div></h3><p>这是一本书，所以显然我们认为阅读是好的。 </p><p>但与任何其他艺术一样，一本书只能向您介绍这门手艺。在某些时候，你只需要合上书并去构建一些关卡即可。 </p><p>如果你向《雷神之锤》（<a class="game-store-link" href="https://store.steampowered.com/app/2310/Quake/" rel="noopener noreferrer" target="_blank">Steam</a>）社区制图者提出很多问题，按照传统，你会直截了当地回答： <strong>“去地图吧。”</strong> 这种简短的表达方式可能看起来很粗鲁，但它的意图是培养——就好像在说，“别再拖延了，你会找到答案的；现在就去尝试吧，你已经准备好了。”</p><p>成为关卡设计师的唯一方法...就是制作关卡。理想情况下，有很多关卡。</p><p><i>    不知道要做什么？请参阅我们的建议列表 </i><span><a href="learning__projects.html"><i>项目</i></a></span><i>.</i></p><div><div></div><div><p>有时我们说“地图”而不是“关卡”。地图意味着支持多样性的自由形式空间，而关卡则意味着更加脚本化的方向。 </p><p>但这没什么大不了的。互换使用这些词。</p></div></div><div><div><div><picture><div><img height="576" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MDj_ngSOdI6jitZ76zx%252F-MDjzO9IvS-gUFWrgq6l%252FArcaneDimensions.jpg%3Falt%3Dmedia%26token%3D7162ef12-dc38-4cd9-8999-ab0c0869e6f2&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=a33d8755&amp;sv=2" width="1024"/></div><figcaption>《雷神之锤》1 mod 中启动中心的屏幕截图 <span><a href="https://www.quaddicted.com/reviews/ad_v1_80p1final.html">奥术维度</a></span>，西蒙“袜子”奥卡拉汉等人 </figcaption></picture></div></div></div><h2><div><a href="#philosophy"></a></div><div>哲学</div></h2><p>本书是带着关于关卡设计的具体理想和信念而写的。</p><h3><div><a href="#cleaner-theory"></a></div><div>清洁理论</div></h3><p>大多数The Level Design Book 中文版要么过于学术化和概念化，要么过于商业化和简化。我们的目标是解释和扩展工作关卡设计师使用的相同语言，同时保持足够的批判性以消除懒惰的思维。</p><p>关卡设计师通常缺乏讨论形状和体积的语言，并且可以从以下建筑概念中受益匪浅： <span><a href="process__blockout__massing.html">体块</a></span>。我们引用外部概念而没有意识到更深层次的根源；例如， <span><a href="process__layout__flow.html#critical-path">主动线</a></span> 来自主动线方法，工程中的范围界定和依赖性检查工具。当我们的言语和理论不精确时，思考和沟通就会受到影响。</p><div><div><div><picture><div><img height="500" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M0j1masUKQWiwiDGXN8%252F-M0j2-GH3OSU0m4JRUf2%252FFormSpaceAndOrder_Light_FrancisChing.png%3Falt%3Dmedia%26token%3Da65a1dcf-1b00-47e4-b858-fea1a643e4d5&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=27e54560&amp;sv=2" width="862"/></div><figcaption>建筑中使用的各种采光策略，作者：Francis Ching，摘自《形式、空间和秩序》</figcaption></picture></div></div></div><h3><div><a href="#zooming-out"></a></div><div>缩小</div></h3><p>虽然关卡设计师应该关注玩家行为，但有时我们必须缩小视野并看到大局。</p><p>一个关卡是空间设计、艺术、心理学、编程和文化的结合。从玩家的角度来看，关卡设计和环境美术没有区别。任何影响游戏世界的都是关卡设计。</p><p>避免简单化的注意事项的诱惑。关卡不仅仅是房间和盒子的集合，也不仅仅是上面散布着岩石和树木的风景。关卡拥有历史、文化和意图，作为负责任的设计师，我们必须考虑整个游戏体验。</p><div><div><div><picture><div><img height="492" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-LtwiHYWTP0HfTGol6GY%252F-Ltwj6_WXropnQEVl4pb%252Fan_approach_to_holistic_level_design_gdc2017.png%3Falt%3Dmedia%26token%3Dcffc6cf2-28f9-4247-b90d-46110d7ecbe5&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c471feda&amp;sv=2" width="1216"/></div><figcaption>仍然来自 Steve Lee 在 GDC 2017 上的“整体关卡设计方法”</figcaption></picture></div></div></div><h3><div><a href="#stay-alive-and-free"></a></div><div>保持活力和自由</div></h3><p>印刷版的关卡设计书籍往往会在几年内过时。幸运的是，这本书可以在线阅读。在可预见的未来，随着关卡设计的新发展或趋势的出现，我们打算继续更新本书。别死。</p><p>这本在线书籍将保持免费和开放访问，直到其服务器关闭 - 即使如此，其内容也可能会通过互联网进行存档。关卡设计社区集体进行了关卡设计，因此它应该继续自由地属于社区。 <strong>我们绝不会为这本书付费，也不会出售这本书的任何副本。</strong></p><p>未注明出处的书籍文本（以及未注明出处的图像/内容）是 <span><a href="appendix__license.html">许可的</a></span> 根据许可的 Creative Commons BY-NC-SA 4.0 许可证。您不能出售这本书，也不能出售任何移植/翻译。 <strong>所有副本、翻译和衍生作品必须保持免费和开放获取。</strong></p><div><div><div><picture><div><img height="107" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-LtfRE6vMa7dIv6OW2I1%252F-Ltf_CKhdLuJKGDXZ0IR%252Fcreative_commons_BY-NC-SA_4.png%3Falt%3Dmedia%26token%3D67bdaaa2-ed85-4dc1-8933-9e00c1193c91&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=3de51925&amp;sv=2" width="433"/></div><figcaption>所有未注明来源的文本和图像均 <span><a href="appendix__license.html">许可的</a></span> 根据 CC-BY-NC-SA 4.0</figcaption></picture></div></div></div><h2><div><a href="#how-to-use-this-book"></a></div><div>如何使用这本书</div></h2><p>本书由四个部分组成：</p><p><span><a href="process__overview.html"><strong>过程</strong></a></span> 详细介绍了关卡设计的核心概念，对于初学者和需要学习关卡设计工作流程和语言的学生来说是必不可少的。大多数读者应该从这里开始。</p><p><span><a href="culture__overview.html"><strong>文化</strong></a></span> 从不同角度涵盖了关卡设计趋势，并提供了有关建筑、照明和与关卡设计相关的其他工艺的历史的简短入门知识。</p><p><span><a href="studies__overview.html"><strong>研究</strong></a></span> 分析和解开特定关卡的工作原理，并附上图表和屏幕截图。</p><p><span><a href="learning__projects.html"><strong>项目</strong></a></span> 是为学生和爱好者提供的自学教程和项目想法。教师应检查 <span><a href="learning__notes.html">给教学者的笔记</a></span>. </p><p>还有一个附录，其中包含 <span><a href="appendix__tools.html"><strong>工具</strong> </a></span>列出推荐的软件和游戏引擎，以及其他关卡设计的链接 <span><a href="appendix__resources.html"><strong>资产和资源</strong></a></span><strong> </strong>（免费模型和贴图，其他The Level Design Book 中文版推荐等）最后强烈建议加入关卡设计 <span><a href="appendix__communities.html"><strong>社区</strong></a></span>，因为一本书无法回报你的爱。</p><div><div><div><picture><div><img height="1152" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MeE6S6RE84hTY0E4Lwf%252F-MeEBQvgO3g54xMOuO9K%252FLDB_Alba_Blockout2019_Jesse_UsTwo.jpg%3Falt%3Dmedia%26token%3Dc5e8dc22-5eef-44a8-bf25-44c3f605047f&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=9149acad&amp;sv=2" width="2048"/></div><figcaption>由 ustwo Games 制作的 Alba 早期开放世界白盒的编辑截图； <span><a href="https://medium.com/@ustwogames/the-environment-art-of-alba-a-wildlife-adventure-6bddd8b56955">杰西·范·艾尔斯特摄</a></span></figcaption></picture></div></div></div><h2><div><a href="#now-what"></a></div><div>现在怎么办？</div></h2><ul><li><div><div></div></div><div><p><strong>初学者：</strong> 大致了解 <span><a href="process__overview.html">过程</a></span>， 尤其 <span><a href="process__preproduction.html">前期制作</a></span>, <span><a href="process__layout.html">布局</a></span>， 和 <span><a href="process__blockout.html">白盒</a></span>。然后选择一个 <span><a href="appendix__tools.html">工具</a></span>，加入关卡设计 <span><a href="appendix__communities.html">社区</a></span>， 和 <i>去地图。</i></p></div></li><li><div><div></div></div><div><p><strong>有点经验：</strong> 阅读特定主题，例如 <span><a href="process__preproduction__pacing.html">节奏</a></span>, <span><a href="process__layout__flow.html">动线</a></span>, <span><a href="process__combat__balance.html">平衡</a></span>, <span><a href="process__blockout__massing.html">体块</a></span>, <span><a href="process__blockout__metrics.html">标准尺度规范</a></span>， 和 <span><a href="process__lighting.html">灯光</a></span> 在大多数在线关卡设计教程中通常会被忽视。 </p><ul><li><div><div></div></div><div><p>我们也采取强硬立场 <span><a href="process__blockout__massing__composition.html">反对“引导线”</a></span> 和 <span><a href="process__env-art__psychology.html">反对形状心理学/色彩心理学</a></span>，认为这些理论要么具有误导性，要么无效，要么对关卡设计师的用途有限。 </p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>非常有经验：</strong> 看看我们的关键设计 <span><a href="studies__overview.html">研究</a></span>，甚至可能贡献一些你自己的。</p></div></li></ul><p></p></div></div></article>
+      </div>
+      <div class="gb-page-links-wrap">
 <div class="page-links"><a class="page-link" href="index.html"><span>上一页</span>The Level Design Book 中文版</a><a class="page-link" href="process__overview.html"><span>下一页</span>🗺️ 如何制作一个关卡</a></div>
-</main>
+
+      </div>
+    </main>
+    <aside class="gb-outline" data-outline>
+      <div class="gb-outline-inner">
+        <button class="gb-outline-title" type="button" data-toggle-outline>ON THIS PAGE</button>
+        <nav class="gb-outline-list" data-outline-list></nav>
+      </div>
+    </aside>
+  </div>
+  <div class="gb-search-modal" role="dialog" aria-modal="true" aria-label="搜索" data-search-modal>
+    <div class="gb-search-box">
+      <div class="gb-search-input-row">
+        <span class="gb-search-icon"></span>
+        <input type="search" data-search-input placeholder="搜索页面、章节或正文内容" autocomplete="off">
+        <button type="button" data-close-search>关闭</button>
+      </div>
+      <div class="gb-search-results" data-search-results></div>
+    </div>
+  </div>
 </body>
 </html>

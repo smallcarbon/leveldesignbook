@@ -1,118 +1,192 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>TrenchBroom | The Level Design Book 中文版</title>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="这个基于画笔的现代关卡编辑器工具的信息和资源">
+  <title>TrenchBroom | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="site-data.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body>
-<aside class="sidebar">
-<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
-<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
-<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
-<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
-<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
-<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
-<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
-<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
-<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
-<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
-<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
-<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
-<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
-<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
-<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
-<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
-<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
-<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
-<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
-<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
-<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
-<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
-<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
-<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
-<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
-<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
-<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
-<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
-<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
-<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
-<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
-<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
-<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
-<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
-<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
-<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
-<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
-<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
-<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
-<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
-<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
-<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
-<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
-<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
-<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
-<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
-<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
-<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
-<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
-<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
-<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
-<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
-<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
-<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
-<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
-<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
-<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
-<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
-<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
-<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
-<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
-<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
-<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
-<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
-<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
-<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
-<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
-<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
-<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
-<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
-<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
-<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
-<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
-<a class="active" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
-<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
-<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
-<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
-<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
-<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
-<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
-<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
-<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
-<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
-<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
-<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
-<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
-</aside>
-<main class="page">
-<div class="topbar">
-<a href="https://book.leveldesignbook.com/appendix/tools/trenchbroom">查看原文</a>
-<a href="https://book.leveldesignbook.com">原站首页</a>
+<body class="gb-body" data-page="appendix__tools__trenchbroom.html" data-article-hash="d3d76515915802e84822f5b2b09476d419027bc3d957dab400fca51eaee1d591">
+  <div class="gb-scrim" data-close-panels></div>
+  <header class="gb-header">
+    <div class="gb-header-inner">
+      <button class="gb-icon-button gb-menu-button" type="button" data-open-sidebar aria-label="打开目录">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="gb-header-logo" href="index.html">
+        <span class="gb-logo-dot"></span>
+        <span>The Level Design Book</span>
+      </a>
+      <nav class="gb-header-links" aria-label="Top links">
+        <a href="process__overview.html">Book</a>
+        <a href="appendix__resources.html">Resources</a>
+        <a href="https://book.leveldesignbook.com/appendix/tools/trenchbroom">原文</a>
+      </nav>
+      <button class="gb-search-trigger" type="button" data-open-search>
+        <span class="gb-search-icon"></span>
+        <span class="gb-search-label">搜索...</span>
+        <span class="gb-shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+      </button>
+    </div>
+  </header>
+  <div class="gb-layout">
+    <aside class="gb-sidebar" data-sidebar>
+      <div class="gb-sidebar-scroll">
+<a class="gb-sidebar-brand" href="index.html"><span class="gb-brand-mark">◆</span><span><strong>The Level Design Book</strong><small>中文版</small></span></a>
+<nav class="gb-nav" aria-label="Table of contents">
+<a class="gb-nav-link" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="gb-nav-link" href="introduction.html" style="--depth:0">✨ 什么是关卡设计</a>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 1, PROCESS</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="process__overview.html" style="--depth:1">🗺️ 如何制作一个关卡</a>
+<a class="gb-nav-link" href="process__preproduction.html" style="--depth:1">🧠 前期设计</a>
+<a class="gb-nav-link" href="process__preproduction__pacing.html" style="--depth:2">节奏</a>
+<a class="gb-nav-link" href="process__preproduction__research.html" style="--depth:2">调研</a>
+<a class="gb-nav-link" href="process__preproduction__worldbuilding.html" style="--depth:2">世界构建</a>
+<a class="gb-nav-link" href="process__preproduction__scope.html" style="--depth:2">范围控制</a>
+<a class="gb-nav-link" href="process__combat.html" style="--depth:1">🔫 战斗</a>
+<a class="gb-nav-link" href="process__combat__enemy.html" style="--depth:2">敌人设计</a>
+<a class="gb-nav-link" href="process__combat__encounter.html" style="--depth:2">遭遇战</a>
+<a class="gb-nav-link" href="process__combat__cover.html" style="--depth:2">掩体</a>
+<a class="gb-nav-link" href="process__combat__balance.html" style="--depth:2">地图平衡</a>
+<a class="gb-nav-link" href="process__layout.html" style="--depth:1">🛠️ 布局</a>
+<a class="gb-nav-link" href="process__layout__flow.html" style="--depth:2">动线</a>
+<a class="gb-nav-link" href="process__layout__flow__circulation.html" style="--depth:3">空间流线</a>
+<a class="gb-nav-link" href="process__layout__flow__verticality.html" style="--depth:3">纵向/垂直空间</a>
+<a class="gb-nav-link" href="process__layout__criticalpath.html" style="--depth:2">主动线</a>
+<a class="gb-nav-link" href="process__layout__parti.html" style="--depth:2">设计概念草图</a>
+<a class="gb-nav-link" href="process__layout__typology.html" style="--depth:2">类型学</a>
+<a class="gb-nav-link" href="process__layout__typology__gates.html" style="--depth:3">门与关口</a>
+<a class="gb-nav-link" href="process__blockout.html" style="--depth:1">🏠 白盒</a>
+<a class="gb-nav-link" href="process__blockout__massing.html" style="--depth:2">体块</a>
+<a class="gb-nav-link" href="process__blockout__massing__landscape.html" style="--depth:3">景观地形</a>
+<a class="gb-nav-link" href="process__blockout__massing__composition.html" style="--depth:3">构图</a>
+<a class="gb-nav-link" href="process__blockout__massing__prospect-refuge.html" style="--depth:3">眺望-庇护</a>
+<a class="gb-nav-link" href="process__blockout__metrics.html" style="--depth:2">标准尺度规范</a>
+<a class="gb-nav-link" href="process__blockout__metrics__modular.html" style="--depth:3">模块化套件设计</a>
+<a class="gb-nav-link" href="process__blockout__metrics__doom.html" style="--depth:3">《毁灭战士》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__metrics__quake.html" style="--depth:3">《雷神之锤》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__wayfinding.html" style="--depth:2">寻路与引导</a>
+<a class="gb-nav-link" href="process__blockout__playtesting.html" style="--depth:2">试玩测试</a>
+<a class="gb-nav-link" href="process__blockout__playtesting__persona.html" style="--depth:3">玩家画像</a>
+<a class="gb-nav-link" href="process__scripting.html" style="--depth:1">📜 脚本</a>
+<a class="gb-nav-link" href="process__scripting__nav.html" style="--depth:2">(存根) 导航</a>
+<a class="gb-nav-link" href="process__scripting__doors.html" style="--depth:2">门</a>
+<a class="gb-nav-link" href="process__lighting.html" style="--depth:1">☀️ 灯光</a>
+<a class="gb-nav-link" href="process__lighting__three-point.html" style="--depth:2">三点布光</a>
+<a class="gb-nav-link" href="process__lighting__d6-lighting.html" style="--depth:2">D6 灯光法</a>
+<a class="gb-nav-link" href="process__lighting__darkness.html" style="--depth:2">黑暗场景灯光</a>
+<a class="gb-nav-link" href="process__env-art.html" style="--depth:1">🏡 环境美术</a>
+<a class="gb-nav-link" href="process__env-art__psychology.html" style="--depth:2">形状与色彩心理学</a>
+<a class="gb-nav-link" href="process__env-art__texturing.html" style="--depth:2">材质</a>
+<a class="gb-nav-link" href="process__env-art__storytelling.html" style="--depth:2">叙事</a>
+<a class="gb-nav-link" href="process__env-art__optimization.html" style="--depth:2">优化</a>
+<a class="gb-nav-link" href="process__release.html" style="--depth:1">🌈 发布</a>
 </div>
-<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-<article><header><nav><ol><li></li><li></li></ol></nav><h1>TrenchBroom</h1><p>这个基于画笔的现代关卡编辑器工具的信息和资源</p></header><div><div><p><span><a href="https://kristianduske.com/trenchbroom/"><strong>TrenchBroom</strong></a></span> （或 TrenchBroom 2，或 TB）是一款免费的开源跨平台 3D 关卡编辑器，具有现代化的 《雷神之锤》 风格笔刷构造和持续更新/支持。它广泛应用于多个改装社区以及商业项目。 </p><p>我们推荐 TB 作为一款不错的通用 3D 关卡编辑器工具，它可以与 Windows、macOS 和 Linux 上的多个游戏引擎配合使用。</p><div><div><div><div><iframe></iframe></div></div></div></div><h2><div><a href="#workflow"></a></div><div>工作流程</div></h2><p>TB 与之前的 《雷神之锤》 时代关卡编辑器不同，它强调在单个视图窗格中进行 3D 构建。 </p><p>剪切平面可以是 3D，并且所有画笔都会自动验证凸度。 TB 还非常擅长同时调整多个画笔的大小，具有类似于 SketchUp 的共享平面处理和上下文挤压功能。</p><p>仅就其构建能力而言，我们推荐 TB 进行构建 <span><a href="process__blockout.html">白盒</a></span>，但它也允许令人惊讶的详细建模和纹理 <span><a href="process__env-art.html">艺术传递</a></span>.<!-- --></p><div><div><div><div><div><div><div><img height="435" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MGiaafOL1SFz9zF9aNV%252F-MGieDp2Fm8LbDvJ1WXD%252FTrenchbroom_Bal_CreateVerts.gif%3Falt%3Dmedia%26token%3Dd4b48e7b-24d3-4031-a6e5-0e5d2169c7bf&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=4d984eb7&amp;sv=2" width="642"/></div></div></div></div><div><div><div><div><img src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MGiUfyjhNJ37SvNCFCm%252F-MGiXldb2hgrKJgePSxe%252FTrenchbroom_Bal_TorusConstruction.gif%3Falt%3Dmedia%26token%3Da57d7d13-796d-4b42-b861-fb904b9d9c03&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=dac6c04b&amp;sv=2"/></div></div></div></div><p><i>各种 TB 构建和纹理演示的画廊，来自 </i><span><a href="https://www.slipseer.com/index.php?threads/bals-quake-mapping-tips-tricks.100/"><i>“巴尔的地震测绘提示与技巧”</i></a></span><i> 作者：伯努瓦·“巴尔”·斯托德尔</i></p></div></div><div><div><div><div><div><div><img height="550" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MGiaafOL1SFz9zF9aNV%252F-MGieUxayXworeJoVm69%252FTrenchbroom_Bal_TextureSkewValveFormat.gif%3Falt%3Dmedia%26token%3D7fee1851-ec8c-48e9-aa8a-3fe6e5588116&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=6555fcc2&amp;sv=2" width="1175"/></div></div></div></div><div><div><div><div><img height="468" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FJ1ZcTwaLnURdEyqdeLSB%252Fbal_tb_trenchbroom_curveTexturing.gif%3Falt%3Dmedia%26token%3Dd1453e7d-a765-47cd-a572-92ef25db2d20&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c2ed8eda&amp;sv=2" width="452"/></div></div></div></div></div></div></div><h2><div><a href="#is-trenchbroom-good-for-my-non-quake-project"></a></div><div>TrenchBroom 适合我的非 《雷神之锤》 项目吗？</div></h2><p>如果它不是 《雷神之锤》 mod，则需要考虑几个方面：</p><ul><li><div><div></div></div><div><p><strong>.MAP / .BSP 支持</strong>: 你的引擎可以导入或编译吗 <span><a href="appendix__resources__formats__map.html">.MAP 文件</a></span> 或.BSP 文件？</p><ul><li><div><div></div></div><div><p>TB的主要文件格式是基于文本的 <strong>雷神之锤.MAP</strong>,<strong> </strong>阀门型号（“版本 220”）</p></div></li><li><div><div></div></div><div><p>如果它不是 《雷神之锤》 引擎，您将需要一个插件来导入 .MAP 或编译的 .BSP</p></div></li><li><div><div></div></div><div><p>最坏的情况：将画笔导出到 .OBJ 但丢失所有实体数据</p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>资产整合：</strong> TB可以接入你的游戏资产吗？</p><ul><li><div><div></div></div><div><p>结核病可以阅读 <strong>常见文件格式</strong> 如 PNG、JPG、FBX、OBJ 等</p></div></li><li><div><div></div></div><div><p>有些插件可以 <strong>同步到 《雷神之锤》 格式</strong>，例如纹理包，例如 .WAD</p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>脚本编写： </strong>您的脚本需求有多复杂？</p><ul><li><div><div></div></div><div><p>为了放置游戏对象或编写脚本，TB 会 <strong>实体定义</strong> 在 <span><a href="appendix__resources__formats__fgd.html"><strong>.烟气脱硫</strong></a></span> 文件。</p></div></li><li><div><div></div></div><div><p>TB 适合简单的《雷神之锤》风格的脚本编写：放置对象、将按钮链接到门或绘制简单的路径……但编写过场动画或编排复杂的序列有点痛苦。</p></div></li><li><div><div></div></div><div><p>或者，也许仅将 TB 用于 3D 构建和标记，并在您使用的任何游戏引擎中本地编写所有脚本。<!-- --></p></div></li></ul></div></li></ul><h2><div><a href="#trenchbroom-engine-compatibility-pipelines"></a></div><div>TrenchBroom 引擎兼容性/管道</div></h2><div><div><div><div></div></div></div><div><div><div><div><div><div>游戏/引擎</div><div>.MAP支持</div><div>资产整合</div></div></div><div><div><div><div><div><p><strong>戈多 </strong></p></div></div><div><div><p>导入通过 <span><a href="https://github.com/func-godot/func_godot_plugin">函数Godot</a></span> (<span><a href="https://func-godot.github.io/func_godot_docs/FuncGodot%20Manual/FuncGodot%20Manual.html">文档</a></span>）或 <span><a href="https://github.com/QodotPlugin/qodot-plugin"><s>科多特</s></a></span><s> (</s><span><a href="https://qodotplugin.github.io/"><s>文档</s></a></span><s>)</s> <i>（已停产）</i></p></div></div><div><div><p>常见文件格式，FGD / WAD 通过插件</p></div></div></div><div><div><div><p><strong>团结</strong></p></div></div><div><div><p>导入通过 <span><a href="https://assetstore.unity.com/packages/tools/level-design/tremble-map-importer-277805">颤抖</a></span>, <span><a href="https://github.com/chunky-cat/Qunity">数量</a></span>, <span><a href="https://github.com/radiatoryang/scopa">斯科帕</a></span>, 或 <span><a href="https://github.com/wfowler1/Unity3D-BSP-Importer">Unity3D-BSP-导入器</a></span></p></div></div><div><div><p>常见文件格式，FGD / WAD（通过一些插件）</p></div></div></div><div><div><div><p><strong>虚幻</strong></p></div></div><div><div><p>导入通过 <span><a href="https://nte.itch.io/hammuer">哈默尔</a></span> (<span><a href="https://store.steampowered.com/news/app/1371690/view/2905347823300141067">指南</a></span>)</p></div></div><div><div><p>常见文件格式，通过 TextUEr 的纹理（<span><a href="https://store.steampowered.com/news/app/1371690/view/2905347823300141067">指南</a></span>)</p></div></div></div><div><div><div><p>雷神之锤1</p></div></div><div><div><p>通过以下方式编译到 BSP <span><a href="https://github.com/ericwa/ericw-tools">EricW工具</a></span></p></div></div><div><div><p>内置 FGD / WAD / MDL</p></div></div></div><div><div><div><p>雷神之锤2</p></div></div><div><div><p>通过以下方式编译到 BSP <span><a href="https://github.com/qbism/q2tools-220">q2tools-220</a></span></p></div></div><div><div><p>内置 FGD / WAL / MD2</p></div></div></div><div><div><div><p>雷神之锤 3 (<span><a href="https://github.com/TrenchBroom/TrenchBroom/issues/2425">不完整的</a></span>)</p></div></div><div><div><p>通过以下方式编译到 BSP <span><a href="http://q3map2.robotrenegade.com/">q3映射2</a></span></p></div></div><div><div><p>内置 MD3 / 等，但还没有（或曾经？）补丁编辑支持</p></div></div></div><div><div><div><p>半条命（<span><a href="https://github.com/TrenchBroom/TrenchBroom/issues/1140">几乎</a></span>)</p></div></div><div><div><p>通过以下方式编译到 BSP <span><a href="http://zhlt.info/">ZHLT v3.4+</a></span> /VHLT（<span><a href="https://twhl.info/wiki/page/Tutorial%3A_Setting_up_TrenchBroom_for_GoldSource_games#Setting_up_VHLT">指南</a></span>)</p></div></div><div><div><p>内置FGD / WAD3 / MDL</p></div></div></div><div><div><div><p>毁灭战士 3 (<span><a href="https://github.com/RobertBeckebans/TrenchBroomBFG">叉子</a></span>)</p></div></div><div><div><p>通过 <span><a href="https://github.com/RobertBeckebans/TrenchBroomBFG">定制叉 Trenchbroom-BFG</a></span></p></div></div><div><div><p>通过 <span><a href="https://github.com/RobertBeckebans/TrenchBroomBFG">定制叉 Trenchbroom-BFG</a></span></p></div></div></div></div></div></div></div></div></div><ul><li><div><div></div></div><div><p><strong>如果为 《雷神之锤》 进行映射</strong>，寻求帮助 <span><a href="https://discord.com/invite/58XqmZM"><strong>地震测绘不一致</strong></a></span></p></div></li><li><div><div></div></div><div><p><strong>如果使用 Godot，请寻求帮助 </strong><span><a href="https://discord.gg/eBQ7EfNZSZ"><strong>FuncGodot 不和谐</strong></a></span></p></div></li><li><div><div></div></div><div><p>要为任何引擎构建 .MAP 文件导入器，请参阅 <span><a href="appendix__resources__formats__map.html">MAP 文件格式</a></span> 获取信息和示例代码</p></div></li><li><div><div></div></div><div><p>对于非 《雷神之锤》 引擎，您必须创建一个 <span><a href="https://trenchbroom.github.io/manual/latest/#game_configuration">TrenchBroom游戏配置</a></span>。请参阅 <span><a href="https://github.com/TrenchBroom/TrenchBroom/tree/master/app/resources/games">GitHub 仓库 <code>/resources/games/</code> 文件夹</a></span> 研究示例配置。<!-- --></p></div></li><li><div><div></div></div><div><p>请注意，TB 可能不是 《雷神之锤》 3 或 《毁灭战士》 3 引擎的最佳工具。参见 <span><a href="appendix__tools.html">工具</a></span> 获取游戏引擎和推荐关卡编辑器的完整列表。</p></div></li></ul><h2><div><a href="#resources-and-community"></a></div><div>资源和社区</div></h2><ul><li><div><div></div></div><div><p><span><a href="https://trenchbroom.github.io/manual/latest/">沟渠扫帚手册</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="https://github.com/TrenchBroom/TrenchBroom/releases">在 GitHub 上下载 TrenchBroom</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="https://github.com/TrenchBroom/TrenchBroom">GitHub 上的 TrenchBroom 存储库</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="https://discord.gg/WGf9uve">TrenchBroom不和谐</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="https://www.youtube.com/watch?v=gONePWocbqA"><strong>TrenchBroom 快速入门教程视频简介</strong></a></span><strong> </strong>通过<strong> </strong>David "dumptruck_ds" Spell 假设您正在为 《雷神之锤》 进行映射，但一般设置过程与任何引擎的映射类似。</p></div></li><li><div><div></div></div><div><p><span><a href="https://www.slipseer.com/index.php?threads/bals-quake-mapping-tips-tricks.100/"><strong>Bal 的地震测绘提示与技巧 (2022)</strong></a></span><strong> </strong>作者：Benoit "Bal" Stordeur 是中级/高级 Trenchbroom 施工技术的重要必读之作。尽管 Stordeur 在 《雷神之锤》 工作，但他的建议适用于在任何游戏中使用 Trenchbroom。</p></div></li></ul><h3><div><a href="#trenchbroom-utility-tools"></a></div><div>TrenchBroom实用工具</div></h3><ul><li><div><div></div></div><div><p>（Windows） <span><a href="https://bitbucket.org/khreathor/obj-2-map/wiki/Home"><strong>对象2MAP</strong></a></span><strong> </strong>作者：Warren Marshall / Aleksander Marhall 将 .OBJ 3D 模型转换为 .MAP 画笔。请注意，该工具相当古老，但它对于复杂的形状、地形或参考地理非常有用。</p><ul><li><div><div></div></div><div><p>注意：如果您使用的是现代游戏引擎，只需直接导入.OBJ，无需使用此工具。该实用程序更适合《雷神之锤》/《半条命》地图绘制者。</p></div></li></ul></div></li><li><div><div></div></div><div><p>（网络） <span><a href="https://spacehare.github.io/prefabs/"><strong>TrenchBroom预制件</strong></a></span><strong> </strong>by SpaceHare 允许您将圆柱体、拱门和楼梯基元复制并粘贴到编辑器中。</p></div></li><li><div><div></div></div><div><p>（网络） <span><a href="https://tools.ummjackson.com/func_terrain"><strong>函数地形</strong></a></span><strong> </strong>Jackson Palmer 的作品可让您生成带有噪波图案的“三角汤”风格笔刷地形或绘制您自己的高度图</p></div></li></ul><div><div><div><picture><div><img height="499" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252Fuys4OZ1YaobF90UDCIrz%252Fimage.png%3Falt%3Dmedia%26token%3Dc608fcee-96e1-40bc-9566-1f3620e486d6&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=8de5f07b&amp;sv=2" width="792"/></div><figcaption>各种可复制粘贴的 TrenchBroom 原始预制件的屏幕截图， <span><a href="https://spacehare.github.io/prefabs">SpaceHare 的网络工具</a></span></figcaption></picture></div></div></div><p></p></div></div></article>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 2, CULTURE</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="culture__overview.html" style="--depth:1">🦜 作为文化的关卡设计</a>
+<a class="gb-nav-link" href="culture__history-level-designer.html" style="--depth:1">关卡设计师简史</a>
+<a class="gb-nav-link" href="culture__zero-player.html" style="--depth:1">零玩家关卡设计</a>
+<a class="gb-nav-link" href="culture__unfinished-pages.html" style="--depth:1">未完成页面</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:2">建筑史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:2">结构工程入门</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:2">环境美术史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:2">家具史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:2">遭遇战设计史</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 3, STUDIES</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="studies__overview.html" style="--depth:1">🔍 如何研究一个关卡</a>
+<a class="gb-nav-link" href="studies__sp.html" style="--depth:1">单人关卡研究</a>
+<a class="gb-nav-link" href="studies__sp__undead-burg.html" style="--depth:2">不死镇（《黑暗之魂》1）</a>
+<a class="gb-nav-link" href="studies__sp__assassins.html" style="--depth:2">Assassins (《神偷》 1)</a>
+<a class="gb-nav-link" href="studies__sp__cradle.html" style="--depth:2">(存根) The Cradle (《神偷》 3)</a>
+<a class="gb-nav-link" href="studies__sp__sapienza.html" style="--depth:2">(存根) Sapienza (《杀手》)</a>
+<a class="gb-nav-link" href="studies__sp__silent-cartographer.html" style="--depth:2">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp.html" style="--depth:1">多人关卡研究</a>
+<a class="gb-nav-link" href="studies__mp__chill-out.html" style="--depth:2">Chill Out (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp__de_dust2.html" style="--depth:2">(存根) de_dust2 (《反恐精英》)</a>
+<a class="gb-nav-link" href="studies__irl.html" style="--depth:1">现实空间研究</a>
+<a class="gb-nav-link" href="studies__irl__disneyland.html" style="--depth:2">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="gb-nav-link" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:2">(存根) 拉斯维加斯 (美国内华达)</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 4, LEARNING</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="learning__notes.html" style="--depth:1">🎒 给教学者的笔记</a>
+<a class="gb-nav-link" href="learning__projects.html" style="--depth:1">项目计划</a>
+<a class="gb-nav-link" href="learning__projects__classic-combat.html" style="--depth:2">经典战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages.html" style="--depth:2">未完成 WIP 页面</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:3">现代战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:3">现代潜行</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:3">练习：直射光</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:3">练习：2D 白板图</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:3">关卡设计作品集</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:3">设计测试：改编</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:3">练习：布局</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:3">练习：纵向/垂直空间</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>APPENDIX</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="appendix__tools.html" style="--depth:1">工具</a>
+<a class="gb-nav-link active" href="appendix__tools__trenchbroom.html" style="--depth:2">TrenchBroom</a>
+<a class="gb-nav-link" href="appendix__resources.html" style="--depth:1">资产与资源</a>
+<a class="gb-nav-link" href="appendix__resources__talks.html" style="--depth:2">推荐演讲</a>
+<a class="gb-nav-link" href="appendix__resources__books.html" style="--depth:2">推荐书目</a>
+<a class="gb-nav-link" href="appendix__resources__quake.html" style="--depth:2">《雷神之锤》资源</a>
+<a class="gb-nav-link" href="appendix__resources__quake__how-to-package.html" style="--depth:3">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="gb-nav-link" href="appendix__resources__formats.html" style="--depth:2">文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__fgd.html" style="--depth:3">FGD 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__map.html" style="--depth:3">MAP 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__mdl.html" style="--depth:3">MDL 文件格式</a>
+<a class="gb-nav-link" href="appendix__communities.html" style="--depth:1">社区</a>
+<a class="gb-nav-link" href="appendix__about.html" style="--depth:1">关于本书与作者</a>
+<a class="gb-nav-link" href="appendix__license.html" style="--depth:1">许可与版权</a>
+</div>
+</nav>
+
+      </div>
+    </aside>
+    <main class="gb-main" id="content">
+      <div class="gb-mobile-tools">
+        <button type="button" data-open-sidebar>目录</button>
+        <button type="button" data-open-outline>本页目录</button>
+      </div>
+      <div class="gb-page-actions">
+        <div class="gb-breadcrumbs"><span>APPENDIX</span><span class="gb-breadcrumb-sep">/</span><span>工具</span></div>
+        <div class="gb-action-links">
+          <a href="https://book.leveldesignbook.com/appendix/tools/trenchbroom">查看原文</a>
+          <a href="https://book.leveldesignbook.com">原站首页</a>
+        </div>
+      </div>
+      <div class="gb-license"><div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div></div>
+      <div class="gb-article-wrap">
+<article><header><nav><ol><li></li><li></li></ol></nav><h1>TrenchBroom</h1><p>这个基于画笔的现代关卡编辑器工具的信息和资源</p></header><div><div><p><span><a href="https://kristianduske.com/trenchbroom/"><strong>TrenchBroom</strong></a></span> （或 TrenchBroom 2，或 TB）是一款免费的开源跨平台 3D 关卡编辑器，具有现代化的 《雷神之锤》（<a class="game-store-link" href="https://store.steampowered.com/app/2310/Quake/" rel="noopener noreferrer" target="_blank">Steam</a>） 风格笔刷构造和持续更新/支持。它广泛应用于多个改装社区以及商业项目。 </p><p>我们推荐 TB 作为一款不错的通用 3D 关卡编辑器工具，它可以与 Windows、macOS 和 Linux 上的多个游戏引擎配合使用。</p><div><div><div><div><iframe></iframe></div></div></div></div><h2><div><a href="#workflow"></a></div><div>工作流程</div></h2><p>TB 与之前的 《雷神之锤》 时代关卡编辑器不同，它强调在单个视图窗格中进行 3D 构建。 </p><p>剪切平面可以是 3D，并且所有画笔都会自动验证凸度。 TB 还非常擅长同时调整多个画笔的大小，具有类似于 SketchUp 的共享平面处理和上下文挤压功能。</p><p>仅就其构建能力而言，我们推荐 TB 进行构建 <span><a href="process__blockout.html">白盒</a></span>，但它也允许令人惊讶的详细建模和纹理 <span><a href="process__env-art.html">美术处理</a></span>.<!-- --></p><div><div><div><div><div><div><div><img height="435" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MGiaafOL1SFz9zF9aNV%252F-MGieDp2Fm8LbDvJ1WXD%252FTrenchbroom_Bal_CreateVerts.gif%3Falt%3Dmedia%26token%3Dd4b48e7b-24d3-4031-a6e5-0e5d2169c7bf&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=4d984eb7&amp;sv=2" width="642"/></div></div></div></div><div><div><div><div><img src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MGiUfyjhNJ37SvNCFCm%252F-MGiXldb2hgrKJgePSxe%252FTrenchbroom_Bal_TorusConstruction.gif%3Falt%3Dmedia%26token%3Da57d7d13-796d-4b42-b861-fb904b9d9c03&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=dac6c04b&amp;sv=2"/></div></div></div></div><p><i>各种 TB 构建和纹理演示的画廊，来自 </i><span><a href="https://www.slipseer.com/index.php?threads/bals-quake-mapping-tips-tricks.100/"><i>“Bal 的《雷神之锤》地图制作提示与技巧”</i></a></span><i> 作者：伯努瓦·“巴尔”·斯托德尔</i></p></div></div><div><div><div><div><div><div><img height="550" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MGiaafOL1SFz9zF9aNV%252F-MGieUxayXworeJoVm69%252FTrenchbroom_Bal_TextureSkewValveFormat.gif%3Falt%3Dmedia%26token%3D7fee1851-ec8c-48e9-aa8a-3fe6e5588116&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=6555fcc2&amp;sv=2" width="1175"/></div></div></div></div><div><div><div><div><img height="468" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FJ1ZcTwaLnURdEyqdeLSB%252Fbal_tb_trenchbroom_curveTexturing.gif%3Falt%3Dmedia%26token%3Dd1453e7d-a765-47cd-a572-92ef25db2d20&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c2ed8eda&amp;sv=2" width="452"/></div></div></div></div></div></div></div><h2><div><a href="#is-trenchbroom-good-for-my-non-quake-project"></a></div><div>TrenchBroom 适合我的非 《雷神之锤》 项目吗？</div></h2><p>如果它不是 《雷神之锤》 mod，则需要考虑几个方面：</p><ul><li><div><div></div></div><div><p><strong>.MAP / .BSP 支持</strong>: 你的引擎可以导入或编译吗 <span><a href="appendix__resources__formats__map.html">.MAP 文件</a></span> 或.BSP 文件？</p><ul><li><div><div></div></div><div><p>TB的主要文件格式是基于文本的 <strong>雷神之锤.MAP</strong>,<strong> </strong>阀门型号（“版本 220”）</p></div></li><li><div><div></div></div><div><p>如果它不是 《雷神之锤》 引擎，您将需要一个插件来导入 .MAP 或编译的 .BSP</p></div></li><li><div><div></div></div><div><p>最坏的情况：将画笔导出到 .OBJ 但丢失所有实体数据</p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>资产整合：</strong> TB可以接入你的游戏资产吗？</p><ul><li><div><div></div></div><div><p>结核病可以阅读 <strong>常见文件格式</strong> 如 PNG、JPG、FBX、OBJ 等</p></div></li><li><div><div></div></div><div><p>有些插件可以 <strong>同步到 《雷神之锤》 格式</strong>，例如纹理包，例如 .WAD</p></div></li></ul></div></li><li><div><div></div></div><div><p><strong>脚本编写： </strong>您的脚本需求有多复杂？</p><ul><li><div><div></div></div><div><p>为了放置游戏对象或编写脚本，TB 会 <strong>实体定义</strong> 在 <span><a href="appendix__resources__formats__fgd.html"><strong>.烟气脱硫</strong></a></span> 文件。</p></div></li><li><div><div></div></div><div><p>TB 适合简单的《雷神之锤》风格的脚本编写：放置对象、将按钮链接到门或绘制简单的路径……但编写过场动画或编排复杂的序列有点痛苦。</p></div></li><li><div><div></div></div><div><p>或者，也许仅将 TB 用于 3D 构建和标记，并在您使用的任何游戏引擎中本地编写所有脚本。<!-- --></p></div></li></ul></div></li></ul><h2><div><a href="#trenchbroom-engine-compatibility-pipelines"></a></div><div>TrenchBroom 引擎兼容性 / 管线</div></h2><div><div><div><div></div></div></div><div><div><div><div><div><div>游戏/引擎</div><div>.MAP支持</div><div>资产整合</div></div></div><div><div><div><div><div><p><strong>戈多 </strong></p></div></div><div><div><p>导入通过 <span><a href="https://github.com/func-godot/func_godot_plugin">函数Godot</a></span> (<span><a href="https://func-godot.github.io/func_godot_docs/FuncGodot%20Manual/FuncGodot%20Manual.html">文档</a></span>）或 <span><a href="https://github.com/QodotPlugin/qodot-plugin"><s>科多特</s></a></span><s> (</s><span><a href="https://qodotplugin.github.io/"><s>文档</s></a></span><s>)</s> <i>（已停产）</i></p></div></div><div><div><p>常见文件格式，FGD / WAD 通过插件</p></div></div></div><div><div><div><p><strong>Unity</strong></p></div></div><div><div><p>导入通过 <span><a href="https://assetstore.unity.com/packages/tools/level-design/tremble-map-importer-277805">颤抖</a></span>, <span><a href="https://github.com/chunky-cat/Qunity">数量</a></span>, <span><a href="https://github.com/radiatoryang/scopa">斯科帕</a></span>, 或 <span><a href="https://github.com/wfowler1/Unity3D-BSP-Importer">Unity3D-BSP-导入器</a></span></p></div></div><div><div><p>常见文件格式，FGD / WAD（通过一些插件）</p></div></div></div><div><div><div><p><strong>虚幻</strong></p></div></div><div><div><p>导入通过 <span><a href="https://nte.itch.io/hammuer">哈默尔</a></span> (<span><a href="https://store.steampowered.com/news/app/1371690/view/2905347823300141067">指南</a></span>)</p></div></div><div><div><p>常见文件格式，通过 TextUEr 的纹理（<span><a href="https://store.steampowered.com/news/app/1371690/view/2905347823300141067">指南</a></span>)</p></div></div></div><div><div><div><p>雷神之锤1</p></div></div><div><div><p>通过以下方式编译到 BSP <span><a href="https://github.com/ericwa/ericw-tools">EricW工具</a></span></p></div></div><div><div><p>内置 FGD / WAD / MDL</p></div></div></div><div><div><div><p>雷神之锤2</p></div></div><div><div><p>通过以下方式编译到 BSP <span><a href="https://github.com/qbism/q2tools-220">q2tools-220</a></span></p></div></div><div><div><p>内置 FGD / WAL / MD2</p></div></div></div><div><div><div><p>雷神之锤 3 (<span><a href="https://github.com/TrenchBroom/TrenchBroom/issues/2425">不完整的</a></span>)</p></div></div><div><div><p>通过以下方式编译到 BSP <span><a href="http://q3map2.robotrenegade.com/">q3映射2</a></span></p></div></div><div><div><p>内置 MD3 / 等，但还没有（或曾经？）补丁编辑支持</p></div></div></div><div><div><div><p>半条命（<span><a href="https://github.com/TrenchBroom/TrenchBroom/issues/1140">几乎</a></span>)</p></div></div><div><div><p>通过以下方式编译到 BSP <span><a href="http://zhlt.info/">ZHLT v3.4+</a></span> /VHLT（<span><a href="https://twhl.info/wiki/page/Tutorial%3A_Setting_up_TrenchBroom_for_GoldSource_games#Setting_up_VHLT">指南</a></span>)</p></div></div><div><div><p>内置FGD / WAD3 / MDL</p></div></div></div><div><div><div><p>毁灭战士 3（<a class="game-store-link" href="https://store.steampowered.com/app/208200/DOOM_3/" rel="noopener noreferrer" target="_blank">Steam</a>） (<span><a href="https://github.com/RobertBeckebans/TrenchBroomBFG">叉子</a></span>)</p></div></div><div><div><p>通过 <span><a href="https://github.com/RobertBeckebans/TrenchBroomBFG">定制叉 Trenchbroom-BFG</a></span></p></div></div><div><div><p>通过 <span><a href="https://github.com/RobertBeckebans/TrenchBroomBFG">定制叉 Trenchbroom-BFG</a></span></p></div></div></div></div></div></div></div></div></div><ul><li><div><div></div></div><div><p><strong>如果为 《雷神之锤》 进行映射</strong>，寻求帮助 <span><a href="https://discord.com/invite/58XqmZM"><strong>Quake Mapping Discord</strong></a></span></p></div></li><li><div><div></div></div><div><p><strong>如果使用 Godot，请寻求帮助 </strong><span><a href="https://discord.gg/eBQ7EfNZSZ"><strong>FuncGodot Discord</strong></a></span></p></div></li><li><div><div></div></div><div><p>要为任何引擎构建 .MAP 文件导入器，请参阅 <span><a href="appendix__resources__formats__map.html">MAP 文件格式</a></span> 获取信息和示例代码</p></div></li><li><div><div></div></div><div><p>对于非 《雷神之锤》 引擎，您必须创建一个 <span><a href="https://trenchbroom.github.io/manual/latest/#game_configuration">TrenchBroom游戏配置</a></span>。请参阅 <span><a href="https://github.com/TrenchBroom/TrenchBroom/tree/master/app/resources/games">GitHub 仓库 <code>/resources/games/</code> 文件夹</a></span> 研究示例配置。<!-- --></p></div></li><li><div><div></div></div><div><p>请注意，TB 可能不是 《雷神之锤》 3 或 《毁灭战士》 3 引擎的最佳工具。参见 <span><a href="appendix__tools.html">工具</a></span> 获取游戏引擎和推荐关卡编辑器的完整列表。</p></div></li></ul><h2><div><a href="#resources-and-community"></a></div><div>资源和社区</div></h2><ul><li><div><div></div></div><div><p><span><a href="https://trenchbroom.github.io/manual/latest/">沟渠扫帚手册</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="https://github.com/TrenchBroom/TrenchBroom/releases">在 GitHub 上下载 TrenchBroom</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="https://github.com/TrenchBroom/TrenchBroom">GitHub 上的 TrenchBroom 存储库</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="https://discord.gg/WGf9uve">TrenchBroom Discord</a></span></p></div></li><li><div><div></div></div><div><p><span><a href="https://www.youtube.com/watch?v=gONePWocbqA"><strong>TrenchBroom 快速入门教程视频简介</strong></a></span><strong> </strong>通过<strong> </strong>David "dumptruck_ds" Spell 假设您正在为 《雷神之锤》 进行映射，但一般设置过程与任何引擎的映射类似。</p></div></li><li><div><div></div></div><div><p><span><a href="https://www.slipseer.com/index.php?threads/bals-quake-mapping-tips-tricks.100/"><strong>Bal 的《雷神之锤》地图制作提示与技巧 (2022)</strong></a></span><strong> </strong>作者：Benoit "Bal" Stordeur 是中级/高级 Trenchbroom 施工技术的重要必读之作。尽管 Stordeur 在 《雷神之锤》 工作，但他的建议适用于在任何游戏中使用 Trenchbroom。</p></div></li></ul><h3><div><a href="#trenchbroom-utility-tools"></a></div><div>TrenchBroom实用工具</div></h3><ul><li><div><div></div></div><div><p>（Windows） <span><a href="https://bitbucket.org/khreathor/obj-2-map/wiki/Home"><strong>对象2MAP</strong></a></span><strong> </strong>作者：Warren Marshall / Aleksander Marhall 将 .OBJ 3D 模型转换为 .MAP 画笔。请注意，该工具相当古老，但它对于复杂的形状、地形或参考地理非常有用。</p><ul><li><div><div></div></div><div><p>注意：如果您使用的是现代游戏引擎，只需直接导入.OBJ，无需使用此工具。该实用程序更适合《雷神之锤》/《半条命》地图绘制者。</p></div></li></ul></div></li><li><div><div></div></div><div><p>（网络） <span><a href="https://spacehare.github.io/prefabs/"><strong>TrenchBroom预制件</strong></a></span><strong> </strong>by SpaceHare 允许您将圆柱体、拱门和楼梯基元复制并粘贴到编辑器中。</p></div></li><li><div><div></div></div><div><p>（网络） <span><a href="https://tools.ummjackson.com/func_terrain"><strong>函数地形</strong></a></span><strong> </strong>Jackson Palmer 的作品可让您生成带有噪波图案的“三角汤”风格笔刷地形或绘制您自己的高度图</p></div></li></ul><div><div><div><picture><div><img height="499" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252Fuys4OZ1YaobF90UDCIrz%252Fimage.png%3Falt%3Dmedia%26token%3Dc608fcee-96e1-40bc-9566-1f3620e486d6&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=8de5f07b&amp;sv=2" width="792"/></div><figcaption>各种可复制粘贴的 TrenchBroom 原始预制件的屏幕截图， <span><a href="https://spacehare.github.io/prefabs">SpaceHare 的网络工具</a></span></figcaption></picture></div></div></div><p></p></div></div></article>
+      </div>
+      <div class="gb-page-links-wrap">
 <div class="page-links"><a class="page-link" href="appendix__tools.html"><span>上一页</span>工具</a><a class="page-link" href="appendix__resources.html"><span>下一页</span>资产与资源</a></div>
-</main>
+
+      </div>
+    </main>
+    <aside class="gb-outline" data-outline>
+      <div class="gb-outline-inner">
+        <button class="gb-outline-title" type="button" data-toggle-outline>ON THIS PAGE</button>
+        <nav class="gb-outline-list" data-outline-list></nav>
+      </div>
+    </aside>
+  </div>
+  <div class="gb-search-modal" role="dialog" aria-modal="true" aria-label="搜索" data-search-modal>
+    <div class="gb-search-box">
+      <div class="gb-search-input-row">
+        <span class="gb-search-icon"></span>
+        <input type="search" data-search-input placeholder="搜索页面、章节或正文内容" autocomplete="off">
+        <button type="button" data-close-search>关闭</button>
+      </div>
+      <div class="gb-search-results" data-search-results></div>
+    </div>
+  </div>
 </body>
 </html>

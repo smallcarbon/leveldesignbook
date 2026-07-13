@@ -1,120 +1,194 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>脚本 | The Level Design Book 中文版</title>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="目标、触发器、谜题">
+  <title>📜 脚本编写 | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="site-data.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body>
-<aside class="sidebar">
-<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
-<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
-<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
-<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
-<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
-<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
-<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
-<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
-<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
-<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
-<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
-<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
-<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
-<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
-<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
-<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
-<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
-<a class="" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
-<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
-<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
-<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
-<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
-<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
-<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
-<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
-<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
-<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
-<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
-<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
-<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
-<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
-<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
-<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
-<a class="active" href="process__scripting.html" style="--depth:2">📜 脚本</a>
-<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
-<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
-<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
-<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
-<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
-<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
-<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
-<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
-<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
-<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
-<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
-<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
-<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
-<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
-<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
-<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
-<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
-<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
-<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
-<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
-<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
-<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
-<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
-<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
-<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
-<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
-<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
-<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
-<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
-<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
-<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
-<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
-<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
-<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
-<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
-<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
-<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
-<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
-<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
-<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
-<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
-<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
-<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
-<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
-<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
-<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
-<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
-<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
-<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
-<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
-<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
-<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
-</aside>
-<main class="page">
-<div class="topbar">
-<a href="https://book.leveldesignbook.com/process/scripting">查看原文</a>
-<a href="https://book.leveldesignbook.com">原站首页</a>
+<body class="gb-body" data-page="process__scripting.html" data-article-hash="2b0997697fae2833c6dc87520728c5aeac5df141528224ba8fad1c9954e10b85">
+  <div class="gb-scrim" data-close-panels></div>
+  <header class="gb-header">
+    <div class="gb-header-inner">
+      <button class="gb-icon-button gb-menu-button" type="button" data-open-sidebar aria-label="打开目录">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="gb-header-logo" href="index.html">
+        <span class="gb-logo-dot"></span>
+        <span>The Level Design Book</span>
+      </a>
+      <nav class="gb-header-links" aria-label="Top links">
+        <a href="process__overview.html">Book</a>
+        <a href="appendix__resources.html">Resources</a>
+        <a href="https://book.leveldesignbook.com/process/scripting">原文</a>
+      </nav>
+      <button class="gb-search-trigger" type="button" data-open-search>
+        <span class="gb-search-icon"></span>
+        <span class="gb-search-label">搜索...</span>
+        <span class="gb-shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+      </button>
+    </div>
+  </header>
+  <div class="gb-layout">
+    <aside class="gb-sidebar" data-sidebar>
+      <div class="gb-sidebar-scroll">
+<a class="gb-sidebar-brand" href="index.html"><span class="gb-brand-mark">◆</span><span><strong>The Level Design Book</strong><small>中文版</small></span></a>
+<nav class="gb-nav" aria-label="Table of contents">
+<a class="gb-nav-link" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="gb-nav-link" href="introduction.html" style="--depth:0">✨ 什么是关卡设计</a>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 1, PROCESS</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="process__overview.html" style="--depth:1">🗺️ 如何制作一个关卡</a>
+<a class="gb-nav-link" href="process__preproduction.html" style="--depth:1">🧠 前期设计</a>
+<a class="gb-nav-link" href="process__preproduction__pacing.html" style="--depth:2">节奏</a>
+<a class="gb-nav-link" href="process__preproduction__research.html" style="--depth:2">调研</a>
+<a class="gb-nav-link" href="process__preproduction__worldbuilding.html" style="--depth:2">世界构建</a>
+<a class="gb-nav-link" href="process__preproduction__scope.html" style="--depth:2">范围控制</a>
+<a class="gb-nav-link" href="process__combat.html" style="--depth:1">🔫 战斗</a>
+<a class="gb-nav-link" href="process__combat__enemy.html" style="--depth:2">敌人设计</a>
+<a class="gb-nav-link" href="process__combat__encounter.html" style="--depth:2">遭遇战</a>
+<a class="gb-nav-link" href="process__combat__cover.html" style="--depth:2">掩体</a>
+<a class="gb-nav-link" href="process__combat__balance.html" style="--depth:2">地图平衡</a>
+<a class="gb-nav-link" href="process__layout.html" style="--depth:1">🛠️ 布局</a>
+<a class="gb-nav-link" href="process__layout__flow.html" style="--depth:2">动线</a>
+<a class="gb-nav-link" href="process__layout__flow__circulation.html" style="--depth:3">空间流线</a>
+<a class="gb-nav-link" href="process__layout__flow__verticality.html" style="--depth:3">纵向/垂直空间</a>
+<a class="gb-nav-link" href="process__layout__criticalpath.html" style="--depth:2">主动线</a>
+<a class="gb-nav-link" href="process__layout__parti.html" style="--depth:2">设计概念草图</a>
+<a class="gb-nav-link" href="process__layout__typology.html" style="--depth:2">类型学</a>
+<a class="gb-nav-link" href="process__layout__typology__gates.html" style="--depth:3">门与关口</a>
+<a class="gb-nav-link" href="process__blockout.html" style="--depth:1">🏠 白盒</a>
+<a class="gb-nav-link" href="process__blockout__massing.html" style="--depth:2">体块</a>
+<a class="gb-nav-link" href="process__blockout__massing__landscape.html" style="--depth:3">景观地形</a>
+<a class="gb-nav-link" href="process__blockout__massing__composition.html" style="--depth:3">构图</a>
+<a class="gb-nav-link" href="process__blockout__massing__prospect-refuge.html" style="--depth:3">眺望-庇护</a>
+<a class="gb-nav-link" href="process__blockout__metrics.html" style="--depth:2">标准尺度规范</a>
+<a class="gb-nav-link" href="process__blockout__metrics__modular.html" style="--depth:3">模块化套件设计</a>
+<a class="gb-nav-link" href="process__blockout__metrics__doom.html" style="--depth:3">《毁灭战士》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__metrics__quake.html" style="--depth:3">《雷神之锤》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__wayfinding.html" style="--depth:2">寻路与引导</a>
+<a class="gb-nav-link" href="process__blockout__playtesting.html" style="--depth:2">试玩测试</a>
+<a class="gb-nav-link" href="process__blockout__playtesting__persona.html" style="--depth:3">玩家画像</a>
+<a class="gb-nav-link active" href="process__scripting.html" style="--depth:1">📜 脚本</a>
+<a class="gb-nav-link" href="process__scripting__nav.html" style="--depth:2">(存根) 导航</a>
+<a class="gb-nav-link" href="process__scripting__doors.html" style="--depth:2">门</a>
+<a class="gb-nav-link" href="process__lighting.html" style="--depth:1">☀️ 灯光</a>
+<a class="gb-nav-link" href="process__lighting__three-point.html" style="--depth:2">三点布光</a>
+<a class="gb-nav-link" href="process__lighting__d6-lighting.html" style="--depth:2">D6 灯光法</a>
+<a class="gb-nav-link" href="process__lighting__darkness.html" style="--depth:2">黑暗场景灯光</a>
+<a class="gb-nav-link" href="process__env-art.html" style="--depth:1">🏡 环境美术</a>
+<a class="gb-nav-link" href="process__env-art__psychology.html" style="--depth:2">形状与色彩心理学</a>
+<a class="gb-nav-link" href="process__env-art__texturing.html" style="--depth:2">材质</a>
+<a class="gb-nav-link" href="process__env-art__storytelling.html" style="--depth:2">叙事</a>
+<a class="gb-nav-link" href="process__env-art__optimization.html" style="--depth:2">优化</a>
+<a class="gb-nav-link" href="process__release.html" style="--depth:1">🌈 发布</a>
 </div>
-<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
-<article><header><nav><ol><li></li></ol></nav><h1><span>📜</span>脚本编写</h1><p>目标、触发器、谜题</p></header><div><div><h2><div><a href="#what-is-scripting"></a></div><div>什么是脚本编写？</div></h2><p>关卡设计师使用 <strong>脚本编写</strong> 用于对关卡的特定游戏规则和行为进行编程的工具。关卡脚本的一些常见示例包括：</p><ul><li><div><div></div></div><div><p><strong>目标</strong>、探索、使命——一系列目标和 <span><a href="process__combat__encounter.html">遭遇战</a></span> 有开始和结束</p></div></li><li><div><div></div></div><div><p><strong>触发器</strong> 进入某个区域时执行逻辑，失去生命值或获得积分等。</p></div></li><li><div><div></div></div><div><p><strong>门与关口</strong> 白盒进度，直到玩家以某种方式解决游戏世界中的问题</p></div></li><li><div><div></div></div><div><p><strong>游戏对象/实体</strong> 移动或反应的东西，如按钮、门、电梯、火车、陷阱等。</p></div></li></ul><p>（可视化脚本示例）</p><h3><div><a href="#game-code-vs-level-scripts"></a></div><div>游戏代码与关卡脚本</div></h3><p>在过去几代游戏引擎中，游戏引擎代码与游戏关卡中的脚本逻辑之间存在很大的技术差异。 </p><p>例如，《雷神之锤》1 的游戏引擎 idTech2 是用 C/《雷神之锤》C 编写的，但关卡脚本编写者依赖于预制的 <strong>实体</strong> 具有狭窄的预定义行为。一个 <i>功能按钮</i> 实体只能充当按钮，并且 <i>函数门</i> 实体只能作为滑动物体。如果设计师将门建造成一个向上“打开”的平坦平台，那么这扇门基本上就是一部电梯；这些足智多谋的技巧是必要的，因为关卡设计师无法轻松地编写新类型的实体。实体是特定于关卡的可视化脚本逻辑，作为游戏引擎解释的数据而存在。</p><div><div><div><picture><div><img height="358" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M7YTOLBLXuAphIf2yUa%252F-M7YTVmFZbXstHQS-X-7%252Fimage.png%3Falt%3Dmedia%26token%3D951bbd62-ebe0-464d-afcc-5611d2f20925&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=b9a187a&amp;sv=2" width="1052"/></div><figcaption>Benoit“Bal”Stordeur 在 《雷神之锤》1 中生成武器的非常复杂的实体设置（168 个不同的对象！）的编辑器屏幕截图 https://twitter.com/BafuBal/status/1261974130624167937</figcaption></picture></div></div></div><p>对于现代游戏引擎来说，脚本已经变得越来越文本化和代码化。 Unreal Engine 4 的 Blueprint 视觉脚本与 C++ 功能相匹配，Unity 的 Playmaker / Bolt 视觉脚本与 C# API 相匹配，《辐射》 4 / 《上古卷轴5：天际》 脚本编写器使用 Papyrus 语言，而其他引擎通常会嵌入 Lua。现在基本上都是代码了。</p><p>所以： <strong>关卡脚本</strong> 只是限制在游戏关卡范围内的编码行为。脚本通常与地图中的特定对象或位置交互，绑定到特定实体。它们在此地图之外或跨不同地图的功能有限。与整个游戏中所有关卡共享的“较硬”核心游戏代码相比，可以将其视为给定关卡独有的“较软”代码。</p><h3><div><a href="#hacks"></a></div><div>黑客</div></h3><p>一个脚本 <strong>黑客</strong> 是一种一次性的脆弱解决方案，它以非预期的方式使用游戏系统，因此无法支持更广泛的行为，也无法在游戏的其他地方轻松重用。</p><p>例如，在《辐射 3》的 Broken Steel DLC 中，玩家在执行任务期间修理并乘坐地铁列车。然而，游戏没有任何实际的车辆或火车系统。相反， <span><a href="https://www.pcgamer.com/heres-whats-happening-inside-fallout-3s-metro-train/">《辐射 3》使用巧妙的技巧来模拟火车</a></span>。通过脚本，游戏迫使玩家秘密装备一个名为“DLC03MetroCarArmor”的库存物品——一个执行相机脚本的臂带，让玩家感觉自己好像在行驶的火车上。在《辐射 3》的 GECK 游戏编辑器工具中，臂章看起来像一顶巨大的火车形帽子。 （见下图）</p><p>这种脚本黑客可能看起来很荒谬，但它确实有效，并且它为开发人员节省了大量时间，使他们免于不必要地设计复杂的功能。所以有时候 hack 是合适的，但只有当你已经做了足够多的事情时，你才能决定像这样的 hack <span><a href="process__preproduction.html">规划</a></span> 适合您的项目范围。在这里，贝塞斯达设计师计划了他们的 DLC，他们知道编写一个他们永远不会再使用的火车系统是没有意义的，因此他们黑客攻击了一辆假火车并成功交付了他们的项目。</p><div><div><div><picture><div><img height="631" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MRCVtiof5fa3eu5U-My%252F-MRD4g1oE8uyae3glcbj%252FFallout3_TrainHeadHack.png%3Falt%3Dmedia%26token%3D2e9e0b5f-0145-47fb-8eda-0258b35bc39c&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=440e4770&amp;sv=2" width="909"/></div><figcaption>《辐射》 3“火车帽”DLC03MetroCarArmor 手环，如 GECK 编辑器工具中预览的那样。来自 </figcaption></picture></div></div></div><h2><div><a href="#objectives"></a></div><div>目标</div></h2><p>任务、任务...通常由触发器和门组成</p><p>分支旗模型</p><p>辐射/天际编号任务阶段（FSM？）</p><p>将其可视化为流程图，可能会变得非常复杂</p><h2><div><a href="#triggers"></a></div><div>触发器</div></h2><p>触发器让我们定义体积和面积，并将行为应用于这些区域</p><p>触发器知道某些东西何时进入、停留和退出...触发器是一个事件</p><p>基本触发因素是陷阱、死亡、熔岩等或打开一扇门</p><p>对于单人游戏来说，触发器应该是隐形的、无缝的、神奇的，有时只是一次性的触发器？ ...亲爱的艾丝特，用于鬼魂和画外音的触发器... </p><p>复杂的触发器：动态调整触发器的大小，就像 Gone Home 父母的衣柜一样？</p><p>对于多人游戏，触发器不应该是隐形的！！...CS 中的炸弹地点、守望先锋中的占领点</p><h2><div><a href="#gates"></a></div><div>门与关口</div></h2><p>    另请参阅：门控， <span><a href="process__scripting__doors.html">门</a></span></p><p>门是阻碍或阻挡玩家在关卡中移动的东西，通常是沿着主动线。 </p><p>尽管有其名称，但门不仅仅是门。几乎关卡中的任何东西都可以 <i>功能</i> 作为一扇门，因为任何阻碍进步或流动的障碍，无论是少量还是大量，都是一种门。</p><p>一个 <strong>硬门</strong> 是指如果不完成遭遇战或谜题就不可能取得进展。当我们说“门”时，我们通常指的是硬门。</p><ul><li><div><div></div></div><div><p>杀死所有怪物/老板才能打开门</p></div></li><li><div><div></div></div><div><p>按下所有按钮</p></div></li><li><div><div></div></div><div><p>收集钥匙</p></div></li><li><div><div></div></div><div><p>只有 NPC 可以在他们想要的时候打开门（例如，脱离战斗）<!-- --></p></div></li></ul><p>或者将所有这些链接在一起......杀死一个怪物以获得钥匙，按下按钮发布一个掉落钥匙的怪物，等等。</p><h3><div><a href="#soft-gate"></a></div><div>软门</div></h3><p>玩家可以在不完成遭遇战或谜题的情况下绕过大门，但强烈建议他们不要这样做（例如，怪物太多）</p><p>更复杂一点，不那么手持，可以更好地支持速度跑步者......但如果玩家不断绕过大门而没有意识到，不确定发生了什么，或者大门可能太软以至于它甚至不做任何事情，可能会导致一连串的混乱</p><ul><li><div><div></div></div><div><p>（非常软）视线受阻，发夹转弯（参见类型学）</p></div></li><li><div><div></div></div><div><p>（软）简单的遍历/跳跃拼图，堆箱子</p></div></li><li><div><div></div></div><div><p>（柔和）阀门式缓开门闸门</p></div></li><li><div><div></div></div><div><p>（范围从软到破坏游戏）布局混乱，不清楚如何进展（尽管最终可能会感到糟糕的混乱而不是良好的混乱）<!-- --></p></div></li></ul><h2><div><a href="#ai-scripting"></a></div><div>人工智能脚本</div></h2><h3><div><a href="#spawners"></a></div><div>产卵者</div></h3><p>怪物壁橱</p><p>导演AI</p><h3><div><a href="#hinting"></a></div><div>提示</div></h3><p>寻路节点、怪物跳跃、覆盖节点、剪辑体积、束缚</p><p>NPC 和 AI 的掩体提示</p><div><div><div><picture><div><img height="502" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLDld1Rw1iN_x-Bl46t%252F-MLDmFfqrnEM8GoLw8gB%252FCoverHinting_GearsTactics.jpg%3Falt%3Dmedia%26token%3D49770431-1a32-4751-a0c5-88a10cbf5249&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=e01ca1b1&amp;sv=2" width="902"/></div><figcaption>Splash Damage 的 Gears Tactics 掩体节点提示标记的编辑器视图（来自 https://www.splashdamage.com/news/blocktober-gears-tropics/） </figcaption></picture></div></div></div><blockquote><p>"<i>高大的红色盒子是站立掩体（也称为“全”掩体，提供最大程度的保护），较小的粉色盒子是低掩体（游戏中的半掩体）</i>). <i>每个掩体节点上的黄色目标显示士兵放置在该掩体节点中时可以从哪些角度进行射击。一些低掩体节点上方的黄色弯曲箭头表明士兵可以越过掩体节点进入相邻侧的节点。仔细放置掩体节点并严格遵守标准尺度规范对于创建一个干净、无错误的掩体设置至关重要，并且可以按照玩家的预期工作。如果一块掩体太高，那么你将无法跳过它，如果掩体节点没有正确放置在角落，那么占据该节点的士兵将无法在角落处射击。这两个例子都会给玩家带来挫败感，必须避免！”</i></p><p><i>——来自 </i><span><a href="https://www.splashdamage.com/news/blocktober-gears-tactics/"><i>《Blocktober：齿轮战术》</i></a></span><i> 溅射伤害博客文章 </i></p></blockquote><p>许多格斗游戏也会自动生成标记并手动微调（例如神秘海域 4）</p><h2><div><a href="#choreography"></a></div><div>编舞</div></h2><p>当我们编写 NPC 执行正常 AI 范围之外的特定操作时，尤其是游戏中的过场动画和 <span><a href="process__env-art__storytelling.html">叙事</a></span>，那么这种类型的脚本称为 <strong>编舞</strong>。在大型团队项目中，角色编排可能由编剧、动画师或专门的电影艺术家负责。</p><p>常见的编排脚本动作包括：</p><ul><li><div><div></div></div><div><p><i>NPC演员身体控制如看、转身、行走、说话。</i> 这个 <span><a href="https://en.wikipedia.org/wiki/Blocking_(stage)">stage blocking</a></span> choreography should hook into the same body systems as the main game AI, i.e. maintaining two different walking systems would introduce extra technical debt into your project.</p></div></li><li><div><div></div></div><div><p><i>动画控制。</i> 完全覆盖默认的空闲姿势或当前的全身动画。 例如，如果两个演员在你的游戏中只拥抱一次，你不应该专门工程化一套拥抱系统；相反，只需用拥抱动作临时覆盖他们的动画即可。</p></div></li><li><div><div></div></div><div><p><i>道具与附着物。 </i>将对象暂时绑定到角色关节，例如将帽子附加到头上，或将杯子附加到手上。<!-- --></p></div></li><li><div><div></div></div><div><p><i>时序延迟。 </i>等待 X 秒，对于戏剧性的节奏或暂停很有用。</p></div></li><li><div><div></div></div><div><p><i>Camera control. </i>强制第一人称控制器观看某些内容，或使用其他摄像机角度或电影摄影生成额外的第三人称摄像机。</p></div></li><li><div><div></div></div><div><p><i>Game state management.</i> For systemic or combat-oriented games, it is best practice to disable the choreographed actors' combat AI and physics, as well as pause / block / delete nearby enemies and make the choreographed NPCs temporarily invincible.如果您不管理和清理编排的游戏状态，那么您的演员可能会在过场动画中意外倒地或死亡。</p></div></li></ul><div><div><div><picture><div><img height="1004" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MRD6iTlCXTPEnB9FNWU%252F-MRD79zRcJar-h-uhcx-%252FChoreography_HL2_Faceposer_multiactors.jpg%3Falt%3Dmedia%26token%3D3e503f2a-c329-44c4-b71e-943c4da70912&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=371906a3&amp;sv=2" width="1280"/></div><figcaption>用于《半条命 2》(2004) 的 Faceposer 编排工具的屏幕截图，具有 3D 预览和基于轨道的时间轴界面 </figcaption></picture></div></div></div><h3><div><a href="#object-interaction-systems"></a></div><div>对象交互系统</div></h3><p>黑曜石 RPG“天外世界”(2019) 的 QA 负责人 Taylor Swope 花了很长时间尝试调试 NPC 对象交互脚本问题 <span><a href="https://twitter.com/_taylorswope/status/1205252714680045568">https://twitter.com/_taylorswope/status/1205252714680045568</a></span></p><blockquote><p><i>We released [...] a fix for the dreaded "the game thinks my companions are dead" bug, which I believe I spent more time investigating than I have for any other individual bug in my career.</i></p><p><i>The gist of the bug was that, for some players, a companion quest would be marked as Failed in the quest log, with the reasoning that the companion was dead -- despite the fact that the companion was very much alive and well. One reason it was so hard to pin down is that it was impossible to tell when the bug actually happened -- all of the cases we had were essentially "hey something bad happened in the last ten hours and now my quest is broken". </i></p><p><i>Investigating it involved figuring out the location of every script and line of code that could possibly make the game think that a companion was dead. The only logical culprit was a bit of scripting that runs when a companion's health reaches zero: if they're in the party, it waits for combat to end and revives them;否则它会将它们标记为“真正”死亡。 [但是]游戏中只有当玩家在船上时，同伴才会在场但不在活跃队伍中。问题是，当同伴在船上时，他们是不受伤害的。 Eventually we figured out that "undamageable" does not mean "invulnerable" -- they can't take damage from attacks but can still get hurt from other things.其中一件事：坠落很远的距离。</i></p><p><i>问题是玩家的飞船上没有足够高的地方导致致命的坠落。所以现在我们必须弄清楚同伴们是如何神秘地最终远远高于水平的。 I looked into tons of theories, including "maybe their height data is preserved when fast travelling from other maps" and "maybe a physics interaction between two companions causes one to rapidly accelerate upwards". (My personal fav was "what if a companion is standing right where a cow spawns in during a random event and they're launched into space". Was genuinely bummed when that theory didn't pan out.) By this time, the game had come out, and all hopes of this being a weird fluke only a couple devs would ever see were dashed, as players all over the place started reporting their companion quests failing.</i></p><p><i>Eventually, an offhand comment in one user's review mentioned seeing a weird bug where a companion was "climbing nothing", and this comment led me to figuring the whole thing out.</i></p><p><i>在开发方面，NPC 与环境交互的系统称为“家具”。有时，这只是字面上的家具，比如坐在椅子上，但它涵盖了从使用终端到靠在墙上的所有内容。 Somewhere deep in the complex beast that is the furniture system, we had code that disabled all NPCs from starting new furniture interactions if the player was in a conversation.</i></p><p><i>The problem was that using a ladder is considered two different furniture interactions: one for getting on the ladder and starting to climb, and one to stop climbing and get off. So, if someone started climbing a ladder and the player entered a conversation before they stopped, they wouldn't be able to exit the ladder, and, well….</i>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 2, CULTURE</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="culture__overview.html" style="--depth:1">🦜 作为文化的关卡设计</a>
+<a class="gb-nav-link" href="culture__history-level-designer.html" style="--depth:1">关卡设计师简史</a>
+<a class="gb-nav-link" href="culture__zero-player.html" style="--depth:1">零玩家关卡设计</a>
+<a class="gb-nav-link" href="culture__unfinished-pages.html" style="--depth:1">未完成页面</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:2">建筑史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:2">结构工程入门</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:2">环境美术史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:2">家具史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:2">遭遇战设计史</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 3, STUDIES</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="studies__overview.html" style="--depth:1">🔍 如何研究一个关卡</a>
+<a class="gb-nav-link" href="studies__sp.html" style="--depth:1">单人关卡研究</a>
+<a class="gb-nav-link" href="studies__sp__undead-burg.html" style="--depth:2">不死镇（《黑暗之魂》1）</a>
+<a class="gb-nav-link" href="studies__sp__assassins.html" style="--depth:2">Assassins (《神偷》 1)</a>
+<a class="gb-nav-link" href="studies__sp__cradle.html" style="--depth:2">(存根) The Cradle (《神偷》 3)</a>
+<a class="gb-nav-link" href="studies__sp__sapienza.html" style="--depth:2">(存根) Sapienza (《杀手》)</a>
+<a class="gb-nav-link" href="studies__sp__silent-cartographer.html" style="--depth:2">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp.html" style="--depth:1">多人关卡研究</a>
+<a class="gb-nav-link" href="studies__mp__chill-out.html" style="--depth:2">Chill Out (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp__de_dust2.html" style="--depth:2">(存根) de_dust2 (《反恐精英》)</a>
+<a class="gb-nav-link" href="studies__irl.html" style="--depth:1">现实空间研究</a>
+<a class="gb-nav-link" href="studies__irl__disneyland.html" style="--depth:2">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="gb-nav-link" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:2">(存根) 拉斯维加斯 (美国内华达)</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 4, LEARNING</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="learning__notes.html" style="--depth:1">🎒 给教学者的笔记</a>
+<a class="gb-nav-link" href="learning__projects.html" style="--depth:1">项目计划</a>
+<a class="gb-nav-link" href="learning__projects__classic-combat.html" style="--depth:2">经典战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages.html" style="--depth:2">未完成 WIP 页面</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:3">现代战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:3">现代潜行</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:3">练习：直射光</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:3">练习：2D 白板图</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:3">关卡设计作品集</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:3">设计测试：改编</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:3">练习：布局</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:3">练习：纵向/垂直空间</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>APPENDIX</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="appendix__tools.html" style="--depth:1">工具</a>
+<a class="gb-nav-link" href="appendix__tools__trenchbroom.html" style="--depth:2">TrenchBroom</a>
+<a class="gb-nav-link" href="appendix__resources.html" style="--depth:1">资产与资源</a>
+<a class="gb-nav-link" href="appendix__resources__talks.html" style="--depth:2">推荐演讲</a>
+<a class="gb-nav-link" href="appendix__resources__books.html" style="--depth:2">推荐书目</a>
+<a class="gb-nav-link" href="appendix__resources__quake.html" style="--depth:2">《雷神之锤》资源</a>
+<a class="gb-nav-link" href="appendix__resources__quake__how-to-package.html" style="--depth:3">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="gb-nav-link" href="appendix__resources__formats.html" style="--depth:2">文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__fgd.html" style="--depth:3">FGD 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__map.html" style="--depth:3">MAP 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__mdl.html" style="--depth:3">MDL 文件格式</a>
+<a class="gb-nav-link" href="appendix__communities.html" style="--depth:1">社区</a>
+<a class="gb-nav-link" href="appendix__about.html" style="--depth:1">关于本书与作者</a>
+<a class="gb-nav-link" href="appendix__license.html" style="--depth:1">许可与版权</a>
+</div>
+</nav>
+
+      </div>
+    </aside>
+    <main class="gb-main" id="content">
+      <div class="gb-mobile-tools">
+        <button type="button" data-open-sidebar>目录</button>
+        <button type="button" data-open-outline>本页目录</button>
+      </div>
+      <div class="gb-page-actions">
+        <div class="gb-breadcrumbs"><span>BOOK 1, PROCESS</span></div>
+        <div class="gb-action-links">
+          <a href="https://book.leveldesignbook.com/process/scripting">查看原文</a>
+          <a href="https://book.leveldesignbook.com">原站首页</a>
+        </div>
+      </div>
+      <div class="gb-license"><div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div></div>
+      <div class="gb-article-wrap">
+<article><header><nav><ol><li></li></ol></nav><h1><span>📜</span>脚本编写</h1><p>目标、触发器、谜题</p></header><div><div><h2><div><a href="#what-is-scripting"></a></div><div>什么是脚本编写？</div></h2><p>关卡设计师使用 <strong>脚本编写</strong> 用于对关卡的特定游戏规则和行为进行编程的工具。关卡脚本的一些常见示例包括：</p><ul><li><div><div></div></div><div><p><strong>目标</strong>、探索、使命——一系列目标和 <span><a href="process__combat__encounter.html">遭遇战</a></span> 有开始和结束</p></div></li><li><div><div></div></div><div><p><strong>触发器</strong> 进入某个区域时执行逻辑，失去生命值或获得积分等。</p></div></li><li><div><div></div></div><div><p><strong>门与关口</strong> 白盒进度，直到玩家以某种方式解决游戏世界中的问题</p></div></li><li><div><div></div></div><div><p><strong>游戏对象/实体</strong> 移动或反应的东西，如按钮、门、电梯、火车、陷阱等。</p></div></li></ul><p>（可视化脚本示例）</p><h3><div><a href="#game-code-vs-level-scripts"></a></div><div>游戏代码与关卡脚本</div></h3><p>在过去几代游戏引擎中，游戏引擎代码与游戏关卡中的脚本逻辑之间存在很大的技术差异。 </p><p>例如，《雷神之锤》（<a class="game-store-link" href="https://store.steampowered.com/app/2310/Quake/" rel="noopener noreferrer" target="_blank">Steam</a>）1 的游戏引擎 idTech2 是用 C/《雷神之锤》C 编写的，但关卡脚本编写者依赖于预制的 <strong>实体</strong> 具有狭窄的预定义行为。一个 <i>功能按钮</i> 实体只能充当按钮，并且 <i>函数门</i> 实体只能作为滑动物体。如果设计师将门建造成一个向上“打开”的平坦平台，那么这扇门基本上就是一部电梯；这些足智多谋的技巧是必要的，因为关卡设计师无法轻松地编写新类型的实体。实体是特定于关卡的可视化脚本逻辑，作为游戏引擎解释的数据而存在。</p><div><div><div><picture><div><img height="358" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M7YTOLBLXuAphIf2yUa%252F-M7YTVmFZbXstHQS-X-7%252Fimage.png%3Falt%3Dmedia%26token%3D951bbd62-ebe0-464d-afcc-5611d2f20925&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=b9a187a&amp;sv=2" width="1052"/></div><figcaption>Benoit“Bal”Stordeur 在 《雷神之锤》1 中生成武器的非常复杂的实体设置（168 个不同的对象！）的编辑器屏幕截图 https://twitter.com/BafuBal/status/1261974130624167937</figcaption></picture></div></div></div><p>对于现代游戏引擎来说，脚本已经变得越来越文本化和代码化。 Unreal Engine 4 的 Blueprint 视觉脚本与 C++ 功能相匹配，Unity 的 Playmaker / Bolt 视觉脚本与 C# API 相匹配，《辐射》 4 / 《上古卷轴5：天际》 脚本编写器使用 Papyrus 语言，而其他引擎通常会嵌入 Lua。现在基本上都是代码了。</p><p>所以： <strong>关卡脚本</strong> 只是限制在游戏关卡范围内的编码行为。脚本通常与地图中的特定对象或位置交互，绑定到特定实体。它们在此地图之外或跨不同地图的功能有限。与整个游戏中所有关卡共享的“较硬”核心游戏代码相比，可以将其视为给定关卡独有的“较软”代码。</p><h3><div><a href="#hacks"></a></div><div>黑客</div></h3><p>一个脚本 <strong>黑客</strong> 是一种一次性的脆弱解决方案，它以非预期的方式使用游戏系统，因此无法支持更广泛的行为，也无法在游戏的其他地方轻松重用。</p><p>例如，在《辐射 3》的 Broken Steel DLC 中，玩家在执行任务期间修理并乘坐地铁列车。然而，游戏没有任何实际的车辆或火车系统。相反， <span><a href="https://www.pcgamer.com/heres-whats-happening-inside-fallout-3s-metro-train/">《辐射 3》使用巧妙的技巧来模拟火车</a></span>。通过脚本，游戏迫使玩家秘密装备一个名为“DLC03MetroCarArmor”的库存物品——一个执行相机脚本的臂带，让玩家感觉自己好像在行驶的火车上。在《辐射 3》的 GECK 游戏编辑器工具中，臂章看起来像一顶巨大的火车形帽子。 （见下图）</p><p>这种脚本黑客可能看起来很荒谬，但它确实有效，并且它为开发人员节省了大量时间，使他们免于不必要地设计复杂的功能。所以有时候 hack 是合适的，但只有当你已经做了足够多的事情时，你才能决定像这样的 hack <span><a href="process__preproduction.html">规划</a></span> 适合您的项目范围。在这里，贝塞斯达设计师计划了他们的 DLC，他们知道编写一个他们永远不会再使用的火车系统是没有意义的，因此他们黑客攻击了一辆假火车并成功交付了他们的项目。</p><div><div><div><picture><div><img height="631" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MRCVtiof5fa3eu5U-My%252F-MRD4g1oE8uyae3glcbj%252FFallout3_TrainHeadHack.png%3Falt%3Dmedia%26token%3D2e9e0b5f-0145-47fb-8eda-0258b35bc39c&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=440e4770&amp;sv=2" width="909"/></div><figcaption>《辐射》 3“火车帽”DLC03MetroCarArmor 手环，如 GECK 编辑器工具中预览的那样。来自 </figcaption></picture></div></div></div><h2><div><a href="#objectives"></a></div><div>目标</div></h2><p>任务、任务...通常由触发器和门组成</p><p>分支旗模型</p><p>辐射/天际编号任务阶段（FSM？）</p><p>将其可视化为流程图，可能会变得非常复杂</p><h2><div><a href="#triggers"></a></div><div>触发器</div></h2><p>触发器让我们定义体积和面积，并将行为应用于这些区域</p><p>触发器知道某些东西何时进入、停留和退出...触发器是一个事件</p><p>基本触发因素是陷阱、死亡、熔岩等或打开一扇门</p><p>对于单人游戏来说，触发器应该是隐形的、无缝的、神奇的，有时只是一次性的触发器？ ...亲爱的艾丝特，用于鬼魂和画外音的触发器... </p><p>复杂的触发器：动态调整触发器的大小，就像 Gone Home（<a class="game-store-link" href="https://store.steampowered.com/app/232430/Gone_Home/" rel="noopener noreferrer" target="_blank">Steam</a>） 父母的衣柜一样？</p><p>对于多人游戏，触发器不应该是隐形的！！...CS 中的炸弹地点、守望先锋（<a class="game-store-link" href="https://overwatch.blizzard.com/" rel="noopener noreferrer" target="_blank">官网</a>）中的占领点</p><h2><div><a href="#gates"></a></div><div>门与关口</div></h2><p>    另请参阅：门控， <span><a href="process__scripting__doors.html">门</a></span></p><p>门是阻碍或阻挡玩家在关卡中移动的东西，通常是沿着主动线。 </p><p>尽管有其名称，但门不仅仅是门。几乎关卡中的任何东西都可以 <i>功能</i> 作为一扇门，因为任何阻碍进步或流动的障碍，无论是少量还是大量，都是一种门。</p><p>一个 <strong>硬门</strong> 是指如果不完成遭遇战或谜题就不可能取得进展。当我们说“门”时，我们通常指的是硬门。</p><ul><li><div><div></div></div><div><p>杀死所有怪物/老板才能打开门</p></div></li><li><div><div></div></div><div><p>按下所有按钮</p></div></li><li><div><div></div></div><div><p>收集钥匙</p></div></li><li><div><div></div></div><div><p>只有 NPC 可以在他们想要的时候打开门（例如，脱离战斗）<!-- --></p></div></li></ul><p>或者将所有这些链接在一起......杀死一个怪物以获得钥匙，按下按钮发布一个掉落钥匙的怪物，等等。</p><h3><div><a href="#soft-gate"></a></div><div>软门</div></h3><p>玩家可以在不完成遭遇战或谜题的情况下绕过大门，但强烈建议他们不要这样做（例如，怪物太多）</p><p>更复杂一点，不那么手持，可以更好地支持速度跑步者......但如果玩家不断绕过大门而没有意识到，不确定发生了什么，或者大门可能太软以至于它甚至不做任何事情，可能会导致一连串的混乱</p><ul><li><div><div></div></div><div><p>（非常软）视线受阻，发夹转弯（参见类型学）</p></div></li><li><div><div></div></div><div><p>（软）简单的遍历/跳跃拼图，堆箱子</p></div></li><li><div><div></div></div><div><p>（柔和）阀门式缓开门闸门</p></div></li><li><div><div></div></div><div><p>（范围从软到破坏游戏）布局混乱，不清楚如何进展（尽管最终可能会感到糟糕的混乱而不是良好的混乱）<!-- --></p></div></li></ul><h2><div><a href="#ai-scripting"></a></div><div>人工智能脚本</div></h2><h3><div><a href="#spawners"></a></div><div>产卵者</div></h3><p>怪物壁橱</p><p>导演AI</p><h3><div><a href="#hinting"></a></div><div>提示</div></h3><p>寻路节点、怪物跳跃、覆盖节点、剪辑体积、束缚</p><p>NPC 和 AI 的掩体提示</p><div><div><div><picture><div><img height="502" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MLDld1Rw1iN_x-Bl46t%252F-MLDmFfqrnEM8GoLw8gB%252FCoverHinting_GearsTactics.jpg%3Falt%3Dmedia%26token%3D49770431-1a32-4751-a0c5-88a10cbf5249&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=e01ca1b1&amp;sv=2" width="902"/></div><figcaption>Splash Damage 的 Gears Tactics 掩体节点提示标记的编辑器视图（来自 https://www.splashdamage.com/news/blocktober-gears-tropics/） </figcaption></picture></div></div></div><blockquote><p>"<i>高大的红色盒子是站立掩体（也称为“全”掩体，提供最大程度的保护），较小的粉色盒子是低掩体（游戏中的半掩体）</i>). <i>每个掩体节点上的黄色目标显示士兵放置在该掩体节点中时可以从哪些角度进行射击。一些低掩体节点上方的黄色弯曲箭头表明士兵可以越过掩体节点进入相邻侧的节点。仔细放置掩体节点并严格遵守标准尺度规范对于创建一个干净、无错误的掩体设置至关重要，并且可以按照玩家的预期工作。如果一块掩体太高，那么你将无法跳过它，如果掩体节点没有正确放置在角落，那么占据该节点的士兵将无法在角落处射击。这两个例子都会给玩家带来挫败感，必须避免！”</i></p><p><i>——来自 </i><span><a href="https://www.splashdamage.com/news/blocktober-gears-tactics/"><i>《Blocktober：齿轮战术》</i></a></span><i> 溅射伤害博客文章 </i></p></blockquote><p>许多格斗游戏也会自动生成标记并手动微调（例如神秘海域 4）</p><h2><div><a href="#choreography"></a></div><div>编舞</div></h2><p>当我们编写 NPC 执行正常 AI 范围之外的特定操作时，尤其是游戏中的过场动画和 <span><a href="process__env-art__storytelling.html">叙事</a></span>，那么这种类型的脚本称为 <strong>编舞</strong>。在大型团队项目中，角色编排可能由编剧、动画师或专门的电影艺术家负责。</p><p>常见的编排脚本动作包括：</p><ul><li><div><div></div></div><div><p><i>NPC演员身体控制如看、转身、行走、说话。</i> 这类 <span><a href="https://en.wikipedia.org/wiki/Blocking_(stage)">舞台调度（stage blocking）</a></span> 式的编排行为，应该接入与主游戏 AI 相同的身体系统；也就是说，维护两套不同的行走系统会给项目引入额外的技术债。</p></div></li><li><div><div></div></div><div><p><i>动画控制。</i> 完全覆盖默认的空闲姿势或当前的全身动画。 例如，如果两个演员在你的游戏中只拥抱一次，你不应该专门工程化一套拥抱系统；相反，只需用拥抱动作临时覆盖他们的动画即可。</p></div></li><li><div><div></div></div><div><p><i>道具与附着物。 </i>将对象暂时绑定到角色关节，例如将帽子附加到头上，或将杯子附加到手上。<!-- --></p></div></li><li><div><div></div></div><div><p><i>时序延迟。 </i>等待 X 秒，对于戏剧性的节奏或暂停很有用。</p></div></li><li><div><div></div></div><div><p><i>Camera control. </i>强制第一人称控制器观看某些内容，或使用其他摄像机角度或电影摄影生成额外的第三人称摄像机。</p></div></li><li><div><div></div></div><div><p><i>Game state management.</i> For systemic or combat-oriented games, it is best practice to disable the choreographed actors' combat AI and physics, as well as pause / block / delete nearby enemies and make the choreographed NPCs temporarily invincible.如果您不管理和清理编排的游戏状态，那么您的演员可能会在过场动画中意外倒地或死亡。</p></div></li></ul><div><div><div><picture><div><img height="1004" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MRD6iTlCXTPEnB9FNWU%252F-MRD79zRcJar-h-uhcx-%252FChoreography_HL2_Faceposer_multiactors.jpg%3Falt%3Dmedia%26token%3D3e503f2a-c329-44c4-b71e-943c4da70912&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=371906a3&amp;sv=2" width="1280"/></div><figcaption>用于《半条命 2》（<a class="game-store-link" href="https://store.steampowered.com/app/220/HalfLife_2/" rel="noopener noreferrer" target="_blank">Steam</a>）(2004) 的 Faceposer 编排工具的屏幕截图，具有 3D 预览和基于轨道的时间轴界面 </figcaption></picture></div></div></div><h3><div><a href="#object-interaction-systems"></a></div><div>对象交互系统</div></h3><p>黑曜石 RPG“天外世界”(2019) 的 QA 负责人 Taylor Swope 花了很长时间尝试调试 NPC 对象交互脚本问题 <span><a href="https://twitter.com/_taylorswope/status/1205252714680045568">https://twitter.com/_taylorswope/status/1205252714680045568</a></span></p><blockquote><p><i>We released [...] a fix for the dreaded "the game thinks my companions are dead" bug, which I believe I spent more time investigating than I have for any other individual bug in my career.</i></p><p><i>The gist of the bug was that, for some players, a companion quest would be marked as Failed in the quest log, with the reasoning that the companion was dead -- despite the fact that the companion was very much alive and well. One reason it was so hard to pin down is that it was impossible to tell when the bug actually happened -- all of the cases we had were essentially "hey something bad happened in the last ten hours and now my quest is broken". </i></p><p><i>Investigating it involved figuring out the location of every script and line of code that could possibly make the game think that a companion was dead. The only logical culprit was a bit of scripting that runs when a companion's health reaches zero: if they're in the party, it waits for combat to end and revives them;否则它会将它们标记为“真正”死亡。 [但是]游戏中只有当玩家在船上时，同伴才会在场但不在活跃队伍中。问题是，当同伴在船上时，他们是不受伤害的。 Eventually we figured out that "undamageable" does not mean "invulnerable" -- they can't take damage from attacks but can still get hurt from other things.其中一件事：坠落很远的距离。</i></p><p><i>问题是玩家的飞船上没有足够高的地方导致致命的坠落。所以现在我们必须弄清楚同伴们是如何神秘地最终远远高于水平的。 I looked into tons of theories, including "maybe their height data is preserved when fast travelling from other maps" and "maybe a physics interaction between two companions causes one to rapidly accelerate upwards". (My personal fav was "what if a companion is standing right where a cow spawns in during a random event and they're launched into space". Was genuinely bummed when that theory didn't pan out.) By this time, the game had come out, and all hopes of this being a weird fluke only a couple devs would ever see were dashed, as players all over the place started reporting their companion quests failing.</i></p><p><i>Eventually, an offhand comment in one user's review mentioned seeing a weird bug where a companion was "climbing nothing", and this comment led me to figuring the whole thing out.</i></p><p><i>在开发方面，NPC 与环境交互的系统称为“家具”。有时，这只是字面上的家具，比如坐在椅子上，但它涵盖了从使用终端到靠在墙上的所有内容。 Somewhere deep in the complex beast that is the furniture system, we had code that disabled all NPCs from starting new furniture interactions if the player was in a conversation.</i></p><p><i>The problem was that using a ladder is considered two different furniture interactions: one for getting on the ladder and starting to climb, and one to stop climbing and get off. So, if someone started climbing a ladder and the player entered a conversation before they stopped, they wouldn't be able to exit the ladder, and, well….</i>
 
 ——泰勒·斯沃普 (@_taylorswope) <span><a href="https://twitter.com/_taylorswope/status/1205252714680045568">https://twitter.com/_taylorswope/status/1205252714680045568</a></span></p></blockquote><h3><div><a href="#choreography-tools"></a></div><div>编排工具</div></h3><p>游戏引擎往往具有基于视觉轨迹的时间线工具来进行编排，例如 <span><a href="https://docs.unity3d.com/Packages/com.unity.timeline@1.2/manual/index.html">时间轴</a></span> （统一）或 <span><a href="https://docs.unrealengine.com/en-US/AnimatingObjects/Sequencer/index.html">音序器</a></span> （UE4）。脚本编写者和动画师设置不同的轨道并在每个轨道上放置事件。 这样，游戏就可以将编排内容作为游戏资源而不是代码导入，从而避免耗时的重新编译，并简化代码库。</p><p>具有许多对话过场动画的大型项目（例如角色扮演游戏）通常依赖于半自动化工作流程来编写其编排脚本。 他们的工具会为每段对话自动生成基础过场脚本，因为手工制作数百个（甚至数千个）短过场并不现实。 之后，脚本编写者和动画师会用额外编排打磨最重要的场景，QA 测试人员则会报告那些需要特别关注的低优先级编排问题。 大量依赖配音的项目还需要针对每种配音语言调整场景时序；具有昼夜循环的游戏则应自动用更适合过场和特写镜头的<span><a href="process__lighting.html">灯光</a></span> 过场动画和特写镜头的设置。</p><p>如果你的项目没有或不需要专门的编排工具，仍然可以直接用玩法脚本代码进行编排。使用类似的东西 <span><a href="https://docs.unity3d.com/Manual/Coroutines.html">产量</a></span> （Unity C#）或 <span><a href="https://docs.unity3d.com/bolt/1.4/manual/bolt-time.html">等待节点</a></span> （统一螺栓）或 <span><a href="https://docs.unrealengine.com/en-US/BlueprintAPI/Utilities/FlowControl/Delay/index.html">延迟</a></span> / <span><a href="https://docs.unrealengine.com/en-US/InteractiveExperiences/UseTimers/index.html">定时器</a></span> 节点 (UE4 BP) 以您所需的时间顺序调用函数。当您需要完全访问所有脚本功能作为编排的一部分时，这种直接方法非常有用。想象一下，编排 100 个 NPC 一次一个地穿过一扇门；在可视化工具中，这项任务将是一项缓慢、痛苦、乏味的工作，但在具有 for() 循环和数组的脚本语言中却微不足道。</p><div><div><div><picture><div><img height="672" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MRD7k2WkGmWWbgNpHJc%252F-MRDNjyo7wWUz3JTD_D-%252FChoreography_DragonAgeOrigins_CutsceneEditor.jpg%3Falt%3Dmedia%26token%3D5d1df587-c499-4533-8b9a-89a341af5372&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=6193562a&amp;sv=2" width="1280"/></div><figcaption>用于《龙腾世纪：起源》(2009) 的过场动画编辑器的屏幕截图，具有 3D 摄像机预览和基于轨道的时间轴</figcaption></picture></div></div></div><h3><div><a href="#example-choreography-workflow-the-witcher-3"></a></div><div>编舞工作流程示例：《巫师 3》</div></h3><p>对于他们的大型开放世界角色扮演游戏《巫师 3》（2015 年），开发商 CD Projekt Red 将他们的任务工作流程分为四个阶段：(1) <i>写作</i> 剧本和剧本格式的选择，(2) <i>任务脚本 </i>可视化脚本流程图工具中可能的分支和游戏状态，(3) <i>对话和编舞</i> 具有初步自动生成通行证，以及 (4) <i>后期制作</i> 修复并优化过场动画的视觉效果。 </p><p>对话设计器工具的自动过场动画生成器在这里特别有趣。 它会读取配音音频，并自动为演员生成轨道和时序，同时配上半随机化的动画变体，以及遵循反打镜头和 180 度规则等基础影视摄影模式的标准机位。 结果是一个已经基本完成的过场初始版，编排者因而可以把更多精力放在增加细节和情绪上，而不是重复做设置基础的枯燥工作。 </p><div><div><div><picture><div><img height="1056" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-MRDWFyR2cz7Hyvvc4sM%252F-MRD_U6quTLTiEL-tFIM%252FChoreography_Witcher3_Generator.jpg%3Falt%3Dmedia%26token%3D39003fef-ba20-4438-9b82-b26ce82853ad&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=a3026ad2&amp;sv=2" width="1913"/></div><figcaption>《巫师 3》的过场动画生成工具图，来自 GDC 2016：“《巫师 3》中的电影对话”</figcaption></picture></div></div></div><p>虽然这种方法的缺点并没有真正提到 <span><a href="https://www.youtube.com/watch?v=chf3REzAjgI">CDPR 的 GDC 2016 演讲</a></span>, 我们可以想象，这里的主要缺点是：你需要先将大量脚本、配音录音和动画集定稿并系统化，才能把它们输入生成器。如果没有标记的音频资源和接近完成的角色，生成器将很难理解要做什么。与任何程序生成系统一样，它严重依赖于其输入，如果没有良好的有意义的输入，它只会导致“<span><a href="https://emshort.blog/2016/09/21/bowls-of-oatmeal-and-text-generation/">燕麦片问题</a></span>."</p><p>关于 CDPR 编排工作流程的其他有趣细节：</p><ul><li><div><div></div></div><div><p>游戏是用英语编写脚本和编排的，但音频配音的长度显然会因每种语言而异。因此，对于每个本地化，编排和摄像机拍摄序列都会自动加快或减慢；例如，法语编舞比英语慢16%。 <span><a href="https://youtu.be/chf3REzAjgI?t=2266">[37:46]</a></span></p></div></li><li><div><div></div></div><div><p>为了白盒 NPC 和野生动物打断过场动画，编舞者遮挡了一个隐形碰撞箱/剪辑触发音量/“拒绝区域”，以将非编排的角色推开并保持摄像机镜头清晰。 <span><a href="https://youtu.be/chf3REzAjgI?t=2425">[40:25]</a></span></p></div></li></ul><picture><div><div><div><div><iframe></iframe></div></div></div></div><figcaption>视频展示了《巫师 3》过场动画生成工具，在同一对话场景上有两个随机生成的变体</figcaption></picture><h2><div><a href="#how-to-script-a-level-feature"></a></div><div>如何编写关卡功能脚本</div></h2><p>脚本编写是一项创造性的解决问题的任务，类似于任何其他关卡设计任务。首先你要了解问题，然后你要尝试各种方法。</p><ol><li><div><div></div></div><div><p>做一点 <strong>规划</strong> 和 <strong>研究</strong>. </p></div></li><li><div><div></div></div><div><p><strong>原型</strong> 最基本的版本和 <strong>试玩测试</strong>.</p></div></li><li><div><div></div></div><div><p>渐渐地 <strong>迭代</strong> 并详细说明脚本，直到它满足您的需求。</p></div></li></ol><h3><div><a href="#id-1.-planning-a-script"></a></div><div>1. 策划剧本</div></h3><p>与任何创造性任务一样， <strong>一点点计划会有很大帮助。</strong> 在打开脚本编辑器之前，请花几分钟时间 <strong>定义您希望脚本执行的操作</strong>。规划文件的一些示例：</p><ul><li><div><div></div></div><div><p>编写任务脚本？绘制流程图并标记 <span><a href="process__layout.html">布局</a></span> 绘制任务地点。</p></div></li><li><div><div></div></div><div><p>编写对象或行为的脚本？画出它的外观及其各种状态/属性。</p></div></li><li><div><div></div></div><div><p>编写战斗或遭遇战脚本？做一些 <span><a href="process__combat__encounter.html">遭遇战设计</a></span> 首先。</p></div></li><li><div><div></div></div><div><p>编写对话脚本还是过场动画？编写剧本并绘制故事板。</p></div></li></ul><p>接下来， <strong>研究</strong> 通过谷歌搜索实现该功能的各种方法。在谷歌上搜索编程或技术脚本帮助时，请确保：</p><ul><li><div><div></div></div><div><p><i>技术上要具体。</i> 包括游戏或引擎名称以及脚本语言。将两者都用引号引起来，以便在搜索结果中需要这些术语。</p></div></li><li><div><div></div></div><div><p><i>概念上要笼统。</i> 用通用术语描述所需的行为。对于更复杂的功能，将问题分解成更小的更简单的部分并分别谷歌。</p></div></li></ul><p>搜索词的一些示例：</p><ul><li><div><div></div></div><div><p>😢<code><strong>如何对吊扇进行编码</strong></code> 最糟糕的是模糊（哪种代码语言？），最糟糕的是具体（你希望其他人专门构建了一个虚拟吊扇）</p><ul><li><div><div></div></div><div><p>😎<code><strong>“unity”“c#”旋转对象代码</strong></code> 在技术上是特定的（我们只需要 Unity C# 代码）并且有助于概括（吊扇是一种旋转的东西），我们可以从通用示例中推断出我们的特定用例</p></div></li></ul></div></li><li><div><div></div></div><div><p>😐 <code><strong>游戏开发脚本目标系统</strong></code> 也许会告诉您某人关于如何构建目标系统的意见，但没有任何具体的帮助。您到底想要编写什么类型的游戏目标脚本？没有任何搜索引擎可以为您设计玩法。</p><ul><li><div><div></div></div><div><p>如果我们将这个问题分解为更简单、更具体的步骤，并分别通过谷歌搜索这些较小的步骤，会怎么样？</p></div></li><li><div><div></div></div><div><p>😎<strong> </strong><code><strong>“ue4”“蓝图”在屏幕上显示文本</strong></code> 帮助我们弄清楚如何通知玩家某个目标</p></div></li><li><div><div></div></div><div><p>😎 <code><strong>“ue4”“蓝图”玩家进入触发器</strong></code> 帮助我们学习如何检测目标何时完成、玩家何时到达关卡中的某个位置等。</p></div></li></ul></div></li></ul><p><strong>何时寻求帮助。</strong> 除非您完全迷失了方向，否则请避免在早期阶段向其他人寻求帮助。尝试用你已经找到的东西自己做，看看你能走多远。当您有更具体的问题或有一些现有脚本需要排除故障时，询问其他人会更有效。要获得有用的答案，您必须首先了解问题。</p><h3><div><a href="#id-2.-prototyping-a-script"></a></div><div>2. 脚本原型设计</div></h3><p>完成一些搜索后，您现在对问题有了更好的了解，并且准备好 <strong>原型</strong> 脚本工具中的功能。</p><p></p><p>向社区成员寻求建议。加入特定于引擎的论坛、网站或 Discord，并提出您的问题。如果可能的话，回顾一下您已经完成的研究并包括所有错误消息。这是您可以发布的示例问题：</p><p>“我正在尝试制作一个可用的嘉年华旋转木马。我发现这个 C# 代码可以使对象旋转（链接），但当我尝试时 </p><h2><div><a href="#encounter-scripting-workflow"></a></div><div>遇到脚本工作流程</div></h2><p>通常涉及生成/仇恨敌人的触发器，以及强制玩家处理敌人的门</p><p>在开始编写脚本之前：</p><ul><li><div><div></div></div><div><p>在纸上做一些遭遇战设计。在打开编辑器之前先制定一个计划，甚至是一个基本计划。玩家在这次遭遇战中将拥有什么武器或能力？</p></div></li><li><div><div></div></div><div><p>了解你的战斗尺度规范。理想的敌人交战距离是多少？白盒太大还是太小？</p></div></li></ul><p>然后，放置一些 AI / NPC / 敌人并开始和他们一起玩</p><ul><li><div><div></div></div><div><p>NPC 对现有空间有何反应？他们是否做了你想通过暗示来白盒的事情？</p></div></li><li><div><div></div></div><div><p>您可以使用哪些工具？静态、脚本、动态？</p></div></li></ul><h2><div><a href="#to-review"></a></div><div>要审查...</div></h2><ul><li><div><div></div></div><div><p><strong>脚本</strong> 是使用轻量级编程语言设计的特定于关卡的行为，通常使用特定于引擎的可视化编程工具。</p></div></li><li><div><div></div></div><div><p>脚本的常见功能包括 <strong>目标</strong>, <strong>编舞</strong>, <strong>触发器</strong>, <strong>盖茨</strong>， 和 <strong>人工智能</strong>.</p></div></li><li><div><div></div></div><div><p></p><ul><li><div><div></div></div><div><p>进行谷歌搜索时，请包含引擎名称并使用通用术语进行搜索。</p></div></li><li><div><div></div></div><div><p>对于短期小型项目（&lt; 1 个月），最简单、最快的 hack 就足够了。 </p></div></li><li><div><div></div></div><div><p>对于长期大型项目（6个月以上），更稳定的系统方法更好。</p></div></li></ul></div></li></ul><h2><div><a href="#now-what"></a></div><div>现在怎么办？</div></h2><ul><li><div><div></div></div><div><p>脚本编写很重要 <span><a href="process__combat__encounter.html"><strong>遭遇战设计</strong></a></span> 和 <span><a href="process__env-art__storytelling.html"><strong>叙事</strong></a></span>.</p></div></li><li><div><div></div></div><div><p>编写好主要脚本后 <span><a href="process__preproduction__pacing.html"><strong>节奏</strong></a></span> 节拍，您可能想要执行 <span><a href="process__lighting.html"><strong>灯光</strong></a></span> 传递 <span><a href="process__blockout.html"><strong>白盒</strong></a></span>.</p></div></li></ul><h3><div><a href="#further-reading"></a></div><div>进一步阅读</div></h3><ul><li><div><div></div></div><div><p>大多数成熟的游戏引擎都有可视化脚本工具。统一使用 <span><a href="https://docs.unity3d.com/bolt/">博尔特</a></span>、虚幻引擎4使用 <span><a href="https://docs.unrealengine.com/en-US/ProgrammingAndScripting/Blueprints/index.html">蓝图</a></span>，而戈多有 <span><a href="https://docs.godotengine.org/en/stable/getting_started/scripting/visual_script/getting_started.html">可视化脚本</a></span>。参见 <span><a href="appendix__tools.html">工具</a></span> 获取游戏及其脚本工具的完整列表。</p><ul><li><div><div></div></div><div><p>Unreal 脚本简介： <span><a href="https://www.unrealengine.com/en-US/onlinelearning-courses/implementing-level-design-with-blueprints">“用蓝图实现关卡设计”作者：Patrick Haslow</a></span>，2021 年 11 月。</p></div></li></ul></div></li><li><div><div></div></div><div><p><span><a href="https://blueprintsfromhell.tumblr.com/">UE4 地狱蓝图</a></span> 是在虚幻引擎 4 的蓝图系统中创作的凌乱/黑客可视化编程图的 Tumblr 存档。这很有趣，但也有点戏剧化。有时，交付低效的脚本比设计耗时的“更好”设计更有意义。如果一个更干净的方法快了 0.0001 毫秒，但制作时间却增加了一倍，那么它可以说不是一个更好的脚本。</p></div></li></ul></div></div></article>
+      </div>
+      <div class="gb-page-links-wrap">
 <div class="page-links"><a class="page-link" href="process__blockout__playtesting__persona.html"><span>上一页</span>玩家画像</a><a class="page-link" href="process__scripting__nav.html"><span>下一页</span>(存根) 导航</a></div>
-</main>
+
+      </div>
+    </main>
+    <aside class="gb-outline" data-outline>
+      <div class="gb-outline-inner">
+        <button class="gb-outline-title" type="button" data-toggle-outline>ON THIS PAGE</button>
+        <nav class="gb-outline-list" data-outline-list></nav>
+      </div>
+    </aside>
+  </div>
+  <div class="gb-search-modal" role="dialog" aria-modal="true" aria-label="搜索" data-search-modal>
+    <div class="gb-search-box">
+      <div class="gb-search-input-row">
+        <span class="gb-search-icon"></span>
+        <input type="search" data-search-input placeholder="搜索页面、章节或正文内容" autocomplete="off">
+        <button type="button" data-close-search>关闭</button>
+      </div>
+      <div class="gb-search-results" data-search-results></div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,120 +1,194 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>主动线 | The Level Design Book 中文版</title>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="完成单人关卡所需经过的最小/主要玩家路径">
+  <title>主动线 | The Level Design Book 中文版</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="site-data.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body>
-<aside class="sidebar">
-<a class="brand" href="index.html">The Level Design Book<span>中文版</span></a>
-<nav><a class="" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
-<a class="" href="introduction.html" style="--depth:1">✨ 什么是关卡设计</a>
-<a class="" href="process__overview.html" style="--depth:2">🗺️ 如何制作一个关卡</a>
-<a class="" href="process__preproduction.html" style="--depth:2">🧠 前期设计</a>
-<a class="" href="process__preproduction__pacing.html" style="--depth:3">节奏</a>
-<a class="" href="process__preproduction__research.html" style="--depth:3">调研</a>
-<a class="" href="process__preproduction__worldbuilding.html" style="--depth:3">世界构建</a>
-<a class="" href="process__preproduction__scope.html" style="--depth:3">范围控制</a>
-<a class="" href="process__combat.html" style="--depth:2">🔫 战斗</a>
-<a class="" href="process__combat__enemy.html" style="--depth:3">敌人设计</a>
-<a class="" href="process__combat__encounter.html" style="--depth:3">遭遇战</a>
-<a class="" href="process__combat__cover.html" style="--depth:3">掩体</a>
-<a class="" href="process__combat__balance.html" style="--depth:3">地图平衡</a>
-<a class="" href="process__layout.html" style="--depth:2">🛠️ 布局</a>
-<a class="" href="process__layout__flow.html" style="--depth:3">动线</a>
-<a class="" href="process__layout__flow__circulation.html" style="--depth:4">空间流线</a>
-<a class="" href="process__layout__flow__verticality.html" style="--depth:4">纵向/垂直空间</a>
-<a class="active" href="process__layout__criticalpath.html" style="--depth:3">主动线</a>
-<a class="" href="process__layout__parti.html" style="--depth:3">设计概念草图</a>
-<a class="" href="process__layout__typology.html" style="--depth:3">类型学</a>
-<a class="" href="process__layout__typology__gates.html" style="--depth:4">门与关口</a>
-<a class="" href="process__blockout.html" style="--depth:2">🏠 白盒</a>
-<a class="" href="process__blockout__massing.html" style="--depth:3">体块</a>
-<a class="" href="process__blockout__massing__landscape.html" style="--depth:4">景观地形</a>
-<a class="" href="process__blockout__massing__composition.html" style="--depth:4">构图</a>
-<a class="" href="process__blockout__massing__prospect-refuge.html" style="--depth:4">眺望-庇护</a>
-<a class="" href="process__blockout__metrics.html" style="--depth:3">标准尺度规范</a>
-<a class="" href="process__blockout__metrics__modular.html" style="--depth:4">模块化套件设计</a>
-<a class="" href="process__blockout__metrics__doom.html" style="--depth:4">《毁灭战士》 尺度</a>
-<a class="" href="process__blockout__metrics__quake.html" style="--depth:4">《雷神之锤》 尺度</a>
-<a class="" href="process__blockout__wayfinding.html" style="--depth:3">寻路与引导</a>
-<a class="" href="process__blockout__playtesting.html" style="--depth:3">试玩测试</a>
-<a class="" href="process__blockout__playtesting__persona.html" style="--depth:4">玩家画像</a>
-<a class="" href="process__scripting.html" style="--depth:2">📜 脚本</a>
-<a class="" href="process__scripting__nav.html" style="--depth:3">(存根) 导航</a>
-<a class="" href="process__scripting__doors.html" style="--depth:3">门</a>
-<a class="" href="process__lighting.html" style="--depth:2">☀️ 灯光</a>
-<a class="" href="process__lighting__three-point.html" style="--depth:3">三点布光</a>
-<a class="" href="process__lighting__d6-lighting.html" style="--depth:3">D6 灯光法</a>
-<a class="" href="process__lighting__darkness.html" style="--depth:3">黑暗场景灯光</a>
-<a class="" href="process__env-art.html" style="--depth:2">🏡 环境美术</a>
-<a class="" href="process__env-art__psychology.html" style="--depth:3">形状与色彩心理学</a>
-<a class="" href="process__env-art__texturing.html" style="--depth:3">材质</a>
-<a class="" href="process__env-art__storytelling.html" style="--depth:3">叙事</a>
-<a class="" href="process__env-art__optimization.html" style="--depth:3">优化</a>
-<a class="" href="process__release.html" style="--depth:2">🌈 发布</a>
-<a class="" href="culture__overview.html" style="--depth:2">🦜 作为文化的关卡设计</a>
-<a class="" href="culture__history-level-designer.html" style="--depth:2">关卡设计师简史</a>
-<a class="" href="culture__zero-player.html" style="--depth:2">零玩家关卡设计</a>
-<a class="" href="culture__unfinished-pages.html" style="--depth:2">未完成页面</a>
-<a class="" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:3">建筑史</a>
-<a class="" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:3">结构工程入门</a>
-<a class="" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:3">环境美术史</a>
-<a class="" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:3">家具史</a>
-<a class="" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:3">遭遇战设计史</a>
-<a class="" href="studies__overview.html" style="--depth:2">🔍 如何研究一个关卡</a>
-<a class="" href="studies__sp.html" style="--depth:2">单人关卡研究</a>
-<a class="" href="studies__sp__undead-burg.html" style="--depth:3">不死镇（《黑暗之魂》1）</a>
-<a class="" href="studies__sp__assassins.html" style="--depth:3">Assassins (《神偷》 1)</a>
-<a class="" href="studies__sp__cradle.html" style="--depth:3">(存根) The Cradle (《神偷》 3)</a>
-<a class="" href="studies__sp__sapienza.html" style="--depth:3">(存根) Sapienza (《杀手》)</a>
-<a class="" href="studies__sp__silent-cartographer.html" style="--depth:3">(存根) Silent Cartographer (《光环》 1)</a>
-<a class="" href="studies__mp.html" style="--depth:2">多人关卡研究</a>
-<a class="" href="studies__mp__chill-out.html" style="--depth:3">Chill Out (《光环》 1)</a>
-<a class="" href="studies__mp__de_dust2.html" style="--depth:3">(存根) de_dust2 (《反恐精英》)</a>
-<a class="" href="studies__irl.html" style="--depth:2">现实空间研究</a>
-<a class="" href="studies__irl__disneyland.html" style="--depth:3">迪士尼乐园 (美国加利福尼亚)</a>
-<a class="" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:3">(存根) 拉斯维加斯 (美国内华达)</a>
-<a class="" href="learning__notes.html" style="--depth:2">🎒 给教学者的笔记</a>
-<a class="" href="learning__projects.html" style="--depth:2">项目计划</a>
-<a class="" href="learning__projects__classic-combat.html" style="--depth:3">经典战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages.html" style="--depth:3">未完成 WIP 页面</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:4">现代战斗</a>
-<a class="" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:4">现代潜行</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:4">练习：直射光</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:4">练习：2D 白板图</a>
-<a class="" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:4">关卡设计作品集</a>
-<a class="" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:4">设计测试：改编</a>
-<a class="" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:4">练习：布局</a>
-<a class="" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:4">练习：纵向/垂直空间</a>
-<a class="" href="appendix__tools.html" style="--depth:2">工具</a>
-<a class="" href="appendix__tools__trenchbroom.html" style="--depth:3">TrenchBroom</a>
-<a class="" href="appendix__resources.html" style="--depth:2">资产与资源</a>
-<a class="" href="appendix__resources__talks.html" style="--depth:3">推荐演讲</a>
-<a class="" href="appendix__resources__books.html" style="--depth:3">推荐书目</a>
-<a class="" href="appendix__resources__quake.html" style="--depth:3">《雷神之锤》资源</a>
-<a class="" href="appendix__resources__quake__how-to-package.html" style="--depth:4">如何打包 《雷神之锤》 地图/Mod</a>
-<a class="" href="appendix__resources__formats.html" style="--depth:3">文件格式</a>
-<a class="" href="appendix__resources__formats__fgd.html" style="--depth:4">FGD 文件格式</a>
-<a class="" href="appendix__resources__formats__map.html" style="--depth:4">MAP 文件格式</a>
-<a class="" href="appendix__resources__formats__mdl.html" style="--depth:4">MDL 文件格式</a>
-<a class="" href="appendix__communities.html" style="--depth:2">社区</a>
-<a class="" href="appendix__about.html" style="--depth:2">关于本书与作者</a>
-<a class="" href="appendix__license.html" style="--depth:2">许可与版权</a></nav>
-</aside>
-<main class="page">
-<div class="topbar">
-<a href="https://book.leveldesignbook.com/process/layout/criticalpath">查看原文</a>
-<a href="https://book.leveldesignbook.com">原站首页</a>
+<body class="gb-body" data-page="process__layout__criticalpath.html" data-article-hash="b2ad8969c2b58715daac02ee12a64e1fd97ee572d49afa713ebb4bf590480e54">
+  <div class="gb-scrim" data-close-panels></div>
+  <header class="gb-header">
+    <div class="gb-header-inner">
+      <button class="gb-icon-button gb-menu-button" type="button" data-open-sidebar aria-label="打开目录">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="gb-header-logo" href="index.html">
+        <span class="gb-logo-dot"></span>
+        <span>The Level Design Book</span>
+      </a>
+      <nav class="gb-header-links" aria-label="Top links">
+        <a href="process__overview.html">Book</a>
+        <a href="appendix__resources.html">Resources</a>
+        <a href="https://book.leveldesignbook.com/process/layout/criticalpath">原文</a>
+      </nav>
+      <button class="gb-search-trigger" type="button" data-open-search>
+        <span class="gb-search-icon"></span>
+        <span class="gb-search-label">搜索...</span>
+        <span class="gb-shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+      </button>
+    </div>
+  </header>
+  <div class="gb-layout">
+    <aside class="gb-sidebar" data-sidebar>
+      <div class="gb-sidebar-scroll">
+<a class="gb-sidebar-brand" href="index.html"><span class="gb-brand-mark">◆</span><span><strong>The Level Design Book</strong><small>中文版</small></span></a>
+<nav class="gb-nav" aria-label="Table of contents">
+<a class="gb-nav-link" href="index.html" style="--depth:0">The Level Design Book 中文版</a>
+<a class="gb-nav-link" href="introduction.html" style="--depth:0">✨ 什么是关卡设计</a>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 1, PROCESS</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="process__overview.html" style="--depth:1">🗺️ 如何制作一个关卡</a>
+<a class="gb-nav-link" href="process__preproduction.html" style="--depth:1">🧠 前期设计</a>
+<a class="gb-nav-link" href="process__preproduction__pacing.html" style="--depth:2">节奏</a>
+<a class="gb-nav-link" href="process__preproduction__research.html" style="--depth:2">调研</a>
+<a class="gb-nav-link" href="process__preproduction__worldbuilding.html" style="--depth:2">世界构建</a>
+<a class="gb-nav-link" href="process__preproduction__scope.html" style="--depth:2">范围控制</a>
+<a class="gb-nav-link" href="process__combat.html" style="--depth:1">🔫 战斗</a>
+<a class="gb-nav-link" href="process__combat__enemy.html" style="--depth:2">敌人设计</a>
+<a class="gb-nav-link" href="process__combat__encounter.html" style="--depth:2">遭遇战</a>
+<a class="gb-nav-link" href="process__combat__cover.html" style="--depth:2">掩体</a>
+<a class="gb-nav-link" href="process__combat__balance.html" style="--depth:2">地图平衡</a>
+<a class="gb-nav-link" href="process__layout.html" style="--depth:1">🛠️ 布局</a>
+<a class="gb-nav-link" href="process__layout__flow.html" style="--depth:2">动线</a>
+<a class="gb-nav-link" href="process__layout__flow__circulation.html" style="--depth:3">空间流线</a>
+<a class="gb-nav-link" href="process__layout__flow__verticality.html" style="--depth:3">纵向/垂直空间</a>
+<a class="gb-nav-link active" href="process__layout__criticalpath.html" style="--depth:2">主动线</a>
+<a class="gb-nav-link" href="process__layout__parti.html" style="--depth:2">设计概念草图</a>
+<a class="gb-nav-link" href="process__layout__typology.html" style="--depth:2">类型学</a>
+<a class="gb-nav-link" href="process__layout__typology__gates.html" style="--depth:3">门与关口</a>
+<a class="gb-nav-link" href="process__blockout.html" style="--depth:1">🏠 白盒</a>
+<a class="gb-nav-link" href="process__blockout__massing.html" style="--depth:2">体块</a>
+<a class="gb-nav-link" href="process__blockout__massing__landscape.html" style="--depth:3">景观地形</a>
+<a class="gb-nav-link" href="process__blockout__massing__composition.html" style="--depth:3">构图</a>
+<a class="gb-nav-link" href="process__blockout__massing__prospect-refuge.html" style="--depth:3">眺望-庇护</a>
+<a class="gb-nav-link" href="process__blockout__metrics.html" style="--depth:2">标准尺度规范</a>
+<a class="gb-nav-link" href="process__blockout__metrics__modular.html" style="--depth:3">模块化套件设计</a>
+<a class="gb-nav-link" href="process__blockout__metrics__doom.html" style="--depth:3">《毁灭战士》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__metrics__quake.html" style="--depth:3">《雷神之锤》 尺度</a>
+<a class="gb-nav-link" href="process__blockout__wayfinding.html" style="--depth:2">寻路与引导</a>
+<a class="gb-nav-link" href="process__blockout__playtesting.html" style="--depth:2">试玩测试</a>
+<a class="gb-nav-link" href="process__blockout__playtesting__persona.html" style="--depth:3">玩家画像</a>
+<a class="gb-nav-link" href="process__scripting.html" style="--depth:1">📜 脚本</a>
+<a class="gb-nav-link" href="process__scripting__nav.html" style="--depth:2">(存根) 导航</a>
+<a class="gb-nav-link" href="process__scripting__doors.html" style="--depth:2">门</a>
+<a class="gb-nav-link" href="process__lighting.html" style="--depth:1">☀️ 灯光</a>
+<a class="gb-nav-link" href="process__lighting__three-point.html" style="--depth:2">三点布光</a>
+<a class="gb-nav-link" href="process__lighting__d6-lighting.html" style="--depth:2">D6 灯光法</a>
+<a class="gb-nav-link" href="process__lighting__darkness.html" style="--depth:2">黑暗场景灯光</a>
+<a class="gb-nav-link" href="process__env-art.html" style="--depth:1">🏡 环境美术</a>
+<a class="gb-nav-link" href="process__env-art__psychology.html" style="--depth:2">形状与色彩心理学</a>
+<a class="gb-nav-link" href="process__env-art__texturing.html" style="--depth:2">材质</a>
+<a class="gb-nav-link" href="process__env-art__storytelling.html" style="--depth:2">叙事</a>
+<a class="gb-nav-link" href="process__env-art__optimization.html" style="--depth:2">优化</a>
+<a class="gb-nav-link" href="process__release.html" style="--depth:1">🌈 发布</a>
 </div>
-<div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 2, CULTURE</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="culture__overview.html" style="--depth:1">🦜 作为文化的关卡设计</a>
+<a class="gb-nav-link" href="culture__history-level-designer.html" style="--depth:1">关卡设计师简史</a>
+<a class="gb-nav-link" href="culture__zero-player.html" style="--depth:1">零玩家关卡设计</a>
+<a class="gb-nav-link" href="culture__unfinished-pages.html" style="--depth:1">未完成页面</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-architecture.html" style="--depth:2">建筑史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__structural-engineering-primer.html" style="--depth:2">结构工程入门</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-environment-art.html" style="--depth:2">环境美术史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-of-furniture.html" style="--depth:2">家具史</a>
+<a class="gb-nav-link" href="culture__unfinished-pages__history-encounter-design.html" style="--depth:2">遭遇战设计史</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 3, STUDIES</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="studies__overview.html" style="--depth:1">🔍 如何研究一个关卡</a>
+<a class="gb-nav-link" href="studies__sp.html" style="--depth:1">单人关卡研究</a>
+<a class="gb-nav-link" href="studies__sp__undead-burg.html" style="--depth:2">不死镇（《黑暗之魂》1）</a>
+<a class="gb-nav-link" href="studies__sp__assassins.html" style="--depth:2">Assassins (《神偷》 1)</a>
+<a class="gb-nav-link" href="studies__sp__cradle.html" style="--depth:2">(存根) The Cradle (《神偷》 3)</a>
+<a class="gb-nav-link" href="studies__sp__sapienza.html" style="--depth:2">(存根) Sapienza (《杀手》)</a>
+<a class="gb-nav-link" href="studies__sp__silent-cartographer.html" style="--depth:2">(存根) Silent Cartographer (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp.html" style="--depth:1">多人关卡研究</a>
+<a class="gb-nav-link" href="studies__mp__chill-out.html" style="--depth:2">Chill Out (《光环》 1)</a>
+<a class="gb-nav-link" href="studies__mp__de_dust2.html" style="--depth:2">(存根) de_dust2 (《反恐精英》)</a>
+<a class="gb-nav-link" href="studies__irl.html" style="--depth:1">现实空间研究</a>
+<a class="gb-nav-link" href="studies__irl__disneyland.html" style="--depth:2">迪士尼乐园 (美国加利福尼亚)</a>
+<a class="gb-nav-link" href="studies__irl__stub-las-vegas-nevada-usa.html" style="--depth:2">(存根) 拉斯维加斯 (美国内华达)</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>BOOK 4, LEARNING</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="learning__notes.html" style="--depth:1">🎒 给教学者的笔记</a>
+<a class="gb-nav-link" href="learning__projects.html" style="--depth:1">项目计划</a>
+<a class="gb-nav-link" href="learning__projects__classic-combat.html" style="--depth:2">经典战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages.html" style="--depth:2">未完成 WIP 页面</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-combat.html" style="--depth:3">现代战斗</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__modern-stealth.html" style="--depth:3">现代潜行</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-direct-lighting.html" style="--depth:3">练习：直射光</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-whiteboard-2d.html" style="--depth:3">练习：2D 白板图</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__level-design-portfolio.html" style="--depth:3">关卡设计作品集</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__adaptation.html" style="--depth:3">设计测试：改编</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__exercise-floorplan.html" style="--depth:3">练习：布局</a>
+<a class="gb-nav-link" href="learning__projects__unfinished-wip-pages__verticality.html" style="--depth:3">练习：纵向/垂直空间</a>
+</div>
+<button class="gb-nav-section" type="button" aria-expanded="true"><span>APPENDIX</span><span class="gb-chevron"></span></button>
+<div class="gb-nav-section-body">
+<a class="gb-nav-link" href="appendix__tools.html" style="--depth:1">工具</a>
+<a class="gb-nav-link" href="appendix__tools__trenchbroom.html" style="--depth:2">TrenchBroom</a>
+<a class="gb-nav-link" href="appendix__resources.html" style="--depth:1">资产与资源</a>
+<a class="gb-nav-link" href="appendix__resources__talks.html" style="--depth:2">推荐演讲</a>
+<a class="gb-nav-link" href="appendix__resources__books.html" style="--depth:2">推荐书目</a>
+<a class="gb-nav-link" href="appendix__resources__quake.html" style="--depth:2">《雷神之锤》资源</a>
+<a class="gb-nav-link" href="appendix__resources__quake__how-to-package.html" style="--depth:3">如何打包 《雷神之锤》 地图/Mod</a>
+<a class="gb-nav-link" href="appendix__resources__formats.html" style="--depth:2">文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__fgd.html" style="--depth:3">FGD 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__map.html" style="--depth:3">MAP 文件格式</a>
+<a class="gb-nav-link" href="appendix__resources__formats__mdl.html" style="--depth:3">MDL 文件格式</a>
+<a class="gb-nav-link" href="appendix__communities.html" style="--depth:1">社区</a>
+<a class="gb-nav-link" href="appendix__about.html" style="--depth:1">关于本书与作者</a>
+<a class="gb-nav-link" href="appendix__license.html" style="--depth:1">许可与版权</a>
+</div>
+</nav>
+
+      </div>
+    </aside>
+    <main class="gb-main" id="content">
+      <div class="gb-mobile-tools">
+        <button type="button" data-open-sidebar>目录</button>
+        <button type="button" data-open-outline>本页目录</button>
+      </div>
+      <div class="gb-page-actions">
+        <div class="gb-breadcrumbs"><span>BOOK 1, PROCESS</span><span class="gb-breadcrumb-sep">/</span><span>🛠️ 布局</span></div>
+        <div class="gb-action-links">
+          <a href="https://book.leveldesignbook.com/process/layout/criticalpath">查看原文</a>
+          <a href="https://book.leveldesignbook.com">原站首页</a>
+        </div>
+      </div>
+      <div class="gb-license"><div class="license">本页面为非商业中文翻译镜像。原文来自 <a href="https://book.leveldesignbook.com/">The Level Design Book</a>；未特别署名文本遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>。图片、截图、视频与引用仍归原作者或权利方所有。</div></div>
+      <div class="gb-article-wrap">
 <article><header><nav><ol><li></li><li></li></ol></nav><h1>主动线</h1><p>完成单人关卡所需经过的最小/主要玩家路径</p></header><div><div><p>这 <strong>主动线</strong> （或 <strong>黄金之路</strong>）是玩家完成关卡和进度的主要路径/程序。 </p><ul><li><div><div></div></div><div><p>通常用于具有脚本化进程的单人关卡，而不是多人关卡</p></div></li><li><div><div></div></div><div><p>突出显示关卡中最重要（“关键”）的部分。</p></div></li><li><div><div></div></div><div><p>代表一个 <i>理想的玩家动线</i> 忽略可选的侧面区域</p></div></li></ul><p>最后一点很重要。主动线代表您的 <i>理想的</i> 设计目标和需求，但它不是现实中玩家的真实行为。大多数玩家会徘徊、探索、徘徊，甚至只是感到困惑。</p><h2><div><a href="#how-to-plan-a-critical-path"></a></div><div>如何规划主动线</div></h2><p>在布局图中，主动线标注能帮助其他设计师和协作者理解关卡的<span><a href="process__preproduction__pacing.html">节奏</a></span>。发生了什么以及在哪里发生？</p><ol><li><div><div></div></div><div><p>画一个首字母 <span><a href="process__layout.html">布局</a></span>.</p></div></li><li><div><div></div></div><div><p>标出并标注玩家的起点和终点。</p></div></li><li><div><div></div></div><div><p>对任何专业进行标记、标签和编号 <span><a href="process__preproduction__pacing.html#beats-and-variation">节拍</a></span>.</p></div></li><li><div><div></div></div><div><p>如果看起来不会太混乱，那就用箭头画出玩家的路线。<!-- --></p></div></li></ol><p><i>     有关绘制平面图的更多信息，请参见 </i><span><a href="process__layout.html"><i>布局</i></a></span><i>.</i></p><div><div><div><picture><div><img height="1050" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Lzym-tKNi8yXq0u-46X%252F-M-21_eOR8UaLLu3gHTW%252Fldb_layout_example.png%3Falt%3Dmedia%26token%3Df74ce3a9-5602-4fd8-932a-0585e2757d19&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=28097bc5&amp;sv=2" width="1915"/></div><figcaption>示例关卡布局，其中标出了主动线并编号了玩法节拍</figcaption></picture></div></div></div><h2><div><a href="#critical-path-as-scoping-tool"></a></div><div>作为范围界定工具的主动线</div></h2><p>在工程中，项目经理使用 <span><a href="https://en.wikipedia.org/wiki/Critical_path_method">主动线法（CPM）</a></span> 找出哪些任务必须首先发生以及为什么。绘制主动线有助于他们理解项目的逻辑和流程。</p><p>我们也可以用类似方式将主动线用于关卡设计，帮助管理项目<span><a href="process__preproduction__scope.html">范围</a></span>.</p><ul><li><div><div></div></div><div><p>该关卡的每个部分有多重要？ </p></div></li><li><div><div></div></div><div><p>如果某个区域不在主动线上，就只有部分玩家会看到它。值得制作吗？</p></div></li></ul><div><div><div><picture><div><img height="1050" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Lzym-tKNi8yXq0u-46X%252F-M-23nLAYXxdB2RkcTid%252Fldb_layout_criticalpath_scope.png%3Falt%3Dmedia%26token%3D6ef8702f-7657-48c2-bbd1-8102d2358753&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=5470327d&amp;sv=2" width="1915"/></div><figcaption>可以在不影响主动线的情况下删除黄色阴影区域 </figcaption></picture></div></div></div><p>主动线帮助我们想象“最小可行”布局是什么样的。 </p><p>例如，在上面的布局图中，黄色斜线区域不在主动线上。那么它还值得制作吗？如果我们削减这个领域，那么我们要做的工作就会减少。</p><p>也许这个关卡仍然太大，制作量仍然太高。也许我们需要删除更多。 </p><p>如果我们删除所有侧面区域会怎么样？ 它还能满足我们的体验设计目标吗？ 也许我们需要完全重新设计主动线……</p><div><div><div><picture><div><img height="1050" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-Lzym-tKNi8yXq0u-46X%252F-M-25rDXmTkGBWwuVS-O%252Fldb_layout_criticalpath_scope_cut.png%3Falt%3Dmedia%26token%3Dd96d97c2-5999-4ebe-a114-423b5aa29c23&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=56dabf49&amp;sv=2" width="1915"/></div><figcaption>如果我们删除所有“不必要”的区域会怎样？现在构建工作量减少了，但它仍然能实现我们的体验目标吗？</figcaption></picture></div></div></div><h2><div><a href="#against-critical-paths"></a></div><div>反对主动线？</div></h2><p>围绕主动线进行设计，可能会让我们以过于简化的方式思考空间。 </p><p>主动线通过资源、大门和目标来工具化世界，这是关卡设计师强加给玩家的活动清单。游戏和关卡能否不仅仅是供用户消费的“内容”？如果您的项目需要高度的真实性、合理性或地方感怎么办？围绕主动线构建通常会产生“电子游戏”的感觉空间。 </p><p>相反，有些设计师更倾向于在<i>之后</i> 一个已经完成的 <span><a href="process__layout.html">布局</a></span> 和 <span><a href="process__blockout.html">白盒</a></span>，围绕现有的关卡几何体流动。 任天堂64 的 《007黄金眼》 007 (1997) 制作人 Martin Hollis 解释了他们的关卡设计过程：</p><blockquote><p><i>“关卡创建者或建筑师在没有太多关卡设计的情况下进行工作，我的意思是，他们通常没有考虑到玩家的起点或出口。当然，他们没有考虑敌人的位置或物体的位置。他们的工作只是创造一个有趣的空间。关卡制作完成后，戴夫或有时邓肯将面临着在其中填充目标、敌人和东西。这种草率的计划外方法的好处是，游戏中的许多关卡都具有现实和非线性的感觉。有些房间坦率地说，关卡中有多种路线，这种设计方法效率很低，因为大部分关卡对于玩法来说是不必要的，但它有助于增强游戏的自由感，而这种自由感和真实感反过来又对游戏的成功做出了巨大贡献。”</i>
 
-——Martin Hollis，《黄金眼 007》（任天堂64）的制片人，引述于 <span><a href="http://www.hobbygamedev.com/int/anti-design-in-ge007/">“《黄金眼 007》中的反设计/向后游戏设计”作者：Chris DeLeon</a></span></p></blockquote><div><div><div><picture><div><img height="579" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M-pU2WbIwJYUhInjEjr%252F-M-pWiCryMn_6vmSeAKF%252F《007黄金眼》007_Surface_Geometry_ChrisDeLeon.png%3Falt%3Dmedia%26token%3D0671a8d1-d31c-4ef9-b3c9-1b4f18ea8e09&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c42c9934&amp;sv=2" width="1150"/></div><figcaption>Chris DeLeon 拍摄的《黄金眼 007》(1997) 中“Surface”的关卡几何形状 https://imgur.com/a/MY59R</figcaption></picture></div></div></div><h2><div><a href="#critical-path-example-deathloop-2021"></a></div><div>主动线示例：死亡循环 (2021)</div></h2><p>在第一人称角色扮演游戏死亡循环 (2021) 的“复杂”关卡下图中，关卡设计师 Sylvain Menguy 强调了非线性单人游戏地图的主动线。他们记录了下午的配置和晚上的配置，以及玩家到达区域老板的可能路径。</p><blockquote><p><i>游戏有4张主地图，可以在一天中的4个时间段（早上、中午、下午和晚上）进行游戏，玩家可以在其中自由探索关卡、进行战斗、发现谜题，甚至解决构成游戏主要冒险的“谋杀谜题”……</i></p></blockquote><p>这个近似的布局图省略了不必要的细节，有利于大局观，这对于沟通很有用 <span><a href="process__preproduction__pacing.html">节奏</a></span>。请注意，下面显示的白色箭头与地图地形并不完全匹配，但仍然传达了有关预期路线的大量信息。尽管玩家一开始有 3 条通路，但这些通路始终会汇聚到地图另一侧 Boss 竞技场的两个入口。</p><div><div><div><picture><div><img height="1000" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FQHC9gOvGNYfBc12JQ70n%252FLDB_Deathloop_ComplexLayout_SylvainMenguy.jpg%3Falt%3Dmedia%26token%3Dfaa621bc-b515-47f9-bcb9-0a205ebc6810&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=7459edce&amp;sv=2" width="2048"/></div><figcaption>《死亡循环》（2021）中地图“复杂”的布局流程图 <span><a href="https://sylvainmenguy.com/en/project/deathloop">作者：Sylvain Menguy，来自 SylvainMenguy.com</a></span></figcaption></picture></div></div></div><blockquote><p><i>该地图从一开始就是为了允许多人游戏而制作的，另一个玩家会在下午或晚上入侵。因此，这两个时期对布局的解读有所不同，与前来追赶柯尔特并让他过得更艰难的对手朱莉安娜的遭遇战也有所不同。</i></p><p><i>这种时间段之间的共享布局总是给出了多种导航选择，禁止出现死胡同和长廊，让你的体验更加流畅，让你在区域之间快速轮换……”</i></p><p> <span><a href="https://sylvainmenguy.com/en/project/deathloop">- 西尔万·孟盖</a></span></p></blockquote><p>“旋转”是指玩家必须将焦点（“旋转”）转移到另一个地图区域，通常是在《反恐精英：全球攻势》等基于团队的多人射击游戏中。有趣的是，Menguy 在单人关卡中采用了多人关卡设计思维。</p><p><i>     有关多人游戏设计中旋转的更多信息，请参阅 </i><span><a href="process__combat__balance.html"><i>地图平衡</i></a></span><i>.</i></p><h2><div><a href="#to-review"></a></div><div>要审查...</div></h2><p>这 <strong>主动线</strong> 是通过单人关卡的理想玩家路线。</p><p>它主要是一个规划和范围界定工具。它有助于沟通 <span><a href="process__preproduction__pacing.html">节奏</a></span> 在一个 <span><a href="process__layout.html">布局</a></span> 绘图。如果您需要缩小项目范围，它可以帮助您决定要削减关卡的哪些部分。</p><p>然而，优先考虑主动线可能会导致更多人为的感觉空间。有些关卡设计师先设计一个空间，然后再找出主动线。</p><h2><div><a href="#now-what"></a></div><div>现在怎么办？</div></h2><ul><li><div><div></div></div><div><p>阅读更多关于 <span><a href="process__layout.html">布局</a></span> 和 <span><a href="process__layout__flow.html">动线</a></span>.</p></div></li><li><div><div></div></div><div><p><span><a href="process__layout__flow__circulation.html">空间流线</a></span> 思考起来也很有帮助。</p></div></li></ul></div></div></article>
+——Martin Hollis，《黄金眼 007》（任天堂64）的制片人，引述于 <span><a href="http://www.hobbygamedev.com/int/anti-design-in-ge007/">“《黄金眼 007》中的反设计/向后游戏设计”作者：Chris DeLeon</a></span></p></blockquote><div><div><div><picture><div><img height="579" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LtVT8pJjInrrHVCovzy%252F-M-pU2WbIwJYUhInjEjr%252F-M-pWiCryMn_6vmSeAKF%252F《007黄金眼》007_Surface_Geometry_ChrisDeLeon.png%3Falt%3Dmedia%26token%3D0671a8d1-d31c-4ef9-b3c9-1b4f18ea8e09&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=c42c9934&amp;sv=2" width="1150"/></div><figcaption>Chris DeLeon 拍摄的《黄金眼 007》(1997) 中“Surface”的关卡几何形状 https://imgur.com/a/MY59R</figcaption></picture></div></div></div><h2><div><a href="#critical-path-example-deathloop-2021"></a></div><div>主动线示例：死亡循环 (2021)</div></h2><p>在第一人称角色扮演游戏死亡循环 (2021) 的“复杂”关卡下图中，关卡设计师 Sylvain Menguy 强调了非线性单人游戏地图的主动线。他们记录了下午的配置和晚上的配置，以及玩家到达区域 Boss的可能路径。</p><blockquote><p><i>游戏有4张主地图，可以在一天中的4个时间段（早上、中午、下午和晚上）进行游戏，玩家可以在其中自由探索关卡、进行战斗、发现谜题，甚至解决构成游戏主要冒险的“谋杀谜题”……</i></p></blockquote><p>这个近似的布局图省略了不必要的细节，有利于大局观，这对于沟通很有用 <span><a href="process__preproduction__pacing.html">节奏</a></span>。请注意，下面显示的白色箭头与地图地形并不完全匹配，但仍然传达了有关预期路线的大量信息。尽管玩家一开始有 3 条通路，但这些通路始终会汇聚到地图另一侧 Boss 竞技场的两个入口。</p><div><div><div><picture><div><img height="1000" src="https://book.leveldesignbook.com/~gitbook/image?url=https%3A%2F%2F1666186240-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LtVT8pJjInrrHVCovzy%252Fuploads%252FQHC9gOvGNYfBc12JQ70n%252FLDB_《死亡循环》（《死亡循环》（《死亡循环》（Deathloop）））_“综合研究中心”（“综合研究中心”（“综合研究中心”（Complex）））Layout_SylvainMenguy.jpg%3Falt%3Dmedia%26token%3Dfaa621bc-b515-47f9-bcb9-0a205ebc6810&amp;width=768&amp;dpr=3&amp;quality=100&amp;sign=7459edce&amp;sv=2" width="2048"/></div><figcaption>《死亡循环》（2021）中地图“复杂”的布局流程图 <span><a href="https://sylvainmenguy.com/en/project/deathloop">作者：Sylvain Menguy，来自 SylvainMenguy.com</a></span></figcaption></picture></div></div></div><blockquote><p><i>该地图从一开始就是为了允许多人游戏而制作的，另一个玩家会在下午或晚上入侵。因此，这两个时期对布局的解读有所不同，与前来追赶柯尔特并让他过得更艰难的对手朱莉安娜的遭遇战也有所不同。</i></p><p><i>这种时间段之间的共享布局总是给出了多种导航选择，禁止出现死胡同和长廊，让你的体验更加流畅，让你在区域之间快速轮换……”</i></p><p> <span><a href="https://sylvainmenguy.com/en/project/deathloop">- 西尔万·孟盖</a></span></p></blockquote><p>“旋转”是指玩家必须将焦点（“旋转”）转移到另一个地图区域，通常是在《反恐精英（<a class="game-store-link" href="https://store.steampowered.com/app/730/CounterStrike_2/" rel="noopener noreferrer" target="_blank">Steam</a>）：全球攻势》等基于团队的多人射击游戏中。有趣的是，Menguy 在单人关卡中采用了多人关卡设计思维。</p><p><i>     有关多人游戏设计中旋转的更多信息，请参阅 </i><span><a href="process__combat__balance.html"><i>地图平衡</i></a></span><i>.</i></p><h2><div><a href="#to-review"></a></div><div>要审查...</div></h2><p>这 <strong>主动线</strong> 是通过单人关卡的理想玩家路线。</p><p>它主要是一个规划和范围界定工具。它有助于沟通 <span><a href="process__preproduction__pacing.html">节奏</a></span> 在一个 <span><a href="process__layout.html">布局</a></span> 绘图。如果您需要缩小项目范围，它可以帮助您决定要削减关卡的哪些部分。</p><p>然而，优先考虑主动线可能会导致更多人为的感觉空间。有些关卡设计师先设计一个空间，然后再找出主动线。</p><h2><div><a href="#now-what"></a></div><div>现在怎么办？</div></h2><ul><li><div><div></div></div><div><p>阅读更多关于 <span><a href="process__layout.html">布局</a></span> 和 <span><a href="process__layout__flow.html">动线</a></span>.</p></div></li><li><div><div></div></div><div><p><span><a href="process__layout__flow__circulation.html">空间流线</a></span> 思考起来也很有帮助。</p></div></li></ul></div></div></article>
+      </div>
+      <div class="gb-page-links-wrap">
 <div class="page-links"><a class="page-link" href="process__layout__flow__verticality.html"><span>上一页</span>纵向/垂直空间</a><a class="page-link" href="process__layout__parti.html"><span>下一页</span>设计概念草图</a></div>
-</main>
+
+      </div>
+    </main>
+    <aside class="gb-outline" data-outline>
+      <div class="gb-outline-inner">
+        <button class="gb-outline-title" type="button" data-toggle-outline>ON THIS PAGE</button>
+        <nav class="gb-outline-list" data-outline-list></nav>
+      </div>
+    </aside>
+  </div>
+  <div class="gb-search-modal" role="dialog" aria-modal="true" aria-label="搜索" data-search-modal>
+    <div class="gb-search-box">
+      <div class="gb-search-input-row">
+        <span class="gb-search-icon"></span>
+        <input type="search" data-search-input placeholder="搜索页面、章节或正文内容" autocomplete="off">
+        <button type="button" data-close-search>关闭</button>
+      </div>
+      <div class="gb-search-results" data-search-results></div>
+    </div>
+  </div>
 </body>
 </html>
